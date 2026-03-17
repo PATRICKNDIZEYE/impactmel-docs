@@ -14,6 +14,8 @@ A **Program** is a funded initiative — typically aligned to a specific donor a
 Navigate to **Programs** in the left sidebar to see all programs in your organization.
 
 ::: info 📸 Figure 4.1 — Programs List Page
+<ImageModal src="/user-manual/images/04-01-programs-list.png" alt="Programs List Page" />
+
 The Programs list page showing a grid of program cards. Each card displays the program name, status badge (Active/Draft/Completed), number of projects, donor logos, date range, and a budget summary bar. A blue "New Program" button appears in the top-right corner. A search bar and filter controls are at the top.
 
 **File:** `user-manual/images/04-01-programs-list.png`
@@ -44,6 +46,8 @@ From this page you can:
 3. Click **Create Program**
 
 ::: info 📸 Figure 4.2 — New Program Form
+<ImageModal src="/user-manual/images/04-02-new-program-form.png" alt="New Program Form" />
+
 The "Create Program" form showing all input fields. The donor field is an auto-complete combobox with a dropdown showing existing donors. A small "Add new donor" option appears at the bottom of the dropdown when a name is typed that doesn't match any existing donor. The "Create Program" and "Cancel" buttons are at the bottom of the form.
 
 **File:** `user-manual/images/04-02-new-program-form.png`
@@ -67,6 +71,8 @@ Before creating programs, set up your donors in **Settings → Donors & Funders*
 Click any program to open its detail page.
 
 ::: info 📸 Figure 4.3 — Program Detail Page
+<ImageModal src="/user-manual/images/04-03-program-detail.png" alt="Program Detail Page" />
+
 The program detail page with a header showing the program name, status badge, date range, and donor logos. Below the header are four tabs: Overview, Projects, Results Framework, and Team. The Overview tab is active, showing a description section and key statistics (total budget, number of projects, number of indicators).
 
 **File:** `user-manual/images/04-03-program-detail.png`
@@ -84,6 +90,8 @@ Lists all projects within this program. From here you can:
 - Create a new project under this program using the **+ New Project** button
 
 ::: info 📸 Figure 4.4 — Program Projects Tab
+<ImageModal src="/user-manual/images/04-04-program-projects-tab.png" alt="Program Projects Tab" />
+
 The Projects tab showing a list of project cards within the program. Each project card shows project name, status badge, location, date range, budget bar (planned vs. spent), and an indicator progress summary. A "New Project" button appears in the top-right.
 
 **File:** `user-manual/images/04-04-program-projects-tab.png`
@@ -119,6 +127,8 @@ To build the results framework for a program:
 Indicators and activities can then be linked to specific Output or Outcome nodes when they are created.
 
 ::: info 📸 Figure 4.5 — Results Framework Builder
+<ImageModal src="/user-manual/images/04-05-results-framework.png" alt="Results Framework Builder" />
+
 The Results Framework tab showing a tree structure with one Impact node at the top ("Improved water security in rural Rwanda"), two Outcome nodes below it, and three Output nodes at the bottom. Each node has a small +, edit (pencil), and delete (trash) icon. An "Add Impact" button appears at the top of the canvas.
 
 **File:** `user-manual/images/04-05-results-framework.png`

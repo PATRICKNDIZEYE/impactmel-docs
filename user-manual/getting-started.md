@@ -18,6 +18,8 @@ You can also click **Continue with Google** to register without a password. Your
 :::
 
 ::: info 📸 Figure 2.1 — Registration Page
+<ImageModal src="/user-manual/images/02-01-register.png" alt="Registration Page" />
+
 The registration form showing fields for First Name, Last Name, Email, and Password. A "Continue with Google" button appears above the form. The ImpactMEL logo is displayed at the top of the card.
 
 **File:** `user-manual/images/02-01-register.png`
@@ -36,6 +38,8 @@ On your first login, a setup dialog appears asking you to create your organizati
 Your account is now connected to your organization and you will be assigned the **Org Admin** role automatically.
 
 ::: info 📸 Figure 2.2 — Organization Setup Dialog
+<ImageModal src="/user-manual/images/02-02-org-setup.png" alt="Organization Setup Dialog" />
+
 The organization setup modal overlaying the dashboard. It shows two input fields: "Organization Name" and "Organization Code", with a "Create Organization" button at the bottom. A brief explanation of what the code is used for appears below the code field.
 
 **File:** `user-manual/images/02-02-org-setup.png`
@@ -52,6 +56,8 @@ If a colleague has already created your organization and invited you, do not cre
 Once your organization is created, you land on the **Dashboard**. Here is a quick tour of the main interface elements:
 
 ::: info 📸 Figure 2.3 — Interface Overview (Annotated)
+<ImageModal src="/user-manual/images/02-03-interface-overview.png" alt="Interface Overview" />
+
 Full-screen view of the ImpactMEL dashboard with labeled callouts pointing to: (A) Top navigation bar with logo and user menu, (B) Left sidebar with main navigation links, (C) Main content area showing the dashboard, (D) Breadcrumb trail showing current location, (E) User avatar and organization switcher in the top-right corner.
 
 **File:** `user-manual/images/02-03-interface-overview.png`
@@ -95,6 +101,8 @@ Before you start entering data, invite the team members who will be using the sy
 They will receive an email with a link to accept the invitation and set up their account.
 
 ::: info 📸 Figure 2.4 — Invite Member Dialog
+<ImageModal src="/user-manual/images/02-04-invite-member.png" alt="Invite Member Dialog" />
+
 The invite member modal showing an email address field, a role selector dropdown (with options: Org Admin, M&E Officer, Reporter, Viewer), and a "Send Invitation" button. The current members table is visible behind the modal.
 
 **File:** `user-manual/images/02-04-invite-member.png`
