@@ -20,6 +20,8 @@ You can access projects in two ways:
 2. **Via the sidebar** — Click **Projects** in the left sidebar to see all projects across all programs in one list
 
 ::: info 📸 Figure 5.1 — All Projects List
+<ImageModal src="/user-manual/images/05-01-projects-list.png" alt="All Projects List" />
+
 The Projects list page showing a table of all projects across all programs. Each row shows project name, the parent program name, status badge, location, date range, budget utilization bar, and a progress chip showing the percentage of indicators on track. Filter dropdowns for Program and Status appear at the top. A "New Project" button is in the top-right.
 
 **File:** `user-manual/images/05-01-projects-list.png`
@@ -52,6 +54,8 @@ Projects are created within a Program.
 5. Click **Create Project**
 
 ::: info 📸 Figure 5.2 — New Project Form
+<ImageModal src="/user-manual/images/05-02-new-project-form.png" alt="New Project Form" />
+
 The "Create Project" slide-over panel showing all project fields. The currency field is a dropdown with common currencies pre-populated. The Status field shows a segmented control with Draft, Active, Completed, and Suspended options. Create and Cancel buttons are at the bottom.
 
 **File:** `user-manual/images/05-02-new-project-form.png`
@@ -64,6 +68,8 @@ The "Create Project" slide-over panel showing all project fields. The currency f
 Click any project to open its full detail page. This is the command center for everything related to a single project.
 
 ::: info 📸 Figure 5.3 — Project Detail Page — Hero Section
+<ImageModal src="/user-manual/images/05-03-project-hero.png" alt="Project Detail Page — Hero Section" />
+
 The top section of the project detail page showing a large header with the project name, status badge, and program breadcrumb. Below the name are four stat cards in a row: Total Budget, Amount Spent, Remaining Budget, and Days Remaining. A horizontal progress bar below the cards shows the budget burn rate (spent vs. planned). Quick action buttons (Add Activity, Submit Data, Create Report) appear on the right side of the header.
 
 **File:** `user-manual/images/05-03-project-hero.png`
@@ -95,6 +101,8 @@ The project detail page is organized into five tabs:
 The project description, key information, lead partner, location, and a summary of linked donors.
 
 ::: info 📸 Figure 5.4 — Project Overview Tab
+<ImageModal src="/user-manual/images/05-04-project-overview.png" alt="Project Overview Tab" />
+
 The Overview tab showing a description section on the left, and a sidebar on the right with key project details (Lead Partner, Location, Currency, Created date). Below the description, a "Key Contacts" section shows team member cards with names, roles, and email addresses.
 
 **File:** `user-manual/images/05-04-project-overview.png`
@@ -117,6 +125,8 @@ From this tab you can:
 - **Click any indicator** to see its full history of submitted values
 
 ::: info 📸 Figure 5.5 — Project Indicators Tab
+<ImageModal src="/user-manual/images/05-05-project-indicators.png" alt="Project Indicators Tab" />
+
 The Indicators tab showing a table with columns for Indicator Code, Indicator Name, Unit, Latest Value, Target, Progress (as a colored badge), and a "Submit Data" action button on each row. A green "Add Indicator" button appears at the top-right. Indicators are grouped by their result framework Output node.
 
 **File:** `user-manual/images/05-05-project-indicators.png`
@@ -145,6 +155,8 @@ Reporting periods define **when** data collection happens for this project. You 
 6. Repeat for each period in your project cycle
 
 ::: info 📸 Figure 5.6 — Reporting Periods Management
+<ImageModal src="/user-manual/images/05-06-reporting-periods.png" alt="Reporting Periods Management" />
+
 The Reporting Periods management page showing a table of periods for a project. Each row shows the period label, date range, due date, submission count, and a "Lock" toggle. A locked period shows a padlock icon and greyed-out row. An "+ Add Period" button appears at the top-right.
 
 **File:** `user-manual/images/05-06-reporting-periods.png`

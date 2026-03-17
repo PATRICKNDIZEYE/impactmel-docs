@@ -7,6 +7,8 @@
 > The core promise: **one source of truth**, from field data entry to donor boardroom — with no copy-paste, no emailed attachments, and no reconciliation.
 
 ::: info 📸 Figure 1.1 — ImpactMEL Home Screen
+<ImageModal src="/user-manual/images/01-01-home-screen.png" alt="ImpactMEL Home Screen" />
+
 The ImpactMEL application home screen as it appears after login, showing the organization dashboard with the sidebar navigation on the left, top navigation bar with the ImpactMEL logo, and the main content area displaying program portfolio cards.
 
 **File:** `user-manual/images/01-01-home-screen.png`
