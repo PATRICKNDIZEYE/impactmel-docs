@@ -1,5 +1,7 @@
 # Programs
 
+<VideoEmbed title="07 · Creating a program and connecting a donor" />
+
 A **Program** is a funded initiative — typically aligned to a specific donor agreement or multi-year strategic plan. Programs are the organizing structure that groups related projects together under a shared results framework.
 
 **Examples of programs:**

@@ -1,5 +1,9 @@
 # Settings & Administration
 
+<VideoEmbed title="29 · Managing donors and funding sources" />
+
+<VideoEmbed title="30 · Notification preferences and email alerts" />
+
 The Settings section is where Org Admins configure the organization, manage team members, set up donors, and control system-wide preferences. Access it by clicking **Settings** in the left sidebar.
 
 ::: info 📸 Figure 11.1 — Settings Navigation

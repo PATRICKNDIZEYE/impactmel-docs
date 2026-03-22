@@ -1,5 +1,9 @@
 # Dashboard
 
+<VideoEmbed title="27 · Reading your dashboard — progress, deadlines, alerts" />
+
+<VideoEmbed title="28 · Understanding indicator progress scores" />
+
 The Dashboard is the first thing you see after logging in. It gives you a complete, real-time picture of your organization's M&E portfolio — all programs, projects, and indicators in one place.
 
 ::: info 📸 Figure 3.1 — Dashboard Overview

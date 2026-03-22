@@ -1,5 +1,11 @@
 # Projects
 
+<VideoEmbed title="08 · Creating a project under a program" />
+
+<VideoEmbed title="09 · Setting project dates, budget, and team" />
+
+<VideoEmbed title="10 · Adding project locations on the map" />
+
 A **Project** is the operational unit where day-to-day implementation happens. It sits within a Program and is where your team logs activities, enters indicator data, tracks budgets, and generates reports.
 
 Each project has:
