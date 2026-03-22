@@ -1,5 +1,13 @@
 # Entering Data
 
+<VideoEmbed title="16 · Submitting data for an indicator period" />
+
+<VideoEmbed title="17 · The review and approval workflow" />
+
+<VideoEmbed title="18 · Returning a submission for revision" />
+
+<VideoEmbed title="19 · Commenting on a submission" />
+
 This guide is primarily for **Reporters** — the team members responsible for submitting indicator values for their assigned projects at the end of each reporting period.
 
 It also covers the **review and approval process** that M&E Officers follow after data is submitted.

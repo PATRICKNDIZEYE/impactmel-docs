@@ -1,5 +1,11 @@
 # Results Framework
 
+<VideoEmbed title="04 · Setting your impact statement" />
+
+<VideoEmbed title="05 · Adding outcomes and outputs" />
+
+<VideoEmbed title="06 · Linking indicators to your results chain" />
+
 ## Overview
 
 The Results Framework is the logical backbone of ImpactMEL. It models the causal chain from field activities to long-term development impact using a tree of **Result Nodes**.

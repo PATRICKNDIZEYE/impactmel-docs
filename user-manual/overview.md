@@ -1,5 +1,7 @@
 # Platform Overview
 
+<VideoEmbed title="01 · Platform overview — a 2-minute tour" />
+
 ## What is ImpactMEL?
 
 **ImpactMEL** is an enterprise Monitoring, Evaluation & Learning (M&E) platform built for development organizations, NGOs, and their donors. It replaces fragmented Excel spreadsheets and disconnected legacy tools with a single, real-time system that tracks development impact from the moment field data is collected all the way to the final donor report.

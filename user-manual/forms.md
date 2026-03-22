@@ -1,5 +1,11 @@
 # Data Collection Forms
 
+<VideoEmbed title="20 · Building a custom data collection form" />
+
+<VideoEmbed title="21 · Sharing a form via public link" />
+
+<VideoEmbed title="22 · Viewing and managing form submissions" />
+
 Data Collection Forms allow you to build custom surveys and forms, deploy them as public links, and have submissions flow automatically into indicator reports — all without a single spreadsheet.
 
 A form can be shared with anyone via a URL: field staff open it on their phone, fill it in, and submit. The data lands directly in your ImpactMEL dashboard.

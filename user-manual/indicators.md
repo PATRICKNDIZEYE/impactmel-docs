@@ -1,5 +1,15 @@
 # Indicators
 
+<VideoEmbed title="11 · Creating an indicator" />
+
+<VideoEmbed title="12 · Setting targets by reporting period" />
+
+<VideoEmbed title="13 · Adding disaggregations (sex, age group, etc.)" />
+
+<VideoEmbed title="14 · Creating a formula indicator" />
+
+<VideoEmbed title="15 · Setting up indicator schedules" />
+
 An **indicator** is a measurable unit that tracks progress toward a specific result. In ImpactMEL, indicators are defined once at the organization level and then linked to one or more projects. Each project sets its own targets and reports values per period.
 
 **Examples of indicators:**

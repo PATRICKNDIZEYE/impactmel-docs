@@ -1,5 +1,13 @@
 # Reports
 
+<VideoEmbed title="23 · Creating a report template" />
+
+<VideoEmbed title="24 · Assembling a report in one click" />
+
+<VideoEmbed title="25 · Sharing a report with a donor via public link" />
+
+<VideoEmbed title="26 · Exporting a report as PDF" />
+
 Reports are the output of the entire M&E cycle. ImpactMEL automatically assembles all your approved indicator data, activity logs, budget summaries, and narratives into a professional, donor-ready document — in seconds, not hours.
 
 Reports can be:

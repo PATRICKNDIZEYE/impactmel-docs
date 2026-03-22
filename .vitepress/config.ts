@@ -13,7 +13,7 @@ export default defineConfig({
       'link',
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap',
       },
     ],
   ],
@@ -31,6 +31,7 @@ export default defineConfig({
     siteTitle: 'ImpactMEL',
 
     nav: [
+      { text: 'Videos', link: '/videos/' },
       { text: 'User Manual', link: '/user-manual/overview' },
       { text: 'Guide', link: '/guide/introduction' },
       { text: 'Architecture', link: '/architecture/overview' },
@@ -46,6 +47,13 @@ export default defineConfig({
     ],
 
     sidebar: [
+      {
+        text: 'Video Guides',
+        collapsed: false,
+        items: [
+          { text: 'All 30 videos', link: '/videos/' },
+        ],
+      },
       {
         text: 'User Manual',
         collapsed: false,
