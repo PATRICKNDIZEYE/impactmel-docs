@@ -61,6 +61,7 @@ const guideSidebar = [
     text: 'Roadmap & Trust',
     collapsed: false,
     items: [
+      { text: 'Pricing', link: '/guide/pricing' },
       { text: 'Roadmap', link: '/guide/roadmap' },
       { text: 'Security & Compliance', link: '/guide/security-compliance' },
     ],
@@ -156,6 +157,7 @@ export default defineConfig({
         text: 'Reference',
         items: [
           { text: 'Why ImpactMEL', link: '/guide/why-impactmel' },
+          { text: 'Pricing', link: '/guide/pricing' },
           { text: 'Roadmap', link: '/guide/roadmap' },
           { text: 'Guide', link: '/guide/introduction' },
           { text: 'Quick Start', link: '/guide/quick-start' },
