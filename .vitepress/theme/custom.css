@@ -36,7 +36,10 @@
   --vp-c-text-1: #17203d;
   --vp-c-text-2: #586380;
   --vp-c-text-3: #7b86a6;
-  --vp-layout-max-width: 1500px;
+  --vp-layout-max-width: 1400px;
+  --vp-sidebar-width: 284px;
+  --im-aside-width: 236px;
+  --im-shell-gutter: 18px;
 }
 
 .dark {
@@ -86,8 +89,17 @@ body {
   margin: 0;
   color: var(--vp-c-text-1);
   background: var(--im-shell-bg);
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
 }
 
 body::before {
@@ -109,7 +121,7 @@ body::before {
 
 @media (min-width: 960px) {
   body {
-    padding: 18px;
+    padding: var(--im-shell-gutter);
   }
 
   .Layout {
@@ -149,6 +161,8 @@ body::before {
 }
 
 .VPNavBar .container {
+  display: flex;
+  gap: 14px;
   position: relative;
   min-height: 76px;
   padding: 0 18px;
@@ -157,6 +171,16 @@ body::before {
   background: var(--im-surface);
   box-shadow: var(--im-shadow-sm);
   backdrop-filter: blur(18px);
+}
+
+.VPNavBar .title,
+.VPNavBar .content,
+.VPNavBar .content-body,
+.VPNavBarMenu,
+.VPNavBarMenuGroup,
+.VPNavBarExtra,
+.VPNavBarAppearance {
+  min-width: 0;
 }
 
 .VPNavBar .container::before {
@@ -191,11 +215,21 @@ body::before {
 }
 
 .VPNavBarMenu {
+  flex: 1 1 auto;
+  justify-content: flex-end;
   gap: 2px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.VPNavBarMenu::-webkit-scrollbar {
+  display: none;
 }
 
 .VPNavBarMenuLink,
 .VPFlyout .button {
+  flex: 0 0 auto;
   border-radius: 999px !important;
   padding: 10px 13px !important;
   color: var(--vp-c-text-2) !important;
@@ -219,6 +253,7 @@ body::before {
 
 .VPNavBarMenuLink[href*='app.impactmel.com'] {
   margin-left: 6px;
+  padding-inline: 18px !important;
   background: linear-gradient(135deg, var(--im-accent), #4e79ff) !important;
   color: #fff !important;
   box-shadow: 0 14px 30px rgba(39, 86, 255, 0.24);
@@ -232,6 +267,7 @@ body::before {
 .VPNavBarAppearance .VPSwitch,
 .VPSocialLink,
 .VPNavBarExtra .button {
+  flex: 0 0 auto;
   border-radius: 999px !important;
   background: rgba(255, 255, 255, 0.7) !important;
   border: 1px solid var(--im-border) !important;
@@ -246,6 +282,7 @@ body::before {
 
 .VPNavBarSearch {
   margin-right: 12px;
+  flex: 0 0 auto;
 }
 
 .VPNavBarSearch .DocSearch-Button {
@@ -300,10 +337,13 @@ body::before {
 .VPSidebar .nav {
   display: grid;
   gap: 14px;
+  width: 100%;
 }
 
 .VPSidebar .group {
   margin: 0 !important;
+  width: 100% !important;
+  max-width: 100%;
   border: 1px solid var(--im-border);
   border-radius: 24px;
   background: var(--im-surface);
@@ -368,6 +408,8 @@ body::before {
 .sidebar-intro {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
   padding: 22px;
   border: 1px solid var(--im-border-strong);
   border-radius: 28px;
@@ -414,6 +456,7 @@ body::before {
   position: relative;
   z-index: 1;
   margin: 14px 0 8px;
+  max-width: 12ch;
   color: var(--im-ink);
   font-family: var(--im-font-display);
   font-size: 1.36rem;
@@ -426,6 +469,7 @@ body::before {
   position: relative;
   z-index: 1;
   margin: 0;
+  min-width: 0;
   color: var(--vp-c-text-2);
   font-size: 0.92rem;
   line-height: 1.65;
@@ -435,6 +479,7 @@ body::before {
   position: relative;
   z-index: 1;
   display: flex;
+  gap: 10px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -498,6 +543,7 @@ body::before {
 
 .VPDoc .content,
 .VPDocAside .content {
+  overflow: hidden;
   border: 1px solid var(--im-border);
   border-radius: 28px;
   background: var(--im-surface);
@@ -511,12 +557,14 @@ body::before {
 }
 
 .VPDoc .content-container {
+  width: 100%;
   max-width: none !important;
 }
 
 .VPDoc .main {
   width: 100%;
   max-width: none !important;
+  min-width: 0;
 }
 
 .vp-doc {
@@ -524,6 +572,7 @@ body::before {
   color: var(--vp-c-text-1);
   font-size: 0.98rem;
   line-height: 1.82;
+  overflow-wrap: break-word;
 }
 
 .doc-breadcrumbs {
@@ -631,14 +680,16 @@ body::before {
 }
 
 .vp-doc table {
-  display: table !important;
+  display: block !important;
   width: 100% !important;
   margin: 1.7rem 0 !important;
-  overflow: hidden !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
   border: 1px solid var(--im-border) !important;
   border-radius: 20px !important;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: var(--im-shadow-sm) !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dark .vp-doc table {
@@ -839,6 +890,7 @@ body::before {
 
 .doc-page-hero__meta-item {
   position: relative;
+  min-width: 0;
   padding: 15px 16px 16px;
   border: 1px solid var(--im-border);
   border-radius: 20px;
@@ -877,6 +929,7 @@ body::before {
   position: relative;
   display: grid;
   gap: 8px;
+  min-width: 0;
   padding: 18px 20px;
   border: 1px solid var(--im-border);
   border-radius: 22px;
@@ -996,6 +1049,18 @@ body::before {
 
 .VPDocAside {
   padding: 0;
+}
+
+.VPDoc .aside {
+  flex: 0 0 calc(var(--im-aside-width) + 18px);
+  width: calc(var(--im-aside-width) + 18px);
+  max-width: calc(var(--im-aside-width) + 18px);
+  padding-left: 18px;
+}
+
+.VPDoc .aside-container,
+.VPDoc .aside-curtain {
+  width: var(--im-aside-width);
 }
 
 .VPDocAside .content {
@@ -1160,6 +1225,10 @@ body::before {
     background 0.18s ease;
 }
 
+.aside-support__link span:first-child {
+  min-width: 0;
+}
+
 .aside-support__link {
   background: rgba(255, 255, 255, 0.68);
 }
@@ -1241,6 +1310,12 @@ body::before {
   box-shadow: var(--im-shadow-md);
 }
 
+.docs-overview-hero > *,
+.docs-overview-stats > *,
+.docs-card-grid > * {
+  min-width: 0;
+}
+
 .dark .docs-overview-hero {
   background:
     radial-gradient(circle at top right, rgba(126, 161, 255, 0.18), transparent 34%),
@@ -1308,6 +1383,7 @@ body::before {
 
 .docs-overview-hero__visual {
   position: relative;
+  min-width: 0;
   min-height: 300px;
   padding: 16px;
   border-radius: 24px;
@@ -1391,6 +1467,7 @@ body::before {
 }
 
 .docs-overview-stat {
+  min-width: 0;
   padding: 18px 20px;
   border: 1px solid var(--im-border);
   border-radius: 22px;
@@ -1436,7 +1513,9 @@ body::before {
 .docs-card {
   display: grid;
   gap: 10px;
+  min-width: 0;
   min-height: 188px;
+  height: 100%;
   padding: 20px;
   border: 1px solid var(--im-border);
   border-radius: 24px;
@@ -1630,6 +1709,61 @@ body::before {
   }
 }
 
+@media (max-width: 1439px) {
+  :root {
+    --vp-layout-max-width: 1320px;
+    --vp-sidebar-width: 268px;
+  }
+
+  .VPDoc.has-aside .container {
+    display: block;
+  }
+
+  .VPDoc .aside {
+    display: none !important;
+  }
+
+  .VPDoc .content {
+    width: 100%;
+    max-width: none;
+    padding-bottom: 90px;
+  }
+
+  .docs-overview-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1180px) {
+  :root {
+    --vp-sidebar-width: 252px;
+  }
+
+  .VPNavBarSearch {
+    display: none !important;
+  }
+
+  .VPNavBarTitle .title {
+    gap: 10px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .VPNavBarMenuLink,
+  .VPFlyout .button {
+    padding: 9px 10px !important;
+    font-size: 0.82rem !important;
+  }
+
+  .VPNavBarMenuLink[href*='app.impactmel.com'] {
+    margin-left: 0;
+    padding-inline: 14px !important;
+  }
+
+  .VPSocialLink {
+    display: none !important;
+  }
+}
+
 @media (max-width: 959px) {
   body {
     padding: 0;
@@ -1640,7 +1774,9 @@ body::before {
   }
 
   .VPNavBar .container {
+    gap: 10px;
     min-height: 68px;
+    padding: 0 12px;
     border-radius: 20px;
   }
 
@@ -1672,7 +1808,14 @@ body::before {
     border-radius: 22px;
   }
 
+  .vp-doc {
+    padding: 0 18px 16px !important;
+    line-height: 1.72;
+  }
+
   .doc-breadcrumbs {
+    padding-left: 18px;
+    padding-right: 18px;
     padding-bottom: 18px;
   }
 
@@ -1689,6 +1832,15 @@ body::before {
 
   .docs-overview-hero__visual {
     min-height: 240px;
+  }
+
+  .docs-overview-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .docs-action {
+    width: 100%;
   }
 
   .doc-page-hero {
@@ -1708,5 +1860,9 @@ body::before {
 
   .doc-quick-link strong {
     max-width: none;
+  }
+
+  .doc-figure__media {
+    padding: 10px;
   }
 }
