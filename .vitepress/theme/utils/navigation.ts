@@ -55,7 +55,7 @@ const SECTION_META: SectionMeta[] = [
     kicker: 'Documentation hub',
     title: 'ImpactMEL Docs',
     description:
-      'Browse the user manual, setup guide, videos, and advanced reference in one place.',
+      'Browse getting started help, the user manual, videos, and reference pages in one place.',
   },
 ]
 

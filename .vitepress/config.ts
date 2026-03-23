@@ -2,25 +2,24 @@ import { defineConfig } from 'vitepress'
 
 const docsHubSidebar = [
   {
-    text: 'Documentation Hub',
+    text: 'Start Here',
     collapsed: false,
     items: [
       { text: 'Overview', link: '/' },
+      { text: 'Getting Started', link: '/user-manual/getting-started' },
       { text: 'Quick Start', link: '/guide/quick-start' },
       { text: 'User Manual', link: '/user-manual/overview' },
-      { text: 'Architecture', link: '/architecture/overview' },
-      { text: 'API Overview', link: '/api/overview' },
       { text: 'Video Guides', link: '/videos/' },
     ],
   },
   {
-    text: 'Popular Pages',
-    collapsed: false,
+    text: 'Advanced Reference',
+    collapsed: true,
     items: [
-      { text: 'Getting Started', link: '/user-manual/getting-started' },
+      { text: 'Guide Introduction', link: '/guide/introduction' },
       { text: 'Results Framework', link: '/modules/results-framework' },
-      { text: 'Reports', link: '/modules/reports' },
-      { text: 'Environment Setup', link: '/guide/environment' },
+      { text: 'Architecture', link: '/architecture/overview' },
+      { text: 'API Overview', link: '/api/overview' },
     ],
   },
 ]
@@ -142,16 +141,18 @@ export default defineConfig({
 
     nav: [
       { text: 'Overview', link: '/' },
+      { text: 'Getting Started', link: '/user-manual/getting-started' },
       { text: 'User Manual', link: '/user-manual/overview' },
       {
-        text: 'Implementation',
+        text: 'Reference',
         items: [
           { text: 'Guide', link: '/guide/introduction' },
+          { text: 'Quick Start', link: '/guide/quick-start' },
           { text: 'Architecture', link: '/architecture/overview' },
           { text: 'Core Modules', link: '/modules/authentication' },
+          { text: 'API', link: '/api/overview' },
         ],
       },
-      { text: 'API', link: '/api/overview' },
       { text: 'Videos', link: '/videos/' },
       { text: 'Open App', link: 'https://app.impactmel.com', target: '_blank' },
     ],
