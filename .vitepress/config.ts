@@ -52,8 +52,17 @@ const guideSidebar = [
     items: [
       { text: 'Introduction', link: '/guide/introduction' },
       { text: 'Quick Start', link: '/guide/quick-start' },
+      { text: 'Why ImpactMEL', link: '/guide/why-impactmel' },
       { text: 'Environment Setup', link: '/guide/environment' },
       { text: 'Changelog', link: '/guide/changelog' },
+    ],
+  },
+  {
+    text: 'Roadmap & Trust',
+    collapsed: false,
+    items: [
+      { text: 'Roadmap', link: '/guide/roadmap' },
+      { text: 'Security & Compliance', link: '/guide/security-compliance' },
     ],
   },
 ]
@@ -146,6 +155,8 @@ export default defineConfig({
       {
         text: 'Reference',
         items: [
+          { text: 'Why ImpactMEL', link: '/guide/why-impactmel' },
+          { text: 'Roadmap', link: '/guide/roadmap' },
           { text: 'Guide', link: '/guide/introduction' },
           { text: 'Quick Start', link: '/guide/quick-start' },
           { text: 'Architecture', link: '/architecture/overview' },
