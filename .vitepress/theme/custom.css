@@ -121,29 +121,23 @@ body::before {
 
 @media (min-width: 960px) {
   body {
-    padding: var(--im-shell-gutter);
+    padding: 0;
   }
 
   .Layout {
-    max-width: var(--vp-layout-max-width);
-    min-height: calc(100vh - 36px);
-    margin: 0 auto;
-    border: 1px solid var(--im-border-strong);
-    border-radius: 32px;
-    overflow: hidden;
-    background: rgba(245, 248, 255, 0.64);
-    box-shadow: var(--im-shadow-lg);
-    backdrop-filter: blur(22px);
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
   .Layout::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.46), transparent 120px),
-      radial-gradient(circle at top right, rgba(127, 165, 255, 0.18), transparent 22%);
+    display: none;
   }
 }
 
