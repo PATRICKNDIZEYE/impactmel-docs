@@ -6,6 +6,45 @@
 
 This guide walks you through creating your account, setting up your organization, and understanding the ImpactMEL interface for the first time.
 
+<div class="doc-page-hero">
+  <p class="doc-page-hero__eyebrow">First-time setup</p>
+  <p class="doc-page-hero__title">Set up your workspace the right way from the start.</p>
+  <p class="doc-page-hero__copy">Follow this page from top to bottom when creating a new organization. If you are coming back later, use the quick links below to jump straight to team setup, structure, or settings.</p>
+  <div class="doc-page-hero__meta">
+    <div class="doc-page-hero__meta-item">
+      <span>Best for</span>
+      <strong>Org Admins setting up a new organization</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Typical time</span>
+      <strong>10 to 15 minutes for account, org, and first invites</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Main outcome</span>
+      <strong>A usable workspace with the right people in the right roles</strong>
+    </div>
+  </div>
+</div>
+
+<div class="doc-quick-links">
+  <a class="doc-quick-link" href="/user-manual/dashboard">
+    <span>Learn the workspace</span>
+    <strong>Read the dashboard once setup is complete</strong>
+  </a>
+  <a class="doc-quick-link" href="/user-manual/roles-permissions">
+    <span>Control access</span>
+    <strong>Assign the right permissions before data starts flowing</strong>
+  </a>
+  <a class="doc-quick-link" href="/user-manual/programs">
+    <span>Build structure</span>
+    <strong>Create programs before you add projects and indicators</strong>
+  </a>
+  <a class="doc-quick-link" href="/user-manual/settings">
+    <span>Finalize configuration</span>
+    <strong>Complete donor, member, and organization settings</strong>
+  </a>
+</div>
+
 ---
 
 ## Step 1 — Create Your Account
@@ -21,13 +60,16 @@ You will be automatically signed in and taken to the organization setup screen.
 You can also click **Continue with Google** to register without a password. Your Google account email becomes your ImpactMEL login.
 :::
 
-::: info 📸 Figure 2.1 — Registration Page
-<ImageModal src="/user-manual/images/02-01-register.png" alt="Registration Page" />
-
-The registration form showing fields for First Name, Last Name, Email, and Password. A "Continue with Google" button appears above the form. The ImpactMEL logo is displayed at the top of the card.
-
-**File:** `user-manual/images/02-01-register.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/02-01-register.png" alt="Figure 2.1 — Registration Page" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 2.1 — Registration Page</p>
+    <p>The registration form showing fields for First Name, Last Name, Email, and Password. A "Continue with Google" button appears above the form. The ImpactMEL logo is displayed at the top of the card.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -41,13 +83,16 @@ On your first login, a setup dialog appears asking you to create your organizati
 
 Your account is now connected to your organization and you will be assigned the **Org Admin** role automatically.
 
-::: info 📸 Figure 2.2 — Organization Setup Dialog
-<ImageModal src="/user-manual/images/02-02-org-setup.png" alt="Organization Setup Dialog" />
-
-The organization setup modal overlaying the dashboard. It shows two input fields: "Organization Name" and "Organization Code", with a "Create Organization" button at the bottom. A brief explanation of what the code is used for appears below the code field.
-
-**File:** `user-manual/images/02-02-org-setup.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/02-02-org-setup.png" alt="Figure 2.2 — Organization Setup Dialog" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 2.2 — Organization Setup Dialog</p>
+    <p>The organization setup modal overlaying the dashboard. It shows two input fields: "Organization Name" and "Organization Code", with a "Create Organization" button at the bottom. A brief explanation of what the code is used for appears below the code field.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ::: warning Already have an organization?
 If a colleague has already created your organization and invited you, do not create a new one. Accept the invitation email they sent you, which will link your account to the existing organization.
@@ -59,13 +104,16 @@ If a colleague has already created your organization and invited you, do not cre
 
 Once your organization is created, you land on the **Dashboard**. Here is a quick tour of the main interface elements:
 
-::: info 📸 Figure 2.3 — Interface Overview (Annotated)
-<ImageModal src="/user-manual/images/02-03-interface-overview.png" alt="Interface Overview" />
-
-Full-screen view of the ImpactMEL dashboard with labeled callouts pointing to: (A) Top navigation bar with logo and user menu, (B) Left sidebar with main navigation links, (C) Main content area showing the dashboard, (D) Breadcrumb trail showing current location, (E) User avatar and organization switcher in the top-right corner.
-
-**File:** `user-manual/images/02-03-interface-overview.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/02-03-interface-overview.png" alt="Figure 2.3 — Interface Overview (Annotated)" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 2.3 — Interface Overview (Annotated)</p>
+    <p>Full-screen view of the ImpactMEL dashboard with labeled callouts pointing to: (A) Top navigation bar with logo and user menu, (B) Left sidebar with main navigation links, (C) Main content area showing the dashboard, (D) Breadcrumb trail showing current location, (E) User avatar and organization switcher in the top-right corner.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ### The Sidebar
 
@@ -94,7 +142,7 @@ The top navigation bar shows:
 
 ## Step 4 — Invite Your Team
 
-Before you start entering data, invite the team members who will be using the system.
+Before you start entering data, invite the team members who will be using ImpactMEL.
 
 1. In the sidebar, click **Settings**
 2. Select the **Members** tab
@@ -104,13 +152,16 @@ Before you start entering data, invite the team members who will be using the sy
 
 They will receive an email with a link to accept the invitation and set up their account.
 
-::: info 📸 Figure 2.4 — Invite Member Dialog
-<ImageModal src="/user-manual/images/02-04-invite-member.png" alt="Invite Member Dialog" />
-
-The invite member modal showing an email address field, a role selector dropdown (with options: Org Admin, M&E Officer, Reporter, Viewer), and a "Send Invitation" button. The current members table is visible behind the modal.
-
-**File:** `user-manual/images/02-04-invite-member.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/02-04-invite-member.png" alt="Figure 2.4 — Invite Member Dialog" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 2.4 — Invite Member Dialog</p>
+    <p>The invite member modal showing an email address field, a role selector dropdown (with options: Org Admin, M&amp;E Officer, Reporter, Viewer), and a "Send Invitation" button. The current members table is visible behind the modal.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ::: tip Roles explained
 Not sure which role to assign? See the [Roles & Permissions](/user-manual/roles-permissions) guide for a full breakdown of what each role can and cannot do.
@@ -147,4 +198,4 @@ Yes. If you are invited to a second organization, you can switch between them us
 On the login page, click **Forgot password** and enter your email. You will receive a link to reset it within a few minutes.
 
 **Is my data backed up?**
-Yes. ImpactMEL runs on managed infrastructure with automated daily backups and point-in-time recovery.
+Yes. ImpactMEL is backed up automatically every day.

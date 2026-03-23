@@ -4,16 +4,55 @@
 
 <VideoEmbed title="24 · Assembling a report in one click" />
 
-<VideoEmbed title="25 · Sharing a report with a donor via public link" />
+<VideoEmbed title="25 · Sharing a report with a donor by link" />
 
 <VideoEmbed title="26 · Exporting a report as PDF" />
 
-Reports are the output of the entire M&E cycle. ImpactMEL automatically assembles all your approved indicator data, activity logs, budget summaries, and narratives into a professional, donor-ready document — in seconds, not hours.
+Reports bring together your approved indicator data, activity logs, budget summaries, and written updates into a donor-ready document.
 
 Reports can be:
-- **Shared via a public link** — donors open a URL, no login required
-- **Downloaded as a PDF** — true binary PDF, not a browser print dialog
+- **Shared by link** — donors open the link, no login required
+- **Downloaded as a PDF**
 - **Assembled for any date range** — quarterly, annual, or any custom period
+
+<div class="doc-page-hero">
+  <p class="doc-page-hero__eyebrow">Donor delivery</p>
+  <p class="doc-page-hero__title">Turn approved information into a report you can share with confidence.</p>
+  <p class="doc-page-hero__copy">This page helps you turn approved information into something clear and ready to share. Use it when you need to prepare a report quickly without losing control of the final result.</p>
+  <div class="doc-page-hero__meta">
+    <div class="doc-page-hero__meta-item">
+      <span>Best for</span>
+      <strong>M&amp;E leads, report owners, and donor-facing managers</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Best moment</span>
+      <strong>After approvals are complete and before donor submission</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Main outcome</span>
+      <strong>A polished report that can be shared by link or PDF</strong>
+    </div>
+  </div>
+</div>
+
+<div class="doc-quick-links">
+  <a class="doc-quick-link" href="#creating-a-report">
+    <span>Start assembly</span>
+    <strong>Generate a new report for a period or custom date range</strong>
+  </a>
+  <a class="doc-quick-link" href="#reading-an-assembled-report">
+    <span>Review output</span>
+    <strong>Understand what the assembled report includes</strong>
+  </a>
+  <a class="doc-quick-link" href="#sharing-a-report">
+    <span>Deliver digitally</span>
+    <strong>Create or manage donor-facing share links</strong>
+  </a>
+  <a class="doc-quick-link" href="#downloading-as-pdf">
+    <span>Export</span>
+    <strong>Download a formal PDF for submission or archiving</strong>
+  </a>
+</div>
 
 ---
 
@@ -21,11 +60,16 @@ Reports can be:
 
 Navigate to **Reports** in the sidebar to see all reports across your projects.
 
-::: info 📸 Figure 10.1 — Reports List Page
-The Reports page showing a table of all assembled reports. Columns include: Report Title, Project, Period, Type (Quarterly/Annual/Ad hoc), Status badge (Draft/Published), Share status (a link icon if shared), Created date, and action buttons (Open, Share, Download PDF). A search bar and filter for Project and Status appear at the top. A "New Report" button is in the top-right.
-
-**File:** `user-manual/images/10-01-reports-list.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/10-01-reports-list.png" alt="Figure 10.1 — Reports List Page" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 10.1 — Reports List Page</p>
+    <p>The Reports page showing a table of all assembled reports. Columns include: Report Title, Project, Period, Type (Quarterly/Annual/Ad hoc), Status badge (Draft/Published), Share status (a link icon if shared), Created date, and action buttons (Open, Share, Download PDF). A search bar and filter for Project and Status appear at the top. A "New Report" button is in the top-right.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -43,31 +87,36 @@ The Reports page showing a table of all assembled reports. Columns include: Repo
 
 3. Click **Generate Report**
 
-The system assembles the report in a few seconds and opens it automatically.
+ImpactMEL builds the report and opens it automatically.
 
-::: info 📸 Figure 10.2 — New Report Dialog
-The "Create Report" modal showing the Title field, Project selector, Report Type segmented control, and a period selection section. The period section shows two options as radio buttons: "Select Reporting Period" (dropdown listing Q1 2026, Q2 2026, etc.) and "Custom Date Range" (with Start Date and End Date fields). When "Custom Date Range" is selected, the dropdown hides and the date pickers appear.
-
-**File:** `user-manual/images/10-02-new-report-dialog.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/10-02-new-report-dialog.png" alt="Figure 10.2 — New Report Dialog" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 10.2 — New Report Dialog</p>
+    <p>The "Create Report" modal showing the Title field, Project selector, Report Type segmented control, and a period selection section. The period section shows two options as radio buttons: "Select Reporting Period" (dropdown listing Q1 2026, Q2 2026, etc.) and "Custom Date Range" (with Start Date and End Date fields). When "Custom Date Range" is selected, the dropdown hides and the date pickers appear.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
 ## Period vs. Custom Date Range
 
 ### Using a Reporting Period
-Select a **standard reporting period** if you are preparing a regular quarterly or annual report aligned to your project's configured periods. The system pulls in all approved and submitted indicator data for that period.
+Select a **standard reporting period** if you are preparing a regular quarterly or annual report aligned to your project's configured periods. ImpactMEL pulls in the approved information for that period.
 
 ### Using a Custom Date Range
 Select a **custom date range** when your donor's reporting cycle doesn't match your internal periods. For example, a donor fiscal year from July 2025 to June 2026 may span three of your quarterly periods.
 
 ImpactMEL handles this automatically:
-1. It finds all reporting periods that overlap your custom date range
-2. It collects all approved indicator data within those periods
-3. It aggregates the values using each indicator's aggregation method
+1. It finds reporting periods that overlap your chosen dates
+2. It collects the approved values from those periods
+3. It combines them using each indicator's reporting rule
 
 ::: tip
-Custom date ranges are one of ImpactMEL's most powerful features. You can generate a report for any date range without changing your data — the same indicator submissions can be included in a Q1 report, a donor annual report, and a mid-term review, all at the same time.
+Custom date ranges make it easier to match donor timelines. The same approved information can appear in a quarterly report, an annual donor report, and a mid-term review without being entered again.
 :::
 
 ---
@@ -76,11 +125,16 @@ Custom date ranges are one of ImpactMEL's most powerful features. You can genera
 
 The assembled report view shows all sections in order:
 
-::: info 📸 Figure 10.3 — Assembled Report View (Top)
-The top of an assembled report showing: the organization logo in the top-left, the report title in large bold text, the project name and date range below, the donor logos in a row. Below the header, an "Executive Summary" section with editable text. Action buttons (Share, Download PDF, Edit) appear in a toolbar at the top-right.
-
-**File:** `user-manual/images/10-03-report-view-top.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/10-03-report-view-top.png" alt="Figure 10.3 — Assembled Report View (Top)" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 10.3 — Assembled Report View (Top)</p>
+    <p>The top of an assembled report showing: the organization logo in the top-left, the report title in large bold text, the project name and date range below, the donor logos in a row. Below the header, an "Executive Summary" section with editable text. Action buttons (Share, Download PDF, Edit) appear in a toolbar at the top-right.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ### Report Sections
 
@@ -95,11 +149,16 @@ The top of an assembled report showing: the organization logo in the top-left, t
 | **Recommendations** | Editable narrative — recommended next steps |
 | **Attachments** | Linked documents, photos, or other evidence |
 
-::: info 📸 Figure 10.4 — Progress Against Results Section
-The "Progress Against Results" section of the report, showing indicators grouped by Output node. Each indicator row shows: indicator name, unit, reported value, target, progress percentage, and a traffic-light badge (green/amber/red). Disaggregated breakdowns appear as an expandable row below each indicator. A summary line at the bottom shows "8 of 12 indicators on track."
-
-**File:** `user-manual/images/10-04-progress-section.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/10-04-progress-section.png" alt="Figure 10.4 — Progress Against Results Section" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 10.4 — Progress Against Results Section</p>
+    <p>The "Progress Against Results" section of the report, showing indicators grouped by Output node. Each indicator row shows: indicator name, unit, reported value, target, progress percentage, and a traffic-light badge (green/amber/red). Disaggregated breakdowns appear as an expandable row below each indicator. A summary line at the bottom shows "8 of 12 indicators on track."</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -114,11 +173,16 @@ The narrative sections (Executive Summary, Challenges & Lessons Learned, Recomme
 
 Changes are saved automatically every 30 seconds.
 
-::: info 📸 Figure 10.5 — Editing a Narrative Section
-The Executive Summary section in editing mode, showing a rich text toolbar at the top with bold, italic, bullet list, and numbered list buttons. The text area is highlighted with a blue border. Unsaved changes show a small "Saving..." indicator in the top-right corner of the section.
-
-**File:** `user-manual/images/10-05-narrative-editing.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/10-05-narrative-editing.png" alt="Figure 10.5 — Editing a Narrative Section" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 10.5 — Editing a Narrative Section</p>
+    <p>The Executive Summary section in editing mode, showing a rich text toolbar at the top with bold, italic, bullet list, and numbered list buttons. The text area is highlighted with a blue border. Unsaved changes show a small "Saving..." indicator in the top-right corner of the section.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -130,13 +194,16 @@ The Executive Summary section in editing mode, showing a rich text toolbar at th
 2. The share dialog opens with a unique URL
 3. Copy the link and send it to your donor or partner
 
-::: info 📸 Figure 10.6 — Share Report Dialog
-The share report dialog showing a URL in a read-only text field with a "Copy Link" button. Below the link, a green checkmark confirms "Link is active." Three action buttons appear: "Copy Link", "Regenerate Link" (warning icon — invalidates old link), and "Revoke Link" (removes public access entirely). At the bottom, an optional "Expiry Date" date picker allows setting a link expiration.
-
-**File:** `user-manual/images/10-06-share-dialog.png`
-:::
-
-The share link format: `https://app.impactmel.com/r/[unique-token]`
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/10-06-share-dialog.png" alt="Figure 10.6 — Share Report Dialog" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 10.6 — Share Report Dialog</p>
+    <p>The share report dialog showing a URL in a read-only text field with a "Copy Link" button. Below the link, a green checkmark confirms "Link is active." Three action buttons appear: "Copy Link", "Regenerate Link" (warning icon — invalidates old link), and "Revoke Link" (removes public access entirely). At the bottom, an optional "Expiry Date" date picker allows setting a link expiration.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 **Anyone with this link can view the report** — no ImpactMEL account required. This is the link you send to donors, headquarters, or any stakeholder who needs to read the report without logging in.
 
@@ -152,11 +219,16 @@ Click **Revoke Link** to permanently remove public access. The URL returns a "No
 
 ## What Donors See
 
-::: info 📸 Figure 10.7 — Public Report View (Donor View)
-The public report page as it appears to someone opening the share link in a browser. The page shows the report rendered as a clean, professional document: organization logo, report title, date range, and all sections below. A "Download PDF" button appears in a sticky header at the top. No login prompts, no sidebars, no ImpactMEL navigation — just the report content. A small "Powered by ImpactMEL" credit appears in the footer.
-
-**File:** `user-manual/images/10-07-public-report-donor-view.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/10-07-public-report-donor-view.png" alt="Figure 10.7 — Public Report View (Donor View)" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 10.7 — Public Report View (Donor View)</p>
+    <p>The public report page as it appears to someone opening the share link in a browser. The page shows the report rendered as a clean, professional document: organization logo, report title, date range, and all sections below. A "Download PDF" button appears in a sticky header at the top. No login prompts, no sidebars, no ImpactMEL navigation — just the report content. A small "Powered by ImpactMEL" credit appears in the footer.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 Donors who open the link see:
 - The full report, beautifully formatted

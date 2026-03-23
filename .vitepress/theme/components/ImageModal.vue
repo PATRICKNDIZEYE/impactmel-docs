@@ -1,23 +1,18 @@
 <template>
   <div>
-    <!-- Clickable image link -->
-    <a href="#" @click.prevent="openModal" class="image-link">
+    <a href="#" class="image-link" @click.prevent="openModal">
       <img :src="src" :alt="alt" class="modal-trigger-img" />
     </a>
 
-    <!-- Modal Overlay -->
     <div v-if="isOpen" class="modal-overlay" @click="closeModal">
-      <!-- Modal Content -->
       <div class="modal-content" @click.stop>
-        <!-- Close Button -->
-        <button class="modal-close" @click="closeModal" title="Close (Esc)">
+        <button class="modal-close" title="Close" @click="closeModal">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
 
-        <!-- Image -->
         <img :src="src" :alt="alt" class="modal-image" />
       </div>
     </div>
@@ -25,30 +20,30 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 interface Props {
   src: string
   alt?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  alt: 'Image'
+withDefaults(defineProps<Props>(), {
+  alt: 'Image',
 })
 
 const isOpen = ref(false)
 
-const openModal = () => {
+function openModal() {
   isOpen.value = true
   document.body.style.overflow = 'hidden'
 }
 
-const closeModal = () => {
+function closeModal() {
   isOpen.value = false
   document.body.style.overflow = 'auto'
 }
 
-const handleEscapeKey = (event: KeyboardEvent) => {
+function handleEscapeKey(event: KeyboardEvent) {
   if (event.key === 'Escape' && isOpen.value) {
     closeModal()
   }
@@ -66,99 +61,59 @@ onUnmounted(() => {
 
 <style scoped>
 .image-link {
-  cursor: pointer;
   display: inline-block;
+  cursor: zoom-in;
   text-decoration: none;
 }
 
 .modal-trigger-img {
-  max-width: 100%;
+  display: block;
+  width: 100%;
   height: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  transition: opacity 0.2s ease;
 }
 
-.modal-trigger-img:hover {
-  opacity: 0.8;
-}
-
-/* Modal Overlay */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 24px;
+  background: rgba(7, 11, 23, 0.72);
+  backdrop-filter: blur(10px);
   z-index: 1000;
-  animation: fadeIn 0.2s ease-in-out;
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  animation: slideUp 0.3s ease-out;
+  max-width: min(92vw, 1400px);
+  max-height: 92vh;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
 
 .modal-image {
-  width: 100%;
-  height: 100%;
-  max-width: 90vw;
-  max-height: 90vh;
+  display: block;
+  max-width: min(92vw, 1400px);
+  max-height: 92vh;
   object-fit: contain;
-  border-radius: 8px;
+  background: #fff;
 }
 
-/* Close Button */
 .modal-close {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
-  z-index: 1001;
-}
-
-.modal-close:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(8, 12, 24, 0.68);
+  color: #fff;
+  cursor: pointer;
 }
 </style>

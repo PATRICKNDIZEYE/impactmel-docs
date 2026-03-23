@@ -9,19 +9,61 @@ A **Program** is a funded initiative — typically aligned to a specific donor a
 - *Girls' Education Initiative — GIZ & FCDO 2024–2026*
 - *Community Resilience Program — World Bank 2023–2028*
 
+<div class="doc-page-hero">
+  <p class="doc-page-hero__eyebrow">Structure and donors</p>
+  <p class="doc-page-hero__title">Use programs to group related projects, donors, and results frameworks under one operating frame.</p>
+  <p class="doc-page-hero__copy">A clean program layer makes everything downstream easier: project organization, donor visibility, reporting structure, and results alignment. If your portfolio feels messy, this is the page to revisit.</p>
+  <div class="doc-page-hero__meta">
+    <div class="doc-page-hero__meta-item">
+      <span>Best for</span>
+      <strong>Org Admins and portfolio owners</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Best moment</span>
+      <strong>Before adding projects, teams, or reporting structure</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Main outcome</span>
+      <strong>A portfolio grouped in a way donors and teams can both understand</strong>
+    </div>
+  </div>
+</div>
+
+<div class="doc-quick-links">
+  <a class="doc-quick-link" href="#the-programs-list">
+    <span>Start with visibility</span>
+    <strong>See what the programs library is built to show</strong>
+  </a>
+  <a class="doc-quick-link" href="#creating-a-program">
+    <span>Create</span>
+    <strong>Set up a new program with donor links and dates</strong>
+  </a>
+  <a class="doc-quick-link" href="#program-detail-page">
+    <span>Operate</span>
+    <strong>Understand the tabs that control each program</strong>
+  </a>
+  <a class="doc-quick-link" href="#linking-a-results-framework">
+    <span>Align results</span>
+    <strong>Connect the program to the framework used for reporting</strong>
+  </a>
+</div>
+
 ---
 
 ## The Programs List
 
 Navigate to **Programs** in the left sidebar to see all programs in your organization.
 
-::: info 📸 Figure 4.1 — Programs List Page
-<ImageModal src="/user-manual/images/04-01-programs-list.png" alt="Programs List Page" />
-
-The Programs list page showing a grid of program cards. Each card displays the program name, status badge (Active/Draft/Completed), number of projects, donor logos, date range, and a budget summary bar. A blue "New Program" button appears in the top-right corner. A search bar and filter controls are at the top.
-
-**File:** `user-manual/images/04-01-programs-list.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/04-01-programs-list.png" alt="Figure 4.1 — Programs List Page" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 4.1 — Programs List Page</p>
+    <p>The Programs list page showing a grid of program cards. Each card displays the program name, status badge (Active/Draft/Completed), number of projects, donor logos, date range, and a budget summary bar. A blue "New Program" button appears in the top-right corner. A search bar and filter controls are at the top.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 From this page you can:
 - **Search** programs by name
@@ -47,13 +89,16 @@ From this page you can:
 
 3. Click **Create Program**
 
-::: info 📸 Figure 4.2 — New Program Form
-<ImageModal src="/user-manual/images/04-02-new-program-form.png" alt="New Program Form" />
-
-The "Create Program" form showing all input fields. The donor field is an auto-complete combobox with a dropdown showing existing donors. A small "Add new donor" option appears at the bottom of the dropdown when a name is typed that doesn't match any existing donor. The "Create Program" and "Cancel" buttons are at the bottom of the form.
-
-**File:** `user-manual/images/04-02-new-program-form.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/04-02-new-program-form.png" alt="Figure 4.2 — New Program Form" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 4.2 — New Program Form</p>
+    <p>The "Create Program" form showing all input fields. The donor field is an auto-complete combobox with a dropdown showing existing donors. A small "Add new donor" option appears at the bottom of the dropdown when a name is typed that doesn't match any existing donor. The "Create Program" and "Cancel" buttons are at the bottom of the form.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ### Adding Donors
 
@@ -72,13 +117,16 @@ Before creating programs, set up your donors in **Settings → Donors & Funders*
 
 Click any program to open its detail page.
 
-::: info 📸 Figure 4.3 — Program Detail Page
-<ImageModal src="/user-manual/images/04-03-program-detail.png" alt="Program Detail Page" />
-
-The program detail page with a header showing the program name, status badge, date range, and donor logos. Below the header are four tabs: Overview, Projects, Results Framework, and Team. The Overview tab is active, showing a description section and key statistics (total budget, number of projects, number of indicators).
-
-**File:** `user-manual/images/04-03-program-detail.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/04-03-program-detail.png" alt="Figure 4.3 — Program Detail Page" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 4.3 — Program Detail Page</p>
+    <p>The program detail page with a header showing the program name, status badge, date range, and donor logos. Below the header are four tabs: Overview, Projects, Results Framework, and Team. The Overview tab is active, showing a description section and key statistics (total budget, number of projects, number of indicators).</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 The program detail page has four tabs:
 
@@ -91,13 +139,16 @@ Lists all projects within this program. From here you can:
 - Click any project to open its detail page
 - Create a new project under this program using the **+ New Project** button
 
-::: info 📸 Figure 4.4 — Program Projects Tab
-<ImageModal src="/user-manual/images/04-04-program-projects-tab.png" alt="Program Projects Tab" />
-
-The Projects tab showing a list of project cards within the program. Each project card shows project name, status badge, location, date range, budget bar (planned vs. spent), and an indicator progress summary. A "New Project" button appears in the top-right.
-
-**File:** `user-manual/images/04-04-program-projects-tab.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/04-04-program-projects-tab.png" alt="Figure 4.4 — Program Projects Tab" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 4.4 — Program Projects Tab</p>
+    <p>The Projects tab showing a list of project cards within the program. Each project card shows project name, status badge, location, date range, budget bar (planned vs. spent), and an indicator progress summary. A "New Project" button appears in the top-right.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ### Results Framework Tab
 Shows the program's Results Framework — the logical chain from Impact to Outcome to Output. See the [Results Framework section](#linking-a-results-framework) below.
@@ -128,13 +179,16 @@ To build the results framework for a program:
 
 Indicators and activities can then be linked to specific Output or Outcome nodes when they are created.
 
-::: info 📸 Figure 4.5 — Results Framework Builder
-<ImageModal src="/user-manual/images/04-05-results-framework.png" alt="Results Framework Builder" />
-
-The Results Framework tab showing a tree structure with one Impact node at the top ("Improved water security in rural Rwanda"), two Outcome nodes below it, and three Output nodes at the bottom. Each node has a small +, edit (pencil), and delete (trash) icon. An "Add Impact" button appears at the top of the canvas.
-
-**File:** `user-manual/images/04-05-results-framework.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/04-05-results-framework.png" alt="Figure 4.5 — Results Framework Builder" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 4.5 — Results Framework Builder</p>
+    <p>The Results Framework tab showing a tree structure with one Impact node at the top ("Improved water security in rural Rwanda"), two Outcome nodes below it, and three Output nodes at the bottom. Each node has a small +, edit (pencil), and delete (trash) icon. An "Add Impact" button appears at the top of the canvas.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 

@@ -1,6 +1,6 @@
 # Roles & Permissions
 
-ImpactMEL uses **Role-Based Access Control (RBAC)** to ensure that every team member can see and do exactly what their job requires — and nothing more. Permissions are assigned at the organization level.
+ImpactMEL uses roles and permissions so each team member can see and do what their job requires — and nothing more. Permissions are set for the organization.
 
 ---
 
@@ -9,17 +9,17 @@ ImpactMEL uses **Role-Based Access Control (RBAC)** to ensure that every team me
 ### Org Admin
 The highest permission level. Typically assigned to Country Directors, Operations Managers, or IT administrators.
 
-An Org Admin can do everything in the system — configure the organization, manage all members, create and delete programs, approve data, and publish reports.
+An Org Admin can do everything in ImpactMEL — configure the organization, manage members, create and delete programs, approve data, and publish reports.
 
 ### M&E Officer
-Designed for MEAL officers, data managers, and M&E coordinators. They control the M&E architecture of the system: defining indicators, managing reporting periods, and reviewing submitted data.
+Designed for MEAL officers, data managers, and M&E coordinators. They manage indicators, reporting periods, and the review of submitted data.
 
-An M&E Officer cannot manage organization settings or invite members, but has full control over the M&E workflow.
+An M&E Officer cannot manage organization settings or invite members, but can handle the main monitoring and reporting tasks.
 
 ### Reporter
 Designed for field officers, project staff, and data entry personnel. Reporters are the people who submit indicator values and register participants.
 
-A Reporter can only access projects they are specifically assigned to, and can only submit data — they cannot approve, edit other people's submissions, or change any system configuration.
+A Reporter can only access projects they are specifically assigned to, and can only submit data. They cannot approve submissions, edit other people's work, or change workspace settings.
 
 ### Viewer
 Designed for senior management, partner organizations, or anyone who needs to monitor progress without entering data.
@@ -163,7 +163,7 @@ If you need more permissions than your current role allows, contact your **Org A
 
 **Follow the principle of least privilege.** Assign the minimum role that allows a person to do their job. Fewer admins means a smaller risk of accidental changes.
 
-**Use M&E Officer (not Org Admin) for most M&E staff.** M&E Officers can do everything related to the M&E workflow without being able to delete programs or change organization settings.
+**Use M&E Officer (not Org Admin) for most M&E staff.** M&E Officers can handle the main monitoring and reporting work without being able to delete programs or change organization settings.
 
 **Give Viewer access to senior management and partners.** Viewers can monitor progress and see reports without any risk of accidentally changing data.
 
@@ -171,8 +171,13 @@ If you need more permissions than your current role allows, contact your **Org A
 
 ---
 
-::: info 📸 Figure 12.1 — Role Assignment Interface
-The Settings → Members tab showing a member row for "Jean Baptiste M." with a "Reporter" role badge. An expanded dropdown shows the four role options (Org Admin, M&E Officer, Reporter, Viewer) with brief descriptions. The currently selected role is highlighted. A "Confirm Change" button appears at the bottom of the dropdown.
-
-**File:** `user-manual/images/12-01-role-assignment.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/12-01-role-assignment.png" alt="Figure 12.1 — Role Assignment Interface" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 12.1 — Role Assignment Interface</p>
+    <p>The Settings → Members tab showing a member row for "Jean Baptiste M." with a "Reporter" role badge. An expanded dropdown shows the four role options (Org Admin, M&amp;E Officer, Reporter, Viewer) with brief descriptions. The currently selected role is highlighted. A "Confirm Change" button appears at the bottom of the dropdown.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
