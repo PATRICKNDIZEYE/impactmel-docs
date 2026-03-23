@@ -2,7 +2,7 @@
 
 <VideoEmbed title="16 · Submitting data for an indicator period" />
 
-<VideoEmbed title="17 · The review and approval workflow" />
+<VideoEmbed title="17 · The review and approval process" />
 
 <VideoEmbed title="18 · Returning a submission for revision" />
 
@@ -33,11 +33,16 @@ When you log in as a Reporter, your dashboard shows only the projects and indica
 3. Click the **Indicators** tab on the project detail page
 4. You will see all indicators linked to this project with their current status for the active reporting period
 
-::: info 📸 Figure 7.1 — Reporter's Project Indicators View
-The Indicators tab as seen by a Reporter role. Each indicator row shows the indicator name, the current reporting period (e.g., "Q1 2026"), the period target, and a "Submit Data" button. Indicators already submitted show a "Submitted" badge (yellow) or "Approved" badge (green). Indicators not yet started show a gray "Not started" badge.
-
-**File:** `user-manual/images/07-01-reporter-indicators.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/07-01-reporter-indicators.png" alt="Figure 7.1 — Reporter's Project Indicators View" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 7.1 — Reporter's Project Indicators View</p>
+    <p>The Indicators tab as seen by a Reporter role. Each indicator row shows the indicator name, the current reporting period (e.g., "Q1 2026"), the period target, and a "Submit Data" button. Indicators already submitted show a "Submitted" badge (yellow) or "Approved" badge (green). Indicators not yet started show a gray "Not started" badge.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -47,11 +52,16 @@ The Indicators tab as seen by a Reporter role. Each indicator row shows the indi
 2. Click **Submit Data** on the indicator row
 3. The data entry form opens:
 
-::: info 📸 Figure 7.2 — Data Entry Form
-The indicator data entry slide-over panel. At the top, it shows the indicator name, code, and unit. Below that: a "Reporting Period" selector dropdown (showing the active period), a large "Value" number input with the unit label (e.g., "people"), a "Target" display showing the period target (read-only), a "Progress Preview" that updates in real-time as you type the value, and a "Narrative" text area. At the bottom: Save as Draft and Submit buttons.
-
-**File:** `user-manual/images/07-02-data-entry-form.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/07-02-data-entry-form.png" alt="Figure 7.2 — Data Entry Form" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 7.2 — Data Entry Form</p>
+    <p>The indicator data entry slide-over panel. At the top, it shows the indicator name, code, and unit. Below that: a "Reporting Period" selector dropdown (showing the active period), a large "Value" number input with the unit label (e.g., "people"), a "Target" display showing the period target (read-only), a "Progress Preview" that updates in real-time as you type the value, and a "Narrative" text area. At the bottom: Save as Draft and Submit buttons.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 Fill in the following fields:
 
@@ -75,13 +85,18 @@ Always add a narrative, even if brief. M&E Officers and donors appreciate knowin
 
 If the indicator has disaggregations (e.g., by sex, age group, or location), you will see additional fields in the data entry form:
 
-::: info 📸 Figure 7.3 — Disaggregated Data Entry
-The data entry form for an indicator with a "Sex" disaggregation. Three fields appear under "Breakdown by Sex": Female (input), Male (input), Non-binary (input). A "Total" field below automatically sums all three values as you type. A warning appears if the total doesn't match the overall value entered above.
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/07-03-disaggregated-entry.png" alt="Figure 7.3 — Disaggregated Data Entry" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 7.3 — Disaggregated Data Entry</p>
+    <p>The data entry form for an indicator with a "Sex" disaggregation. Three fields appear under "Breakdown by Sex": Female (input), Male (input), Non-binary (input). A "Total" field below automatically sums all three values as you type. A warning appears if the total doesn't match the overall value entered above.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
-**File:** `user-manual/images/07-03-disaggregated-entry.png`
-:::
-
-Enter the value for each category. The system automatically sums them and sets that as the overall value. If the sum doesn't match a value you typed in the main field, a warning appears — resolve this before submitting.
+Enter the value for each category. ImpactMEL automatically sums them and sets that as the overall value. If the sum doesn't match a value you typed in the main field, a warning appears — resolve this before submitting.
 
 ---
 
@@ -102,7 +117,7 @@ Drafts are not visible to M&E Officers. Only submitted values appear in the revi
 
 ## What Happens After Submission
 
-Once you submit a value, it enters the **review workflow**:
+Once you submit a value, it enters the **review process**:
 
 ```
 Reporter submits → Status: Submitted (yellow)
@@ -119,11 +134,16 @@ To correct a rejected submission:
 3. Make the corrections
 4. Click **Resubmit**
 
-::: info 📸 Figure 7.4 — Submission Status Badges
-A close-up of the indicator table showing four rows with different status badges: "Draft" (gray), "Submitted" (yellow), "Approved" (green), and "Rejected" (red). The Rejected row has a small tooltip icon that shows the rejection reason when hovered.
-
-**File:** `user-manual/images/07-04-submission-status.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/07-04-submission-status.png" alt="Figure 7.4 — Submission Status Badges" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 7.4 — Submission Status Badges</p>
+    <p>A close-up of the indicator table showing four rows with different status badges: "Draft" (gray), "Submitted" (yellow), "Approved" (green), and "Rejected" (red). The Rejected row has a small tooltip icon that shows the rejection reason when hovered.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -152,11 +172,16 @@ Once approved:
 
 Click **Reject** if the value needs correction. You **must** enter a rejection reason — this is sent to the reporter.
 
-::: info 📸 Figure 7.5 — Approval / Rejection Dialog
-The review dialog showing a submitted indicator value with its narrative. Below the narrative are two large buttons: "Approve" (green) and "Reject" (red). When "Reject" is clicked, a text area appears requiring a rejection reason before the rejection can be confirmed.
-
-**File:** `user-manual/images/07-05-approval-dialog.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/07-05-approval-dialog.png" alt="Figure 7.5 — Approval / Rejection Dialog" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 7.5 — Approval / Rejection Dialog</p>
+    <p>The review dialog showing a submitted indicator value with its narrative. Below the narrative are two large buttons: "Approve" (green) and "Reject" (red). When "Reject" is clicked, a text area appears requiring a rejection reason before the rejection can be confirmed.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 

@@ -1,248 +1,173 @@
----
-layout: home
+# Documentation overview
 
-hero:
-  name: "ImpactMEL"
-  text: "M&E Built for Serious Teams"
-  tagline: From field data entry to donor-ready report — tracked, reviewed, and delivered in one system. No spreadsheets. No reconciliation.
-  image:
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" rx="32" fill="#0f2d52"/><rect x="20" y="20" width="160" height="160" rx="20" fill="#1e3a5f" opacity="0.6"/><line x1="50" y1="160" x2="50" y2="95" stroke="#16a34a" stroke-width="14" stroke-linecap="round"/><line x1="90" y1="160" x2="90" y2="55" stroke="#16a34a" stroke-width="14" stroke-linecap="round"/><line x1="130" y1="160" x2="130" y2="75" stroke="#7eb3e0" stroke-width="14" stroke-linecap="round"/><line x1="170" y1="160" x2="170" y2="110" stroke="#7eb3e0" stroke-width="14" stroke-linecap="round"/><polyline points="50,95 90,55 130,75 170,110" stroke="#b8922e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="6,3"/><circle cx="50" cy="95" r="5" fill="#b8922e"/><circle cx="90" cy="55" r="5" fill="#b8922e"/><circle cx="130" cy="75" r="5" fill="#b8922e"/><circle cx="170" cy="110" r="5" fill="#b8922e"/><line x1="30" y1="50" x2="180" y2="50" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><line x1="30" y1="80" x2="180" y2="80" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><line x1="30" y1="110" x2="180" y2="110" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><line x1="30" y1="140" x2="180" y2="140" stroke="rgba(255,255,255,0.06)" stroke-width="1"/></svg>'
-  actions:
-    - theme: brand
-      text: Start with the User Manual
-      link: /user-manual/overview
-    - theme: alt
-      text: Watch video guides
-      link: /videos/
-    - theme: alt
-      text: Quick Start →
-      link: /guide/quick-start
-
-features:
-  - icon: 🎯
-    title: Results Framework
-    details: Model your full logical framework — Impact → Outcome → Output → Activity. Every indicator traces back to a result. No more disconnected spreadsheets.
-    link: /user-manual/overview
-    linkText: Learn more
-
-  - icon: 📊
-    title: Smart Indicators
-    details: Define once, reuse across projects. Set targets per period, add disaggregations by sex or age group, and build formula indicators automatically.
-    link: /user-manual/indicators
-    linkText: Learn more
-
-  - icon: 📋
-    title: Dynamic Data Collection
-    details: Build forms with conditional logic. Deploy as a public link — field staff submit from their phone. Data flows straight into indicator reports.
-    link: /user-manual/forms
-    linkText: Learn more
-
-  - icon: 📄
-    title: One-Click Reports
-    details: Assemble quarterly donor reports, annual reviews, and evidence packs in seconds. Share via public link or export as a true binary PDF.
-    link: /user-manual/reports
-    linkText: Learn more
-
-  - icon: 🔐
-    title: Role-Based Access
-    details: Owner, Admin, Member, Viewer — with permission-level scoping on every screen and every API endpoint. Donors get a read-only public link, no login needed.
-    link: /user-manual/roles-permissions
-    linkText: Learn more
-
-  - icon: 🌍
-    title: Built for Development Orgs
-    details: Designed for NGOs, INGOs, government programs, and research institutions. Multi-org, multi-donor, multi-currency. Replaces DevResults at a fraction of the cost.
-    link: /guide/introduction
-    linkText: Learn more
----
-
-<style>
-/* ── Hero badge ──────────────────────────────────────────────── */
-.VPHero::before {
-  content: 'Enterprise M&E Platform';
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #16a34a;
-  background: rgba(22,163,74,0.1);
-  border: 1px solid rgba(22,163,74,0.25);
-  border-radius: 20px;
-  padding: 4px 14px;
-  width: fit-content;
-  margin-bottom: 20px;
-}
-
-/* ── Stats strip ─────────────────────────────────────────────── */
-.home-stats {
-  display: flex;
-  gap: 0;
-  justify-content: center;
-  border-top: 1px solid var(--vp-c-divider);
-  border-bottom: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-  padding: 0;
-  margin: 0;
-}
-
-.home-stat {
-  flex: 1;
-  text-align: center;
-  padding: 32px 24px;
-  border-right: 1px solid var(--vp-c-divider);
-}
-
-.home-stat:last-child { border-right: none; }
-
-.home-stat-number {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: #0f2d52;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.dark .home-stat-number { color: #7eb3e0; }
-
-.home-stat-label {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--vp-c-text-3);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
-/* ── vs DevResults strip ─────────────────────────────────────── */
-.home-vs {
-  max-width: 900px;
-  margin: 64px auto;
-  padding: 0 24px;
-}
-
-.home-vs-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  text-align: center;
-  margin-bottom: 32px;
-  color: var(--vp-c-text-1);
-}
-
-.home-vs table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  overflow: hidden;
-  font-size: 0.875rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-}
-
-.home-vs th {
-  background: #0f2d52;
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 14px 20px;
-  text-align: left;
-}
-
-.home-vs th:first-child { background: var(--vp-c-bg-soft); color: var(--vp-c-text-3); }
-
-.home-vs td {
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--vp-c-divider);
-  color: var(--vp-c-text-2);
-  vertical-align: middle;
-}
-
-.home-vs tr:last-child td { border-bottom: none; }
-.home-vs tr:nth-child(even) td { background: var(--vp-c-bg-soft); }
-
-.home-vs .yes { color: #16a34a; font-weight: 700; }
-.home-vs .no  { color: #9ca3af; }
-.home-vs .ltd { color: #d97706; font-weight: 600; }
-
-@media (max-width: 640px) {
-  .home-stats { flex-direction: column; }
-  .home-stat { border-right: none; border-bottom: 1px solid var(--vp-c-divider); }
-  .home-vs { display: none; }
-}
-</style>
-
-<!-- Stats strip -->
-<div class="home-stats">
-  <div class="home-stat">
-    <div class="home-stat-number">30+</div>
-    <div class="home-stat-label">Video guides</div>
+<div class="docs-overview-hero">
+  <div class="docs-overview-hero__content">
+    <p class="docs-overview-hero__eyebrow">ImpactMEL documentation</p>
+    <h2 class="docs-overview-hero__title">Everything your team needs to learn ImpactMEL and get work done.</h2>
+    <p class="docs-overview-hero__copy">
+      Start with the user manual for everyday tasks, use the setup guide when rolling out the
+      platform with your team, and open the videos when a walkthrough is easier than reading.
+      Advanced reference is still available when you need it.
+    </p>
+    <div class="docs-overview-hero__actions">
+      <a class="docs-action docs-action--primary" href="/user-manual/overview">Open the user manual</a>
+      <a class="docs-action" href="/guide/quick-start">Quick start</a>
+      <a class="docs-action" href="/videos/">Watch video guides</a>
+    </div>
   </div>
-  <div class="home-stat">
-    <div class="home-stat-number">15</div>
-    <div class="home-stat-label">Email notifications</div>
-  </div>
-  <div class="home-stat">
-    <div class="home-stat-number">100%</div>
-    <div class="home-stat-label">Open API</div>
-  </div>
-  <div class="home-stat">
-    <div class="home-stat-number">1</div>
-    <div class="home-stat-label">Source of truth</div>
+  <div class="docs-overview-hero__visual" aria-hidden="true">
+    <div class="docs-overview-hero__window">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="docs-overview-hero__chart">
+      <div class="docs-overview-hero__bar docs-overview-hero__bar--one"></div>
+      <div class="docs-overview-hero__bar docs-overview-hero__bar--two"></div>
+      <div class="docs-overview-hero__bar docs-overview-hero__bar--three"></div>
+      <div class="docs-overview-hero__bar docs-overview-hero__bar--four"></div>
+      <div class="docs-overview-hero__bar docs-overview-hero__bar--five"></div>
+    </div>
+    <div class="docs-overview-hero__pulse"></div>
   </div>
 </div>
 
-<!-- vs DevResults -->
-<div class="home-vs">
-  <div class="home-vs-title">Why teams switch from DevResults</div>
-  <table>
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>DevResults</th>
-        <th>ImpactMEL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Custom date-range reports</td>
-        <td class="ltd">Limited</td>
-        <td class="yes">✓ Free-form + period-aware</td>
-      </tr>
-      <tr>
-        <td>True binary PDF export</td>
-        <td class="no">Print dialog only</td>
-        <td class="yes">✓ Binary PDF</td>
-      </tr>
-      <tr>
-        <td>Public shareable report link</td>
-        <td class="ltd">Paid tier only</td>
-        <td class="yes">✓ Built-in, always free</td>
-      </tr>
-      <tr>
-        <td>Dynamic forms with conditional logic</td>
-        <td class="no">Not available</td>
-        <td class="yes">✓ Full form builder</td>
-      </tr>
-      <tr>
-        <td>Self-hosted option</td>
-        <td class="no">SaaS only</td>
-        <td class="yes">✓ Deploy anywhere</td>
-      </tr>
-      <tr>
-        <td>Open REST API + Swagger</td>
-        <td class="ltd">Limited</td>
-        <td class="yes">✓ Full API + docs</td>
-      </tr>
-      <tr>
-        <td>Google OAuth login</td>
-        <td class="yes">✓</td>
-        <td class="yes">✓</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="docs-overview-stats">
+  <div class="docs-overview-stat">
+    <strong>30+</strong>
+    <span>Video walkthroughs</span>
+  </div>
+  <div class="docs-overview-stat">
+    <strong>6</strong>
+    <span>Documentation tracks</span>
+  </div>
+  <div class="docs-overview-stat">
+    <strong>4</strong>
+    <span>Core user roles</span>
+  </div>
+  <div class="docs-overview-stat">
+    <strong>1</strong>
+    <span>Clear starting point</span>
+  </div>
 </div>
+
+## Start here
+
+<div class="docs-card-grid docs-card-grid--2">
+  <a class="docs-card" href="/user-manual/getting-started">
+    <span class="docs-card__eyebrow">Best first read</span>
+    <strong class="docs-card__title">Getting Started</strong>
+    <span class="docs-card__copy">
+      Create your organization, invite teammates, and learn the main interface before you start
+      configuring live data.
+    </span>
+    <span class="docs-card__arrow">Open guide</span>
+  </a>
+  <a class="docs-card" href="/guide/quick-start">
+    <span class="docs-card__eyebrow">Fastest setup path</span>
+    <strong class="docs-card__title">Quick Start</strong>
+    <span class="docs-card__copy">
+      Follow the shortest path from account setup to a working results framework, indicators, and
+      reporting cycle.
+    </span>
+    <span class="docs-card__arrow">View checklist</span>
+  </a>
+</div>
+
+## Browse by need
+
+<div class="docs-card-grid docs-card-grid--3">
+  <a class="docs-card" href="/user-manual/overview">
+    <span class="docs-card__eyebrow">For daily users</span>
+    <strong class="docs-card__title">User Manual</strong>
+    <span class="docs-card__copy">
+      Step-by-step product flows for admins, M&E officers, reviewers, and field staff.
+    </span>
+    <span class="docs-card__arrow">Browse manual</span>
+  </a>
+  <a class="docs-card" href="/guide/introduction">
+    <span class="docs-card__eyebrow">For rollout</span>
+    <strong class="docs-card__title">Guide</strong>
+    <span class="docs-card__copy">
+      Checklists and setup guidance for introducing the platform to your team.
+    </span>
+    <span class="docs-card__arrow">Open guide</span>
+  </a>
+  <a class="docs-card" href="/architecture/overview">
+    <span class="docs-card__eyebrow">Advanced reference</span>
+    <strong class="docs-card__title">Architecture</strong>
+    <span class="docs-card__copy">
+      Background reading for teams who want a closer look at what sits behind the product.
+    </span>
+    <span class="docs-card__arrow">View reference</span>
+  </a>
+  <a class="docs-card" href="/modules/authentication">
+    <span class="docs-card__eyebrow">For product depth</span>
+    <strong class="docs-card__title">Core Modules</strong>
+    <span class="docs-card__copy">
+      Feature-by-feature reference for authentication, projects, indicators, reporting, and more.
+    </span>
+    <span class="docs-card__arrow">Explore modules</span>
+  </a>
+  <a class="docs-card" href="/api/overview">
+    <span class="docs-card__eyebrow">Developer docs</span>
+    <strong class="docs-card__title">API Reference</strong>
+    <span class="docs-card__copy">
+      Reference for connecting ImpactMEL with other tools when your team needs it.
+    </span>
+    <span class="docs-card__arrow">Open developer docs</span>
+  </a>
+  <a class="docs-card" href="/videos/">
+    <span class="docs-card__eyebrow">For walkthroughs</span>
+    <strong class="docs-card__title">Video Guides</strong>
+    <span class="docs-card__copy">
+      A full set of short demos covering onboarding, results frameworks, reporting, and forms.
+    </span>
+    <span class="docs-card__arrow">Watch videos</span>
+  </a>
+</div>
+
+## What teams usually need
+
+<div class="docs-card-grid docs-card-grid--3">
+  <a class="docs-card" href="/user-manual/programs">
+    <span class="docs-card__eyebrow">Common task</span>
+    <strong class="docs-card__title">Programs and projects</strong>
+    <span class="docs-card__copy">
+      Structure your donor-funded work, assign locations and teams, and connect projects to
+      reporting timelines.
+    </span>
+    <span class="docs-card__arrow">Open section</span>
+  </a>
+  <a class="docs-card" href="/user-manual/indicators">
+    <span class="docs-card__eyebrow">Common task</span>
+    <strong class="docs-card__title">Indicators and targets</strong>
+    <span class="docs-card__copy">
+      Define indicators once, reuse them across projects, and set targets by reporting period.
+    </span>
+    <span class="docs-card__arrow">Open section</span>
+  </a>
+  <a class="docs-card" href="/user-manual/reports">
+    <span class="docs-card__eyebrow">Common task</span>
+    <strong class="docs-card__title">Reports and sharing</strong>
+    <span class="docs-card__copy">
+      Build reports, share a link with donors, and download a clean PDF when needed.
+    </span>
+    <span class="docs-card__arrow">Open section</span>
+  </a>
+</div>
+
+## What gets easier in ImpactMEL
+
+| Task | Without ImpactMEL | With ImpactMEL |
+| --- | --- | --- |
+| Tracking indicators | Spreadsheets go out of date quickly | Everyone works from the same current figures |
+| Preparing donor reports | Manual copy-paste and formatting | Build reports from approved data |
+| Collecting field information | Separate forms and cleanup work | Forms feed straight into reporting |
+| Sharing progress | Email attachments cause version confusion | Share a link or download a PDF |
+| Working across different donor dates | Manual rework each time | Build reports for the date range you need |
+
+## Suggested next step
+
+If you are brand new, start with [Getting Started](/user-manual/getting-started). If you prefer a
+checklist or walkthrough, go to [Quick Start](/guide/quick-start) or [Video Guides](/videos/).

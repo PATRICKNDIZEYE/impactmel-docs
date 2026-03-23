@@ -2,13 +2,13 @@
 
 <VideoEmbed title="20 · Building a custom data collection form" />
 
-<VideoEmbed title="21 · Sharing a form via public link" />
+<VideoEmbed title="21 · Sharing a form by link" />
 
 <VideoEmbed title="22 · Viewing and managing form submissions" />
 
-Data Collection Forms allow you to build custom surveys and forms, deploy them as public links, and have submissions flow automatically into indicator reports — all without a single spreadsheet.
+Data Collection Forms let you build surveys and forms, share them by link, and have responses flow into indicator reporting without a spreadsheet.
 
-A form can be shared with anyone via a URL: field staff open it on their phone, fill it in, and submit. The data lands directly in your ImpactMEL dashboard.
+A form can be shared with anyone by link: field staff open it on their phone, fill it in, and submit. The responses appear directly in ImpactMEL.
 
 **Common use cases:**
 - Post-training feedback surveys
@@ -17,17 +17,61 @@ A form can be shared with anyone via a URL: field staff open it on their phone, 
 - Site monitoring checklists
 - Community needs assessments
 
+<div class="doc-page-hero">
+  <p class="doc-page-hero__eyebrow">Field collection</p>
+  <p class="doc-page-hero__title">Turn surveys and checklists into data that flows directly into reporting without spreadsheet cleanup.</p>
+  <p class="doc-page-hero__copy">Forms are where fieldwork turns into usable reporting data. Use this guide to create forms that are easy to complete and easy for your team to review later.</p>
+  <div class="doc-page-hero__meta">
+    <div class="doc-page-hero__meta-item">
+      <span>Best for</span>
+      <strong>M&amp;E teams, field coordinators, and data officers</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Best moment</span>
+      <strong>When collection needs to scale beyond manual spreadsheets</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Main outcome</span>
+      <strong>Published forms with clean submissions tied back to reporting</strong>
+    </div>
+  </div>
+</div>
+
+<div class="doc-quick-links">
+  <a class="doc-quick-link" href="#creating-a-form">
+    <span>Start building</span>
+    <strong>Create the form shell and connect it to the right project</strong>
+  </a>
+  <a class="doc-quick-link" href="#conditional-logic">
+    <span>Keep it relevant</span>
+    <strong>Use conditional logic to hide unnecessary questions</strong>
+  </a>
+  <a class="doc-quick-link" href="#publishing-a-form">
+    <span>Launch</span>
+    <strong>Publish the form and share it by link</strong>
+  </a>
+  <a class="doc-quick-link" href="#viewing-submissions">
+    <span>Review responses</span>
+    <strong>Track incoming submissions and manage quality control</strong>
+  </a>
+</div>
+
 ---
 
 ## The Forms Library
 
 Navigate to **Data Collection** in the sidebar to see all forms in your organization.
 
-::: info 📸 Figure 9.1 — Data Collection Library
-The Data Collection page showing a grid of form cards. Each card displays the form title, linked project, linked indicator (if any), status badge (Draft/Published/Closed), total submission count, and a "Share" button. Filter options (by project, by status) appear at the top. A "New Form" button is in the top-right corner.
-
-**File:** `user-manual/images/09-01-forms-library.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-01-forms-library.png" alt="Figure 9.1 — Data Collection Library" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.1 — Data Collection Library</p>
+    <p>The Data Collection page showing a grid of form cards. Each card displays the form title, linked project, linked indicator (if any), status badge (Draft/Published/Closed), total submission count, and a "Share" button. Filter options (by project, by status) appear at the top. A "New Form" button is in the top-right corner.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -47,11 +91,16 @@ The Data Collection page showing a grid of form cards. Each card displays the fo
 
 3. Click **Create Form** — the form builder opens
 
-::: info 📸 Figure 9.2 — Form Builder
-The form builder interface. On the left: a panel showing the current form fields in order, with drag handles to reorder them. On the right: a field properties panel showing the settings for the selected field. At the top: a "Preview" button and a "Publish" button. Below the field list: an "+ Add Field" button with a dropdown of field type options.
-
-**File:** `user-manual/images/09-02-form-builder.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-02-form-builder.png" alt="Figure 9.2 — Form Builder" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.2 — Form Builder</p>
+    <p>The form builder interface. On the left: a panel showing the current form fields in order, with drag handles to reorder them. On the right: a field properties panel showing the settings for the selected field. At the top: a "Preview" button and a "Publish" button. Below the field list: an "+ Add Field" button with a dropdown of field type options.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -88,11 +137,16 @@ To **reorder fields**, drag the handle (⋮⋮) on the left side of each field u
 
 To **delete a field**, click the trash icon (🗑) on the right side of the field row.
 
-::: info 📸 Figure 9.3 — Field Configuration Panel
-The field properties panel on the right side of the form builder. The selected field is a "Single Select" type. The panel shows: Label input ("What is your primary water source?"), Help text input, Required toggle (ON), and an Options section with four items (Piped water / Borehole / River / Rainwater) each with a drag handle and delete button. An "Add Option" link appears below.
-
-**File:** `user-manual/images/09-03-field-configuration.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-03-field-configuration.png" alt="Figure 9.3 — Field Configuration Panel" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.3 — Field Configuration Panel</p>
+    <p>The field properties panel on the right side of the form builder. The selected field is a "Single Select" type. The panel shows: Label input ("What is your primary water source?"), Help text input, Required toggle (ON), and an Options section with four items (Piped water / Borehole / River / Rainwater) each with a drag handle and delete button. An "Add Option" link appears below.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -112,11 +166,16 @@ Conditional logic lets you show or hide fields based on a respondent's previous 
 6. Enter or select the **value** that triggers the condition
 7. The field will only appear when the condition is met
 
-::: info 📸 Figure 9.4 — Conditional Logic Setup
-The field properties panel showing the "Conditional Logic" section expanded. The toggle is ON, showing three dropdowns: "When" (field selector showing "Has handwashing station?"), "is" (condition: "equals"), and the value field ("Yes"). A preview note below says: "This field will only be shown when [Has handwashing station?] equals [Yes]."
-
-**File:** `user-manual/images/09-04-conditional-logic.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-04-conditional-logic.png" alt="Figure 9.4 — Conditional Logic Setup" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.4 — Conditional Logic Setup</p>
+    <p>The field properties panel showing the "Conditional Logic" section expanded. The toggle is ON, showing three dropdowns: "When" (field selector showing "Has handwashing station?"), "is" (condition: "equals"), and the value field ("Yes"). A preview note below says: "This field will only be shown when [Has handwashing station?] equals [Yes]."</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -124,11 +183,16 @@ The field properties panel showing the "Conditional Logic" section expanded. The
 
 Click **Preview** at the top of the form builder to see exactly what respondents will see. The preview is fully interactive — you can fill it in and test conditional logic without submitting real data.
 
-::: info 📸 Figure 9.5 — Form Preview
-The form preview mode showing the form as a respondent would see it on a mobile phone. The form title appears at the top, followed by the description, then each question in sequence. A conditional field is hidden because its trigger answer was not selected. A "Submit" button appears at the bottom.
-
-**File:** `user-manual/images/09-05-form-preview.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-05-form-preview.png" alt="Figure 9.5 — Form Preview" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.5 — Form Preview</p>
+    <p>The form preview mode showing the form as a respondent would see it on a mobile phone. The form title appears at the top, followed by the description, then each question in sequence. A conditional field is hidden because its trigger answer was not selected. A "Submit" button appears at the bottom.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -137,18 +201,21 @@ The form preview mode showing the form as a respondent would see it on a mobile 
 When the form is ready:
 
 1. Click **Publish** at the top of the form builder (or from the form card in the library)
-2. A dialog appears with the **public share link**
+2. A dialog appears with the **share link**
 3. Copy the link and share it with your respondents
-
-The public link looks like: `https://app.impactmel.com/form/abc123`
 
 No login is required to fill in the form. It works on any device — phone, tablet, or computer.
 
-::: info 📸 Figure 9.6 — Publish & Share Dialog
-The publish confirmation dialog showing a URL in a read-only input field with a "Copy Link" button next to it. Below the link: a QR code that respondents can scan with their phone camera. Two additional options appear: "Copy Short Link" and "Generate New Link". A warning note says: "Generating a new link will invalidate the current one."
-
-**File:** `user-manual/images/09-06-publish-share.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-06-publish-share.png" alt="Figure 9.6 — Publish & Share Dialog" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.6 — Publish &amp; Share Dialog</p>
+    <p>The publish confirmation dialog showing a URL in a read-only input field with a "Copy Link" button next to it. Below the link: a QR code that respondents can scan with their phone camera. Two additional options appear: "Copy Short Link" and "Generate New Link". A warning note says: "Generating a new link will invalidate the current one."</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ::: tip Generate a QR Code
 The share dialog includes a QR code. Print or display it at training venues and community meetings so participants can scan to open the form on their phones.
@@ -167,11 +234,16 @@ The public form page is:
 
 There is no login, no account creation, and no personal tracking — respondents see only the form.
 
-::: info 📸 Figure 9.7 — Public Form on Mobile
-The public form as it appears on a smartphone browser. The ImpactMEL branding appears subtly at the bottom ("Powered by ImpactMEL"). The form shows a clean white card with the form title at the top, and each question below with appropriate input controls. A progress bar at the top of the form shows completion percentage.
-
-**File:** `user-manual/images/09-07-public-form-mobile.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-07-public-form-mobile.png" alt="Figure 9.7 — Public Form on Mobile" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.7 — Public Form on Mobile</p>
+    <p>The public form as it appears on a smartphone browser. The ImpactMEL branding appears subtly at the bottom ("Powered by ImpactMEL"). The form shows a clean white card with the form title at the top, and each question below with appropriate input controls. A progress bar at the top of the form shows completion percentage.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -186,11 +258,16 @@ The submissions table shows every response with:
 - Device type (mobile/desktop)
 - An **Export** button to download all responses as an Excel file
 
-::: info 📸 Figure 9.8 — Submissions Table
-The Submissions tab showing a data table with one column per form field and one row per submission. The first three columns are frozen (Submission Date, Device Type, and a sequential ID). A toolbar at the top shows total submission count ("147 responses"), a search bar, date range filter, and an "Export to Excel" button.
-
-**File:** `user-manual/images/09-08-submissions-table.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/09-08-submissions-table.png" alt="Figure 9.8 — Submissions Table" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 9.8 — Submissions Table</p>
+    <p>The Submissions tab showing a data table with one column per form field and one row per submission. The first three columns are frozen (Submission Date, Device Type, and a sequential ID). A toolbar at the top shows total submission count ("147 responses"), a search bar, date range filter, and an "Export to Excel" button.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 

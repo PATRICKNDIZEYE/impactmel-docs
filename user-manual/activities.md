@@ -24,11 +24,16 @@ Activities are recorded per **Project**, and each one can have a list of **Parti
 
 Open a project → click the **Activities** tab. Activities are displayed as a list sorted by date, grouped by the Output they are linked to.
 
-::: info 📸 Figure 8.1 — Activities Tab
-The Activities tab of a project showing a list of activities grouped under Output headings. Each activity row shows the activity title, date, location, facilitator name, participant count (with a small person icon), status badge (Planned/Completed/Cancelled), and action buttons (View, Edit). A "Log Activity" button appears in the top-right.
-
-**File:** `user-manual/images/08-01-activities-list.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/08-01-activities-list.png" alt="Figure 8.1 — Activities Tab" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 8.1 — Activities Tab</p>
+    <p>The Activities tab of a project showing a list of activities grouped under Output headings. Each activity row shows the activity title, date, location, facilitator name, participant count (with a small person icon), status badge (Planned/Completed/Cancelled), and action buttons (View, Edit). A "Log Activity" button appears in the top-right.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -51,11 +56,16 @@ The Activities tab of a project showing a list of activities grouped under Outpu
 
 4. Click **Save Activity**
 
-::: info 📸 Figure 8.2 — Log Activity Form
-The "Log Activity" slide-over panel showing all fields. The Output field is a dropdown showing the results framework tree with selectable Output nodes. The Status field shows a segmented control. Start Date and End Date fields are date pickers. A "Save Activity" button is at the bottom.
-
-**File:** `user-manual/images/08-02-log-activity.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/08-02-log-activity.png" alt="Figure 8.2 — Log Activity Form" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 8.2 — Log Activity Form</p>
+    <p>The "Log Activity" slide-over panel showing all fields. The Output field is a dropdown showing the results framework tree with selectable Output nodes. The Status field shows a segmented control. Start Date and End Date fields are date pickers. A "Save Activity" button is at the bottom.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -67,11 +77,16 @@ Click any activity to open its detail page. This page shows:
 - A list of registered participants
 - Quick actions: Register Participants, Push to Indicator, Edit, Delete
 
-::: info 📸 Figure 8.3 — Activity Detail Page
-The activity detail page showing the activity name and metadata in a header section, a "Participants" section below with a table of registered participants (with columns for Name, Sex, Age, Location, and Attended checkbox), and a sidebar showing the linked Output node with its description. Quick action buttons appear at the top-right.
-
-**File:** `user-manual/images/08-03-activity-detail.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/08-03-activity-detail.png" alt="Figure 8.3 — Activity Detail Page" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 8.3 — Activity Detail Page</p>
+    <p>The activity detail page showing the activity name and metadata in a header section, a "Participants" section below with a table of registered participants (with columns for Name, Sex, Age, Location, and Attended checkbox), and a sidebar showing the linked Output node with its description. Quick action buttons appear at the top-right.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -99,11 +114,16 @@ After an activity takes place, register the people who attended or participated.
 4. Click **+ Add Another** to add more participants in the same session
 5. Click **Save Participants** when done
 
-::: info 📸 Figure 8.4 — Register Participants Form
-The participant registration form showing a repeating section with fields for each participant. Three participants have been partially filled in. An "Add Another Participant" link appears below the last entry. A count badge at the top shows "3 participants added". A "Save Participants" button is at the bottom.
-
-**File:** `user-manual/images/08-04-register-participants.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/08-04-register-participants.png" alt="Figure 8.4 — Register Participants Form" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 8.4 — Register Participants Form</p>
+    <p>The participant registration form showing a repeating section with fields for each participant. Three participants have been partially filled in. An "Add Another Participant" link appears below the last entry. A count badge at the top shows "3 participants added". A "Save Participants" button is at the bottom.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ::: tip Bulk import
 If you have a participant list in Excel or CSV, you can import it instead of entering one by one. Click the **Import** button at the top of the registration form and upload your file. See the import template for the required column format.
@@ -120,11 +140,16 @@ The participant list for an activity shows all registered individuals with their
 - **Export** the register as an Excel file or PDF attendance sheet
 - **Remove** a participant from the list if registered by mistake
 
-::: info 📸 Figure 8.5 — Participant Register
-The participant register table for an activity showing 12 participants. Columns include Name, Sex, Age, Location, and an "Attended" checkbox column. 10 out of 12 checkboxes are checked. At the bottom, a summary shows "10 attended / 12 registered — 83% attendance rate." Export buttons for Excel and PDF appear at the top-right.
-
-**File:** `user-manual/images/08-05-participant-register.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/08-05-participant-register.png" alt="Figure 8.5 — Participant Register" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 8.5 — Participant Register</p>
+    <p>The participant register table for an activity showing 12 participants. Columns include Name, Sex, Age, Location, and an "Attended" checkbox column. 10 out of 12 checkboxes are checked. At the bottom, a summary shows "10 attended / 12 registered — 83% attendance rate." Export buttons for Excel and PDF appear at the top-right.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -154,11 +179,16 @@ Once your participant register is complete, you can automatically populate an in
 6. Add a narrative (optional)
 7. Click **Submit**
 
-::: info 📸 Figure 8.6 — Push to Indicator Dialog
-The "Push to Indicator" dialog showing a preview of the values that will be submitted. The main value shows "10 people (10 attended participants)". Below, a disaggregation breakdown shows Female: 6 / Male: 4. A period selector and narrative text area appear below. "Submit" and "Cancel" buttons are at the bottom.
-
-**File:** `user-manual/images/08-06-push-to-indicator.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/08-06-push-to-indicator.png" alt="Figure 8.6 — Push to Indicator Dialog" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 8.6 — Push to Indicator Dialog</p>
+    <p>The "Push to Indicator" dialog showing a preview of the values that will be submitted. The main value shows "10 people (10 attended participants)". Below, a disaggregation breakdown shows Female: 6 / Male: 4. A period selector and narrative text area appear below. "Submit" and "Cancel" buttons are at the bottom.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 This creates an **IndicatorReport** record in draft status, which the M&E Officer then reviews and approves.
 

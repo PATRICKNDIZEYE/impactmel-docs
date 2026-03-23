@@ -10,7 +10,7 @@
 
 <VideoEmbed title="15 · Setting up indicator schedules" />
 
-An **indicator** is a measurable unit that tracks progress toward a specific result. In ImpactMEL, indicators are defined once at the organization level and then linked to one or more projects. Each project sets its own targets and reports values per period.
+An **indicator** is a measure of progress toward a specific result. In ImpactMEL, indicators are created once and then linked to one or more projects. Each project sets its own targets and reports values for each period.
 
 **Examples of indicators:**
 - *Number of people with access to clean water* (unit: people)
@@ -18,17 +18,61 @@ An **indicator** is a measurable unit that tracks progress toward a specific res
 - *Number of community health workers trained* (unit: persons)
 - *Dropout rate in supported schools* (unit: %)
 
+<div class="doc-page-hero">
+  <p class="doc-page-hero__eyebrow">Measurement layer</p>
+  <p class="doc-page-hero__title">Standardize how progress is measured before teams start reporting numbers.</p>
+  <p class="doc-page-hero__copy">Indicators are one of the most important setup areas in ImpactMEL. If names, targets, and reporting rules are unclear here, dashboards and reports become harder to trust later. Use this page to make measurement consistent from the start.</p>
+  <div class="doc-page-hero__meta">
+    <div class="doc-page-hero__meta-item">
+      <span>Best for</span>
+      <strong>M&amp;E officers, data managers, and program leads</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Best moment</span>
+      <strong>Before reporting periods open and before forms are linked</strong>
+    </div>
+    <div class="doc-page-hero__meta-item">
+      <span>Main outcome</span>
+      <strong>Indicators with strong definitions, targets, and calculations</strong>
+    </div>
+  </div>
+</div>
+
+<div class="doc-quick-links">
+  <a class="doc-quick-link" href="#the-indicator-library">
+    <span>Find and review</span>
+    <strong>See how the shared indicator library is organized</strong>
+  </a>
+  <a class="doc-quick-link" href="#creating-an-indicator">
+    <span>Create</span>
+    <strong>Define a new indicator with the right unit and method</strong>
+  </a>
+  <a class="doc-quick-link" href="#setting-targets">
+    <span>Operationalize</span>
+    <strong>Set project targets before reporting begins</strong>
+  </a>
+  <a class="doc-quick-link" href="#formula-indicators">
+    <span>Automate</span>
+    <strong>Let ImpactMEL calculate percentages and ratios for you</strong>
+  </a>
+</div>
+
 ---
 
 ## The Indicator Library
 
 Navigate to **Indicators** in the sidebar to view your organization's complete indicator library.
 
-::: info 📸 Figure 6.1 — Indicator Library Page
-The Indicators list page showing a searchable table. Columns include Code, Indicator Name, Unit, Aggregation Method (shown as a badge), Linked Result Node, and the number of projects using this indicator. A search bar and filters for Aggregation Method and Result Level are at the top. A "New Indicator" button is in the top-right corner. Indicators are grouped by their result framework level (Impact / Outcome / Output).
-
-**File:** `user-manual/images/06-01-indicator-library.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/06-01-indicator-library.png" alt="Figure 6.1 — Indicator Library Page" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 6.1 — Indicator Library Page</p>
+    <p>The Indicators list page showing a searchable table. Columns include Code, Indicator Name, Unit, Aggregation Method (shown as a badge), Linked Result Node, and the number of projects using this indicator. A search bar and filters for Aggregation Method and Result Level are at the top. A "New Indicator" button is in the top-right corner. Indicators are grouped by their result framework level (Impact / Outcome / Output).</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -49,17 +93,22 @@ The Indicators list page showing a searchable table. Columns include Code, Indic
 
 3. Click **Create Indicator**
 
-::: info 📸 Figure 6.2 — New Indicator Form
-The "Create Indicator" form slide-over panel showing all fields. The Aggregation Method field shows a segmented control with the five options (Sum, Average, Latest, Min, Max) and a tooltip icon that explains each option. The Result Node field is an auto-complete dropdown showing the results framework tree.
-
-**File:** `user-manual/images/06-02-new-indicator-form.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/06-02-new-indicator-form.png" alt="Figure 6.2 — New Indicator Form" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 6.2 — New Indicator Form</p>
+    <p>The "Create Indicator" form slide-over panel showing all fields. The Aggregation Method field shows a segmented control with the five options (Sum, Average, Latest, Min, Max) and a tooltip icon that explains each option. The Result Node field is an auto-complete dropdown showing the results framework tree.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
 ## Aggregation Methods — Explained
 
-When a report covers multiple reporting periods, ImpactMEL needs to combine the values from each period into a single number. The **Aggregation Method** tells the system how to do this.
+When a report covers multiple reporting periods, ImpactMEL needs one combined value. The **Aggregation Method** is the rule used to combine those values.
 
 | Method | When to use it | Example |
 |---|---|---|
@@ -87,11 +136,16 @@ To set or update targets:
 4. Optionally set **per-period targets** if each period has a different expected value
 5. Click **Save**
 
-::: info 📸 Figure 6.3 — Setting Indicator Targets
-The target editing dialog showing an overall project target field and a "Per-period targets" toggle. When the toggle is enabled, a table appears listing each reporting period with an individual target field. A baseline field appears below the overall target.
-
-**File:** `user-manual/images/06-03-setting-targets.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/06-03-setting-targets.png" alt="Figure 6.3 — Setting Indicator Targets" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 6.3 — Setting Indicator Targets</p>
+    <p>The target editing dialog showing an overall project target field and a "Per-period targets" toggle. When the toggle is enabled, a table appears listing each reporting period with an individual target field. A baseline field appears below the overall target.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -109,19 +163,24 @@ Many indicators need to be broken down by categories — such as sex, age group,
 4. Add the **categories** (e.g., *Female*, *Male*, *Non-binary*) — press Enter after each
 5. Click **Save**
 
-When reporters submit values for this indicator, they can enter a value for each category. The system automatically sums them as the total value.
+When reporters submit values for this indicator, they can enter a value for each category. ImpactMEL automatically adds them together as the total value.
 
-::: info 📸 Figure 6.4 — Disaggregation Setup
-The disaggregation editor showing two existing disaggregation dimensions: "Sex" with categories Female/Male/Non-binary, and "Age Group" with categories Under 18 / 18-35 / 36-60 / Over 60. An "Add Disaggregation" button appears below. Each category has a small trash icon to delete it.
-
-**File:** `user-manual/images/06-04-disaggregations.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/06-04-disaggregations.png" alt="Figure 6.4 — Disaggregation Setup" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 6.4 — Disaggregation Setup</p>
+    <p>The disaggregation editor showing two existing disaggregation dimensions: "Sex" with categories Female/Male/Non-binary, and "Age Group" with categories Under 18 / 18-35 / 36-60 / Over 60. An "Add Disaggregation" button appears below. Each category has a small trash icon to delete it.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
 ## Formula Indicators
 
-A **formula indicator** automatically calculates its value from other indicators, instead of requiring manual data entry. This is useful for derived metrics like percentages or ratios.
+A **formula indicator** calculates its value from other indicators, instead of asking someone to type it manually. This is useful for percentages, ratios, and similar measures.
 
 **Example:** Instead of asking reporters to calculate the percentage, define:
 
@@ -136,13 +195,18 @@ A **formula indicator** automatically calculates its value from other indicators
 3. In the **Formula** field, enter the expression using other indicators' **codes** as variables
 4. Click **Save**
 
-At report generation time, the system fetches the aggregated values for each referenced indicator and evaluates the formula.
+When the report is created, ImpactMEL uses the saved values for each referenced indicator and applies the formula automatically.
 
-::: info 📸 Figure 6.5 — Formula Indicator Setup
-The indicator form with the "Formula Indicator" toggle enabled. A new "Formula" text field appears below, containing the expression "WASH-01 / WASH-02 * 100". A green tooltip appears confirming that the formula is valid and listing the two referenced indicators. The Unit field is set to "%".
-
-**File:** `user-manual/images/06-05-formula-indicator.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/06-05-formula-indicator.png" alt="Figure 6.5 — Formula Indicator Setup" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 6.5 — Formula Indicator Setup</p>
+    <p>The indicator form with the "Formula Indicator" toggle enabled. A new "Formula" text field appears below, containing the expression "WASH-01 / WASH-02 * 100". A green tooltip appears confirming that the formula is valid and listing the two referenced indicators. The Unit field is set to "%".</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -155,11 +219,16 @@ Click any indicator in the library to open its detail view, which shows:
 - The current progress score vs. target
 - Links to the projects using this indicator
 
-::: info 📸 Figure 6.6 — Indicator Detail View
-The indicator detail page showing a line chart at the top with value on the Y-axis and reporting periods on the X-axis. Below the chart, a table shows all submitted reports with columns for Project, Period, Submitted Value, Target, Progress, Status (Approved/Pending/Rejected), and Submitted By. A "View in Project" link appears on each row.
-
-**File:** `user-manual/images/06-06-indicator-detail.png`
-:::
+<figure class="doc-figure">
+  <div class="doc-figure__media">
+    <ImageModal src="/user-manual/images/06-06-indicator-detail.png" alt="Figure 6.6 — Indicator Detail View" />
+  </div>
+  <figcaption class="doc-figure__caption">
+    <p class="doc-figure__title">Figure 6.6 — Indicator Detail View</p>
+    <p>The indicator detail page showing a line chart at the top with value on the Y-axis and reporting periods on the X-axis. Below the chart, a table shows all submitted reports with columns for Project, Period, Submitted Value, Target, Progress, Status (Approved/Pending/Rejected), and Submitted By. A "View in Project" link appears on each row.</p>
+    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
+  </figcaption>
+</figure>
 
 ---
 
@@ -170,5 +239,5 @@ The indicator detail page showing a line chart at the top with value on the Y-ax
 **Delete:** Open the indicator → three-dot menu → **Delete**. An indicator cannot be deleted if it has submitted data. You must archive the indicator instead, which hides it from the library without deleting historical values.
 
 ::: warning
-Changing an indicator's **aggregation method** after data has already been submitted will change how existing data is aggregated in future reports. Make sure to review and communicate this change to your team.
+Changing an indicator's **aggregation method** after data has already been submitted will change how earlier values appear in future reports. Review the change carefully and let your team know before you save it.
 :::
