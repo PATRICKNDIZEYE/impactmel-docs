@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "ImpactMEL technical documentation",
   "scripts": {
-    "start": "vitepress dev",
-    "docs:build": "vitepress build",
-    "dev": "vitepress preview"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "keywords": [],
   "author": "",
