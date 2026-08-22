@@ -1,145 +1,67 @@
 # Security & Compliance
 
-ImpactMEL is designed for organizations handling sensitive beneficiary data, financial information, and donor-restricted program data. This page describes the security architecture, data handling practices, and compliance posture.
+ImpactMEL is built for organizations that handle sensitive beneficiary data, financial information, and donor-restricted program data. This page explains, in plain language, how your data is protected and what your IT reviewers and donors will want to know.
 
 ---
 
-## Authentication
+## Signing in safely
 
-### Cookie-based JWT
-
-ImpactMEL uses **HttpOnly, Secure, SameSite cookies** to transmit session tokens — not localStorage.
-
-```
-Login → Backend validates credentials
-     → Signs JWT (HS256, 7-day expiry)
-     → Sets HttpOnly cookie (browser only, not readable by JavaScript)
-     → All subsequent requests carry cookie automatically
-```
-
-This eliminates the most common web attack vector: XSS scripts stealing tokens from localStorage.
-
-### Google OAuth
-
-Organizations can enable Sign in with Google. The OAuth flow redirects through Google, exchanges the authorization code server-side, and sets the same HttpOnly cookie. No passwords are stored for OAuth users.
-
-### Token expiry
-
-Tokens expire after 7 days. There is no silent refresh that extends this indefinitely — users re-authenticate periodically. Admins can revoke access instantly by removing a member from the organization.
+- Sessions use **secure, browser-managed cookies** that scripts on a page can never read — the design that closes off the most common web attack on session tokens.
+- **Sign in with Google** is available; ImpactMEL stores no password for Google-signed accounts.
+- Sessions expire after seven days, so access always re-confirms itself. An administrator can also revoke any member instantly by removing them from the organization.
 
 ---
 
-## Authorization
+## Who can see and do what
 
-### Role-based access control
-
-Every request is validated against the user's role within the organization. Four roles are supported:
+Every action is checked against the member's role in your organization:
 
 | Role | Access |
 |---|---|
-| `org_admin` | Full access: members, settings, all programs and data |
-| `me_officer` | Create and manage indicators, forms, reporting periods, reports |
-| `reporter` | Submit data against assigned indicators for current periods |
-| `viewer` | Read-only access to approved data and published reports |
+| **Org admin** | Full access: members, settings, all programs and data |
+| **M&E officer** | Create and manage indicators, forms, reporting periods, and reports |
+| **Reporter** | Submit data against assigned indicators for open periods |
+| **Viewer** | Read-only access to approved data and published reports |
 
-Roles are assigned per organization. A user can belong to multiple organizations with different roles in each.
+Roles are assigned per organization, and a person can hold different roles in different organizations.
 
-### Organization isolation
+### Your organization's data is isolated
 
-**All data is scoped to the organization**. Every API query filters by `orgId` derived from the authenticated user's JWT. There is no mechanism for users to access data from another organization — not even by constructing a request manually.
+Every piece of data belongs to exactly one organization, and every request is confined to the requester's own organization. There is no way for a user — even a deliberately crafted request — to reach another organization's programs, indicators, or beneficiaries. This isolation is systematically verified across the platform.
 
-This was verified through a systematic audit of all list endpoints in the backend. Each service method that returns data joins through the organization chain (`project → program → org`) before executing.
+### Public report links
 
-### Public report access
-
-Reports can be shared via a public link. Public report access is:
-- Read-only
-- Scoped to a single report
-- Controlled by the organization admin (can be revoked)
-- Requires no account
-
-Public endpoints are explicitly separated from authenticated endpoints and cannot traverse to other data.
+Reports you choose to share by link are read-only, scoped to that single report, and revocable at any time by your admin. Recipients need no account — and a shared link can never lead onward to anything else in your workspace.
 
 ---
 
-## Infrastructure
+## How your data is protected
 
-### Hosting
-
-ImpactMEL is deployed on cloud infrastructure with the following characteristics:
-
-- API servers in a private subnet, not directly internet-accessible
-- PostgreSQL database separate from application servers
-- All traffic over HTTPS (TLS 1.2+)
-- Database backups on a daily schedule with point-in-time recovery
-
-### Database
-
-PostgreSQL 16 is used as the primary data store. Key practices:
-
-- UUID primary keys (not sequential integers, which would allow enumeration)
-- Parameterized queries via TypeORM (no raw string concatenation in SQL)
-- No sensitive fields in plaintext (passwords hashed with bcrypt)
-- `settingsJson` fields for flexible metadata (no schema changes required for org-level customization)
-
-### Secrets management
-
-Environment variables are used for all secrets (`JWT_SECRET`, `SMTP_PASS`, `DB_PASSWORD`, etc.). No secrets are committed to source control. Production environment variables are injected via the deployment platform.
+- **Encrypted in transit** — all traffic runs over HTTPS.
+- **Separated infrastructure** — application servers are not directly internet-accessible, and the database lives apart from them.
+- **Daily backups with point-in-time recovery**, so an incident never means losing your program history.
+- **Non-guessable identifiers** throughout, so records cannot be discovered by counting upward through IDs.
+- **Approval trail** — every submission carries who entered it, who reviewed it, and when; approved records cannot be silently edited.
 
 ---
 
-## Email security
+## Your data is yours
 
-Transactional emails (invitations, password resets, notifications) are sent via authenticated SMTP (Zoho Mail, port 465, SMTPS).
+- Export your organization's data — programs, indicators, submissions, participants — whenever you need it, from **Settings → Export**.
+- ImpactMEL does not sell or share customer or beneficiary data.
+- On contract end, your data is returned on request and then removed from our systems.
 
-- Sender domain: `impactmel.com`
-- SPF and DKIM records configured on the sending domain
-- Password reset links expire after 1 hour
-- Invite tokens expire after 7 days
-
----
-
-## Data handling
-
-### Beneficiary data
-
-ImpactMEL stores aggregated indicator values, not personally identifiable information about beneficiaries by default. If an organization uses the form builder to collect individual-level data, that data is stored within the organization's tenant and is not accessible to ImpactMEL staff or other organizations.
-
-### Data residency
-
-All data is stored in the region selected at deployment. For organizations with data residency requirements, dedicated deployment options are available — contact **support@impactmel.com**.
-
-### Data export
-
-Organizations can export their data at any time:
-- Reports as PDF
-- Indicator data via the API
-- Full data export on request (no lock-in)
-
-### Data retention
-
-Data is retained for the duration of the organization's subscription. On account closure, data is retained for 30 days and then deleted upon written request.
+For organization-hosted deployments, all data lives on **your** servers under your policies from day one.
 
 ---
 
-## Compliance posture
+## What to send your donor or IT reviewer
 
-ImpactMEL is not yet certified against formal compliance frameworks (SOC 2, ISO 27001). The architecture and practices described above are aligned with the requirements of these frameworks and formal certification is on the roadmap.
+Most due-diligence questionnaires are covered by four statements:
 
-### GDPR
+1. Data is isolated per organization, encrypted in transit, and backed up daily with point-in-time recovery.
+2. Access is role-based, revocable instantly, and every data change carries an audit trail.
+3. Data is exportable by the customer at any time and is never sold or shared.
+4. An organization-hosted option exists for data-sovereignty requirements.
 
-For organizations based in or processing data of people in the EU:
-
-- ImpactMEL acts as a **data processor** on behalf of your organization (the data controller)
-- A Data Processing Agreement (DPA) is available on request
-- Data subject access and deletion requests can be fulfilled via the API or by contacting support
-
-### Responsible disclosure
-
-If you discover a security vulnerability in ImpactMEL, please report it responsibly to **security@impactmel.com**. We commit to acknowledging reports within 48 hours and providing a timeline for resolution.
-
----
-
-::: tip Questions?
-For security-related questions or to request a DPA, contact **security@impactmel.com**.
-:::
+Need a formal security summary or a Data Processing Agreement for a proposal? [Contact us](https://impactmel.com/contact) — we provide both.

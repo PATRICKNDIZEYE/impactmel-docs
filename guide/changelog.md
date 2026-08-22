@@ -33,8 +33,8 @@ Initial production release.
 
 ### Core Platform
 - Multi-org architecture with role-based access control (org_admin, me_officer, reporter, viewer)
-- JWT + Google OAuth authentication with HttpOnly cookie sessions
-- Full TypeORM migration system — zero-downtime schema evolution
+- Secure sign-in with email or Google, with sessions that scripts cannot read
+- Zero-downtime upgrades — your data carries forward through every release
 
 ### Results Framework
 - Impact → Outcome → Output → Activity hierarchy
@@ -74,11 +74,9 @@ Initial production release.
 - Participant registration with household member data
 - Aggregation into indicator values
 
-### Infrastructure
-- Swagger docs at `/api`
-- NestJS modular architecture
-- Next.js 14 App Router frontend
-- Local search (VitePress)
+### Platform
+- Fast, responsive interface that works on any modern browser
+- Full-text search across the documentation
 
 ---
 
@@ -86,7 +84,7 @@ Initial production release.
 
 | Feature | Status |
 |---|---|
-| Mobile app (React Native) | Planned |
+| Mobile app for offline data collection | Planned |
 | Advanced analytics dashboards | In progress |
 | Webhook integrations | Planned |
 | DHIS2 data sync | Planned |

@@ -43,5 +43,5 @@ No copy-paste. No emailed spreadsheets. No reconciliation.
 | Shareable public report link | Paid tier | ✅ Built-in |
 | Google OAuth | ✅ | ✅ |
 | Self-hosted | ❌ | ✅ |
-| Open API | Limited | ✅ REST + Swagger |
+| Integrations | Limited | ✅ Integration-ready |
 | Dynamic forms | ❌ | ✅ Conditional logic |

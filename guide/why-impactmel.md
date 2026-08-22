@@ -52,11 +52,11 @@ A US-based M&E platform used by large INGOs and USAID implementing partners. Tec
 | | DevResults | ImpactMEL |
 |---|---|---|
 | Setup time | Weeks of consultant-led onboarding | Self-service onboarding wizard in under 30 minutes |
-| Pricing | $15,000–$50,000+ per year | Transparent per-seat pricing |
+| Pricing | $15,000–$50,000+ per year | Transparent published pricing |
 | Data collection | Basic | Full form builder with conditional logic |
 | Results framework | Supported | Visual tree editor with drag-and-drop |
-| API access | Limited | Full REST API with OpenAPI docs |
-| Modern UX | Legacy interface | Built on Next.js, responsive, mobile-friendly |
+| Integrations | Limited | Integration-ready, with data export any time |
+| Modern UX | Legacy interface | Fast, responsive, mobile-friendly |
 
 ### DHIS2
 

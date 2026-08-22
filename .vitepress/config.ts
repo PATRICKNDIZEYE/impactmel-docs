@@ -13,13 +13,12 @@ const docsHubSidebar = [
     ],
   },
   {
-    text: 'Advanced Reference',
+    text: 'Going Further',
     collapsed: true,
     items: [
       { text: 'Guide Introduction', link: '/guide/introduction' },
-      { text: 'Results Framework', link: '/modules/results-framework' },
-      { text: 'Architecture', link: '/architecture/overview' },
-      { text: 'API Overview', link: '/api/overview' },
+      { text: 'Results Framework', link: '/user-manual/results-framework' },
+      { text: 'Security & Compliance', link: '/guide/security-compliance' },
     ],
   },
 ]
@@ -54,7 +53,6 @@ const guideSidebar = [
       { text: 'Introduction', link: '/guide/introduction' },
       { text: 'Quick Start', link: '/guide/quick-start' },
       { text: 'Why ImpactMEL', link: '/guide/why-impactmel' },
-      { text: 'Environment Setup', link: '/guide/environment' },
       { text: 'Changelog', link: '/guide/changelog' },
     ],
   },
@@ -65,53 +63,6 @@ const guideSidebar = [
       { text: 'Pricing', link: '/guide/pricing' },
       { text: 'Roadmap', link: '/guide/roadmap' },
       { text: 'Security & Compliance', link: '/guide/security-compliance' },
-    ],
-  },
-]
-
-const architectureSidebar = [
-  {
-    text: 'Architecture',
-    collapsed: false,
-    items: [
-      { text: 'System Overview', link: '/architecture/overview' },
-      { text: 'Tech Stack', link: '/architecture/tech-stack' },
-      { text: 'Data Model', link: '/architecture/data-model' },
-      { text: 'Security Model', link: '/architecture/security' },
-    ],
-  },
-]
-
-const moduleSidebar = [
-  {
-    text: 'Core Modules',
-    collapsed: false,
-    items: [
-      { text: 'Authentication', link: '/modules/authentication' },
-      { text: 'Organizations', link: '/modules/organizations' },
-      { text: 'Programs and Projects', link: '/modules/programs-projects' },
-      { text: 'Results Framework', link: '/modules/results-framework' },
-      { text: 'Indicators', link: '/modules/indicators' },
-      { text: 'Reporting Periods', link: '/modules/reporting-periods' },
-      { text: 'Activities and Participants', link: '/modules/activities' },
-      { text: 'Data Collection', link: '/modules/data-collection' },
-      { text: 'Reports', link: '/modules/reports' },
-      { text: 'Budget and Finance', link: '/modules/budget' },
-      { text: 'Donors', link: '/modules/donors' },
-      { text: 'Dashboard', link: '/modules/dashboard' },
-    ],
-  },
-]
-
-const apiSidebar = [
-  {
-    text: 'API Reference',
-    collapsed: false,
-    items: [
-      { text: 'Overview and Auth', link: '/api/overview' },
-      { text: 'Programs', link: '/api/programs' },
-      { text: 'Indicators', link: '/api/indicators' },
-      { text: 'Reports', link: '/api/reports' },
     ],
   },
 ]
@@ -162,9 +113,7 @@ export default defineConfig({
           { text: 'Roadmap', link: '/guide/roadmap' },
           { text: 'Guide', link: '/guide/introduction' },
           { text: 'Quick Start', link: '/guide/quick-start' },
-          { text: 'Architecture', link: '/architecture/overview' },
-          { text: 'Core Modules', link: '/modules/authentication' },
-          { text: 'API', link: '/api/overview' },
+          { text: 'Security & Compliance', link: '/guide/security-compliance' },
         ],
       },
       { text: 'Videos', link: '/videos/' },
@@ -175,9 +124,6 @@ export default defineConfig({
       '/videos/': videoSidebar,
       '/user-manual/': userManualSidebar,
       '/guide/': guideSidebar,
-      '/architecture/': architectureSidebar,
-      '/modules/': moduleSidebar,
-      '/api/': apiSidebar,
       '/': docsHubSidebar,
     },
 
