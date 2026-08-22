@@ -26,24 +26,6 @@ const SECTION_META: SectionMeta[] = [
     description: 'Use this track for rollout planning, onboarding, and setup decisions.',
   },
   {
-    prefix: '/architecture',
-    kicker: 'Behind the scenes',
-    title: 'Architecture',
-    description: 'Reference for teams who want a closer look at how the product is organized.',
-  },
-  {
-    prefix: '/modules',
-    kicker: 'Feature reference',
-    title: 'Core Modules',
-    description: 'Feature-by-feature reference for the main areas of the platform.',
-  },
-  {
-    prefix: '/api',
-    kicker: 'Developer docs',
-    title: 'API Reference',
-    description: 'Reference for connecting ImpactMEL with other tools and automations.',
-  },
-  {
     prefix: '/videos',
     kicker: 'Walkthroughs',
     title: 'Video Guides',

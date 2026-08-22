@@ -10,7 +10,7 @@ The initial production release covers the full M&E lifecycle for a single organi
 
 ### Platform foundation
 - Multi-tenant architecture: each organization is fully isolated
-- JWT + Google OAuth authentication with HttpOnly cookie sessions
+- Secure sign-in with email or Google
 - Role-based access control: `org_admin`, `me_officer`, `reporter`, `viewer`
 - Onboarding wizard: complete org setup in under 30 minutes
 
@@ -46,16 +46,16 @@ The initial production release covers the full M&E lifecycle for a single organi
 ### Platform
 - Real-time dashboard: indicator progress, deadlines, alerts
 - Donor CRM: manage funder profiles and link them to programs
-- Full REST API with OpenAPI documentation
+- Integration-ready: connect ImpactMEL with the tools your organization already uses
 - Email notifications: invitations, deadlines, approvals, weekly digest
-- Scheduled cron reminders
+- Scheduled deadline reminders
 
 ---
 
 ## In progress — Q2 2026
 
 ### Mobile data collection app
-A lightweight React Native companion for offline-capable form submissions. Designed for field staff in areas with intermittent connectivity. Responses sync when back online.
+A lightweight mobile companion for offline-capable form submissions. Designed for field staff in areas with intermittent connectivity. Responses sync when back online.
 
 ### Sub-grantee portal
 Partner organizations can submit data directly into the system without a full ImpactMEL account. A parent organization grants scoped access; partners see only their assigned programs and indicators.

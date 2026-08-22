@@ -93,29 +93,21 @@
     </span>
     <span class="docs-card__arrow">Open guide</span>
   </a>
-  <a class="docs-card" href="/architecture/overview">
-    <span class="docs-card__eyebrow">Advanced reference</span>
-    <strong class="docs-card__title">Architecture</strong>
+  <a class="docs-card" href="/user-manual/results-framework">
+    <span class="docs-card__eyebrow">The core workflow</span>
+    <strong class="docs-card__title">Results Framework</strong>
     <span class="docs-card__copy">
-      Background reading for teams who want a closer look at what sits behind the product.
+      Choose your framework structure, build the chain from impact down, and link every indicator.
     </span>
-    <span class="docs-card__arrow">View reference</span>
+    <span class="docs-card__arrow">Open the builder guide</span>
   </a>
-  <a class="docs-card" href="/modules/authentication">
-    <span class="docs-card__eyebrow">For product depth</span>
-    <strong class="docs-card__title">Core Modules</strong>
+  <a class="docs-card" href="/guide/security-compliance">
+    <span class="docs-card__eyebrow">For your IT and donors</span>
+    <strong class="docs-card__title">Security &amp; Compliance</strong>
     <span class="docs-card__copy">
-      Feature-by-feature reference for authentication, projects, indicators, reporting, and more.
+      How your data is protected, where it lives, and what your donors will want to know.
     </span>
-    <span class="docs-card__arrow">Explore modules</span>
-  </a>
-  <a class="docs-card" href="/api/overview">
-    <span class="docs-card__eyebrow">Developer docs</span>
-    <strong class="docs-card__title">API Reference</strong>
-    <span class="docs-card__copy">
-      Reference for connecting ImpactMEL with other tools when your team needs it.
-    </span>
-    <span class="docs-card__arrow">Open developer docs</span>
+    <span class="docs-card__arrow">Read the overview</span>
   </a>
   <a class="docs-card" href="/videos/">
     <span class="docs-card__eyebrow">For walkthroughs</span>
