@@ -34,6 +34,7 @@ const userManualSidebar = [
       { text: 'Dashboard', link: '/user-manual/dashboard' },
       { text: 'Programs', link: '/user-manual/programs' },
       { text: 'Projects', link: '/user-manual/projects' },
+      { text: 'Results Framework', link: '/user-manual/results-framework' },
       { text: 'Indicators', link: '/user-manual/indicators' },
       { text: 'Entering Data', link: '/user-manual/data-entry' },
       { text: 'Activities and Participants', link: '/user-manual/activities' },
@@ -119,7 +120,7 @@ const videoSidebar = [
   {
     text: 'Video Guides',
     collapsed: false,
-    items: [{ text: 'All 30 videos', link: '/videos/' }],
+    items: [{ text: 'All 47 videos', link: '/videos/' }],
   },
 ]
 
@@ -129,7 +130,7 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['meta', { name: 'theme-color', content: '#2756ff' }],
+    ['meta', { name: 'theme-color', content: '#14170f' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     [

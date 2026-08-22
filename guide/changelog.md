@@ -4,6 +4,29 @@ All notable changes to ImpactMEL are documented here.
 
 ---
 
+## v1.1.0 — 2026-08
+
+The framework release.
+
+### Results Framework Builder
+- Choose your structure per project: **Results Framework**, **Logical Framework**, or **Theory of Change** — switching relabels levels and keeps all data
+- Build from the impact/goal level down, with codes, statements, assumptions, and risks on every result
+- Drag-and-drop reordering and validated move-between-parents
+- Link indicators directly on the chain; outputs show their activities
+
+### Data pipeline
+- One unified review queue: values entered on the project reporting page now appear alongside submissions for approval
+- Targets set per period now flow through to the indicator detail page and progress reports
+- Reporting periods are deduplicated by date and named consistently
+
+### Platform
+- New organization calendar with automatic reporting deadlines and custom events
+- Indicator methodology fields: data source, collection method, means of verification, frequency
+- Consistent metrics across Statistics, AI Insights, and Data Hub
+- 47-video walkthrough library covering every feature
+
+---
+
 ## v1.0.0 — 2026-03
 
 Initial production release.

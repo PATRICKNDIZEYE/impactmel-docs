@@ -1,11 +1,5 @@
 # Projects
 
-<VideoEmbed title="08 · Creating a project under a program" />
-
-<VideoEmbed title="09 · Setting project dates, budget, and team" />
-
-<VideoEmbed title="10 · Adding project locations on the map" />
-
 A **Project** is where the day-to-day work happens. It sits within a Program and is where your team logs activities, enters indicator data, tracks budgets, and creates reports.
 
 Each project has:
@@ -17,6 +11,14 @@ Each project has:
 - Assembled donor reports
 
 ---
+
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/06-create-project.mp4" title="06 · Create a project" duration="60s" />
+  <VideoEmbed src="/videos/07-project-workspace-tour.mp4" title="07 · Inside a project workspace" duration="28s" />
+  <VideoEmbed src="/videos/08-manage-project-team.mp4" title="08 · Manage the project team" duration="22s" />
+</div>
 
 ## Viewing Projects
 

@@ -1,13 +1,5 @@
 # Reports
 
-<VideoEmbed title="23 · Creating a report template" />
-
-<VideoEmbed title="24 · Assembling a report in one click" />
-
-<VideoEmbed title="25 · Sharing a report with a donor by link" />
-
-<VideoEmbed title="26 · Exporting a report as PDF" />
-
 Reports bring together your approved indicator data, activity logs, budget summaries, and written updates into a donor-ready document.
 
 Reports can be:
@@ -55,6 +47,14 @@ Reports can be:
 </div>
 
 ---
+
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/55-create-report.mp4" title="55 · Generate a donor report" duration="25s" />
+  <VideoEmbed src="/videos/56-reports-library.mp4" title="56 · Your reports library" duration="14s" />
+  <VideoEmbed src="/videos/57-org-data-export.mp4" title="57 · Export your organization’s data" duration="18s" />
+</div>
 
 ## The Reports List
 

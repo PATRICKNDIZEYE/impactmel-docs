@@ -1,15 +1,5 @@
 # Indicators
 
-<VideoEmbed title="11 · Creating an indicator" />
-
-<VideoEmbed title="12 · Setting targets by reporting period" />
-
-<VideoEmbed title="13 · Adding disaggregations (sex, age group, etc.)" />
-
-<VideoEmbed title="14 · Creating a formula indicator" />
-
-<VideoEmbed title="15 · Setting up indicator schedules" />
-
 An **indicator** is a measure of progress toward a specific result. In ImpactMEL, indicators are created once and then linked to one or more projects. Each project sets its own targets and reports values for each period.
 
 **Examples of indicators:**
@@ -58,6 +48,17 @@ An **indicator** is a measure of progress toward a specific result. In ImpactMEL
 </div>
 
 ---
+
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/20-create-indicator.mp4" title="20 · Create an indicator" duration="48s" />
+  <VideoEmbed src="/videos/21-create-custom-unit.mp4" title="21 · Create a custom unit of measurement" duration="28s" />
+  <VideoEmbed src="/videos/22-generate-reporting-periods.mp4" title="22 · Generate reporting periods automatically" duration="28s" />
+  <VideoEmbed src="/videos/23-set-targets.mp4" title="23 · Set targets per period" duration="30s" />
+  <VideoEmbed src="/videos/24-indicator-detail.mp4" title="24 · Read an indicator’s performance page" duration="25s" />
+  <VideoEmbed src="/videos/25-aggregation-methods.mp4" title="25 · Choose the right aggregation method" duration="25s" />
+</div>
 
 ## The Indicator Library
 

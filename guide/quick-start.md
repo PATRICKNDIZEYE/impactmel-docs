@@ -1,5 +1,14 @@
 # Quick Start
 
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/01-sign-in.mp4" title="01 · Sign in to IMPACTMEL" duration="19s" />
+  <VideoEmbed src="/videos/05-create-program.mp4" title="05 · Create a program" duration="59s" />
+  <VideoEmbed src="/videos/06-create-project.mp4" title="06 · Create a project" duration="60s" />
+  <VideoEmbed src="/videos/20-create-indicator.mp4" title="20 · Create an indicator" duration="48s" />
+</div>
+
 ## Prerequisites
 
 | Tool | Version |

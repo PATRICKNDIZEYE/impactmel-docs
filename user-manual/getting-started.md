@@ -1,9 +1,5 @@
 # Getting Started
 
-<VideoEmbed title="02 · Setting up your organization profile" />
-
-<VideoEmbed title="03 · Inviting your team and assigning roles" />
-
 This guide walks you through creating your account, setting up your organization, and understanding the ImpactMEL interface for the first time.
 
 <div class="doc-page-hero">
@@ -46,6 +42,14 @@ This guide walks you through creating your account, setting up your organization
 </div>
 
 ---
+
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/01-sign-in.mp4" title="01 · Sign in to IMPACTMEL" duration="19s" />
+  <VideoEmbed src="/videos/02-dashboard-tour.mp4" title="02 · Your dashboard at a glance" duration="22s" />
+  <VideoEmbed src="/videos/60-invite-member.mp4" title="60 · Invite a team member" duration="19s" />
+</div>
 
 ## Step 1 — Create Your Account
 

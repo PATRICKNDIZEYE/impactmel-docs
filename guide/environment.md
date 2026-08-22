@@ -28,7 +28,7 @@ cp main/.env.example main/.env
 
 ### Minimum local setup
 
-```env
+```ini
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/impactmel
 JWT_SECRET=dev-secret-change-in-production
 PORT=3001
@@ -50,7 +50,7 @@ cp frontend/.env.local.example frontend/.env.local
 
 ### Minimum local setup
 
-```env
+```ini
 NEXT_PUBLIC_API_URL=http://localhost:3001
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```

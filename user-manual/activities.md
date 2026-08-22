@@ -6,6 +6,12 @@ Recording activities and participants in ImpactMEL keeps a permanent, auditable 
 
 ---
 
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/66-participants.mp4" title="66 · The participant registry" duration="23s" />
+</div>
+
 ## Activities
 
 ### What is an Activity?

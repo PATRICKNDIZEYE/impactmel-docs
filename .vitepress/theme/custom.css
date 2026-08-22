@@ -9,24 +9,24 @@
   --vp-font-family-base: 'Manrope', ui-sans-serif, system-ui, sans-serif;
   --vp-font-family-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  /* Brand */
-  --vp-c-brand-1: #2756ff;
-  --vp-c-brand-2: #1c3fd6;
-  --vp-c-brand-3: #5d83ff;
-  --vp-c-brand-soft: rgba(39, 86, 255, 0.08);
+  /* Brand — matches the IMPACTMEL app: warm paper, ink, lime accent */
+  --vp-c-brand-1: #5f7212;
+  --vp-c-brand-2: #4c5c0e;
+  --vp-c-brand-3: #aec42d;
+  --vp-c-brand-soft: rgba(174, 196, 45, 0.16);
 
   /* Surfaces */
-  --vp-c-bg:       #ffffff;
-  --vp-c-bg-soft:  #f6f8fc;
-  --vp-c-bg-alt:   #f0f2f8;
+  --vp-c-bg:       #faf9f3;
+  --vp-c-bg-soft:  #f2f0e5;
+  --vp-c-bg-alt:   #edeadd;
 
   /* Text */
-  --vp-c-text-1: #17203d;
-  --vp-c-text-2: #586380;
-  --vp-c-text-3: #8e9abc;
+  --vp-c-text-1: #1d1c18;
+  --vp-c-text-2: #5c5a4e;
+  --vp-c-text-3: #8f8c7c;
 
   /* Divider */
-  --vp-c-divider: #e2e6f0;
+  --vp-c-divider: #e2dfd0;
 
   /* Layout */
   --vp-layout-max-width: 1380px;
@@ -35,20 +35,20 @@
 }
 
 .dark {
-  --vp-c-brand-1: #6b96ff;
-  --vp-c-brand-2: #4d7eff;
-  --vp-c-brand-3: #8fb2ff;
-  --vp-c-brand-soft: rgba(107, 150, 255, 0.1);
+  --vp-c-brand-1: #c6da55;
+  --vp-c-brand-2: #aec42d;
+  --vp-c-brand-3: #d8e77e;
+  --vp-c-brand-soft: rgba(174, 196, 45, 0.12);
 
-  --vp-c-bg:       #0f1421;
-  --vp-c-bg-soft:  #141a2e;
-  --vp-c-bg-alt:   #111827;
+  --vp-c-bg:       #14170f;
+  --vp-c-bg-soft:  #1b2013;
+  --vp-c-bg-alt:   #171b11;
 
-  --vp-c-text-1: #e2e8f8;
-  --vp-c-text-2: #8a96b8;
-  --vp-c-text-3: #515d80;
+  --vp-c-text-1: #eef0e0;
+  --vp-c-text-2: #a8aa94;
+  --vp-c-text-3: #6f715c;
 
-  --vp-c-divider: #1e2844;
+  --vp-c-divider: #2b301c;
 }
 
 /* ── 2. Global ─────────────────────────────────────────────── */
@@ -61,14 +61,14 @@ body {
 
 /* ── 3. Nav Bar ────────────────────────────────────────────── */
 .VPNav {
-  background: rgba(255, 255, 255, 0.92) !important;
+  background: rgba(250, 249, 243, 0.92) !important;
   backdrop-filter: blur(12px) !important;
   border-bottom: 1px solid var(--vp-c-divider) !important;
   height: var(--vp-nav-height) !important;
 }
 
 .dark .VPNav {
-  background: rgba(15, 20, 33, 0.92) !important;
+  background: rgba(20, 23, 15, 0.92) !important;
 }
 
 /* Site title */
@@ -223,7 +223,7 @@ body {
   font-weight: 600 !important;
 }
 
-.vp-doc a {
+.vp-doc a:not(.docs-action):not(.docs-card):not(.doc-quick-link) {
   color: var(--vp-c-brand-1) !important;
   font-weight: 500 !important;
   text-decoration: underline !important;
@@ -232,7 +232,7 @@ body {
   transition: text-decoration-color 0.15s !important;
 }
 
-.vp-doc a:hover {
+.vp-doc a:not(.docs-action):not(.docs-card):not(.doc-quick-link):hover {
   text-decoration-color: var(--vp-c-brand-1) !important;
 }
 
@@ -319,7 +319,7 @@ body {
 .vp-doc .custom-block.tip {
   border-left-color: var(--vp-c-brand-1) !important;
   background: var(--vp-c-brand-soft) !important;
-  border-color: rgba(39, 86, 255, 0.15) !important;
+  border-color: rgba(95, 114, 18, 0.18) !important;
 }
 
 .vp-doc .custom-block.warning {
@@ -384,7 +384,7 @@ body {
 .VPButton.brand:hover {
   background: var(--vp-c-brand-2) !important;
   border-color: var(--vp-c-brand-2) !important;
-  box-shadow: 0 4px 16px rgba(39, 86, 255, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(95, 114, 18, 0.30) !important;
 }
 
 .VPButton.alt {
@@ -402,8 +402,8 @@ body {
 }
 
 .VPFeature:hover {
-  border-color: rgba(39, 86, 255, 0.3) !important;
-  box-shadow: 0 8px 24px rgba(39, 86, 255, 0.08) !important;
+  border-color: rgba(95, 114, 18, 0.30) !important;
+  box-shadow: 0 8px 24px rgba(95, 114, 18, 0.08) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -859,7 +859,7 @@ body {
   background: var(--vp-c-brand-2);
   border-color: var(--vp-c-brand-2);
   color: #fff !important;
-  box-shadow: 0 4px 16px rgba(39, 86, 255, 0.28);
+  box-shadow: 0 4px 16px rgba(95, 114, 18, 0.26);
 }
 
 /* ── 19. Card grid ─────────────────────────────────────────── */
@@ -890,8 +890,8 @@ body {
 }
 
 .docs-card:hover {
-  border-color: rgba(39, 86, 255, 0.3);
-  box-shadow: 0 6px 20px rgba(39, 86, 255, 0.07);
+  border-color: rgba(95, 114, 18, 0.30);
+  box-shadow: 0 6px 20px rgba(95, 114, 18, 0.07);
   transform: translateY(-2px);
 }
 
@@ -1009,7 +1009,7 @@ body {
 
 .doc-quick-link:hover {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 12px rgba(39, 86, 255, 0.07);
+  box-shadow: 0 4px 12px rgba(95, 114, 18, 0.07);
 }
 
 .doc-quick-link span {
