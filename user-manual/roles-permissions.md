@@ -4,6 +4,13 @@ ImpactMEL uses roles and permissions so each team member can see and do what the
 
 ---
 
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/60-invite-member.mp4" title="60 · Invite a team member" duration="19s" />
+  <VideoEmbed src="/videos/61-roles-permissions.mp4" title="61 · Roles: who can do what" duration="78s" />
+</div>
+
 ## The Four Roles
 
 ### Org Admin

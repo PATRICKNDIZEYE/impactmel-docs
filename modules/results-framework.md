@@ -1,10 +1,15 @@
 # Results Framework
 
-<VideoEmbed title="04 · Setting your impact statement" />
+## Watch it done
 
-<VideoEmbed title="05 · Adding outcomes and outputs" />
-
-<VideoEmbed title="06 · Linking indicators to your results chain" />
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/10-choose-framework-type.mp4" title="10 · Choose your framework structure" duration="30s" />
+  <VideoEmbed src="/videos/11-build-results-chain.mp4" title="11 · Build your results chain from impact down" duration="65s" />
+  <VideoEmbed src="/videos/12-drag-reorder-results.mp4" title="12 · Reorder results with drag and drop" duration="15s" />
+  <VideoEmbed src="/videos/13-move-result-between-parents.mp4" title="13 · Move a result to a different parent" duration="21s" />
+  <VideoEmbed src="/videos/14-link-indicators-to-results.mp4" title="14 · Link indicators to your results" duration="28s" />
+  <VideoEmbed src="/videos/15-switch-framework-type.mp4" title="15 · Switch framework type without losing data" duration="23s" />
+</div>
 
 ## Overview
 
@@ -32,6 +37,18 @@ Every indicator and activity can be linked to a node in this tree, giving you a 
 | **Output** | Direct deliverables from project activities | "500 households have access to clean water points" |
 
 Activities are linked to Output nodes — they describe the work done to produce an output.
+
+### Framework structures
+
+Each project chooses one of three structures, stored as `framework_type` on the project. All three share the storage model above — the structure drives the vocabulary and nesting rules the builder enforces:
+
+| Structure | Vocabulary | Nesting rules |
+|---|---|---|
+| `results_framework` | Impact / Outcome / Output | Single impact; outcomes under impact; outputs under outcomes |
+| `logframe` | Goal / Purpose / Output | Single goal; purposes under goal; outputs under purposes |
+| `theory_of_change` | Impact / Outcome / Output | Outcomes may nest under outcomes (intermediate outcomes) |
+
+Switching structure only relabels — no data migration occurs. See the [user manual page](/user-manual/results-framework) for the builder walkthrough.
 
 ---
 

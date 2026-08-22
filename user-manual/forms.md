@@ -1,11 +1,5 @@
 # Data Collection Forms
 
-<VideoEmbed title="20 · Building a custom data collection form" />
-
-<VideoEmbed title="21 · Sharing a form by link" />
-
-<VideoEmbed title="22 · Viewing and managing form submissions" />
-
 Data Collection Forms let you build surveys and forms, share them by link, and have responses flow into indicator reporting without a spreadsheet.
 
 A form can be shared with anyone by link: field staff open it on their phone, fill it in, and submit. The responses appear directly in ImpactMEL.
@@ -57,6 +51,17 @@ A form can be shared with anyone by link: field staff open it on their phone, fi
 </div>
 
 ---
+
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/30-create-form.mp4" title="30 · Create a data-collection form" duration="34s" />
+  <VideoEmbed src="/videos/31-form-builder-fields.mp4" title="31 · Add fields in the form builder" duration="27s" />
+  <VideoEmbed src="/videos/32-publish-share-form.mp4" title="32 · Publish a form and share the public link" duration="25s" />
+  <VideoEmbed src="/videos/33-submit-public-form.mp4" title="33 · What respondents see: the public form" duration="22s" />
+  <VideoEmbed src="/videos/34-view-form-responses.mp4" title="34 · Review form responses" duration="24s" />
+  <VideoEmbed src="/videos/35-delete-form-with-export.mp4" title="35 · Delete a form — with your data protected" duration="31s" />
+</div>
 
 ## The Forms Library
 

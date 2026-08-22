@@ -1,0 +1,284 @@
+{
+  "01-sign-in": {
+    "title": "Sign in to IMPACTMEL",
+    "section": "1 · Getting started",
+    "duration": 19,
+    "file": "01-sign-in.mp4"
+  },
+  "02-dashboard-tour": {
+    "title": "Your dashboard at a glance",
+    "section": "1 · Getting started",
+    "duration": 22,
+    "file": "02-dashboard-tour.mp4"
+  },
+  "05-create-program": {
+    "title": "Create a program",
+    "section": "2 · Programs & projects",
+    "duration": 59,
+    "file": "05-create-program.mp4"
+  },
+  "06-create-project": {
+    "title": "Create a project",
+    "section": "2 · Programs & projects",
+    "duration": 60,
+    "file": "06-create-project.mp4"
+  },
+  "07-project-workspace-tour": {
+    "title": "Inside a project workspace",
+    "section": "2 · Programs & projects",
+    "duration": 28,
+    "file": "07-project-workspace-tour.mp4"
+  },
+  "08-manage-project-team": {
+    "title": "Manage the project team",
+    "section": "2 · Programs & projects",
+    "duration": 22,
+    "file": "08-manage-project-team.mp4"
+  },
+  "03-global-search": {
+    "title": "Find anything with global search",
+    "section": "1 · Getting started",
+    "duration": 20,
+    "file": "03-global-search.mp4"
+  },
+  "04-activity-pulse": {
+    "title": "Stay updated with Activity Pulse",
+    "section": "1 · Getting started",
+    "duration": 31,
+    "file": "04-activity-pulse.mp4"
+  },
+  "10-choose-framework-type": {
+    "title": "Choose your framework structure",
+    "section": "3 · Results framework",
+    "duration": 30,
+    "file": "10-choose-framework-type.mp4"
+  },
+  "11-build-results-chain": {
+    "title": "Build your results chain from impact down",
+    "section": "3 · Results framework",
+    "duration": 65,
+    "file": "11-build-results-chain.mp4"
+  },
+  "12-drag-reorder-results": {
+    "title": "Reorder results with drag and drop",
+    "section": "3 · Results framework",
+    "duration": 15,
+    "file": "12-drag-reorder-results.mp4"
+  },
+  "13-move-result-between-parents": {
+    "title": "Move a result to a different parent",
+    "section": "3 · Results framework",
+    "duration": 21,
+    "file": "13-move-result-between-parents.mp4"
+  },
+  "14-link-indicators-to-results": {
+    "title": "Link indicators to your results",
+    "section": "3 · Results framework",
+    "duration": 28,
+    "file": "14-link-indicators-to-results.mp4"
+  },
+  "15-switch-framework-type": {
+    "title": "Switch framework type without losing data",
+    "section": "3 · Results framework",
+    "duration": 23,
+    "file": "15-switch-framework-type.mp4"
+  },
+  "20-create-indicator": {
+    "title": "Create an indicator",
+    "section": "4 · Indicators",
+    "duration": 48,
+    "file": "20-create-indicator.mp4"
+  },
+  "21-create-custom-unit": {
+    "title": "Create a custom unit of measurement",
+    "section": "4 · Indicators",
+    "duration": 28,
+    "file": "21-create-custom-unit.mp4"
+  },
+  "22-generate-reporting-periods": {
+    "title": "Generate reporting periods automatically",
+    "section": "4 · Indicators",
+    "duration": 28,
+    "file": "22-generate-reporting-periods.mp4"
+  },
+  "23-set-targets": {
+    "title": "Set targets per period",
+    "section": "4 · Indicators",
+    "duration": 30,
+    "file": "23-set-targets.mp4"
+  },
+  "24-indicator-detail": {
+    "title": "Read an indicator’s performance page",
+    "section": "4 · Indicators",
+    "duration": 25,
+    "file": "24-indicator-detail.mp4"
+  },
+  "25-aggregation-methods": {
+    "title": "Choose the right aggregation method",
+    "section": "4 · Indicators",
+    "duration": 25,
+    "file": "25-aggregation-methods.mp4"
+  },
+  "30-create-form": {
+    "title": "Create a data-collection form",
+    "section": "5 · Data collection forms",
+    "duration": 34,
+    "file": "30-create-form.mp4"
+  },
+  "32-publish-share-form": {
+    "title": "Publish a form and share the public link",
+    "section": "5 · Data collection forms",
+    "duration": 25,
+    "file": "32-publish-share-form.mp4"
+  },
+  "33-submit-public-form": {
+    "title": "What respondents see: the public form",
+    "section": "5 · Data collection forms",
+    "duration": 22,
+    "file": "33-submit-public-form.mp4"
+  },
+  "34-view-form-responses": {
+    "title": "Review form responses",
+    "section": "5 · Data collection forms",
+    "duration": 24,
+    "file": "34-view-form-responses.mp4"
+  },
+  "35-delete-form-with-export": {
+    "title": "Delete a form — with your data protected",
+    "section": "5 · Data collection forms",
+    "duration": 31,
+    "file": "35-delete-form-with-export.mp4"
+  },
+  "31-form-builder-fields": {
+    "title": "Add fields in the form builder",
+    "section": "5 · Data collection forms",
+    "duration": 27,
+    "file": "31-form-builder-fields.mp4"
+  },
+  "40-enter-indicator-values": {
+    "title": "Enter indicator values (reporter)",
+    "section": "6 · Reporting data",
+    "duration": 29,
+    "file": "40-enter-indicator-values.mp4"
+  },
+  "41-submit-for-review": {
+    "title": "Submit data for review",
+    "section": "6 · Reporting data",
+    "duration": 29,
+    "file": "41-submit-for-review.mp4"
+  },
+  "42-review-approve": {
+    "title": "Review and approve submissions",
+    "section": "6 · Reporting data",
+    "duration": 32,
+    "file": "42-review-approve.mp4"
+  },
+  "43-return-for-correction": {
+    "title": "Return a submission for correction",
+    "section": "6 · Reporting data",
+    "duration": 22,
+    "file": "43-return-for-correction.mp4"
+  },
+  "44-data-hub": {
+    "title": "Audit everything in the Data Hub",
+    "section": "6 · Reporting data",
+    "duration": 33,
+    "file": "44-data-hub.mp4"
+  },
+  "50-statistics": {
+    "title": "Portfolio statistics at a glance",
+    "section": "7 · Analysis & dashboards",
+    "duration": 22,
+    "file": "50-statistics.mp4"
+  },
+  "51-create-dashboard": {
+    "title": "Create a custom dashboard",
+    "section": "7 · Analysis & dashboards",
+    "duration": 27,
+    "file": "51-create-dashboard.mp4"
+  },
+  "52-add-dashboard-widget": {
+    "title": "Add a widget to a dashboard",
+    "section": "7 · Analysis & dashboards",
+    "duration": 23,
+    "file": "52-add-dashboard-widget.mp4"
+  },
+  "53-dashboard-filters": {
+    "title": "Filter a whole dashboard at once",
+    "section": "7 · Analysis & dashboards",
+    "duration": 21,
+    "file": "53-dashboard-filters.mp4"
+  },
+  "54-ai-insights": {
+    "title": "AI insights: risks and recommendations",
+    "section": "7 · Analysis & dashboards",
+    "duration": 31,
+    "file": "54-ai-insights.mp4"
+  },
+  "55-create-report": {
+    "title": "Generate a donor report",
+    "section": "8 · Reports",
+    "duration": 25,
+    "file": "55-create-report.mp4"
+  },
+  "56-reports-library": {
+    "title": "Your reports library",
+    "section": "8 · Reports",
+    "duration": 14,
+    "file": "56-reports-library.mp4"
+  },
+  "61-roles-permissions": {
+    "title": "Roles: who can do what",
+    "section": "9 · Team & admin",
+    "duration": 78,
+    "file": "61-roles-permissions.mp4"
+  },
+  "62-org-reporting-periods": {
+    "title": "Manage organization reporting periods",
+    "section": "9 · Team & admin",
+    "duration": 17,
+    "file": "62-org-reporting-periods.mp4"
+  },
+  "63-units-settings": {
+    "title": "Manage units of measurement",
+    "section": "9 · Team & admin",
+    "duration": 15,
+    "file": "63-units-settings.mp4"
+  },
+  "66-participants": {
+    "title": "The participant registry",
+    "section": "9 · Team & admin",
+    "duration": 23,
+    "file": "66-participants.mp4"
+  },
+  "57-org-data-export": {
+    "title": "Export your organization’s data",
+    "section": "8 · Reports",
+    "duration": 18,
+    "file": "57-org-data-export.mp4"
+  },
+  "60-invite-member": {
+    "title": "Invite a team member",
+    "section": "9 · Team & admin",
+    "duration": 19,
+    "file": "60-invite-member.mp4"
+  },
+  "65-notifications": {
+    "title": "Notifications and the activity log",
+    "section": "9 · Team & admin",
+    "duration": 17,
+    "file": "65-notifications.mp4"
+  },
+  "67-org-profile": {
+    "title": "Organization profile and branding",
+    "section": "9 · Team & admin",
+    "duration": 13,
+    "file": "67-org-profile.mp4"
+  },
+  "64-calendar": {
+    "title": "The M&E calendar: never miss a deadline",
+    "section": "9 · Team & admin",
+    "duration": 18,
+    "file": "64-calendar.mp4"
+  }
+}

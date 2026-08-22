@@ -1,9 +1,5 @@
 # Dashboard
 
-<VideoEmbed title="27 · Reading your dashboard — progress, deadlines, alerts" />
-
-<VideoEmbed title="28 · Understanding indicator progress scores" />
-
 The Dashboard is the first thing you see after logging in. It gives you a clear view of your programs, projects, indicators, and upcoming deadlines in one place.
 
 <div class="doc-page-hero">
@@ -58,18 +54,26 @@ The Dashboard is the first thing you see after logging in. It gives you a clear 
 
 ---
 
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/02-dashboard-tour.mp4" title="02 · Your dashboard at a glance" duration="22s" />
+  <VideoEmbed src="/videos/03-global-search.mp4" title="03 · Find anything with global search" duration="20s" />
+  <VideoEmbed src="/videos/04-activity-pulse.mp4" title="04 · Stay updated with Activity Pulse" duration="31s" />
+</div>
+
 ## Summary Cards
 
 At the top of the dashboard, four cards show the most important numbers across your entire portfolio at a glance.
 
 | Card | What it shows |
 |---|---|
-| **Active Projects** | Number of projects with status "Active" across all programs |
-| **Total Budget** | Combined budget of all active projects (grouped by currency) |
-| **Indicators On Track** | Number of indicators with a progress score of 90% or above |
-| **Upcoming Deadlines** | Number of reporting period due dates falling within the next 30 days |
+| **Submissions Approved** | How many submissions passed review, with drafts / in-review / returned beneath |
+| **Submission Completion** | Share of expected submissions that have been approved this period |
+| **Target Achievement** | Average achievement against indicator targets across the portfolio |
+| **Indicators On Track** | How many targeted indicators are currently meeting their targets |
 
-Clicking any card takes you to the relevant filtered view.
+Each card carries a small trend or warning line, so a glance tells you whether the number is moving the right way.
 
 <figure class="doc-figure">
   <div class="doc-figure__media">
@@ -77,7 +81,7 @@ Clicking any card takes you to the relevant filtered view.
   </div>
   <figcaption class="doc-figure__caption">
     <p class="doc-figure__title">Figure 3.2 — Dashboard Summary Cards</p>
-    <p>Close-up of the four stat cards at the top of the dashboard. Each card shows a number, a label, and a small icon. The "Indicators On Track" card shows a green badge. The "Upcoming Deadlines" card shows an orange badge if there are deadlines within 7 days.</p>
+    <p>Close-up of the four stat cards at the top of the dashboard: Submissions Approved, Submission Completion, Target Achievement, and Indicators On Track — each with a colored accent and a context line underneath.</p>
     <p class="doc-figure__hint">Click the screenshot to expand it.</p>
   </figcaption>
 </figure>
@@ -197,8 +201,15 @@ Dashboard numbers may take up to a minute to refresh automatically. If you need 
 
 ## Customizing Your View
 
-::: tip Coming Soon
-Dashboard customization (choosing which widgets to show, reordering panels, and saving filter preferences) is planned for a future release.
-:::
+The organization dashboard shows data from all programs and projects. When you need a tailored view — for a donor briefing, one program, or a board meeting — build a **custom dashboard**:
 
-For now, the dashboard shows data from all programs and projects in your organization. To narrow your focus to a single program or project, navigate to the program or project detail page directly from the sidebar.
+1. Go to **Analysis → Dashboards** and click **New Dashboard**.
+2. Add widgets — bar, line, gauge, map, KPI and more — each pointed at an indicator or data source.
+3. Use **global filters** (program, project, date range) that cascade to every widget at once.
+
+Custom dashboards open in a read view for everyone; editors reach the builder through the **Edit** button.
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/51-create-dashboard.mp4" title="51 · Create a custom dashboard" duration="27s" />
+  <VideoEmbed src="/videos/53-dashboard-filters.mp4" title="53 · Filter a whole dashboard at once" duration="21s" />
+</div>

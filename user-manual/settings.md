@@ -1,9 +1,5 @@
 # Settings & Administration
 
-<VideoEmbed title="29 · Managing donors and funding sources" />
-
-<VideoEmbed title="30 · Notification preferences and email alerts" />
-
 The Settings section is where Org Admins manage the organization, team members, donors, and workspace preferences. Access it by clicking **Settings** in the left sidebar.
 
 <figure class="doc-figure">
@@ -18,6 +14,16 @@ The Settings section is where Org Admins manage the organization, team members, 
 </figure>
 
 ---
+
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/67-org-profile.mp4" title="67 · Organization profile and branding" duration="13s" />
+  <VideoEmbed src="/videos/62-org-reporting-periods.mp4" title="62 · Manage organization reporting periods" duration="17s" />
+  <VideoEmbed src="/videos/63-units-settings.mp4" title="63 · Manage units of measurement" duration="15s" />
+  <VideoEmbed src="/videos/64-calendar.mp4" title="64 · The M&E calendar: never miss a deadline" duration="18s" />
+  <VideoEmbed src="/videos/65-notifications.mp4" title="65 · Notifications and the activity log" duration="17s" />
+</div>
 
 ## General Settings
 

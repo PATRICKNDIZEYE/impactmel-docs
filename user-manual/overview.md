@@ -1,7 +1,5 @@
 # Platform Overview
 
-<VideoEmbed title="01 · Platform overview — a 2-minute tour" />
-
 <div class="doc-page-hero">
   <p class="doc-page-hero__eyebrow">Foundations</p>
   <p class="doc-page-hero__title">Understand the actors, core objects, and reporting flow before you configure anything.</p>

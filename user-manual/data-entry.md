@@ -1,18 +1,20 @@
 # Entering Data
 
-<VideoEmbed title="16 · Submitting data for an indicator period" />
-
-<VideoEmbed title="17 · The review and approval process" />
-
-<VideoEmbed title="18 · Returning a submission for revision" />
-
-<VideoEmbed title="19 · Commenting on a submission" />
-
 This guide is primarily for **Reporters** — the team members responsible for submitting indicator values for their assigned projects at the end of each reporting period.
 
 It also covers the **review and approval process** that M&E Officers follow after data is submitted.
 
 ---
+
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/40-enter-indicator-values.mp4" title="40 · Enter indicator values (reporter)" duration="29s" />
+  <VideoEmbed src="/videos/41-submit-for-review.mp4" title="41 · Submit data for review" duration="29s" />
+  <VideoEmbed src="/videos/42-review-approve.mp4" title="42 · Review and approve submissions" duration="32s" />
+  <VideoEmbed src="/videos/43-return-for-correction.mp4" title="43 · Return a submission for correction" duration="22s" />
+  <VideoEmbed src="/videos/44-data-hub.mp4" title="44 · Audit everything in the Data Hub" duration="33s" />
+</div>
 
 ## Who Enters Data?
 

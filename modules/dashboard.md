@@ -1,5 +1,15 @@
 # Dashboard
 
+## Watch it done
+
+<div class="video-track__grid">
+  <VideoEmbed src="/videos/51-create-dashboard.mp4" title="51 · Create a custom dashboard" duration="27s" />
+  <VideoEmbed src="/videos/52-add-dashboard-widget.mp4" title="52 · Add a widget to a dashboard" duration="23s" />
+  <VideoEmbed src="/videos/53-dashboard-filters.mp4" title="53 · Filter a whole dashboard at once" duration="21s" />
+  <VideoEmbed src="/videos/50-statistics.mp4" title="50 · Portfolio statistics at a glance" duration="22s" />
+  <VideoEmbed src="/videos/54-ai-insights.mp4" title="54 · AI insights: risks and recommendations" duration="31s" />
+</div>
+
 ## Overview
 
 The Dashboard is the landing page for each organization. It provides an at-a-glance view of portfolio performance across all programs and projects — without needing to open individual records.
