@@ -76,6 +76,9 @@ const videoSidebar = [
 ]
 
 export default defineConfig({
+  // README.md is for GitHub, not a docs page — it links to repo-relative
+  // assets that Vite cannot resolve.
+  srcExclude: ['README.md'],
   title: 'ImpactMEL Docs',
   description: 'Enterprise Monitoring, Evaluation & Learning Platform documentation',
 
