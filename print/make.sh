@@ -20,6 +20,11 @@ IMAGE="${IMAGE:-impactmel-print:latest}"
 THEME="${THEME:-impactmel}"
 THEME_ARGS="${THEME_ARGS:-}"
 TOC_DEPTH="${TOC_DEPTH:-2}"
+# A client's name is one argument however many words it has. THEME_ARGS is
+# word-split on purpose, so "MZF Nutrition" passed through it would arrive as
+# two arguments and the cover would read "MZF". This is the way to set it from
+# a script.
+ORG_NAME="${ORG_NAME:-}"
 OUT="${OUT:-out}"          # output directory, relative to print/
 
 PRINT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -74,6 +79,7 @@ for VARIANT in "${VARIANTS[@]}"; do
     --toc-depth "$TOC_DEPTH" \
     "${SRC_ARGS[@]}" \
     --out "$OUT" \
+    ${ORG_NAME:+--org-name "$ORG_NAME"} \
     $THEME_ARGS
 
   # 2. HTML + CSS Paged Media -> PDF.
