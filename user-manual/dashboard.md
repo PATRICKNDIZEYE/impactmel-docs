@@ -1,56 +1,38 @@
-# Dashboard
+---
+title: Overview dashboard
+chapter: 3
+roles:
+  - viewer
+  - reporter
+  - me_officer
+  - org_admin
+---
 
-The Dashboard is the first thing you see after logging in. It gives you a clear view of your programs, projects, indicators, and upcoming deadlines in one place.
+# Overview dashboard
+
+**Overview** is the first thing you see after signing in. Open it from the top bar.
+
+What it shows depends on your role. A field officer gets a short list of what they owe. A director gets the portfolio. The four versions are described separately below.
 
 <div class="doc-page-hero">
-  <p class="doc-page-hero__eyebrow">Portfolio control</p>
-  <p class="doc-page-hero__title">Read portfolio health fast, then jump straight from warning signals into action.</p>
-  <p class="doc-page-hero__copy">Use the dashboard for day-to-day oversight. It helps leadership, M&amp;E teams, and managers notice deadlines, weak indicators, and slow-moving programs before reports are due.</p>
+  <p class="doc-page-hero__eyebrow">Daily oversight</p>
+  <p class="doc-page-hero__title">Read the state of the portfolio, then go straight from a warning to the screen that fixes it.</p>
+  <p class="doc-page-hero__copy">Use the dashboard for daily and weekly checks. Every warning on it is a link.</p>
   <div class="doc-page-hero__meta">
     <div class="doc-page-hero__meta-item">
       <span>Best for</span>
-      <strong>Org Admins, M&amp;E officers, and program managers</strong>
+      <strong>Everyone, every day</strong>
     </div>
     <div class="doc-page-hero__meta-item">
       <span>Best moment</span>
-      <strong>Daily checks, weekly reviews, and reporting check-ins</strong>
+      <strong>Daily checks and the week before a deadline</strong>
     </div>
     <div class="doc-page-hero__meta-item">
       <span>Main outcome</span>
-      <strong>A short list of issues that need action now</strong>
+      <strong>A short list of things that need doing now</strong>
     </div>
   </div>
 </div>
-
-<div class="doc-quick-links">
-  <a class="doc-quick-link" href="#summary-cards">
-    <span>Scan fast</span>
-    <strong>Read the four portfolio summary cards first</strong>
-  </a>
-  <a class="doc-quick-link" href="#program-performance-table">
-    <span>Compare programs</span>
-    <strong>Use the performance table to spot uneven execution</strong>
-  </a>
-  <a class="doc-quick-link" href="#indicators-at-risk">
-    <span>Find trouble</span>
-    <strong>Jump to indicators that are behind target</strong>
-  </a>
-  <a class="doc-quick-link" href="/user-manual/reports">
-    <span>Turn insight into output</span>
-    <strong>Move from dashboard signals to donor-ready reports</strong>
-  </a>
-</div>
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/03-01-dashboard-overview.png" alt="Figure 3.1 — Dashboard Overview" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 3.1 — Dashboard Overview</p>
-    <p>The full dashboard page showing the four stat cards at the top (Active Projects, Total Budget, Indicators On Track, Upcoming Deadlines), the Program Performance table in the middle, and the Recent Activity feed on the right side. The sidebar is visible on the left.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
 
 ---
 
@@ -62,154 +44,236 @@ The Dashboard is the first thing you see after logging in. It gives you a clear 
   <VideoEmbed src="/videos/04-activity-pulse.mp4" title="04 · Stay updated with Activity Pulse" duration="31s" />
 </div>
 
-## Summary Cards
+<!-- roles: org_admin -->
 
-At the top of the dashboard, four cards show the most important numbers across your entire portfolio at a glance.
+## The org admin dashboard
 
-| Card | What it shows |
+{{figure:dashboard-admin}}
+
+### Before there is any data
+
+Until you have a programme, a project and an indicator, the dashboard shows four setup steps instead of figures: **Account Created**, **Create a Program**, **Add a Project** and **Define Indicators**. Each carries a button that takes you there, and steps you cannot start yet are marked **Locked**.
+
+### The four tiles
+
+Once there is data, four tiles replace the steps.
+
+| Tile | What it counts |
 |---|---|
-| **Submissions Approved** | How many submissions passed review, with drafts / in-review / returned beneath |
-| **Submission Completion** | Share of expected submissions that have been approved this period |
-| **Target Achievement** | Average achievement against indicator targets across the portfolio |
-| **Indicators On Track** | How many targeted indicators are currently meeting their targets |
+| **Submissions Approved** | Approved plus locked submissions. Underneath: how many are draft, in review and returned |
+| **Submission Completion** | Approved submissions as a share of everything reported. Below 60% it tells you how far short you are |
+| **Target Achievement** | Average achievement against indicator targets. Indicators with no target are excluded, and the tile says how many |
+| **Indicators On Track** | On-track indicators, out of those that have targets |
 
-Each card carries a small trend or warning line, so a glance tells you whether the number is moving the right way.
+{{figure:dashboard-tiles}}
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/03-02-summary-cards.png" alt="Figure 3.2 — Dashboard Summary Cards" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 3.2 — Dashboard Summary Cards</p>
-    <p>Close-up of the four stat cards at the top of the dashboard: Submissions Approved, Submission Completion, Target Achievement, and Indicators On Track — each with a colored accent and a context line underneath.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Each tile carries a line underneath comparing it with the period before, so a glance tells you which way it is moving.
+
+::: warning Indicators with no target are excluded, not counted as zero
+An indicator whose due targets add up to nothing is left out of Target Achievement entirely. The tile says how many were excluded. If that number is large, your targets are incomplete.
+:::
+
+### System Insight
+
+One paragraph naming the single most useful thing about the state of your data right now — a stale month, a run of returned submissions, or an empty queue.
+
+### Priority Queue
+
+Five rows, sorted with the most urgent first. Each is a link:
+
+- Submissions due within 7 days → **Submissions**
+- Returned submissions needing correction → **Submissions**
+- Submissions awaiting approval → **Submissions**
+- Whether organisation setup is finished → **Settings**
+- Team invitations still unaccepted → **Settings → Members**
+
+When there is nothing to do, each row says so plainly.
+
+### Activity Feed
+
+The five most recent submissions, each reading as a sentence — *Households with safe water submitted for review · Q1 2026* — with how long ago it happened.
+
+{{figure:dashboard-activity-feed}}
+
+### Indicator Performance
+
+A table of the first six programmes, with columns **Indicator + Program**, **Target**, **Actual**, **Indicators** and **Status**. The Indicators column draws one small bar per indicator, so an uneven programme is visible without reading numbers.
+
+{{figure:dashboard-indicator-performance}}
+
+### Quick Actions
+
+Four links — review the submission queue, manage members and invitations, launch a new programme, audit role permissions — and a one-line summary of the queue.
+
+### Monthly Throughput
+
+Submission volume by month, for the last six months. It appears only once you have at least two months of data, because one bar compares with nothing.
+
+### Programmes Portfolio and Indicator Reports
+
+Two more cards, each shown only when there is something in it. The first lists programmes with their indicator counts and status. The second breaks indicator reports down into **Draft**, **Submitted**, **Approved** and **Rejected**.
+
+<!-- /roles -->
 
 ---
 
-## Program Performance Table
+<!-- roles: me_officer -->
 
-Below the summary cards, the **Program Performance** table lists every active program with key metrics:
+## The M&E officer dashboard
 
-| Column | Description |
+Headed **Dashboard**, with the line *High-level performance signals across programs and teams.*
+
+The first row of four tiles is **Active Users**, **Projects**, **Indicators** and **Target Completion**.
+
+The second row is the one to read every morning:
+
+| Tile | What it counts |
 |---|---|
-| **Program** | Program name and status badge |
-| **Projects** | Number of projects within the program |
-| **Budget** | Total planned budget vs. spent to date |
-| **Indicators** | Count of indicators, with how many are on track |
-| **Progress** | Visual progress bar showing overall completion |
-| **Last Activity** | When data was last submitted for this program |
+| **Pending Review** | Submissions waiting on a decision |
+| **Returned** | Submissions sent back and not yet corrected |
+| **Due Soon (7 days)** | Draft or returned submissions whose deadline is within a week |
+| **Quick Actions** | **Review submissions**, and **New program** if you can create one |
 
-Click any program row to open the full program view.
+Below that, **Team Progress** shows the latest activity per programme as cards.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/03-03-program-table.png" alt="Figure 3.3 — Program Performance Table" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 3.3 — Program Performance Table</p>
-    <p>The program performance table showing three programs as rows. Each row has a colored status badge (Active/Completed), a budget bar showing burn rate, an indicator count chip, and a "View" action button. One program shows a warning badge indicating indicators at risk.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+The **Timeline** card at the bottom is not built yet. Its four tabs say so.
+
+<!-- /roles -->
 
 ---
 
-## Indicators at Risk
+<!-- roles: reporter -->
 
-Below the program table, ImpactMEL highlights any indicators that need your attention. An indicator is flagged as **At Risk** if its progress score is below 70%, or as **Off Track** if below 50%.
+## The reporter dashboard
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/03-04-indicators-at-risk.png" alt="Figure 3.4 — Indicators at Risk Panel" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 3.4 — Indicators at Risk Panel</p>
-    <p>A panel titled "Indicators Needing Attention" showing a list of 3-4 indicator cards. Each card shows the indicator name, the project it belongs to, the current value vs target, and a red or orange progress badge. A "View All" link appears at the bottom.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Headed **My Reporting Dashboard**, with the line *What needs your attention right now.*
 
-For each flagged indicator you can see:
-- **Indicator name** and the project it belongs to
-- **Current value** vs. the period target
-- **Progress score** with a color-coded badge
-- A direct link to the indicator's data entry page
+Four tiles:
 
-Click **View All** to see the full list of all indicators across your portfolio.
+| Tile | What it counts |
+|---|---|
+| **Assigned Programs** | The projects you can report on |
+| **Drafts To Submit** | Figures you have saved but not submitted |
+| **Returned (Fix Needed)** | Figures sent back to you |
+| **Due Soon (7 days)** | Drafts with a deadline inside a week |
 
----
+Two buttons: **Go to submissions** and **View my programs**.
 
-## Understanding Traffic Lights
+Below, **My Assigned Programs** lists up to six projects. Click one to open it.
 
-ImpactMEL uses a three-color system throughout the platform to communicate progress at a glance:
+If it says **No assigned programs yet**, ask an org admin to add you to a project's team.
 
-| Color | Label | Progress Score | Meaning |
-|---|---|---|---|
-| 🟢 Green | **On Track** | ≥ 90% | Meeting or exceeding the target |
-| 🟡 Amber | **At Risk** | 70–89% | Behind target but recoverable |
-| 🔴 Red | **Off Track** | < 70% | Significantly behind target, action needed |
-
-This color coding appears on indicator cards, in the program table, on project detail pages, and in assembled reports.
+<!-- /roles -->
 
 ---
 
-## Recent Activity Feed
+<!-- roles: viewer -->
 
-The **Recent Activity** panel (right side of the dashboard) shows a chronological log of the most recent events across your organization:
+## The viewer dashboard
 
-- Data submitted by a reporter
-- Indicator report approved or rejected by an M&E officer
-- New member invited
-- Report published and shared
-- Reporting period locked
-- New project created
+Headed **Portfolio Dashboard**, with the line *Read-only performance overview (dashboards and reports).*
 
-Each item shows the action, the person who did it, and how long ago it happened. Click any item to navigate to the relevant record.
+Four tiles: **Projects**, **Indicators**, **Reports** and **Target Achievement**.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/03-05-activity-feed.png" alt="Figure 3.5 — Recent Activity Feed" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 3.5 — Recent Activity Feed</p>
-    <p>The activity feed panel showing 8-10 recent events as a vertical list. Each event has a small avatar, a description of the action, the user's name, and a relative timestamp (e.g., "2 hours ago"). Events with different types have different colored icons (green for approvals, blue for submissions, gray for admin actions).</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Three buttons: **Dashboards**, **Analysis** and **Statistics**.
+
+<!-- /roles -->
 
 ---
 
-## Upcoming Deadlines
+## Traffic lights, and where they come from
 
-Below the activity feed, the **Upcoming Deadlines** widget lists all reporting period due dates in the next 30 days, sorted by urgency:
+The same three-state system is used everywhere in ImpactMEL — on the dashboard, in the indicator register, on a programme's page and in an assembled report.
 
-- Deadlines within 7 days appear in **red**
-- Deadlines within 14 days appear in **amber**
-- Deadlines beyond 14 days appear in **gray**
+| Label | Default band |
+|---|---|
+| **On Track** | 90% of target or above |
+| **At Risk** | 70% up to 90% |
+| **Off Track** | Below 70% |
+| **No data** | Nothing reported |
 
-Click any deadline to open the relevant project and reporting period.
+Every status is shown as a coloured pill **with a written label**, so it never depends on telling two colours apart.
+
+<!-- roles: org_admin -->
+
+The two thresholds are yours to change. Go to **Settings → Organization**, find **When progress is on track**, and set **On track from (% of target)** and **At risk from (% of target)**. The at-risk figure must be above zero and below the on-track figure. Change them and every status in the product follows.
+
+<!-- /roles -->
+
+::: tip No data is not zero
+A period with nothing reported shows as **No data**, never as zero. An unreported indicator and an indicator that achieved nothing are different problems.
+:::
 
 ---
 
-## Refreshing Data
+## Statistics
 
-Dashboard numbers may take up to a minute to refresh automatically. If you need the latest values right away, refresh the page with **F5** or use the refresh icon if it is visible.
+**Statistics** sits next to Overview in the left rail. It is the numbers behind the dashboard, without the prioritising.
+
+{{figure:statistics}}
+
+It opens with six figures — **Programs**, **Projects**, **Indicators**, **Target Achievement**, **Reports** and **Due Soon Drafts** — each with a line of context underneath.
+
+**Reporting Pressure** then gives four operational signals, each with its own healthy band: **Approval Rate**, **Review Queue**, **Indicator Coverage** and **Draft Backlog**.
+
+Four charts follow: **Portfolio Completion**, **Quarterly Target vs Actual**, **Projects by Status** and **Submission Activity**.
+
+**Program Ranking** splits programmes into **Top Performing Programs** and **Needs Attention**. The split uses your organisation's own at-risk threshold.
+
+Down the right: **Report Output Mix**, **Recent Reporting Outputs** and **Submission State Snapshot**.
 
 ---
 
-## Customizing Your View
+## Notifications
 
-The organization dashboard shows data from all programs and projects. When you need a tailored view — for a donor briefing, one program, or a board meeting — build a **custom dashboard**:
+Reach it with **⌘K**, then type *Notifications*.
 
-1. Go to **Analysis → Dashboards** and click **New Dashboard**.
-2. Add widgets — bar, line, gauge, map, KPI and more — each pointed at an indicator or data source.
-3. Use **global filters** (program, project, date range) that cascade to every widget at once.
+The page lists recent activity in your organisation, grouped under **Today**, **Yesterday** and then by date. Each line names who did what to which record, and how long ago.
 
-Custom dashboards open in a read view for everyone; editors reach the builder through the **Edit** button.
+- Click an unread line to mark just that one read.
+- **Mark all read** appears while anything is unread.
+- A refresh button reloads the list.
+
+::: warning Read state does not follow you
+Which notifications you have read is stored in the browser you are using. Open ImpactMEL on a different computer and they will look unread again.
+:::
+
+---
+
+## Custom dashboards
+
+The org dashboard covers everything. When you need one view — for a board meeting, or one programme — build a dashboard of your own.
+
+Reach it with **⌘K**, then type *Dashboards*.
+
+1. Click **New Dashboard**, give it a name, click **Create Dashboard**.
+2. Open it and click **Open Builder**.
+3. Click **Add Widget**. The widget screen has six numbered steps: what to track, an optional project, which indicators, the breakdown, the metrics, and the visualisation. Name it and click **Save to Dashboard**.
+4. Drag and resize widgets in the builder to arrange them.
+
+Widgets can be a **bar**, **line** or **pie** chart, a **kpi** figure, or a **table**.
+
+**Global Filters** in the builder panel set **Program**, **Project**, **Date From** and **Date To** for the whole dashboard at once. They cascade to every widget and save themselves — there is no Apply button.
+
+A dashboard is **Draft** or **Published**, and the list shows how many widgets each holds.
 
 <div class="video-track__grid">
   <VideoEmbed src="/videos/51-create-dashboard.mp4" title="51 · Create a custom dashboard" duration="27s" />
   <VideoEmbed src="/videos/53-dashboard-filters.mp4" title="53 · Filter a whole dashboard at once" duration="21s" />
 </div>
+
+<!-- TODO: the Share affordances on the dashboards list and in the builder do nothing — the dropdown item has no handler and the builder button is disabled. There is no public dashboard route. The system guide says dashboard sharing is live and revocable; the frontend disagrees. Resolve before this section mentions sharing at all. -->
+
+---
+
+## Refreshing
+
+Dashboard figures are worked out when the page loads. Reload the page for the current numbers.
+
+---
+
+## Where to go next
+
+- [Review and approve](/user-manual/review-and-approve) — clear what the dashboard is warning you about
+- [Indicator register and tracking table](/user-manual/indicator-register) — the same figures, one row per indicator
+- [Reports](/user-manual/reports) — turn the figures into a document

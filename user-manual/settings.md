@@ -1,17 +1,38 @@
-# Settings & Administration
+---
+title: Settings and administration
+chapter: 18
+roles:
+  - me_officer
+  - org_admin
+---
 
-The Settings section is where Org Admins manage the organization, team members, donors, and workspace preferences. Access it by clicking **Settings** in the left sidebar.
+# Settings and administration
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/11-01-settings-navigation.png" alt="Figure 11.1 — Settings Navigation" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 11.1 — Settings Navigation</p>
-    <p>The Settings page with a sub-navigation menu on the left showing tabs: General, Members, Donors &amp; Funders, Security, and Notifications. The "General" tab is selected, showing organization name, code, and logo upload fields in the main content area.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Settings is where the organisation, its people, and the reference data everything else depends on are managed.
+
+Open it from your avatar → **Admin Console**, or press **⌘K** and type *Settings*.
+
+---
+
+## The eleven pages
+
+The rail down the left holds eleven pages. Not all of them are open to every role.
+
+| Page | What it is for | Who |
+|---|---|---|
+| **Organization** | Name, code, logo, country, currency, progress thresholds | M&E officer reads, org admin saves |
+| **Members** | Who has access, and their roles | Owner or Admin |
+| **Donors & Funders** | The donor registry | Org admin |
+| **Reporting Periods** | The org-wide reporting calendar | M&E officer, org admin |
+| **Disaggregations** | The dimensions figures are broken down by | M&E officer, org admin |
+| **Units** | Units of measurement | M&E officer, org admin |
+| **Roles & permissions** | Custom roles | Org admin |
+| **Integrations** | Connections to external systems | Org admin |
+| **Notifications** | What you are notified about | M&E officer, org admin |
+| **Export Data** | Bulk export as a spreadsheet | M&E officer, org admin |
+| **Audit Log** | Who changed what | Org admin |
+
+A page your role cannot reach does not appear in the rail.
 
 ---
 
@@ -25,225 +46,299 @@ The Settings section is where Org Admins manage the organization, team members, 
   <VideoEmbed src="/videos/65-notifications.mp4" title="65 · Notifications and the activity log" duration="17s" />
 </div>
 
-## General Settings
+## Organization
 
-The **General** tab lets you update your organization's core information.
+Headed **Organization**: *Update your organization name, code, logo, contact details, and default currency.*
 
-| Setting | Description |
+One card, **Organization profile**. What is in it appears in the header and can be used in reports.
+
+| Field | Notes |
 |---|---|
-| **Organization Name** | The full display name of your organization |
-| **Organization Code** | Short identifier (e.g., *STF-RW*) — used in exports and reports |
-| **Logo** | Upload your organization's logo (PNG or SVG, max 1 MB) |
-| **Website** | Your organization's public website URL |
-| **Country** | Primary country of operation |
+| **Organization name** | |
+| **Organization code** | |
+| **Country (ISO-2)** | Two letters — RW, UG, KE |
+| **Website** | |
+| **Contact email** | |
+| **Default currency** | Three letters — USD, RWF, EUR |
 
-After making changes, click **Save Changes**.
+{{figure:settings-organization}}
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/11-02-general-settings.png" alt="Figure 11.2 — General Settings Tab" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 11.2 — General Settings Tab</p>
-    <p>The General tab showing the organization name and code as editable text inputs, a logo upload area with a preview of the current logo, and country/website fields below. A "Save Changes" button appears at the bottom. A note below the logo upload says "Recommended size: 200×60px. PNG or SVG format."</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+### When progress is on track
+
+The most important two fields on this page, and the easiest to miss.
+
+- **On track from (% of target)**
+- **At risk from (% of target)**
+
+These set the bands behind every **On Track**, **At Risk** and **Off Track** label in ImpactMEL — the dashboard, the indicator register, a programme's page, an assembled report. The default is 90 and 70.
+
+The at-risk figure must be above zero and below the on-track figure.
+
+### Logo
+
+**Upload new logo** or **Replace**. The current one is shown next to it.
+
+Click **Save changes**.
+
+<!-- roles: me_officer -->
+
+::: warning An M&E officer can read this page but not save it
+Saving the organisation profile needs organisation-level write access. Ask an org admin.
+:::
+
+<!-- /roles -->
 
 ---
 
-## Managing Team Members
+<!-- roles: org_admin -->
 
-The **Members** tab shows everyone who has access to your organization's ImpactMEL account.
+## Members
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/11-03-members-tab.png" alt="Figure 11.3 — Members Tab" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 11.3 — Members Tab</p>
-    <p>The Members tab showing a table with columns: Name, Email, Role (shown as a colored badge), Status (Active/Pending), Date Joined, and an Actions column with "Change Role" and "Remove" options. A search bar appears at the top. An "+ Invite Member" button is in the top-right corner. Pending invitations appear with a gray "Pending" badge and a "Resend" link.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Headed **Organization members**: *Manage who has access to this organization and their roles.*
 
-### Inviting a New Member
+{{figure:settings-members}}
 
-1. Click **+ Invite Member**
-2. Enter their **email address**
-3. Select their **role** (see [Roles & Permissions](/user-manual/roles-permissions) for guidance)
-4. Click **Send Invitation**
+### Invite by email
 
-The invited person receives an email with a link to create their account (or sign in if they have one). Once they accept, they appear as **Active** in your members list.
+*Send a secure invite link or auto-add if the email already exists.*
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/11-04-invite-member-dialog.png" alt="Figure 11.4 — Invite Member Dialog" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 11.4 — Invite Member Dialog</p>
-    <p>The "Invite Member" dialog showing an email address field and a role dropdown with four options: Org Admin, M&amp;E Officer, Reporter, and Viewer. Each option has a brief description below its name. A "Send Invitation" button is at the bottom. A note below the role selector says "You can change their role at any time after they join."</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Enter their **Email**, choose a **Role**, and click **Invite**. One of three things happens, and the page tells you which:
 
-### Changing a Member's Role
+- They already had an account, so they are now a member. Nothing else to do.
+- An invitation was created but this workspace cannot send email — copy the link from **Pending invites** and send it yourself.
+- An invitation was sent. It expires in seven days; invite them again to send it a second time.
 
-1. Find the member in the table
-2. Click **Change Role** in the Actions column
-3. Select the new role
-4. Click **Update Role**
-
-The change takes effect immediately — the member's permissions are updated on their next page load.
-
-### Removing a Member
-
-1. Find the member in the table
-2. Click **Remove** in the Actions column
-3. Confirm in the dialog that appears
-
-Removed members immediately lose access to your organization. Their submitted data is preserved — it is not deleted when a member is removed.
-
-::: warning
-Removing a member cannot be undone automatically. If the removal was a mistake, you will need to send a new invitation to re-add them.
+::: warning This Role dropdown is Member, Admin or Owner
+It sets the membership level, which governs who can manage the team. The four ImpactMEL roles are attached separately, below. See [Roles and permissions](/user-manual/roles-permissions).
 :::
 
-### Resending an Invitation
+### The members table
 
-If an invited person hasn't accepted after a few days, the invitation may have gone to their spam folder.
+**Search members…** finds a person. Each row shows the user, their membership level as a dropdown, their attached roles, and a remove button.
 
-1. Find their entry in the members table (shown with a **Pending** badge)
-2. Click **Resend** next to their entry
-3. A new invitation email is sent
+- Change the membership level with the dropdown.
+- Attach an ImpactMEL role with **Add role…**. The **×** on a role chip removes it.
+- **Remove** takes them out of the organisation. The confirmation names them: *They will lose access.*
+
+Your own row cannot be edited. It says so: *Your account — another administrator changes or removes it.*
+
+Removing someone does not delete their work. Figures they entered stay.
+
+### Pending invites
+
+Each pending invitation shows the email and the level, with **Copy link** and **Revoke**.
 
 ---
 
 ## Donors & Funders
 
-The **Donors & Funders** tab maintains your organization's registry of funding organizations. Donors in this registry can be linked to programs.
+Headed **Donors & Funders**: *Manage your organization's donor/funder registry.*
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/11-05-donors-tab.png" alt="Figure 11.5 — Donors & Funders Tab" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 11.5 — Donors &amp; Funders Tab</p>
-    <p>The Donors &amp; Funders tab showing a searchable table of donors. Columns include: Donor Name, Code, Type (shown as a colored badge: Bilateral/Multilateral/Private/NGO), Country, Contact, and Action buttons (Edit, Delete). A search bar at the top. A "+ New Donor" button in the top-right. Type filter chips (All / Bilateral / Multilateral / Private / NGO) appear below the search bar.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+The table lists **Name**, **Type**, **Country**, **Contact** and **Status**. **Search donors...** filters it.
 
-### Adding a Donor
+### Adding a donor
 
-1. Click **+ New Donor**
-2. Fill in the donor's details:
+Click **Add Donor**. The modal is **Add New Donor**.
 
-| Field | Required | Description |
-|---|---|---|
-| **Donor Name** | ✅ | Full official name |
-| **Code** | | Short abbreviation (e.g., *USAID*, *GIZ*, *FCDO*) |
-| **Type** | ✅ | Bilateral, Multilateral, Private, NGO, Government, Other |
-| **Country** | | Donor's country of origin |
-| **Website** | | Donor's website URL |
-| **Contact Name** | | Primary point of contact |
-| **Contact Email** | | Contact email address |
-| **Notes** | | Internal notes about this donor relationship |
-
-3. Click **Save Donor**
-
-### Donor Types
-
-| Type | Examples |
+| Field | Required |
 |---|---|
-| **Bilateral** | USAID, FCDO, GIZ, AFD, SIDA |
-| **Multilateral** | UNICEF, UNDP, World Bank, European Union, WHO |
-| **Private** | Private foundations, corporate social responsibility |
-| **NGO** | International NGO sub-grants |
-| **Government** | Host government co-financing |
-| **Other** | Any other funding source |
+| **Name** | Yes |
+| **Abbreviation** | |
+| **Type** | |
+| **Country** | |
+| **Website** | |
+| **Email** | |
+| **Phone** | |
+| **Notes** | |
+| **Active donor** | Tick to keep it in use |
 
-### Editing or Deleting a Donor
+**Type** is one of **Bilateral**, **Multilateral**, **Foundation**, **Government**, **Private Sector**, **NGO** or **Other**.
 
-- **Edit:** Click the pencil icon on the donor row → update fields → **Save**
-- **Delete:** Click the trash icon → confirm. Donors linked to active programs cannot be deleted — unlink them from all programs first.
+Click **Add Donor**. Editing uses the same form, with **Save Changes**.
 
----
+::: tip Set donors up before programmes
+A programme's donor field reads this registry. Filling it in first keeps names consistent. You can still create one inline from the programme form.
+:::
 
-## Notification Preferences
-
-The **Notifications** tab lets each user configure which system events they want to be notified about via email or in-app alert.
-
-| Event | Who receives it | Configurable |
-|---|---|---|
-| Indicator report submitted | M&E Officers | ✅ |
-| Indicator report approved | Reporter who submitted | ✅ |
-| Indicator report rejected | Reporter who submitted | ✅ |
-| Reporting period due in 7 days | All project members | ✅ |
-| New member joined the org | Org Admins | ✅ |
-| Report shared externally | Org Admins | ✅ |
-
-To update your preferences:
-1. Go to **Settings** → **Notifications**
-2. Toggle each notification type on or off
-3. Changes save automatically
+<!-- /roles -->
 
 ---
 
-## Security Settings
+## Reporting Periods
 
-The **Security** tab (Org Admin only) shows:
+Headed **Reporting Periods**: *Org-wide periods that projects report against.*
 
-- **Active sessions** — list of devices currently logged into your account
-- **Session timeout** — how long until inactive sessions are automatically signed out
-- **2FA setup** — Two-factor authentication via authenticator app (coming soon)
-- **Audit log** — a tamper-proof log of all admin actions in the organization
+These are the periods [Period sign-off](/user-manual/period-sign-off) closes and locks. They are not the same as the per-indicator periods inside a project.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/11-06-security-settings.png" alt="Figure 11.6 — Security Settings Tab" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 11.6 — Security Settings Tab</p>
-    <p>The Security tab showing three sections: "Active Sessions" (a table of devices with location, browser, and a "Sign out this device" button), "Session Settings" (a timeout dropdown set to "7 days"), and "Audit Log" (a chronological list of admin actions with timestamps, user names, and action descriptions).</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+The page splits into **Open** and **Closed / Locked**.
 
-### Audit Log
+{{figure:settings-reporting-periods}}
 
-The audit log records every significant action taken by any admin in your organization:
+### Adding a period
 
-- Member invited / removed / role changed
-- Program / project created or deleted
-- Reporting period locked or unlocked
-- Report published or share link revoked
-- Org settings changed
+Click **New Period**.
 
-Each entry shows: who did it, what they did, when, and the IP address. The audit log cannot be edited or deleted.
+| Field | Required |
+|---|---|
+| **Period Name** | Yes — for example *Q1 2025* or *FY2025-H1* |
+| **Period Type** | Yes — Monthly, Quarterly, Semi-Annual, Annual or Custom |
+| **Start Date** | Yes |
+| **End Date** | Yes |
+| **Submission Due** | |
+| **Approval Deadline** | |
+| **Fiscal Year** | For example *FY2025* |
+
+Click **Create Period**. It is created **Open**.
+
+::: warning There is no bulk generate here
+Each org-wide period is created one at a time. The **Quick Generate** buttons that produce four quarters or twelve months at once are inside a project, on its **Reporting Periods** page.
+:::
+
+### Closing and locking
+
+Row actions depend on the state: an **Open** period offers **Close**; a **Closed** one offers **Re-open** and **Lock**; a **Locked** one offers nothing — there is no unlock here.
+
+For the version of this that shows you what is outstanding first, and that demands a written reason when you reopen, use **More → Period sign-off** instead.
+
+### Deleting
+
+Available on any period that is not locked. The confirmation warns that indicator reports linked to it are removed too.
 
 ---
 
-## Your Profile Settings
+## Disaggregations
 
-Each user (regardless of role) can manage their personal account settings:
+Headed **Disaggregation Dimensions**: *Define breakdown dimensions for indicators (e.g., Gender, Age Group, Location).*
 
-1. Click your **avatar** or name in the top-right corner
-2. Select **Account Settings**
+{{figure:settings-disaggregations}}
 
-From there you can:
-- Update your **display name**
-- Change your **email address**
-- Update your **password**
-- Manage **notification preferences**
-- **Sign out** from all devices
+### A dimension
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/11-07-account-settings.png" alt="Figure 11.7 — Account Settings Page" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 11.7 — Account Settings Page</p>
-    <p>The personal account settings page showing: a profile photo upload area, First Name and Last Name fields, Email field with a "Change Email" button, a "Change Password" section with current and new password fields, and a "Sign Out All Devices" button at the bottom in red.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Click **Add Dimension**, fill in **Dimension Name** (*Gender*, *Age Group*) and an optional **Code** (*GEN*, *AGE*), and click **Create Dimension**.
+
+### Its values
+
+Expand the dimension to reach **Values**.
+
+- **Add Value** takes a **Value Label** (*Male*, *Female*), a **Code** (*M*, *F*), and optionally a **Link to location**.
+- **Bulk add** takes one value per line, with an optional code, and **Add bulk** creates them all.
+- Editing a value also exposes its **Order**.
+- **Search values…** finds one in a long list.
+
+Linking a value to a location lets a district breakdown appear on the map. The **Search map** toggle will create the location if it does not exist yet.
+
+---
+
+## Units
+
+Headed **Units of measurement**: *Manage units for indicators (e.g. people, %, USD).*
+
+Click **Add unit**, then fill in **Name** (*People*), **Symbol** (*%*) and **Unit type** (*count*, *percentage*). Click **Save**.
+
+**Bulk add** takes one unit per line, as `name, symbol, type`.
+
+The table lists **Name**, **Symbol** and **Type**, with edit and delete on each row.
+
+::: tip Units can also be created where they are needed
+The New Indicator form has a **New** button next to the unit dropdown, so nobody has to abandon a form to add a missing unit.
+:::
+
+---
+
+## Notifications
+
+Headed **Notification Preferences**: *Choose what to be notified about and how.*
+
+Eight rows, each with an **Email** toggle and an **In-App** toggle:
+
+| Notification | What triggers it |
+|---|---|
+| **New Submission** | Someone submits a data entry for review |
+| **Submission Approved** | Your submission is approved by a reviewer |
+| **Submission Rejected** | Your submission is returned for corrections |
+| **Indicator Report Approved** | An indicator report you entered is approved |
+| **Indicator Report Rejected** | An indicator report you entered is rejected |
+| **Report Due Soon** | A reporting deadline is three days away |
+| **New Team Member** | Someone joins your organisation |
+| **Activity Completed** | An activity is marked as completed |
+
+**Save** is disabled until you change something.
+
+::: warning These preferences live in your browser
+The page says so itself. They are stored locally, so they do not follow you to another computer, and email delivery still depends on whether your administrator has email configured.
+:::
+
+---
+
+## Export Data
+
+Headed **Export Data**: *Download your organization's data as an Excel or CSV file.*
+
+{{figure:settings-export}}
+
+1. **Project Scope** — tick the projects you want. Leave them all unticked for every project.
+2. **What to Export** — tick one or more:
+
+| Data set | What you get |
+|---|---|
+| **Indicators & Reports** | Every indicator with its latest reported value per period |
+| **Activities** | Every activity with status, dates and participant counts |
+| **Participants** | Registered participants and household members |
+| **Budget Lines** | Budget lines with planned against actual |
+
+3. **Format** — **XLSX** or **CSV**.
+4. Click **Export Now**.
+
+The workbook holds one sheet per project per data set, plus a single org-wide Participants sheet. Sheets with no rows are left out.
+
+::: warning CSV holds one sheet
+Pick more than one data set and the export switches to Excel automatically. The page tells you.
+:::
+
+---
+
+<!-- roles: org_admin -->
+
+## Audit Log
+
+Headed **Audit Log**: *A read-only record of all actions taken in your organization.*
+
+{{figure:settings-audit-log}}
+
+Filter by email, by **Action** (*create*, *update*, *delete*, *login*, *submit*, *approve*, *reject*), by **Entity type**, and between two dates. **Search** applies them; **Clear** resets.
+
+Columns: **Time**, **Actor**, **Action**, **Entity** and **Entity ID**.
+
+Where a change has a before and after, the row expands into two panels — **Before** and **After** — showing exactly what changed.
+
+Fifty entries to a page, with **Previous** and **Next** and a running total.
+
+The log cannot be edited or deleted. There is no download.
+
+---
+
+## Integrations
+
+Headed **Integrations**: *Connect external data sources and services to your organization.*
+
+This page records the connection details for an external system. **Nothing on this page imports or exports any data**, and there is no schedule, no test-connection and no sync.
+
+**Disconnect** marks a connection as disconnected. Anything already imported is untouched.
+
+<!-- /roles -->
+
+---
+
+## Your own account
+
+Your avatar → **Profile** holds your own details and your password. See [Getting started](/user-manual/getting-started#your-own-account).
+
+There is no security page, no list of active sessions, no session timeout and no two-factor authentication.
+
+---
+
+## Where to go next
+
+- [Roles and permissions](/user-manual/roles-permissions) — the four roles, in detail
+- [Period sign-off](/user-manual/period-sign-off) — closing the periods set up here
+- [Getting started](/user-manual/getting-started) — a sensible order to set all this up

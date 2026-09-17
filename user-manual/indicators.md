@@ -1,50 +1,41 @@
+---
+title: Indicators
+chapter: 8
+roles:
+  - reporter
+  - me_officer
+  - org_admin
+---
+
 # Indicators
 
-An **indicator** is a measure of progress toward a specific result. In ImpactMEL, indicators are created once and then linked to one or more projects. Each project sets its own targets and reports values for each period.
+An **indicator** is a measure of progress towards a result. It belongs to a project. Its definition can be reused in other projects, and each project reports its own figures against it.
 
-**Examples of indicators:**
-- *Number of people with access to clean water* (unit: people)
-- *% of households with functioning handwashing stations* (unit: %)
-- *Number of community health workers trained* (unit: persons)
+Examples:
+
+- *Number of people with access to safe water* (unit: people)
+- *Percentage of households with a functioning handwashing station* (unit: %)
+- *Number of community health workers trained* (unit: people)
 - *Dropout rate in supported schools* (unit: %)
 
 <div class="doc-page-hero">
   <p class="doc-page-hero__eyebrow">Measurement layer</p>
-  <p class="doc-page-hero__title">Standardize how progress is measured before teams start reporting numbers.</p>
-  <p class="doc-page-hero__copy">Indicators are one of the most important setup areas in ImpactMEL. If names, targets, and reporting rules are unclear here, dashboards and reports become harder to trust later. Use this page to make measurement consistent from the start.</p>
+  <p class="doc-page-hero__title">Settle how progress is measured before anyone reports a number.</p>
+  <p class="doc-page-hero__copy">If a definition is vague here, every dashboard and report built on it is vague too. This is the page to get right.</p>
   <div class="doc-page-hero__meta">
     <div class="doc-page-hero__meta-item">
       <span>Best for</span>
-      <strong>M&amp;E officers, data managers, and program leads</strong>
+      <strong>M&amp;E officers and org admins</strong>
     </div>
     <div class="doc-page-hero__meta-item">
       <span>Best moment</span>
-      <strong>Before reporting periods open and before forms are linked</strong>
+      <strong>After the results framework, before periods open</strong>
     </div>
     <div class="doc-page-hero__meta-item">
       <span>Main outcome</span>
-      <strong>Indicators with strong definitions, targets, and calculations</strong>
+      <strong>Definitions an auditor, a funder and a field officer all agree on</strong>
     </div>
   </div>
-</div>
-
-<div class="doc-quick-links">
-  <a class="doc-quick-link" href="#the-indicator-library">
-    <span>Find and review</span>
-    <strong>See how the shared indicator library is organized</strong>
-  </a>
-  <a class="doc-quick-link" href="#creating-an-indicator">
-    <span>Create</span>
-    <strong>Define a new indicator with the right unit and method</strong>
-  </a>
-  <a class="doc-quick-link" href="#setting-targets">
-    <span>Operationalize</span>
-    <strong>Set project targets before reporting begins</strong>
-  </a>
-  <a class="doc-quick-link" href="#formula-indicators">
-    <span>Automate</span>
-    <strong>Let ImpactMEL calculate percentages and ratios for you</strong>
-  </a>
 </div>
 
 ---
@@ -60,185 +51,173 @@ An **indicator** is a measure of progress toward a specific result. In ImpactMEL
   <VideoEmbed src="/videos/25-aggregation-methods.mp4" title="25 · Choose the right aggregation method" duration="25s" />
 </div>
 
-## The Indicator Library
+## Where indicators live
 
-Navigate to **Indicators** in the sidebar to view your organization's complete indicator library.
+There is no organisation-wide indicator library page. Indicators belong to projects. You reach them three ways:
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/06-01-indicator-library.png" alt="Figure 6.1 — Indicator Library Page" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 6.1 — Indicator Library Page</p>
-    <p>The Indicators list page showing a searchable table. Columns include Code, Indicator Name, Unit, Aggregation Method (shown as a badge), Linked Result Node, and the number of projects using this indicator. A search bar and filters for Aggregation Method and Result Level are at the top. A "New Indicator" button is in the top-right corner. Indicators are grouped by their result framework level (Impact / Outcome / Output).</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+| Route | What you get |
+|---|---|
+| **Reports → Indicator register** | Every indicator in the organisation, one row each, with target and actual |
+| A project → **Indicators & Targets** tab | That project's indicators |
+| A project → **Result Framework** | The indicators hanging off each result |
+
+To read one, click its name anywhere it appears.
 
 ---
 
-## Creating an Indicator
+<!-- roles: me_officer, org_admin -->
 
-1. Click **+ New Indicator** in the top-right corner
-2. Fill in the indicator details:
+## Creating an indicator
 
-| Field | Required | Description |
+Open a project, then **New Indicator** from the left rail or the Indicators & Targets tab. The page is headed **New Indicator**.
+
+### Search before you type
+
+The first thing on the page is a panel headed **Already measuring this somewhere?**. Use it. Half the time the definition already exists somewhere in your workspace, and copying it is what keeps an organisation-wide total addable. See [Reusing an indicator](/user-manual/reusing-an-indicator).
+
+Everything below the panel is the form.
+
+### 1 · Definition
+
+| Field | Required | What it is for |
 |---|---|---|
-| **Indicator Name** | ✅ | Full name in sentence case — be specific and measurable |
-| **Indicator Code** | ✅ | Short reference code (e.g., *WASH-01*, *EDU-03*) |
-| **Unit of Measurement** | ✅ | What the value represents: *people*, *%*, *HHs*, *USD*, *sessions*, etc. |
-| **Aggregation Method** | ✅ | How to combine values across periods (see below) |
-| **Description** | | Full definition and how to measure it |
-| **Data Source** | | Where the data comes from (survey, register, report, etc.) |
-| **Result Node** | | Link to a specific Output or Outcome in your results framework |
+| **Indicator Name** | Yes | The full name. Include the unit in the name for clarity |
+| **Indicator Code** | | A short reference |
+| **Definition / Description** | | What exactly is being counted |
+| **Link to Result** | | Which result in the framework this measures. Only shown if the project has one |
 
-3. Click **Create Indicator**
+{{figure:new-indicator-definition}}
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/06-02-new-indicator-form.png" alt="Figure 6.2 — New Indicator Form" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 6.2 — New Indicator Form</p>
-    <p>The "Create Indicator" form slide-over panel showing all fields. The Aggregation Method field shows a segmented control with the five options (Sum, Average, Latest, Min, Max) and a tooltip icon that explains each option. The Result Node field is an auto-complete dropdown showing the results framework tree.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+### 2 · Measurement
+
+| Field | Required | What it is for |
+|---|---|---|
+| **Unit of Measurement** | Yes | What the number counts. **New** creates one inline, with a **Name** and a **Symbol** |
+| **Direction** | Yes | **Higher is better** or **Lower is better** |
+| **Aggregation Method** | Yes | How period values combine into one figure |
+
+The validation message on the unit field is worth repeating: *a value without units is meaningless*.
+
+{{figure:new-indicator-measurement}}
+
+### 3 · Baseline & Quality
+
+| Field | What it is for |
+|---|---|
+| **Baseline Value** | The starting value |
+| **Baseline Date** | When it was measured |
+| **Baseline source** | Where it came from |
+| **Target as written in the plan** | The target in the plan's own words |
+| **Data Source** | Where the figure will come from |
+| **Reporting Frequency** | Monthly, Quarterly, Twice a year, Termly, Annual or Custom |
+| **Collection Method** | How it is gathered |
+| **Means of Verification** | What an auditor would ask to see, for example signed inspection reports |
+| **Requires data quality review** | Tick if it needs checking |
+| **Active indicator** | Tick to keep it in use |
+
+Click **Create Indicator**.
 
 ---
 
-## Aggregation Methods — Explained
+## Aggregation methods
 
-When a report covers multiple reporting periods, ImpactMEL needs one combined value. The **Aggregation Method** is the rule used to combine those values.
+When one figure has to stand for several periods, the aggregation method is the rule that produces it.
 
 | Method | When to use it | Example |
 |---|---|---|
-| **Sum** | Counting people, events, or activities — where each period adds to the total | *# of people trained:* Q1=200, Q2=300 → Report total = 500 |
-| **Average** | Rates, percentages, satisfaction scores — where you want the mean over the period | *% satisfaction:* Q1=78%, Q2=82% → Report value = 80% |
-| **Latest** | Stock indicators — where the current state is what matters, not the history | *# of functioning water points:* Q1=45, Q2=48 → Report value = 48 |
-| **Min** | Worst-case tracking — report the lowest value across periods | *Minimum coverage rate:* Q1=65%, Q2=72% → Report value = 65% |
-| **Max** | Peak achievement — report the highest value reached | *Maximum beneficiaries in a session:* Q1=120, Q2=95 → Report value = 120 |
+| **Sum** | Counting people, events or items — each period adds to the total | *People trained:* Q1 = 200, Q2 = 300 → 500 |
+| **Average** | Rates, percentages, scores — you want the mean | *Satisfaction:* Q1 = 78%, Q2 = 82% → 80% |
+| **Latest** | Stock indicators — the current state is what matters | *Functioning water points:* Q1 = 45, Q2 = 48 → 48 |
+| **Formula** | The figure is calculated from named inputs rather than typed in | *% of households with safe water* |
 
-::: tip
-The most commonly used methods are **Sum** (for counts) and **Latest** (for stock indicators). Use **Average** for percentages and rates.
+::: warning Changing it after figures exist
+Changing the aggregation method changes how figures already reported appear in future reports. Tell your team before you save it.
 :::
 
 ---
 
-## Setting Targets
+## Formula indicators
 
-Targets are set when you **link an indicator to a project**, not on the indicator definition itself. This allows the same indicator to have different targets across different projects.
+Choose **Formula** as the aggregation method and a formula builder appears. Use it for percentages, ratios and differences, so nobody in the field is doing arithmetic by hand.
 
-To set or update targets:
+The left panel holds **Formula Expression** and a **Formula preview**, with buttons to build it: **Add (+)**, **Subtract (-)**, **Multiply (x)**, **Divide (/)**, **Open bracket**, **Close bracket**, **Multiply by 100**, **⌫ Backspace** and **Clear formula**. A readback headed **This indicator calculates** states in words what you have built.
 
-1. Open the **Project** → **Indicators** tab
-2. Click the **target** value for any indicator (or click the pencil icon)
-3. Enter the project-level target
-4. Optionally set **per-period targets** if each period has a different expected value
-5. Click **Save**
+The right panel holds the inputs.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/06-03-setting-targets.png" alt="Figure 6.3 — Setting Indicator Targets" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 6.3 — Setting Indicator Targets</p>
-    <p>The target editing dialog showing an overall project target field and a "Per-period targets" toggle. When the toggle is enabled, a table appears listing each reporting period with an individual target field. A baseline field appears below the overall target.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+1. Under **Templates**, click **Percentage**, **Ratio** or **Difference** to start from a shape.
+2. Add each input: an **Input name**, an **Input type** (Value, Numerator or Denominator) and an **Input unit**, which defaults to the indicator's own.
+3. **Advanced input settings** on an input adds a **Description**, its **Disaggregations**, and whether the **Input is required during data entry**.
+4. Click **Add input**, then **Insert into formula** to place it in the expression.
 
----
+A formula indicator needs an expression and at least one input before it will save.
 
-## Disaggregations
+{{figure:new-indicator-formula}}
 
-Many indicators need to be broken down by categories — such as sex, age group, or geographic area. These breakdowns are called **disaggregations**.
+When someone reports against a formula indicator, they enter the inputs. ImpactMEL works out the result.
 
-**Example:** The indicator *# of community health workers trained* may be disaggregated by sex (Female / Male) and by district (Gasabo / Kicukiro / Nyarugenge).
-
-### Adding a disaggregation
-
-1. Open the indicator → click **Disaggregations** tab (or edit the indicator)
-2. Click **+ Add Disaggregation**
-3. Enter the **dimension name** (e.g., *Sex*)
-4. Add the **categories** (e.g., *Female*, *Male*, *Non-binary*) — press Enter after each
-5. Click **Save**
-
-When reporters submit values for this indicator, they can enter a value for each category. ImpactMEL automatically adds them together as the total value.
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/06-04-disaggregations.png" alt="Figure 6.4 — Disaggregation Setup" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 6.4 — Disaggregation Setup</p>
-    <p>The disaggregation editor showing two existing disaggregation dimensions: "Sex" with categories Female/Male/Non-binary, and "Age Group" with categories Under 18 / 18-35 / 36-60 / Over 60. An "Add Disaggregation" button appears below. Each category has a small trash icon to delete it.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
----
-
-## Formula Indicators
-
-A **formula indicator** calculates its value from other indicators, instead of asking someone to type it manually. This is useful for percentages, ratios, and similar measures.
-
-**Example:** Instead of asking reporters to calculate the percentage, define:
-
-- `WASH-01` — *# of HHs with access to clean water* (reported manually)
-- `WASH-02` — *Total # of HHs in project area* (reported manually)
-- `WASH-PCT-01` — *% of HHs with clean water access* = `WASH-01 / WASH-02 * 100` (computed automatically)
-
-### Creating a formula indicator
-
-1. Create a new indicator
-2. Toggle **Formula Indicator** to ON
-3. In the **Formula** field, enter the expression using other indicators' **codes** as variables
-4. Click **Save**
-
-When the report is created, ImpactMEL uses the saved values for each referenced indicator and applies the formula automatically.
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/06-05-formula-indicator.png" alt="Figure 6.5 — Formula Indicator Setup" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 6.5 — Formula Indicator Setup</p>
-    <p>The indicator form with the "Formula Indicator" toggle enabled. A new "Formula" text field appears below, containing the expression "WASH-01 / WASH-02 * 100". A green tooltip appears confirming that the formula is valid and listing the two referenced indicators. The Unit field is set to "%".</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
----
-
-## Viewing an Indicator's History
-
-Click any indicator in the library to open its detail view, which shows:
-
-- A chart of reported values over time (across all projects and periods)
-- A table of all submitted indicator reports — who submitted, when, what value, what status
-- The current progress score vs. target
-- Links to the projects using this indicator
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/06-06-indicator-detail.png" alt="Figure 6.6 — Indicator Detail View" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 6.6 — Indicator Detail View</p>
-    <p>The indicator detail page showing a line chart at the top with value on the Y-axis and reporting periods on the X-axis. Below the chart, a table shows all submitted reports with columns for Project, Period, Submitted Value, Target, Progress, Status (Approved/Pending/Rejected), and Submitted By. A "View in Project" link appears on each row.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
----
-
-## Editing and Deleting Indicators
-
-**Edit:** Open the indicator → click **Edit Indicator** (top-right) → change the fields → **Save Changes**.
-
-**Delete:** Open the indicator → three-dot menu → **Delete**. An indicator cannot be deleted if it has submitted data. You must archive the indicator instead, which hides it from the library without deleting historical values.
-
-::: warning
-Changing an indicator's **aggregation method** after data has already been submitted will change how earlier values appear in future reports. Review the change carefully and let your team know before you save it.
+::: tip Disaggregation is set on formula inputs
+Breaking a figure down by sex, age or district is configured on a formula indicator's **inputs**, under **Advanced input settings**. The dimensions themselves come from **Settings → Disaggregations**. There is no disaggregation picker on the indicator itself on this form.
 :::
+
+<!-- /roles -->
+
+---
+
+## Setting targets
+
+Targets belong to periods, not to the definition. Set them per indicator, per period, so the same definition can carry different ambitions in different projects.
+
+Open the project → **Reporting Periods**, expand the indicator, and set the target on each period. See [Projects](/user-manual/projects) for generating a year of periods in two clicks.
+
+---
+
+## Reading an indicator
+
+Click any indicator name. The page opens with a link back to the results framework.
+
+{{figure:indicator-detail}}
+
+### The header
+
+The code, the level, and which result it measures — *measures "Households reach a safe water source"*. Then the name and the definition.
+
+Four figures: **Latest reported**, **End target**, **Progress** and **Periods reported**.
+
+<!-- roles: me_officer, org_admin -->
+
+**Use in another project** sits in the header. See [Reusing an indicator](/user-manual/reusing-an-indicator).
+
+<!-- /roles -->
+
+### How this indicator is measured
+
+Six facts, described on the page as *the definition an auditor, a funder and a field officer all have to agree on*:
+
+| Fact | Hint shown |
+|---|---|
+| **Unit of measure** | What the number counts |
+| **Baseline** | |
+| **Reporting frequency** | |
+| **Data source** | Where the figure comes from |
+| **Collection method** | How it is gathered |
+| **Means of verification** | What an auditor would ask to see |
+
+Anything left blank reads **Not recorded**.
+
+### Performance by period
+
+A table of **Period**, **Target**, **Actual**, **Progress** and **Status**, one row per period, with a small bar on the progress cell.
+
+A period with no reported value shows as **No data**, not as zero. They mean different things.
+
+### To confirm with your team
+
+Where an indicator was set up from your own documents, a panel headed **To confirm with your team** lists the points that were read rather than stated outright. Check them, then click **These are right**.
+
+---
+
+## Where to go next
+
+- [Reusing an indicator](/user-manual/reusing-an-indicator) — one definition, several projects
+- [Entering data](/user-manual/data-entry) — reporting figures against these indicators
+- [Indicator register and tracking table](/user-manual/indicator-register) — every indicator at once

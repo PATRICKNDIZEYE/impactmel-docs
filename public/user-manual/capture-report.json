@@ -1,0 +1,41 @@
+{
+  "capturedAt": "2026-09-17T15:53:45.023Z",
+  "baseUrl": "https://demo.impactmel.com",
+  "world": {
+    "orgId": "1f672004-cd30-45b2-afd4-d2b5ef23a071",
+    "orgName": "Meridian Impact Alliance",
+    "programId": "cb70b639-0d21-4c5c-9f2c-73405bbb3406",
+    "programName": "Resilient Livelihoods and Water",
+    "projectId": "fa15f83f-7ea9-4656-a3ce-483228557f24",
+    "projectName": "Highland Water Security, Cajamarca",
+    "indicatorId": "3117c044-1af2-41ff-af80-db83129bf2bf",
+    "indicatorName": "Connected households reporting water every day in the last month",
+    "formId": "1e68c47a-610b-4940-b09e-f2eb252ead1e",
+    "formName": "Site monitoring visit",
+    "reportId": null,
+    "activityId": "d4c82d4d-04c3-40d6-ad48-6ac54d7f2181",
+    "periodId": "377001ab-54d3-44f2-a240-6f3406872679",
+    "counts": {
+      "programmes": 3,
+      "projects": 6,
+      "indicatorsInProject": 5,
+      "forms": 4,
+      "reports": 0,
+      "activities": 8,
+      "periods": 9
+    }
+  },
+  "figures": [
+    {
+      "key": "dashboard-tiles",
+      "chapter": 3,
+      "as": "org_admin",
+      "url": "/org/1f672004-cd30-45b2-afd4-d2b5ef23a071/dashboard",
+      "region": "fn",
+      "bytes": 62126,
+      "ms": 4781,
+      "ok": true,
+      "suspiciouslySmall": false
+    }
+  ]
+}

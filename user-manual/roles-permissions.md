@@ -1,6 +1,16 @@
-# Roles & Permissions
+---
+title: Roles and permissions
+chapter: 17
+roles:
+  - viewer
+  - reporter
+  - me_officer
+  - org_admin
+---
 
-ImpactMEL uses roles and permissions so each team member can see and do what their job requires — and nothing more. Permissions are set for the organization.
+# Roles and permissions
+
+ImpactMEL decides what you can see and do from your **role**. There are four, and every account has exactly one.
 
 ---
 
@@ -11,180 +21,206 @@ ImpactMEL uses roles and permissions so each team member can see and do what the
   <VideoEmbed src="/videos/61-roles-permissions.mp4" title="61 · Roles: who can do what" duration="78s" />
 </div>
 
-## The Four Roles
+## Two layers, and why that matters
 
-### Org Admin
-The highest permission level. Typically assigned to Country Directors, Operations Managers, or IT administrators.
+This trips people up, so it is worth stating plainly. Each person carries **two** things.
 
-An Org Admin can do everything in ImpactMEL — configure the organization, manage members, create and delete programs, approve data, and publish reports.
+| Layer | What it controls | Where it is set |
+|---|---|---|
+| **Membership level** — Owner, Admin or Member | Who can invite colleagues, change levels and remove people | Settings → Members, the dropdown next to each person |
+| **Role** — org admin, M&E officer, reporter or viewer | Which sections and actions they get | Settings → Members, attached per person |
 
-### M&E Officer
-Designed for MEAL officers, data managers, and M&E coordinators. They manage indicators, reporting periods, and the review of submitted data.
+Managing the team is governed by the **membership level**. Everything else in this chapter is governed by the **role**.
 
-An M&E Officer cannot manage organization settings or invite members, but can handle the main monitoring and reporting tasks.
+<!-- TODO: the old manual said the invite dialog offers Org Admin / M&E Officer / Reporter / Viewer. It does not — it offers Member / Admin / Owner, and the four roles are attached afterwards from the members table. I have documented what the code does, but two role vocabularies in one screen is the single thing most likely to be got wrong in training. Worth fixing in the product rather than explained in the manual. -->
+
+::: warning The invite dropdown offers Member, Admin and Owner
+When you invite someone, the **Role** dropdown on the invite form lists **Member**, **Admin** and **Owner** — that is the membership level, not one of the four roles below. Attach their role afterwards, from the members table.
+:::
+
+---
+
+## The four roles
+
+### Org admin
+Every permission in the system, now and in future. Typically a country director or operations manager.
+
+### M&E officer
+Designs the results framework, defines indicators, reviews and approves figures, closes periods, assembles reports, builds forms and dashboards.
+
+**What an M&E officer cannot reach:** the donor registry, the audit log, integrations, roles and permissions, and saving changes to the organisation profile. All four need organisation-level write access, which only an org admin has.
 
 ### Reporter
-Designed for field officers, project staff, and data entry personnel. Reporters are the people who submit indicator values and register participants.
+Enters figures for the projects they are assigned to, and registers participants.
 
-A Reporter can only access projects they are specifically assigned to, and can only submit data. They cannot approve submissions, edit other people's work, or change workspace settings.
+A reporter has nine permissions. They can read programmes, projects, indicators, forms and reference data, read and write submissions, read notifications and read risks. **That is all.** They cannot approve anything, close a period, edit the results framework, see a budget, or reach Settings.
 
 ### Viewer
-Designed for senior management, partner organizations, or anyone who needs to monitor progress without entering data.
+Reads. Eight permissions, all read-only: programmes, projects, indicators, results, dashboards, reports, notifications and risks.
 
-A Viewer has read-only access to dashboards and reports across the organization. They cannot submit or approve any data.
-
----
-
-## Full Permission Matrix
-
-The table below shows exactly what each role can and cannot do. ✅ = allowed, ❌ = not allowed, 🔒 = only for assigned projects.
-
-### Organization & Members
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View organization settings | ✅ | ✅ | ❌ | ❌ |
-| Edit organization settings (name, logo) | ✅ | ❌ | ❌ | ❌ |
-| View members list | ✅ | ✅ | ❌ | ❌ |
-| Invite new members | ✅ | ❌ | ❌ | ❌ |
-| Change a member's role | ✅ | ❌ | ❌ | ❌ |
-| Remove a member | ✅ | ❌ | ❌ | ❌ |
-| View audit log | ✅ | ❌ | ❌ | ❌ |
-
-### Donors & Funders
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View donors list | ✅ | ✅ | ❌ | ❌ |
-| Create / edit donors | ✅ | ✅ | ❌ | ❌ |
-| Delete donors | ✅ | ❌ | ❌ | ❌ |
-
-### Programs
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View all programs | ✅ | ✅ | 🔒 | ✅ |
-| Create a program | ✅ | ✅ | ❌ | ❌ |
-| Edit a program | ✅ | ✅ | ❌ | ❌ |
-| Delete a program | ✅ | ❌ | ❌ | ❌ |
-| Manage results framework | ✅ | ✅ | ❌ | ❌ |
-
-### Projects
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View all projects | ✅ | ✅ | 🔒 | ✅ |
-| Create a project | ✅ | ✅ | ❌ | ❌ |
-| Edit project details | ✅ | ✅ | ❌ | ❌ |
-| Delete a project | ✅ | ❌ | ❌ | ❌ |
-| Manage reporting periods | ✅ | ✅ | ❌ | ❌ |
-| Lock / unlock a period | ✅ | ✅ | ❌ | ❌ |
-
-### Indicators
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View indicator library | ✅ | ✅ | 🔒 | ✅ |
-| Create / edit indicators | ✅ | ✅ | ❌ | ❌ |
-| Delete indicators | ✅ | ❌ | ❌ | ❌ |
-| Link indicators to projects | ✅ | ✅ | ❌ | ❌ |
-| Set indicator targets | ✅ | ✅ | ❌ | ❌ |
-| Add disaggregations | ✅ | ✅ | ❌ | ❌ |
-
-### Data Entry (Indicator Reports)
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| Submit indicator values (own submissions) | ✅ | ✅ | 🔒 | ❌ |
-| Edit draft submissions (own) | ✅ | ✅ | 🔒 | ❌ |
-| View all submissions | ✅ | ✅ | 🔒 | ✅ |
-| Approve submissions | ✅ | ✅ | ❌ | ❌ |
-| Reject submissions | ✅ | ✅ | ❌ | ❌ |
-
-### Activities & Participants
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View activities | ✅ | ✅ | 🔒 | ✅ |
-| Create / edit activities | ✅ | ✅ | 🔒 | ❌ |
-| Delete activities | ✅ | ✅ | ❌ | ❌ |
-| Register participants | ✅ | ✅ | 🔒 | ❌ |
-| Edit / remove participants | ✅ | ✅ | ❌ | ❌ |
-| Export participant register | ✅ | ✅ | 🔒 | ✅ |
-| Push participants to indicator | ✅ | ✅ | 🔒 | ❌ |
-
-### Data Collection Forms
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View forms library | ✅ | ✅ | 🔒 | ✅ |
-| Create / edit forms | ✅ | ✅ | ❌ | ❌ |
-| Publish / unpublish forms | ✅ | ✅ | ❌ | ❌ |
-| View form submissions | ✅ | ✅ | 🔒 | ✅ |
-| Export submissions | ✅ | ✅ | 🔒 | ❌ |
-| Delete forms | ✅ | ❌ | ❌ | ❌ |
-
-### Reports
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View reports | ✅ | ✅ | 🔒 | ✅ |
-| Create / assemble a report | ✅ | ✅ | ❌ | ❌ |
-| Edit report narratives | ✅ | ✅ | ❌ | ❌ |
-| Generate share link | ✅ | ✅ | ❌ | ❌ |
-| Revoke share link | ✅ | ✅ | ❌ | ❌ |
-| Download PDF | ✅ | ✅ | 🔒 | ✅ |
-| Delete a report | ✅ | ❌ | ❌ | ❌ |
-
-### Budget
-
-| Action | Org Admin | M&E Officer | Reporter | Viewer |
-|---|---|---|---|---|
-| View budget lines | ✅ | ✅ | 🔒 | ✅ |
-| Add / edit budget lines | ✅ | ✅ | ❌ | ❌ |
-| Delete budget lines | ✅ | ❌ | ❌ | ❌ |
+A viewer cannot enter a figure, approve one, or open Submissions or Forms at all.
 
 ---
 
-## 🔒 Project Scoping for Reporters
+## Which sections each role can reach
 
-The 🔒 symbol means a Reporter can perform the action only for the **projects they are specifically assigned to**. If a Reporter is not listed as a team member on a project, they cannot see that project at all.
+| Section | Org admin | M&E officer | Reporter | Viewer |
+|---|---|---|---|---|
+| Overview (dashboard) | ✅ | ✅ | ✅ | ✅ |
+| Statistics | ✅ | ✅ | ✅ | ✅ |
+| Programmes and projects | ✅ | ✅ | 🔒 | ❌ |
+| Submissions | ✅ | ✅ | ✅ | ❌ |
+| Review | ✅ | ✅ | 👁 | ❌ |
+| Period sign-off | ✅ | ✅ | 👁 | ❌ |
+| Reports, indicator register, tracking table | ✅ | ✅ | ❌ | ✅ |
+| Visualization | ✅ | ✅ | ❌ | ✅ |
+| Risks | ✅ | ✅ | ✅ | ✅ |
+| AI Insights | ✅ | ✅ | ❌ | ❌ |
+| Geographic Map | ✅ | ✅ | ❌ | ✅ |
+| Data Hub | ✅ | ✅ | ❌ | ❌ |
+| Forms | ✅ | ✅ | 👁 | ❌ |
+| Calendar | ✅ | ✅ | ❌ | ❌ |
+| Participants | ✅ | ✅ | ✅ | ❌ |
+| Dashboards (custom) | ✅ | ✅ | ❌ | ✅ |
+| Users | ✅ | ✅ | ❌ | ❌ |
+| Settings | ✅ | ✅ | ❌ | ❌ |
+| Notifications and Profile | ✅ | ✅ | ✅ | ✅ |
 
-To assign a Reporter to a project:
-1. Open the project → **Team** tab (or **Settings** → **Members**)
-2. Click **+ Assign Member**
-3. Select the reporter from your organization's member list
-4. Click **Assign**
+✅ can reach and act · 👁 can read but not act · 🔒 assigned projects only · ❌ not in their navigation
 
-Reporters added to a project see it appear on their dashboard and can submit data for its indicators.
-
----
-
-## Requesting a Role Change
-
-If you need more permissions than your current role allows, contact your **Org Admin** and ask them to update your role. Role changes take effect immediately after the admin saves the update.
-
----
-
-## Best Practices
-
-**Follow the principle of least privilege.** Assign the minimum role that allows a person to do their job. Fewer admins means a smaller risk of accidental changes.
-
-**Use M&E Officer (not Org Admin) for most M&E staff.** M&E Officers can handle the main monitoring and reporting work without being able to delete programs or change organization settings.
-
-**Give Viewer access to senior management and partners.** Viewers can monitor progress and see reports without any risk of accidentally changing data.
-
-**Assign Reporters to specific projects, not the whole org.** This ensures field staff only see what is relevant to them and reduces information overload.
+A section a role cannot reach does not appear in their top bar at all. Following a link to one bounces you back to the dashboard.
 
 ---
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/12-01-role-assignment.png" alt="Figure 12.1 — Role Assignment Interface" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 12.1 — Role Assignment Interface</p>
-    <p>The Settings → Members tab showing a member row for "Jean Baptiste M." with a "Reporter" role badge. An expanded dropdown shows the four role options (Org Admin, M&amp;E Officer, Reporter, Viewer) with brief descriptions. The currently selected role is highlighted. A "Confirm Change" button appears at the bottom of the dropdown.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+## Which actions each role can take
+
+### Structure
+
+| Action | Org admin | M&E officer | Reporter | Viewer |
+|---|---|---|---|---|
+| Create or edit a programme | ✅ | ✅ | ❌ | ❌ |
+| Create or edit a project | ✅ | ✅ | ❌ | ❌ |
+| Build the results framework | ✅ | ✅ | ❌ | ❌ |
+| Create or edit an indicator | ✅ | ✅ | ❌ | ❌ |
+| Reuse an indicator in another project | ✅ | ✅ | ❌ | ❌ |
+| See a project's budget | ✅ | ✅ | ❌ | ❌ |
+
+### Reporting and approval
+
+| Action | Org admin | M&E officer | Reporter | Viewer |
+|---|---|---|---|---|
+| Enter and submit a figure | ✅ | ✅ | 🔒 | ❌ |
+| Read all submissions | ✅ | ✅ | 🔒 | ❌ |
+| Approve or send a figure back | ✅ | ✅ | ❌ | ❌ |
+| Ask a colleague to review | ✅ | ✅ | ❌ | ❌ |
+| Judge a result in Performance Review | ✅ | ✅ | ❌ | ❌ |
+| Close, lock or reopen a period | ✅ | ✅ | ❌ | ❌ |
+
+### Reporting out
+
+| Action | Org admin | M&E officer | Reporter | Viewer |
+|---|---|---|---|---|
+| Read a report | ✅ | ✅ | ❌ | ✅ |
+| Assemble a report | ✅ | ✅ | ❌ | ❌ |
+| Share a report by link | ✅ | ✅ | ❌ | ❌ |
+| Export the indicator register | ✅ | ✅ | ❌ | ✅ |
+| Build a form | ✅ | ✅ | ❌ | ❌ |
+| Build a dashboard | ✅ | ✅ | ❌ | ❌ |
+
+### Administration
+
+| Action | Org admin | M&E officer | Reporter | Viewer |
+|---|---|---|---|---|
+| Read the organisation profile | ✅ | ✅ | ❌ | ❌ |
+| Save changes to it | ✅ | ❌ | ❌ | ❌ |
+| Read the members list | ✅ | ✅ | ❌ | ❌ |
+| Invite, remove or change a member | ✅ (Owner or Admin) | ❌ | ❌ | ❌ |
+| Manage units, disaggregations and the reporting calendar | ✅ | ✅ | ❌ | ❌ |
+| Manage the donor registry | ✅ | ❌ | ❌ | ❌ |
+| Roles and permissions | ✅ | ❌ | ❌ | ❌ |
+| Integrations | ✅ | ❌ | ❌ | ❌ |
+| Audit log | ✅ | ❌ | ❌ | ❌ |
+| Export data | ✅ | ✅ | ❌ | ❌ |
+
+---
+
+## 🔒 What "assigned projects only" means
+
+A reporter sees the projects whose **team** they are on, and nothing else.
+
+<!-- roles: me_officer, org_admin -->
+
+To assign one:
+
+1. Open the project.
+2. Go to the **Team** tab.
+3. Click **Add member** and pick them.
+
+<!-- /roles -->
+
+::: warning An empty portfolio is usually an assignment problem
+A reporter on no project sees an empty Programmes page and an empty dashboard. Nothing is broken. Add them to a project's team.
+:::
+
+---
+
+## Where a role reads but cannot act
+
+Two screens are deliberately readable by a reporter who cannot act on them.
+
+**Review.** A reporter can see the queue, which is how they find out what has been sent back to them and why. The Approve, Send back and Ask someone buttons will not work for them.
+
+**Period sign-off.** A reporter can see what is outstanding in each period and which are still open to report into. Close, Lock and Reopen will not work for them.
+
+---
+
+<!-- roles: org_admin -->
+
+## Custom roles
+
+**Settings → Roles & permissions** lets you build a role of your own.
+
+1. Click **New Role**. Give it a **Role Name** and a **Description**. Click **Create Role**.
+2. Select it in the list on the left.
+3. Permissions are grouped by what they act on, each group showing how many of its permissions the role has. Use **Select All** or **Clear** on a group, or tick permissions one at a time.
+4. **Filter permissions…** narrows the list.
+
+Changes apply immediately to everyone holding that role. The page says so.
+
+**Delete Role** removes it. Anyone holding it loses those permissions at once.
+
+A custom role is attached to a person from **Settings → Members**, using the **Add role…** dropdown on their row. Several can be attached to one person, and the **×** removes one.
+
+::: warning You cannot invent a permission
+This page toggles the permissions the system already defines. It does not create new ones.
+:::
+
+<!-- /roles -->
+
+---
+
+## Asking for more access
+
+Contact an org admin. A role change takes effect on your next page load.
+
+---
+
+## Getting this right
+
+**Give people the smallest role that lets them work.** Fewer admins means fewer accidents.
+
+**Most M&E staff should be M&E officers, not org admins.** An M&E officer can do all the monitoring and reporting work without being able to change the organisation or read the audit log.
+
+**Give funders and senior management the viewer role** — or, better, just send them a report share link, which needs no account at all.
+
+**Assign reporters to projects, not to everything.** It keeps their screens short and their figures in the right place.
+
+{{figure:members-roles}}
+
+---
+
+## Where to go next
+
+- [Settings and administration](/user-manual/settings) — where members and roles are managed
+- [Review and approve](/user-manual/review-and-approve) — the screen the approval permissions govern
+- [Getting started](/user-manual/getting-started) — inviting your first colleagues
