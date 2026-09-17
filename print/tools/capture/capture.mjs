@@ -1,19 +1,4 @@
 #!/usr/bin/env node
-//
-// Capture every figure in the manual from the demo instance.
-//
-//   node capture.mjs                     everything
-//   node capture.mjs --only review-      keys starting review-
-//   node capture.mjs --chapter 12        one chapter
-//   node capture.mjs --list              what would run, and as whom
-//   node capture.mjs --headed            watch it work
-//   node capture.mjs --keep-going        do not stop at the first failure
-//
-// Images land in public/user-manual/images/<key>.png, which is where both the
-// print build and the docs site look for them. A run also writes
-// capture-report.json: per figure the url, the region, the pixel size and the
-// duration, so a figure that captured an empty state is visible without
-// opening sixty PNGs.
 
 import fs from 'node:fs'
 import path from 'node:path'
@@ -92,9 +77,6 @@ async function contextFor(role) {
   return contexts.get(role)
 }
 
-// The world is discovered once, as the officer, because every recipe must
-// point at the same project — two figures of "the same project" that show
-// different projects is the kind of thing a reader notices and we do not.
 const seedContext = await contextFor('me_officer')
 const seedPage = await seedContext.newPage()
 await seedPage.goto('/dashboard', { waitUntil: 'domcontentloaded' })

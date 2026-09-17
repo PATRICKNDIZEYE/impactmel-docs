@@ -1,21 +1,4 @@
 #!/usr/bin/env node
-/**
- * sync-figures.mjs — regenerate figures.json from user-manual/FIGURES.md.
- *
- * FIGURES.md is the documentation team's capture list: one table per chapter,
- * one row per figure, holding the key, where to capture it, which role to
- * capture it as, and the caption. That makes it the natural source of truth for
- * caption text, so figures.json is generated from it rather than maintained
- * alongside it.
- *
- *   node tools/sync-figures.mjs            # rewrite figures.json
- *   node tools/sync-figures.mjs --check    # exit 1 if figures.json is stale
- *
- * Only `caption` is carried across. Image paths are not stored: build.mjs
- * discovers `images/<key>.png` (or a numbered `images/NN-MM-<key>.png`) on its
- * own, so recapturing a screenshot under the right filename is all that is
- * needed to replace a placeholder.
- */
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';

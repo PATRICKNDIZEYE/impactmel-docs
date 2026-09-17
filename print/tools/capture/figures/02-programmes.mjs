@@ -1,23 +1,6 @@
-// Chapters 4–8: programmes, the programme page, projects, the results
-// framework, indicators.
-//
-// The through-line of these chapters is one project, so every figure that can
-// use `world.projectId` does. Two figures of "the same project" showing
-// different projects is the kind of thing a reader notices and we would not.
-
 import { centre, unionOf, grow } from '../lib/regions.mjs'
 import { apiGet } from '../lib/browser.mjs'
 
-/**
- * Walk the demo's projects until one shows (or does not show) the framework
- * chooser, and stay there.
- *
- * The chosen project turned out to have no results framework at all, so the
- * "a built results chain" figure quietly captured the chooser instead — two
- * different figures, byte-for-byte the same picture. Each of the pair now
- * looks for the state its own caption describes and fails loudly if the demo
- * has no project in it.
- */
 async function goToProjectWhereChooser(page, w, { shown }) {
   const chooser = () => page.getByText(/choose your framework structure/i).count()
   const path = (id) => `/org/${w.orgId}/projects/${id}/result-framework`

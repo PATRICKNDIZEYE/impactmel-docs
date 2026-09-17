@@ -1,10 +1,3 @@
-// What part of the screen a figure is.
-//
-// Nothing is captured full-page by default. A dashboard is 6,000px tall; put
-// that on a 155mm column and the text inside it is a third of a millimetre
-// high. Every figure names a region, and the named regions below are the
-// handful that recur.
-
 /** Named regions. A recipe's `clip` may be one of these, a CSS selector, or a function. */
 export const REGIONS = {
   /** The visible window — what a person sees without scrolling. */
@@ -20,12 +13,6 @@ export const REGIONS = {
   main: 'main, [role="main"]',
 }
 
-/**
- * Turn a recipe's `clip` into a Playwright screenshot target.
- *
- * Returns either `{ locator }` to shoot an element, or `{ clip }` for a
- * rectangle, or `{}` for the viewport.
- */
 export async function resolveClip(page, clip, { padding = 0, maxHeight = 2200 } = {}) {
   if (!clip || clip === 'viewport') return {}
 
@@ -59,15 +46,6 @@ export async function resolveClip(page, clip, { padding = 0, maxHeight = 2200 } 
   return { clip: rect }
 }
 
-/**
- * The rectangle that holds all of these, plus padding.
- *
- * For figures that are a band of the page rather than one element: the four
- * dashboard tiles, a heading with the table under it. Capping the height
- * instead produces a crop that starts at whatever happened to be at the top of
- * `main`, which is how the first attempt at the tiles figure came back as a
- * picture of the page title.
- */
 export async function unionOf(page, ...locators) {
   const boxes = []
   for (const l of locators) {
@@ -103,12 +81,6 @@ export function grow(box, padding = 12, viewport = { width: 1440, height: 900 })
   }
 }
 
-/**
- * Scroll an element into a position worth photographing.
- *
- * `scrollIntoViewIfNeeded` puts things at the very edge of the window, which
- * crops the thing the caption is about. This centres it instead.
- */
 export async function centre(page, selector) {
   const locator = typeof selector === 'string' ? page.locator(selector).first() : selector
   await locator.waitFor({ state: 'visible', timeout: 20_000 })

@@ -1,15 +1,3 @@
-// Which programme, which project, which indicator.
-//
-// Recipes need real ids, and they need the *right* ones: a caption promising
-// "six figures across the top, then its projects with their indicators rolled
-// up" is a lie if the harness picked the programme with one empty project in
-// it. So the world is discovered and then scored — most projects, most
-// indicators, most reported figures wins — and every recipe reads the same
-// ctx, so two figures of the same project agree with each other.
-//
-// Discovery runs once per capture run and is printed in the report, so a
-// figure that looks wrong can be traced to the object it was taken from.
-
 import { apiGet } from './browser.mjs'
 
 const pick = (rows, score) =>

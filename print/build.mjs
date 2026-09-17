@@ -1,20 +1,4 @@
 #!/usr/bin/env node
-/**
- * build.mjs — markdown chapters -> one print-ready HTML file (+ assets).
- *
- * The HTML this emits is not meant for a browser. It is meant for WeasyPrint,
- * which implements CSS Paged Media: running headers via margin boxes,
- * counter(page)/counter(pages), target-counter() for the table of contents,
- * named pages and @page :left/:right/:first. All of the page furniture lives in
- * print.css; this file's job is only to produce clean, correctly ordered,
- * correctly filtered semantic HTML with stable anchor ids.
- *
- * Usage:
- *   node build.mjs --variant full
- *   node build.mjs --variant viewer --theme mzfn --powered-by true
- *
- * See --help for the full flag list.
- */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, copyFileSync } from 'node:fs';
 import { dirname, join, resolve, basename, relative } from 'node:path';
@@ -112,18 +96,6 @@ function slugify(s) {
 const titleCase = (slug) =>
   slug.replace(/[-_]+/g, ' ').replace(/\b[a-z]/g, (c) => c.toUpperCase());
 
-/**
- * Split markdown into code and non-code segments.
- *
- * This matters more than it looks: the chapters document the authoring contract
- * by *showing* `{{figure:key}}` markers and `<!-- roles: ... -->` fences inside
- * fenced code blocks. Without this, those examples would be treated as live
- * markup — the example figure would render as a real figure, and the example
- * role fence would actually strip the code block it lives in.
- *
- * Handles ``` and ~~~ fences and single-backtick spans. Four-space indented
- * code blocks are not detected; the source does not use them.
- */
 function splitCode(md) {
   const segments = [];
   const lines = md.split('\n');
@@ -171,11 +143,6 @@ function mapOutsideCode(md, fn) {
     .join('\n');
 }
 
-/**
- * Replace every `<div class="NAME">...</div>` block, matching nested <div>s by
- * counting. The source markdown embeds component markup with nested divs, which
- * a flat regex cannot handle.
- */
 function replaceBalancedDiv(text, className, transform) {
   const open = new RegExp(`<div class="${className}(?:[^"]*)"[^>]*>`, 'g');
   let out = '';
@@ -206,12 +173,6 @@ function replaceBalancedDiv(text, className, transform) {
 
 // ==================================================== frontmatter parsing ===
 
-/**
- * Minimal YAML frontmatter reader. Deliberately not a YAML library: the
- * contract is three keys (title, chapter, roles) holding a string, a number and
- * a flow or block sequence. Anything else is reported and ignored rather than
- * silently half-parsed.
- */
 function parseFrontmatter(raw, ctx) {
   if (!raw.startsWith('---')) return { data: {}, body: raw };
   const end = raw.indexOf('\n---', 3);
@@ -260,17 +221,6 @@ const dequote = (s) => s.trim().replace(/^["']|["']$/g, '').trim();
 const ROLE_FENCE_OPEN = /^\s*<!--\s*roles:\s*([^->]+?)\s*-->\s*$/;
 const ROLE_FENCE_CLOSE = /^\s*<!--\s*\/roles\s*-->\s*$/;
 
-/**
- * Strip role-fenced blocks that the variant is not entitled to.
- *
- *   <!-- roles: me_officer, org_admin -->
- *   ...markdown...
- *   <!-- /roles -->
- *
- * Runs on the raw markdown, before any HTML conversion, because the fenced
- * content is markdown and may contain anything including nested fences.
- * `full` keeps every block.
- */
 function stripRoleFences(md, variant, ctx) {
   const lines = md.split('\n');
   const out = [];
@@ -328,11 +278,6 @@ function loadFigures() {
   return { figures: manifest.figures ?? {}, imageRoots: manifest.imageRoots ?? ['fixtures'] };
 }
 
-/**
- * Turn `{{figure:key}}` into a real <figure>. The number is NOT written here:
- * print.css generates "Figure 3.1" with CSS counters that reset per chapter, so
- * numbering stays correct whichever chapters a variant happens to include.
- */
 function makeFigureResolver({ figures, imageRoots }, assets, stats) {
   return (md, ctx) =>
     mapOutsideCode(md, (text) =>
@@ -371,12 +316,6 @@ function makeFigureResolver({ figures, imageRoots }, assets, stats) {
 
 const IMAGE_EXT = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'svg'];
 
-/**
- * Find the screenshot for a figure key by convention, under `<root>/images/`:
- *   images/<key>.<ext>            preferred
- *   images/NN-MM-<key>.<ext>      the pre-rewrite numbered naming
- * Returns an absolute path, or null when nothing has been captured yet.
- */
 function discoverImage(key, imageRoots) {
   for (const root of imageRoots) {
     const dir = resolve(HERE, root, 'images');
@@ -418,10 +357,6 @@ function makeAssets(outDir, stats) {
         }
         if (!found) warn(`figure "${key}": src "${src}" not found in any imageRoot`);
       } else {
-        // Discover by key. This is the normal path: the manifest holds no
-        // paths, so recapturing a screenshot as images/<key>.png is all that is
-        // needed to replace its placeholder. Numbered legacy filenames
-        // (images/03-01-<key>.png) are matched too.
         found = discoverImage(key, imageRoots);
       }
 
@@ -454,14 +389,6 @@ function makeAssets(outDir, stats) {
   };
 }
 
-// ====================================================== legacy adapters =====
-//
-// Everything in this section exists only to digest the pre-rewrite VitePress
-// markdown: Vue components, hand-written <figure> blocks with figure numbers
-// baked into the prose, and in-app navigation cards. Once the chapters are
-// rewritten to the documented contract (frontmatter + role fences +
-// {{figure:key}}) this whole section can be deleted; nothing else depends on it.
-
 const figureKeyFromSrc = (src) =>
   basename(String(src))
     .replace(/\.(png|jpe?g|webp|gif|svg)$/i, '')
@@ -485,10 +412,6 @@ function adaptImageModals(md, stats) {
   });
 }
 
-/**
- * Videos cannot play on paper. They become a printed reference block listing
- * the title and a resolvable URL, so the reader can still find them.
- */
 function adaptVideos(md, stats, siteBase) {
   const one = (attrs) => {
     const get = (k) => (attrs.match(new RegExp(`${k}="([^"]*)"`)) || [])[1] ?? '';
@@ -555,11 +478,6 @@ function adaptHero(md, stats) {
   });
 }
 
-/**
- * `doc-quick-links` are in-app navigation cards: four links to other pages.
- * On paper they are noise — the table of contents already does this job — so
- * they are dropped. Counted, so the build report says how many went.
- */
 function dropQuickLinks(md, stats) {
   return replaceBalancedDiv(md, 'doc-quick-links', () => {
     stats.legacy.quickLinks++;
@@ -571,11 +489,6 @@ function dropQuickLinks(md, stats) {
 
 const CALLOUT_LABELS = { tip: 'Tip', info: 'Note', note: 'Note', warning: 'Important', danger: 'Warning', caution: 'Warning' };
 
-/**
- * `::: tip … :::` -> a callout. Converted to sentinel paragraphs first so that
- * marked still renders the markdown *inside* the block; the sentinels become
- * the wrapper element afterwards.
- */
 function markCallouts(md) {
   const out = [];
   const stack = [];
@@ -621,12 +534,6 @@ function renderCallouts(html, stats) {
 
 // ============================================== HTML post-processing ========
 
-/**
- * Give every heading a document-unique id and collect the table of contents.
- * Done on the rendered HTML rather than through a marked renderer so the
- * pipeline is not coupled to marked's renderer API, which changes between
- * major versions.
- */
 function addHeadingIds(html, slug, tocDepth, toc) {
   const used = new Set();
   return html.replace(/<h([1-6])>([\s\S]*?)<\/h\1>/g, (_m, lvl, inner) => {
@@ -644,18 +551,6 @@ function addHeadingIds(html, slug, tocDepth, toc) {
   });
 }
 
-/**
- * Rewrite links for paper.
- *  - /user-manual/<slug>       -> in-document anchor; print.css appends the
- *                                 real page number via target-counter()
- *  - link to an excluded slug  -> de-linked, because a cross-reference to a
- *                                 chapter this variant does not contain would
- *                                 dangle (and target-counter would resolve to
- *                                 nothing)
- *  - #anchor                   -> chapter-scoped anchor
- *  - http(s)                   -> kept, with the URL printed when it differs
- *                                 from the link text
- */
 function rewriteLinks(html, slug, included, stats) {
   return html.replace(/<a href="([^"]+)"([^>]*)>([\s\S]*?)<\/a>/g, (all, href, attrs, text) => {
     const plain = unent(stripTags(text)).trim();
@@ -692,12 +587,6 @@ function rewriteLinks(html, slug, included, stats) {
 const wrapTables = (html) =>
   html.replace(/<table>/g, '<div class="table-wrap"><table class="table">').replace(/<\/table>/g, '</table></div>');
 
-/**
- * The chapters use `---` as a section separator before most headings. print.css
- * already draws a short accent rule above every <h2>, so the <hr> lands
- * directly above it as a second, redundant line. Drop those; keep any <hr> that
- * genuinely separates body content.
- */
 const dropRulesBeforeHeadings = (html) => html.replace(/<hr\s*\/?>\s*(?=<h[1-3]\b)/g, '');
 
 // ================================================== chapter assembly =======

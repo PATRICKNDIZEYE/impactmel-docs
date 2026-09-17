@@ -1,11 +1,3 @@
-// Chapters 14–18: forms, reports, the register and tracking table, roles,
-// settings.
-//
-// Nothing here is confirmed. `settings-export` is photographed with the form
-// filled in and never submitted; the audit log row is expanded, which is a
-// read. Deleting anything on the demo would take a figure another chapter
-// depends on with it.
-
 import { centre, unionOf, grow } from '../lib/regions.mjs'
 import { apiGet } from '../lib/browser.mjs'
 
