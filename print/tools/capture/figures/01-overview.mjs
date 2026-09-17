@@ -66,6 +66,18 @@ export default [
       ),
   },
   {
+    // dashboard.md referenced this key with nothing in the capture list behind
+    // it, so the chapter rendered a placeholder and the build warned. The
+    // officer's dashboard is a different screen from the admin's, which is
+    // what the chapter is making the point about.
+    key: 'dashboard-overview',
+    chapter: 3,
+    as: 'me_officer',
+    url: (w) => `/org/${w.orgId}/dashboard`,
+    clip: 'main',
+    maxHeight: 1800,
+  },
+  {
     key: 'statistics',
     chapter: 3,
     as: 'org_admin',

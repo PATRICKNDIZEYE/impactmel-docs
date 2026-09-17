@@ -61,7 +61,7 @@ export async function discoverWorld(page) {
   }
 
   const forms = await soft('/forms')
-  const reports = await soft('/reports')
+  const reports = await soft('/reports/org')
   const activities = project ? await soft(`/activities?projectId=${project.id}`) : []
   const periods = await soft('/reporting-periods')
 

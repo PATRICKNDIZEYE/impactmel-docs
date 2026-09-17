@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-17T15:53:45.023Z",
+  "capturedAt": "2026-09-17T19:36:09.161Z",
   "baseUrl": "https://demo.impactmel.com",
   "world": {
     "orgId": "1f672004-cd30-45b2-afd4-d2b5ef23a071",
@@ -27,13 +27,13 @@
   },
   "figures": [
     {
-      "key": "dashboard-tiles",
+      "key": "dashboard-overview",
       "chapter": 3,
-      "as": "org_admin",
+      "as": "me_officer",
       "url": "/org/1f672004-cd30-45b2-afd4-d2b5ef23a071/dashboard",
-      "region": "fn",
-      "bytes": 62126,
-      "ms": 4781,
+      "region": "main",
+      "bytes": 457001,
+      "ms": 2629,
       "ok": true,
       "suspiciouslySmall": false
     }
