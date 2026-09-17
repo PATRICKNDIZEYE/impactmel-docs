@@ -1,17 +1,3 @@
-// Chapters 9–13: reusing an indicator, entering data, review and approve,
-// period sign-off, activities and participants.
-//
-// The hardest figures in the manual, because most of them are a dialog with a
-// field filled in rather than a page. Two rules hold throughout:
-//
-//   - a dialog is opened, filled and photographed, and the confirming button
-//     is never clicked. Closing a reporting period on the demo would refuse
-//     every figure the rest of the manual needs, and "Reject" would throw away
-//     a submission somebody's screenshot depends on;
-//   - anything typed into a field is plausible sentence, not "test" — the
-//     reader is looking at an example of how to write a reason, and "asdf"
-//     teaches them nothing.
-
 import { centre, unionOf, grow } from '../lib/regions.mjs'
 import { apiGet } from '../lib/browser.mjs'
 

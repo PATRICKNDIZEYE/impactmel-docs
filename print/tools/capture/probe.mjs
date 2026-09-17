@@ -1,12 +1,3 @@
-// Ad-hoc probe: sign in as a role and print what an endpoint returns.
-//
-//   node probe.mjs me_officer /projects
-//   node probe.mjs org_admin /reports/indicator-register --keys
-//
-// Kept in the repo because every recipe that broke so far broke over the shape
-// of a response, and guessing at it from the frontend source is slower than
-// asking the instance.
-
 import { openBrowser, contextForRole, apiGet, assertDemoHost } from './lib/browser.mjs'
 
 const [role = 'me_officer', endpoint = '/projects', ...flags] = process.argv.slice(2)

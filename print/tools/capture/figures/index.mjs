@@ -1,10 +1,3 @@
-// Every recipe, in chapter order.
-//
-// One file per group of chapters, because 61 recipes in one file is a file
-// nobody edits carefully. `index.mjs` only concatenates and checks for the two
-// mistakes that cost a whole run: a duplicate key, and a role that does not
-// exist.
-
 import { ROLES } from '../lib/browser.mjs'
 import overview from './01-overview.mjs'
 import programmes from './02-programmes.mjs'

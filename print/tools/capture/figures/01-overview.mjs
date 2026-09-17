@@ -51,9 +51,6 @@ export default [
     chapter: 3,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/dashboard`,
-    // The band of four tiles, found by their own labels rather than by a
-    // height cap — a cap crops from the top of `main`, which is the page
-    // title, not the tiles.
     clip: async (page) =>
       grow(
         await unionOf(
@@ -66,10 +63,6 @@ export default [
       ),
   },
   {
-    // dashboard.md referenced this key with nothing in the capture list behind
-    // it, so the chapter rendered a placeholder and the build warned. The
-    // officer's dashboard is a different screen from the admin's, which is
-    // what the chapter is making the point about.
     key: 'dashboard-overview',
     chapter: 3,
     as: 'me_officer',

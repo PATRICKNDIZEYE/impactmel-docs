@@ -1,33 +1,9 @@
 #!/usr/bin/env node
-/**
- * verify.mjs — checks the rendered PDFs, using poppler (pdfinfo / pdftotext).
- *
- * This is not a smoke test. Each check reads the actual text of the actual PDF
- * and compares it against what the build claimed it would produce:
- *
- *   1. page count and A4 page geometry            (pdfinfo)
- *   2. cover page carries no header or footer     (@page :first)
- *   3. running header + "Page N of M" footer      (margin boxes)
- *   4. every table-of-contents page number points at the page that really
- *      contains that heading                      (target-counter)
- *   5. figure numbers restart at .1 in each chapter and match the chapter they
- *      appear in                                  (CSS counters)
- *   6. role-fenced and role-excluded content is present only in the variants
- *      entitled to it
- *
- * Usage: node verify.mjs out/manual-full.pdf out/manual-viewer.pdf
- * Exit code is non-zero if any check fails.
- */
 
 import { execFileSync } from 'node:child_process';
 import { readFileSync, existsSync } from 'node:fs';
 import { inflateSync } from 'node:zlib';
 import { basename, dirname, join } from 'node:path';
-
-// ---------------------------------------------------------------- markers ---
-//
-// Natural phrases taken from the fixture chapters. Each says which variants
-// should contain it; every other variant must not.
 
 const MARKERS = [
   {
@@ -64,14 +40,6 @@ const norm = (s) =>
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 
-/**
- * A regex for a word that print.css has letter-spaced.
- *
- * pdftotext inserts a space between glyphs whose advance exceeds the natural
- * one, so the chapter opener's `letter-spacing: 0.16em` eyebrow comes back as
- * "C H A P T E R 11" on some pages and "CHAPTER 11" on others depending on the
- * number width. Matching must tolerate both.
- */
 const spacedRe = (word, trailing = '') => new RegExp(word.split('').join('\\s*') + trailing);
 
 const CHAPTER_RE = spacedRe('CHAPTER', '\\s*(\\d+)');
@@ -129,21 +97,11 @@ function pdfPageText(pdf, pages) {
 
 // ------------------------------------------------------------------ checks ---
 
-/**
- * Parse the contents pages into { text, page, level } entries.
- * Handles entries that wrap onto a second line: the page number always ends
- * the entry, so lines are accumulated until a trailing number appears.
- * Level is inferred from the indent that print.css applies to l1/l2/l3.
- */
 function parseTOC(pageTexts, tocPages) {
   const entries = [];
   let carry = '';
   let carryIndent = 0;
 
-  // The running header and footer sit on the contents pages too, and pdftotext
-  // returns them as ordinary lines. Identify them structurally rather than by
-  // looking for the organisation name as a substring: headings like "What is
-  // ImpactMEL?" are real entries and must not be swallowed.
   const runningHeader = new RegExp(spacedRe('CONTENTS').source + '\\s*$');
   const isFurniture = (line) => {
     if (/Page\s+\d+\s+of\s+\d+\s*$/.test(line)) return true; // footer
@@ -174,10 +132,6 @@ function parseTOC(pageTexts, tocPages) {
       carry = '';
       carryIndent = 0;
 
-      // Strip the leader dots only. The leading chapter number is deliberately
-      // left on: real headings such as "1 · Definition" also start with a
-      // digit, so the number cannot be removed by pattern. Levels come from the
-      // build report instead; `indentLevel` is only a fallback.
       text = text.replace(/[.\s·]+$/, '').trim();
       if (!text) continue;
       entries.push({
@@ -265,9 +219,6 @@ function checkPDF(pdf, variant, rep) {
   // --- 4. TOC page numbers vs reality --------------------------------------
   const parsed = parseTOC(pageTexts, tocPages);
 
-  // Levels come from the build report, not from guessing at pdftotext indents,
-  // and zipping the two lists also proves the PDF contains exactly the entries
-  // the build emitted, in the same order.
   const expected = readBuildStat(pdf, 'toc');
   let toc = parsed.map((e) => ({ ...e, level: e.indentLevel }));
 
@@ -396,13 +347,6 @@ function checkPDF(pdf, variant, rep) {
   return { pages, toc: toc.length, figures: figs.length };
 }
 
-/**
- * Does the PDF carry a bookmark outline?
- *
- * poppler has no outline dumper, and WeasyPrint compresses its cross-reference
- * and object streams by default, so `/Outlines` is usually not in the raw bytes.
- * Inflate every FlateDecode stream and look inside.
- */
 function hasOutline(pdf) {
   const raw = readFileSync(pdf);
   if (raw.includes('/Outlines')) return true;

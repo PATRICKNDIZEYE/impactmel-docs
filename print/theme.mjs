@@ -1,23 +1,3 @@
-/**
- * theme.mjs — per-tenant branding for the print pipeline.
- *
- * Emits a block of CSS custom properties that print.css consumes. Nothing in
- * print.css hard-codes a colour, an organisation name or a logo, so one source
- * tree produces an ImpactMEL-branded manual or a client-branded manual purely
- * from build arguments.
- *
- * Two kinds of property are emitted:
- *   - colours / lengths, used normally
- *   - CSS *strings* (--org-name, --powered-by-text, ...) which print.css uses
- *     inside `content:` in @page margin boxes. WeasyPrint 66 resolves var()
- *     inside margin-box content, which is what makes the running header
- *     brandable without generating per-tenant CSS rules. (Verified; see the
- *     capability notes in README-less form at the bottom of this file.)
- *
- * Presets are a convenience. Every field can be overridden per build, e.g.
- *   node build.mjs --theme mzfn --org-name "Mzansi Foundation" --brand-accent "#0f766e"
- */
-
 // --------------------------------------------------------------- presets ---
 
 /** @typedef {ReturnType<typeof resolveTheme>} Theme */
@@ -37,11 +17,6 @@ export const PRESETS = {
     footerNote: 'ImpactMEL — internal and client documentation',
   },
 
-  /**
-   * Client tenant example. A white-labelled build: the client's name and
-   * colours lead, and "powered by ImpactMEL" is shown because the platform
-   * brand is no longer the primary one.
-   */
   mzfn: {
     key: 'mzfn',
     orgName: 'MZFN',
@@ -104,10 +79,6 @@ const cssString = (s) => '"' + String(s).replace(/\\/g, '\\\\').replace(/"/g, '\
 
 // ------------------------------------------------------------- resolving ---
 
-/**
- * Build a theme from a preset plus overrides.
- * @param {object} overrides camelCase keys matching PRESETS entries
- */
 export function resolveTheme(overrides = {}) {
   const presetKey = overrides.theme ?? DEFAULT_THEME;
   const preset = PRESETS[presetKey];
@@ -135,11 +106,6 @@ export function resolveTheme(overrides = {}) {
 
 // ------------------------------------------------------------ CSS output ---
 
-/**
- * @param {Theme} t
- * @param {{variant: string, logoHref: string|null, buildDate: string}} ctx
- * @returns {string} a `:root { ... }` block
- */
 export function themeCSS(t, ctx = {}) {
   const { platformPrimary: primary, brandAccent: accent, paper } = t;
 

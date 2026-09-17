@@ -1,20 +1,3 @@
-/**
- * Placeholder PNG generator — zero dependencies.
- *
- * Real screenshots are being recaptured separately, so the pipeline needs
- * stand-in art to be testable today. This writes a grey box with the figure key
- * stamped on it, plus a frame and a corner label, at 16:10.
- *
- * Used two ways:
- *   1. `node fixtures/make-placeholders.mjs` — regenerate every placeholder
- *      named in figures.json.
- *   2. imported by build.mjs, which calls ensurePlaceholder() for any figure
- *      whose real image is missing, so a build never dies on absent art.
- *
- * PNG is written by hand (8-bit RGB, filter 0, one IDAT) because pulling a
- * raster library in for a grey rectangle is not worth it. Text is drawn with
- * the embedded 5x7 bitmap font below.
- */
 import { deflateSync } from 'node:zlib';
 import { mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -198,11 +181,6 @@ const PALETTE = {
   faint: [0x83, 0x87, 0x7d],
 };
 
-/**
- * Render one placeholder. Returns the PNG buffer.
- * @param {string} key   figure key, stamped on the box
- * @param {object} [opts]
- */
 export function renderPlaceholder(key, opts = {}) {
   const width = opts.width ?? 1280;
   const height = opts.height ?? 800;
