@@ -44,6 +44,7 @@ Capture on **demo.impactmel.com** (Meridian Impact Alliance), never on a client 
 | `dashboard-activity-feed` | `/org/<orgId>/dashboard` | org_admin | The Activity Feed, showing five recent submissions with relative times. |
 | `dashboard-indicator-performance` | `/org/<orgId>/dashboard` | org_admin | The Indicator Performance table, with one bar per indicator in the Indicators column. |
 | `statistics` | `/org/<orgId>/statistics` | org_admin | The six figures and the Reporting Pressure signals at the top of Statistics. |
+| `dashboard-overview` | `/org/<orgId>/dashboard` | me_officer | The dashboard as an M&E officer sees it, with the reviewer's queue in place of the admin tiles. |
 
 ## 4 · Programmes
 
