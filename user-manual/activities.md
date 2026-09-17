@@ -1,8 +1,17 @@
-# Activities & Participants
+---
+title: Activities and participants
+chapter: 13
+roles:
+  - reporter
+  - me_officer
+  - org_admin
+---
 
-Activities are the day-to-day work your team does to produce results — training sessions, community meetings, site visits, construction milestones. Participants are the people who attend or benefit from those activities.
+# Activities and participants
 
-Recording activities and participants in ImpactMEL keeps a permanent, auditable log of what was done, who was reached, and how it links to your results framework. Participant data can also be pushed directly into indicator values.
+**Activities** are the work your team does — training sessions, community meetings, site visits, construction. **Participants** are the people who attend.
+
+Recording both gives you an auditable log of what was done and who was reached, and lets you link that work to the outputs in your results framework.
 
 ---
 
@@ -14,202 +23,159 @@ Recording activities and participants in ImpactMEL keeps a permanent, auditable 
 
 ## Activities
 
-### What is an Activity?
+Open the project, then **Activities** in the left rail. The page is headed **Activities**, with the line *Plan and track field activities, workshops, and events.*
 
-An activity is a single event or work item linked to a specific **Output** in your results framework. For example:
+{{figure:activities-list}}
 
-- *Community WASH training session — Gasabo District — 15 March 2026*
-- *Borehole installation — Nyarugenge sector — Week 8*
-- *School sanitation inspection — Kicukiro Primary School*
+Each card shows a status chip — **Planned**, **In Progress**, **Completed** or **Cancelled** — its dates, how many participants are registered, its budget, and how many sub-activities it has. Sub-activities are nested under their parent and tagged **Sub-activity**.
 
-Activities are recorded per **Project**, and each one can have a list of **Participants** registered against it.
+### Logging an activity
 
----
+Click **New Activity**. The page is headed **New Activity**. Only **Activity Name** is required.
 
-### Viewing Activities
+{{figure:new-activity}}
 
-Open a project → click the **Activities** tab. Activities are displayed as a list sorted by date, grouped by the Output they are linked to.
+#### Basic Information
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/08-01-activities-list.png" alt="Figure 8.1 — Activities Tab" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 8.1 — Activities Tab</p>
-    <p>The Activities tab of a project showing a list of activities grouped under Output headings. Each activity row shows the activity title, date, location, facilitator name, participant count (with a small person icon), status badge (Planned/Completed/Cancelled), and action buttons (View, Edit). A "Log Activity" button appears in the top-right.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
----
-
-### Logging an Activity
-
-1. Open the project → **Activities** tab
-2. Click **+ Log Activity**
-3. Fill in the activity details:
-
-| Field | Required | Description |
+| Field | Required | What it is for |
 |---|---|---|
-| **Activity Title** | ✅ | Clear, descriptive title |
-| **Output** | ✅ | Which result framework Output this activity contributes to |
-| **Start Date** | ✅ | Date the activity started (or took place) |
-| **End Date** | | End date if the activity spans multiple days |
-| **Location** | | Where the activity happened (village, district, facility) |
-| **Facilitator** | | Name of the person who led the activity |
-| **Description** | | Additional details — methodology, materials used, etc. |
-| **Status** | ✅ | Planned, In Progress, Completed, or Cancelled |
+| **Activity Name** | Yes | A clear title |
+| **Activity Code** | | A short reference |
+| **Activity Type** | | Training, Meeting, Distribution, Assessment, Campaign, Construction or Other |
+| **Status** | | Planned, In Progress, Completed or Cancelled |
+| **Description** | | Method, materials, anything else |
 
-4. Click **Save Activity**
+#### Schedule
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/08-02-log-activity.png" alt="Figure 8.2 — Log Activity Form" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 8.2 — Log Activity Form</p>
-    <p>The "Log Activity" slide-over panel showing all fields. The Output field is a dropdown showing the results framework tree with selectable Output nodes. The Status field shows a segmented control. Start Date and End Date fields are date pickers. A "Save Activity" button is at the bottom.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Planned Start Date**, **Planned End Date**, **Venue**, and **Location (admin unit + GPS pin)**.
 
----
+#### Participants & Budget
 
-### Activity Detail Page
+**Target Total**, **Target Female**, **Target Male**, **Target Youth** and **Budget Planned**. These are what you expect, not what happened.
 
-Click any activity to open its detail page. This page shows:
-- Full activity information (title, dates, location, facilitator)
-- The linked Output in the results framework
-- A list of registered participants
-- Quick actions: Register Participants, Push to Indicator, Edit, Delete
+#### Management
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/08-03-activity-detail.png" alt="Figure 8.3 — Activity Detail Page" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 8.3 — Activity Detail Page</p>
-    <p>The activity detail page showing the activity name and metadata in a header section, a "Participants" section below with a table of registered participants (with columns for Name, Sex, Age, Location, and Attended checkbox), and a sidebar showing the linked Output node with its description. Quick action buttons appear at the top-right.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Responsible Person**, and **Parent Activity** — leave it as *None — top-level activity*, or choose a parent to make this a sub-activity.
+
+Click **Create Activity**.
+
+Dates can be in the past or the future. Activities sort chronologically.
 
 ---
 
-## Participants
+## An activity's page
 
-### Registering Participants
+Click any activity.
 
-After an activity takes place, register the people who attended or participated.
+{{figure:activity-detail}}
 
-1. Open the activity detail page
-2. Click **+ Register Participants**
-3. For each participant, enter:
+The header carries chips for **Schedule**, **Venue**, **Registered** and **Linked Indicators**, with buttons for **Participants**, **Edit** and **Delete**.
 
-| Field | Required | Description |
-|---|---|---|
-| **First Name** | ✅ | |
-| **Last Name** | ✅ | |
-| **Sex** | ✅ | Female, Male, or Non-binary |
-| **Date of Birth** | | For age disaggregation reporting |
-| **Phone** | | Contact number (optional) |
-| **Village / Cell** | | Geographic location |
-| **District** | | Administrative district |
-| **National ID** | | For identity verification (optional) |
+Four cards read the activity at a glance: **Attendance**, **Budget Burn**, **Indicator Coverage** and **Sub-activity Flow**.
 
-4. Click **+ Add Another** to add more participants in the same session
-5. Click **Save Participants** when done
+Below them:
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/08-04-register-participants.png" alt="Figure 8.4 — Register Participants Form" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 8.4 — Register Participants Form</p>
-    <p>The participant registration form showing a repeating section with fields for each participant. Three participants have been partially filled in. An "Add Another Participant" link appears below the last entry. A count badge at the top shows "3 participants added". A "Save Participants" button is at the bottom.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+| Panel | What it does |
+|---|---|
+| **Activity Intelligence** | What the figures add up to |
+| **Indicators** | **New** creates one; **Link Existing** attaches one that exists. Each linked indicator can be unlinked |
+| **Sub-activities** | **Add Sub-activity** |
+| **Participant Targets** | Total, female, male and youth targets |
+| **Budget & Attendance Pulse** | Planned against actual |
+| **Linked Output** | **Link Output** attaches the output in the results framework this activity delivers; **Unlink** removes it |
+| **Participation Composition** | Who actually came |
 
-::: tip Bulk import
-If you have a participant list in Excel or CSV, you can import it instead of entering one by one. Click the **Import** button at the top of the registration form and upload your file. See the import template for the required column format.
+::: tip Link the output
+An activity linked to an output is what makes the output card in the results framework show **N activities**. Without the link, the framework cannot show what is delivering the result.
 :::
 
 ---
 
-### Participant Register
+## Attendance
 
-The participant list for an activity shows all registered individuals with their details. You can:
+Click **Participants** on an activity. The page is headed **Participants**, with the line *Manage registrations and attendance for this activity.*
 
-- **Mark attendance** using the checkboxes (useful when some registered people did not attend)
-- **Search** participants by name
-- **Export** the register as an Excel file or PDF attendance sheet
-- **Remove** a participant from the list if registered by mistake
+Four figures: **Total**, **Registered**, **Attended** and **Absent**.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/08-05-participant-register.png" alt="Figure 8.5 — Participant Register" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 8.5 — Participant Register</p>
-    <p>The participant register table for an activity showing 12 participants. Columns include Name, Sex, Age, Location, and an "Attended" checkbox column. 10 out of 12 checkboxes are checked. At the bottom, a summary shows "10 attended / 12 registered — 83% attendance rate." Export buttons for Excel and PDF appear at the top-right.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+The table has columns for Name, Gender, Phone, National ID, Status and an action. **Status** is a dropdown on each row — set it to **Registered**, **Attended** or **Absent**. The bin icon unregisters someone added by mistake.
 
----
+{{figure:activity-participants}}
 
-### Household Members
+### Registering someone
 
-For household-level surveys and programs, each participant can have family members registered as **household members**. This allows you to track data at the household level rather than just the individual level.
+Click **Register Participant**. The dialog has two modes.
 
-1. Click on a participant's name in the register
-2. Click **Household Members** tab
-3. Click **+ Add Member**
-4. Enter: Name, Relationship to Participant, Sex, Age
-5. Click **Save**
+**Select Existing** searches the registry by name, phone or national ID. Type at least two characters. Click **Add** on the row. Someone already registered is shown as such.
+
+**Create New** registers a new person and adds them in one step: First Name, Last Name, Gender, Phone, Email, National ID, Date of Birth, **Location**, and checkboxes for **Person with disability** and **Household head**. Click **Create and Register**.
+
+::: tip Search before you create
+Searching the registry first is what stops the same person existing three times under slightly different spellings.
+:::
 
 ---
 
-### Pushing Participant Data to Indicators
+## The participant registry
 
-Once your participant register is complete, you can automatically populate an indicator with the participant count — eliminating manual counting.
+Reach it with **⌘K**, then type *Participants*. The page is headed **Participants**, with the line *Registry of all participants across activities.*
 
-1. Open the activity detail page
-2. Click **Push to Indicator**
-3. Select the indicator you want to update (e.g., *# of people trained*)
-4. Select the reporting period
-5. Review the pre-filled values:
-   - **Total value** = count of attended participants
-   - **Disaggregated values** = automatically split by sex/age based on participant data
-6. Add a narrative (optional)
-7. Click **Submit**
+It is org-wide, not per project. Columns: Name, Gender, Phone, Location, National ID and **Household**, which counts household members. Twenty-five to a page, with **Previous** and **Next**.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/08-06-push-to-indicator.png" alt="Figure 8.6 — Push to Indicator Dialog" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 8.6 — Push to Indicator Dialog</p>
-    <p>The "Push to Indicator" dialog showing a preview of the values that will be submitted. The main value shows "10 people (10 attended participants)". Below, a disaggregation breakdown shows Female: 6 / Male: 4. A period selector and narrative text area appear below. "Submit" and "Cancel" buttons are at the bottom.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+Two filters: a search box for name, phone, national ID or district, and a gender dropdown.
 
-This creates an **IndicatorReport** record in draft status, which the M&E Officer then reviews and approves.
+### Registering a participant
+
+Click **New Participant**, or use **New** ▾ → **New participant** in the top bar. The page is headed **Register Participant**.
+
+{{figure:participant-register-new}}
+
+| Section | Fields |
+|---|---|
+| **Personal Information** | First Name (required), Last Name (required), Gender, Date of Birth, Phone, Email, National ID |
+| **Location** | The location picker |
+| **Additional Info** | **Person with disability**, **Household head** |
+| **Household Members** | See below |
+
+Click **Register Participant**.
+
+### Household members
+
+Where you work at household level, register the family alongside the participant.
+
+1. Click **Add Member**.
+2. Each block is headed **Member 1**, **Member 2** and so on. Fill in First Name, Last Name, Gender, Date of Birth, **Relationship** (Spouse, Child, Parent, Sibling or Other), and tick **Person with disability** if it applies.
+3. The bin icon removes a member.
+
+Only members with both a first and last name are saved.
 
 ---
 
-## Frequently Asked Questions
+## Exporting participants
 
-**Can one participant appear in multiple activities?**
-Yes. Participants are linked to specific activities, not the project. The same person can be registered for multiple activities. The system tracks unique participants across a project for deduplication reporting.
+Go to **Settings → Export Data**, tick **Participants**, and click **Export Now**. You get a single org-wide sheet with Name, Gender, Age, Phone, Location and Status.
 
-**What if I made a mistake in a participant's details?**
-Click on the participant's name → click **Edit** → correct the information → **Save**.
+To export the activities themselves, tick **Activities** in the same place. That gives you one sheet per project with the activity, its status, dates, participant count, location and remarks.
 
-**Can I record activities for past dates?**
-Yes. The date fields accept any date, past or future. Activities are sorted chronologically.
+---
 
-**Can I export all participants across all activities for a project?**
-Yes — in the project Activities tab, click **Export All** to download a full Excel file of all activities and participants for the project.
+## Common questions
+
+**Can one person attend several activities?**
+Yes. Register them once in the registry, then add them to each activity with **Select Existing**.
+
+**What if I got someone's details wrong?**
+Open them in the registry and edit them. The correction follows them everywhere.
+
+**Can I import a participant list from a spreadsheet?**
+Not into the participant registry. Register people one at a time, or collect them through a [form](/user-manual/forms) with a **Participant** field.
+
+**Can an activity's attendance become an indicator figure?**
+Not directly. Link the indicator to the activity so the connection is recorded, then report the figure through [Progress Reports](/user-manual/data-entry).
+
+---
+
+## Where to go next
+
+- [Results framework](/user-manual/results-framework) — the outputs activities deliver
+- [Forms](/user-manual/forms) — collecting attendance in the field
+- [Entering data](/user-manual/data-entry) — turning what happened into a reported figure

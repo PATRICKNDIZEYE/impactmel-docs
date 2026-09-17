@@ -1,54 +1,49 @@
-# Data Collection Forms
+---
+title: Forms
+chapter: 14
+roles:
+  - reporter
+  - me_officer
+  - org_admin
+---
 
-Data Collection Forms let you build surveys and forms, share them by link, and have responses flow into indicator reporting without a spreadsheet.
+# Forms
 
-A form can be shared with anyone by link: field staff open it on their phone, fill it in, and submit. The responses appear directly in ImpactMEL.
+A **form** is something you build, publish, and share by link. Anyone with the link can fill it in on a phone without an account, and the responses appear in ImpactMEL.
 
-**Common use cases:**
-- Post-training feedback surveys
+Open it from the top bar: **More → Forms**.
+
+Common uses:
+
+- Post-training feedback
 - Household baseline and endline surveys
-- Beneficiary registration forms
+- Participant intake
 - Site monitoring checklists
-- Community needs assessments
+- Attendance sheets
 
 <div class="doc-page-hero">
   <p class="doc-page-hero__eyebrow">Field collection</p>
-  <p class="doc-page-hero__title">Turn surveys and checklists into data that flows directly into reporting without spreadsheet cleanup.</p>
-  <p class="doc-page-hero__copy">Forms are where fieldwork turns into usable reporting data. Use this guide to create forms that are easy to complete and easy for your team to review later.</p>
+  <p class="doc-page-hero__title">Turn a survey into data that lands in ImpactMEL, not in a spreadsheet you have to clean.</p>
+  <p class="doc-page-hero__copy">Use this when collection needs to reach further than the people with logins.</p>
   <div class="doc-page-hero__meta">
     <div class="doc-page-hero__meta-item">
       <span>Best for</span>
-      <strong>M&amp;E teams, field coordinators, and data officers</strong>
+      <strong>M&amp;E officers and field coordinators</strong>
     </div>
     <div class="doc-page-hero__meta-item">
       <span>Best moment</span>
-      <strong>When collection needs to scale beyond manual spreadsheets</strong>
+      <strong>Before fieldwork starts</strong>
     </div>
     <div class="doc-page-hero__meta-item">
       <span>Main outcome</span>
-      <strong>Published forms with clean submissions tied back to reporting</strong>
+      <strong>A published form with a link you can send</strong>
     </div>
   </div>
 </div>
 
-<div class="doc-quick-links">
-  <a class="doc-quick-link" href="#creating-a-form">
-    <span>Start building</span>
-    <strong>Create the form shell and connect it to the right project</strong>
-  </a>
-  <a class="doc-quick-link" href="#conditional-logic">
-    <span>Keep it relevant</span>
-    <strong>Use conditional logic to hide unnecessary questions</strong>
-  </a>
-  <a class="doc-quick-link" href="#publishing-a-form">
-    <span>Launch</span>
-    <strong>Publish the form and share it by link</strong>
-  </a>
-  <a class="doc-quick-link" href="#viewing-submissions">
-    <span>Review responses</span>
-    <strong>Track incoming submissions and manage quality control</strong>
-  </a>
-</div>
+::: warning Forms has no left rail
+Forms is one of the sections with no left-hand rail, so that side of the page is empty. Nothing is missing.
+:::
 
 ---
 
@@ -63,241 +58,215 @@ A form can be shared with anyone by link: field staff open it on their phone, fi
   <VideoEmbed src="/videos/35-delete-form-with-export.mp4" title="35 · Delete a form — with your data protected" duration="31s" />
 </div>
 
-## The Forms Library
+## The forms list
 
-Navigate to **Data Collection** in the sidebar to see all forms in your organization.
+The page is headed **Forms**. Each card shows the form's name, its status, and a truncated copy of its public address.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-01-forms-library.png" alt="Figure 9.1 — Data Collection Library" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.1 — Data Collection Library</p>
-    <p>The Data Collection page showing a grid of form cards. Each card displays the form title, linked project, linked indicator (if any), status badge (Draft/Published/Closed), total submission count, and a "Share" button. Filter options (by project, by status) appear at the top. A "New Form" button is in the top-right corner.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Search forms…** filters by name and description.
+
+{{figure:forms-list}}
 
 ---
 
-## Creating a Form
+<!-- roles: me_officer, org_admin -->
 
-1. Click **+ New Form**
-2. Set up the basic form information:
+## Creating a form
 
-| Field | Required | Description |
-|---|---|---|
-| **Form Title** | ✅ | Title shown to respondents at the top of the form |
-| **Description / Instructions** | | Instructions for the respondent |
-| **Linked Project** | ✅ | Which project this form belongs to |
-| **Linked Indicator** | | If submissions should count toward an indicator |
-| **Reporting Period** | | Which period submissions will be counted in |
-| **Auto-close Date** | | Date after which the form stops accepting responses |
+1. Click **New form** — or **Create your first form** if you have none.
+2. The dialog is headed **Create a form**: *Give your form a name and short description. You'll add fields on the next screen.*
+3. Enter a **Name** and, if you want one, a **Description (optional)** — it is shown on the public form.
+4. Click **Create**.
 
-3. Click **Create Form** — the form builder opens
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-02-form-builder.png" alt="Figure 9.2 — Form Builder" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.2 — Form Builder</p>
-    <p>The form builder interface. On the left: a panel showing the current form fields in order, with drag handles to reorder them. On the right: a field properties panel showing the settings for the selected field. At the top: a "Preview" button and a "Publish" button. Below the field list: an "+ Add Field" button with a dropdown of field type options.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+The builder opens.
 
 ---
 
-## Field Types
+## The builder
 
-| Type | Best for |
+{{figure:form-builder}}
+
+Along the top: the form's name and description, both editable in place; a status chip reading **Draft**, **Published** or **Archived**; a version number; and a save indicator.
+
+The builder **saves itself** as you work. The indicator reads **Saving…**, **Unsaved** or **Saved**. There is no save button.
+
+**Preview** switches to what a respondent sees, and back to **Edit**. In preview, the submit button reads **Preview submit** and nothing is recorded.
+
+An empty form says **Add your first field**: *Pick a field type from the left. You can reorder, edit, and add more anytime.*
+
+---
+
+## Field types
+
+The palette on the left is headed **Add field**, in three groups.
+
+### Basic
+
+| Type | What it is |
 |---|---|
-| **Short Text** | Names, short answers, single-line responses |
-| **Long Text** | Comments, descriptions, feedback (multiple lines) |
-| **Number** | Quantities, scores, counts |
-| **Single Select** | Choose one from a list (radio buttons / dropdown) |
-| **Multiple Select** | Choose several from a list (checkboxes) |
-| **Date** | Date picker |
-| **Yes / No** | Simple binary question |
-| **Location** | Text-based location input or GPS (if on mobile browser) |
-| **File Upload** | Photo, document, or signature |
-| **Section Heading** | Divider to organize long forms into sections |
+| **Short text** | One-line text answer |
+| **Long text** | Multi-line paragraph |
+| **Number** | Numeric input |
+| **Yes / No** | Boolean toggle |
+| **Date** | Calendar date |
+| **Time** | Time of day |
+| **Note** | Display-only text |
+
+### Choices
+
+| Type | What it is |
+|---|---|
+| **Single choice** | Pick one option |
+| **Multiple choice** | Pick many options |
+| **Rating** | A star scale, five by default |
+
+### IMPACTMEL
+
+| Type | What it is |
+|---|---|
+| **Location** | Place search plus a GPS pin |
+| **Participant** | Pick or create a participant |
+| **Activity** | Pick from the project's activities |
+| **Indicator value** | The answer flows to an indicator |
+| **Evidence file** | Photo or document upload |
 
 ---
 
-## Adding Fields
+## Configuring a field
 
-1. Click **+ Add Field** at the bottom of the field list
-2. Select a **field type** from the dropdown
-3. In the right-hand properties panel, configure the field:
-   - **Label** — the question text shown to the respondent
-   - **Help text** — optional hint shown below the question
-   - **Required** — toggle ON to make the field mandatory
-   - **Placeholder** — example answer shown inside the input (for text/number fields)
-   - **Options** — for Single/Multiple Select, add the answer choices
-4. Click somewhere else to close the properties panel
+Click a field. The panel on the right is headed **Edit field**, with the type beneath.
 
-To **reorder fields**, drag the handle (⋮⋮) on the left side of each field up or down.
+{{figure:form-field-inspector}}
 
-To **delete a field**, click the trash icon (🗑) on the right side of the field row.
+Every field has:
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-03-field-configuration.png" alt="Figure 9.3 — Field Configuration Panel" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.3 — Field Configuration Panel</p>
-    <p>The field properties panel on the right side of the form builder. The selected field is a "Single Select" type. The panel shows: Label input ("What is your primary water source?"), Help text input, Required toggle (ON), and an Options section with four items (Piped water / Borehole / River / Rainwater) each with a drag handle and delete button. An "Add Option" link appears below.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+| Setting | What it does |
+|---|---|
+| **Label** | The question, as the respondent reads it. Required |
+| **Help text** | Shown under the label to guide respondents |
+| **Field key** | The column key in exports. Letters, numbers and underscores only. A warning appears if two fields share one |
+| **Required field** | Whether it must be answered. Not shown on a **Note** |
 
----
+Depending on the type, you also get:
 
-## Conditional Logic
+- **Choices**, with **Add choice** — single and multiple choice
+- **Validation**, with **Min** and **Max** — number and rating
+- **Pattern (regex)** — short and long text
+- **Max stars** — rating
+- **Indicator binding** — indicator value
+- **Note text** — note
+- **Accepted file types** — evidence file
 
-Conditional logic lets you show or hide fields based on a respondent's previous answer. This keeps forms focused and avoids asking irrelevant questions.
+**Remove field** is at the bottom of the panel.
 
-**Example:** Only show the question *"Describe the station"* if the person answered *"Yes"* to *"Do you have a handwashing station?"*
+Reorder fields by dragging the handle.
 
-### Setting up a condition
+### Sending an answer to an indicator
 
-1. Click on the field you want to show/hide conditionally
-2. In the properties panel, scroll to **Conditional Logic**
-3. Toggle **Show this field only when...** to ON
-4. Select the **trigger field** (the question whose answer controls this field)
-5. Select the **condition** (equals / does not equal / is any of)
-6. Enter or select the **value** that triggers the condition
-7. The field will only appear when the condition is met
+Add an **Indicator value** field and set its **Indicator binding**. The numeric answer in that field flows to the chosen indicator when a response is submitted.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-04-conditional-logic.png" alt="Figure 9.4 — Conditional Logic Setup" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.4 — Conditional Logic Setup</p>
-    <p>The field properties panel showing the "Conditional Logic" section expanded. The toggle is ON, showing three dropdowns: "When" (field selector showing "Has handwashing station?"), "is" (condition: "equals"), and the value field ("Yes"). A preview note below says: "This field will only be shown when [Has handwashing station?] equals [Yes]."</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+If the dropdown reads **No indicators in scope**, there is no indicator available for this form to bind to.
 
 ---
 
-## Previewing Your Form
+## Publishing
 
-Click **Preview** at the top of the form builder to see exactly what respondents will see. The preview is fully interactive — you can fill it in and test conditional logic without submitting real data.
+1. Click **Publish**.
+2. A green banner appears headed **Share this form**, with the link and three buttons: **Copy**, **Open** and **View responses**.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-05-form-preview.png" alt="Figure 9.5 — Form Preview" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.5 — Form Preview</p>
-    <p>The form preview mode showing the form as a respondent would see it on a mobile phone. The form title appears at the top, followed by the description, then each question in sequence. A conditional field is hidden because its trigger answer was not selected. A "Submit" button appears at the bottom.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+The link is your organisation's address followed by `/f/` and the form's token. No login is needed to fill it in, and it works on any device.
 
----
+{{figure:form-share}}
 
-## Publishing a Form
+A form with no fields cannot be published — you are told to add at least one first.
 
-When the form is ready:
-
-1. Click **Publish** at the top of the form builder (or from the form card in the library)
-2. A dialog appears with the **share link**
-3. Copy the link and share it with your respondents
-
-No login is required to fill in the form. It works on any device — phone, tablet, or computer.
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-06-publish-share.png" alt="Figure 9.6 — Publish & Share Dialog" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.6 — Publish &amp; Share Dialog</p>
-    <p>The publish confirmation dialog showing a URL in a read-only input field with a "Copy Link" button next to it. Below the link: a QR code that respondents can scan with their phone camera. Two additional options appear: "Copy Short Link" and "Generate New Link". A warning note says: "Generating a new link will invalidate the current one."</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
-::: tip Generate a QR Code
-The share dialog includes a QR code. Print or display it at training venues and community meetings so participants can scan to open the form on their phones.
+::: warning Publishing freezes the fields
+While a form is published, the palette and the drag handles are disabled. The banner explains why: *To edit fields, unpublish first — existing responses stay pinned to the current version.*
 :::
 
----
-
-## What Respondents See
-
-The public form page is:
-- Clean and mobile-friendly
-- Branded with your organization's name
-- Shows the form title and instructions
-- Validates required fields before allowing submission
-- Shows a thank-you confirmation after submission
-
-There is no login, no account creation, and no personal tracking — respondents see only the form.
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-07-public-form-mobile.png" alt="Figure 9.7 — Public Form on Mobile" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.7 — Public Form on Mobile</p>
-    <p>The public form as it appears on a smartphone browser. The ImpactMEL branding appears subtly at the bottom ("Powered by ImpactMEL"). The form shows a clean white card with the form title at the top, and each question below with appropriate input controls. A progress bar at the top of the form shows completion percentage.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Unpublish** moves it back to draft and the public link stops working.
 
 ---
 
-## Viewing Submissions
+## What a respondent sees
 
-1. Open the form card in the Data Collection library
-2. Click the **Submissions** tab
+Your organisation's name and logo under **Form from**, the form's title and description, then the questions in order.
 
-The submissions table shows every response with:
-- Submission date and time
-- Answers to each field
-- Device type (mobile/desktop)
-- An **Export** button to download all responses as an Excel file
+Three optional respondent fields come first: **Your name**, an email and a phone number. All three are marked *Optional*.
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/09-08-submissions-table.png" alt="Figure 9.8 — Submissions Table" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 9.8 — Submissions Table</p>
-    <p>The Submissions tab showing a data table with one column per form field and one row per submission. The first three columns are frozen (Submission Date, Device Type, and a sequential ID). A toolbar at the top shows total submission count ("147 responses"), a search bar, date range filter, and an "Export to Excel" button.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+The button reads **Submit response**. Afterwards they see **Thank you** — *Your response has been recorded.*
+
+<!-- /roles -->
 
 ---
 
-## Closing a Form
+## Reading responses
 
-When you no longer want to accept new responses:
+Click **View responses** on the banner, or open the form and go to its responses page.
 
-1. Open the form → click **Unpublish** (or **Close Form**)
-2. The form URL shows a "This form is closed" message to anyone who opens it
-3. All existing submissions are preserved
+The page shows the form's name, how many responses there are, and two panes. On the left, a searchable list — each row is the respondent's name, or **Anonymous respondent**, with the time and location. Click one and its answers appear on the right, in the order the form asks them.
 
-To reopen the form, click **Republish**.
+Evidence files appear as download links.
+
+{{figure:form-responses}}
+
+An empty form says **No responses yet**: *Share the public link from the builder. Responses will appear here as soon as they come in.*
 
 ---
 
-## Frequently Asked Questions
+<!-- roles: me_officer, org_admin -->
 
-**Can I edit a form after publishing it?**
-Yes, but with caution. Adding new fields is safe. Deleting or renaming fields that already have responses may affect how submissions are displayed. A warning appears when you try to delete a field that has existing responses.
+## Deleting a form, and keeping the data
 
-**What happens to submissions when a form is linked to an indicator?**
-Each submission increments the indicator's value for the selected reporting period. The M&E Officer reviews and approves the indicator report before it appears in final reports.
+The bin icon on a form card starts the deletion. ImpactMEL checks for collected data first.
 
-**Can I accept file uploads?**
-Yes — use the File Upload field type. Uploaded files (photos, PDFs) are stored securely and linked to the submission record.
+If there are responses, the dialog says so and gives you a button reading **Export all N responses (.xlsx)**. Use it. You then have to tick **I understand the collected data will be permanently deleted** before the **Delete form** button will work.
 
-**How many responses can a form accept?**
-There is no limit on the number of submissions a form can receive.
+The export is one sheet named **Responses**, with columns for **Submitted at**, **Respondent**, **Email**, **Phone**, **Location**, then one column per field label.
+
+::: warning This is the only response export
+There is no export button on the responses page itself. The export inside the delete dialog is the only way to get a form's responses as a spreadsheet. You can cancel the deletion after exporting.
+:::
+
+<!-- TODO: telling readers to open a delete dialog in order to export their data is bad advice that happens to be accurate. The export helper already exists and is called from one place only. If a plain Export button lands on the responses page, delete this warning and move the column list up into the Reading responses section. -->
+
+<!-- /roles -->
+
+---
+
+## Common questions
+
+**Can I edit a published form?**
+Unpublish it first. Responses already collected stay pinned to the version they were answered on.
+
+**Can I accept photos?**
+Yes — the **Evidence file** field type.
+
+**How many responses can a form take?**
+There is no limit.
+
+**Is there conditional logic — showing a question only if a previous answer was Yes?**
+Not yet. Every field is shown to every respondent.
+
+**Can a form close itself on a date?**
+Not from the builder. Unpublish it when you are finished collecting.
+
+---
+
+## Two kinds of link
+
+Forms are not the only public link in ImpactMEL, and the two are worth keeping apart.
+
+| Link | Built where | What it collects |
+|---|---|---|
+| A **form** link | More → Forms | Answers to questions you designed |
+| A **collection** link | A project → Collect Data → **Share Form** | One figure against one indicator, for one period |
+
+A collection link is the right tool when a partner just needs to report a number. See [Entering data](/user-manual/data-entry).
+
+---
+
+## Where to go next
+
+- [Entering data](/user-manual/data-entry) — turning responses into submissions
+- [Activities and participants](/user-manual/activities) — the registry a Participant field writes into
+- [Indicators](/user-manual/indicators) — what an Indicator value field binds to

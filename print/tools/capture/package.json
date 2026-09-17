@@ -1,0 +1,9 @@
+{
+  "name": "impactmel-capture",
+  "private": true,
+  "type": "module",
+  "description": "Screenshot harness for the printed manual",
+  "dependencies": {
+    "playwright": "^1.62.0"
+  }
+}

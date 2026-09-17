@@ -1,8 +1,26 @@
-# Entering Data
+---
+title: Entering data
+chapter: 10
+roles:
+  - reporter
+  - me_officer
+  - org_admin
+---
 
-This guide is primarily for **Reporters** — the team members responsible for submitting indicator values for their assigned projects at the end of each reporting period.
+# Entering data
 
-It also covers the **review and approval process** that M&E Officers follow after data is submitted.
+This chapter is mainly for **reporters** — the people who enter the figures at the end of a period.
+
+There are four ways a figure gets into ImpactMEL. Pick the one that matches how the figure reaches you.
+
+| Route | Best for |
+|---|---|
+| Project → **Progress Reports** | Entering a period's figures for a whole project in one sitting |
+| Project → **Collect Data** | One indicator and one period at a time, with evidence |
+| **Progress Reports → Bulk Import** | A spreadsheet of figures |
+| A public collection link | Someone outside your organisation reporting a figure |
+
+What happens after entry — approval — is covered in [Review and approve](/user-manual/review-and-approve).
 
 ---
 
@@ -16,193 +34,239 @@ It also covers the **review and approval process** that M&E Officers follow afte
   <VideoEmbed src="/videos/44-data-hub.mp4" title="44 · Audit everything in the Data Hub" duration="33s" />
 </div>
 
-## Who Enters Data?
+## Finding what you owe
 
-| Role | Responsibility |
+Sign in and your dashboard shows it: **Drafts To Submit**, **Returned (Fix Needed)** and **Due Soon (7 days)**.
+
+**Assigned Programs** lists the projects you can report on. If it is empty, you have not been added to a project's team yet. Ask an org admin.
+
+---
+
+## Progress Reports — a period at a time
+
+Open the project, then **Progress Reports** in the left rail. The page is headed **Indicator Progress Reports**, with the line *Record actual values and narrative for each reporting period*.
+
+{{figure:progress-reports}}
+
+### Choose the period first
+
+The button at the top right shows the current period and its status — **Open**, **Closed** or **Locked**. The period containing today is chosen for you and tagged **Current**.
+
+Periods here are worked out from your indicators' reporting frequency: monthly, quarterly, twice-yearly, termly or annual.
+
+Four figures sit above the list: **Total Indicators**, **Values Entered**, **Submitted** and **Still Draft**, plus **Due:** and the date where there is a deadline.
+
+### Enter a figure
+
+1. Find the indicator's row.
+2. Type into the **Value** box. The unit symbol is shown inside it.
+3. An **Unsaved** chip appears. Click **Save** on the row.
+4. When you are ready for review, click **Submit**.
+
+Submitting saves first, so you cannot lose a figure by forgetting to save.
+
+### Say what happened
+
+Click the row to expand it. That is where the rest of the entry lives:
+
+| Field | What to put in it |
 |---|---|
-| **Reporter** | Submits indicator values for assigned projects and periods |
-| **M&E Officer** | Reviews submissions, requests corrections, and approves or rejects data |
-| **Org Admin** | Can submit and approve data for any project |
+| **Narrative Explanation** | What drove this result, and any deviation from target |
+| **Qualitative Value / Description** | For a qualitative indicator, this replaces the number |
+| **Data Source** | Field survey, HMIS, admin records |
+| **Verification Notes** | Verified by a field officer, spot-check done |
+| **Geographic scope** | Optional. Without it the figure applies to the whole project |
 
----
+The expanded panel has its own **Save Draft** and **Submit for Review** buttons.
 
-## Finding Your Assigned Indicators
-
-When you log in as a Reporter, your dashboard shows only the projects and indicators you are assigned to. To submit data:
-
-1. Open your **Dashboard**
-2. Click the project you need to report on, **or** navigate via **Projects** in the sidebar
-3. Click the **Indicators** tab on the project detail page
-4. You will see all indicators linked to this project with their current status for the active reporting period
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/07-01-reporter-indicators.png" alt="Figure 7.1 — Reporter's Project Indicators View" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 7.1 — Reporter's Project Indicators View</p>
-    <p>The Indicators tab as seen by a Reporter role. Each indicator row shows the indicator name, the current reporting period (e.g., "Q1 2026"), the period target, and a "Submit Data" button. Indicators already submitted show a "Submitted" badge (yellow) or "Approved" badge (green). Indicators not yet started show a gray "Not started" badge.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
----
-
-## Submitting an Indicator Value
-
-1. Find the indicator you want to submit for
-2. Click **Submit Data** on the indicator row
-3. The data entry form opens:
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/07-02-data-entry-form.png" alt="Figure 7.2 — Data Entry Form" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 7.2 — Data Entry Form</p>
-    <p>The indicator data entry slide-over panel. At the top, it shows the indicator name, code, and unit. Below that: a "Reporting Period" selector dropdown (showing the active period), a large "Value" number input with the unit label (e.g., "people"), a "Target" display showing the period target (read-only), a "Progress Preview" that updates in real-time as you type the value, and a "Narrative" text area. At the bottom: Save as Draft and Submit buttons.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
-Fill in the following fields:
-
-| Field | Required | Description |
-|---|---|---|
-| **Reporting Period** | ✅ | Select the period you are reporting for (e.g., Q1 2026) |
-| **Value** | ✅ | The actual number achieved during this period |
-| **Narrative** | | A brief explanation of the result — what worked, what didn't, context for the number |
-
-4. Choose one of the two action buttons:
-   - **Save as Draft** — saves your entry without submitting. You can come back and edit it later.
-   - **Submit** — sends the data for M&E Officer review. You cannot edit a submitted entry without it being rejected back to you.
-
-::: tip
-Always add a narrative, even if brief. M&E Officers and donors appreciate knowing the story behind the numbers — what activities produced this result, any challenges faced, or why the value is higher or lower than expected.
+::: tip Always write a narrative
+The figure tells a reviewer what happened. The narrative tells them why. A figure with no narrative is the one that gets sent back.
 :::
 
----
+### Submit everything at once
 
-## Entering Disaggregated Values
+Where drafts are waiting, a bar appears reading *N indicators still in draft* with a **Submit All Drafts** button.
 
-If the indicator has disaggregations (e.g., by sex, age group, or location), you will see additional fields in the data entry form:
+### Export the period
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/07-03-disaggregated-entry.png" alt="Figure 7.3 — Disaggregated Data Entry" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 7.3 — Disaggregated Data Entry</p>
-    <p>The data entry form for an indicator with a "Sex" disaggregation. Three fields appear under "Breakdown by Sex": Female (input), Male (input), Non-binary (input). A "Total" field below automatically sums all three values as you type. A warning appears if the total doesn't match the overall value entered above.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Export** at the top right writes an Excel file of the period — indicator, type, unit, target, actual, status, narrative, data source and verification notes.
 
-Enter the value for each category. ImpactMEL automatically sums them and sets that as the overall value. If the sum doesn't match a value you typed in the main field, a warning appears — resolve this before submitting.
+### When a period is closed or locked
+
+A **locked** period shows a banner: *This period is locked. No changes can be made.* Every field goes read-only and Save and Submit disappear.
+
+<!-- TODO: verify this on a live cell. Period sign-off closes ORG-WIDE periods and the server refuses figures against them. Progress Reports reads PER-INDICATOR periods and only treats 'locked' as read-only — a 'closed' one still renders editable inputs. Both statements can be true at once because they are two different period tables, but a reporter who types into an editable box and then gets rejected on save will read that as a fault. -->
+A **closed** period shows its badge, and the org-wide calendar refuses new figures against it. If you need to report into a closed period, ask an M&E officer to reopen it — they have to give a written reason, which stays on the record. See [Period sign-off](/user-manual/period-sign-off).
 
 ---
 
-## Saving and Editing Drafts
+## Collect Data — one figure, with evidence
 
-Drafts are saved automatically as you type and can be accessed at any time before submission.
+Open the project, then **Collect Data**. The page shows four figures — **Open periods**, **Active indicators**, **Overdue** and **Due this week** — then a section headed **Open for Reporting**.
 
-To return to a draft:
-1. Go to the project → **Indicators** tab
-2. Find the indicator — it shows a **Draft** badge
-3. Click **Edit Draft** to continue
+Each indicator card lists its open periods, with a badge reading **Overdue by 4d**, **Due in 9d** or **Due** and a date.
 
-::: warning
-Drafts are not visible to M&E Officers. Only submitted values appear in the review queue. Make sure to click **Submit** when your data is ready for review.
-:::
+1. Click the period row you want to report.
+2. The entry form opens.
+3. Enter the values. **Save Draft** keeps it; **Submit for Review** sends it.
+
+Submitting asks you to confirm: *Once submitted, this data will go to your reviewer. You won't be able to edit it unless it's returned.*
+
+The form's toolbar also has **Export Template**, **Import Data** and **Import History** for handling a sheet of values for that one indicator.
+
+A project with nothing open says **No Open Reporting Periods** and offers **Manage Indicators & Periods**. A collapsed **Other Indicators** block tags the rest as *all closed* or *no periods*.
 
 ---
 
-## What Happens After Submission
+## Bulk import — a spreadsheet of figures
 
-Once you submit a value, it enters the **review process**:
+Open **Progress Reports**, then **Bulk Import**. Three numbered steps.
+
+{{figure:bulk-import-template}}
+
+### 1 · Select reporting period & download template
+
+Choose the **Reporting Period**, then click **Download Template**.
+
+The file is an Excel workbook with one sheet, **Indicator Data**, already filled in with every indicator on the project. You fill in two columns: **actualValue** and **notes**. Leave the identifier columns alone.
+
+### 2 · Fill in values and upload
+
+Drag the filled template onto **Drag & drop your filled template here**, or click to browse. Only `.xlsx` files are accepted.
+
+### 3 · Preview & confirm
+
+The preview counts how many rows are **ready** and how many have an **error**, and lists them with a status of **Ready**, **Error** or **Skipped**. Row-level messages name the problem — a missing identifier, or a value that is not a number.
+
+Click **Import N reports**.
+
+You then get **Import complete**, a count of imported and failed rows, and buttons for **View Indicator Reports** and **Import Another**.
+
+Rows with an empty **actualValue** are skipped rather than treated as zero. Notes land in the narrative.
+
+---
+
+<!-- roles: me_officer, org_admin -->
+
+## Collecting from outside your organisation
+
+A public collection link lets someone with no account report a figure against one indicator.
+
+1. Open the project → **Collect Data**.
+2. Click **Share Form** on an indicator. The modal is headed **Shareable Forms**.
+3. Click **Create Shareable Form Link** and fill in **Form Title**, the **reporting unit** shown on the form, the **Reporting Period**, and a **Description**. Toggle **Require Name** and **Require Email** as you need.
+4. Copy the link and send it.
+
+Per link you can copy it, open it, **Pause** or **Resume** it, see **View Results** and **View Responses (N)**, or delete it. A link is **active**, **paused** or **closed**.
+
+Deleting a link deletes the responses collected on it.
+
+### Turning a response into a submission
+
+A public response is not a submission until someone makes it one.
+
+1. Go to **Submissions** in the top bar.
+2. Open the **Public Forms** tab.
+3. Find the row and click **Create submission**.
+
+Converted rows show a **Converted** chip. A message tells you how many drafts were created and to switch to **System & Imports** to submit or approve them.
+
+Do them one at a time. There is no way to convert several at once.
+
+<!-- /roles -->
+
+---
+
+## Submissions — every figure in one place
+
+**Submissions** in the top bar is headed **All Submissions**, with the line *All submission records across programs — manual, imported, and public forms.*
+
+{{figure:submissions-overview}}
+
+### The five statuses
+
+Five clickable pills across the top double as counts and as filters:
+
+| Status | What it means |
+|---|---|
+| **Draft** | Saved, not submitted. Nobody else is waiting on it |
+| **Submitted** | Waiting on a decision |
+| **Returned** | Sent back with a reason. Yours to correct |
+| **Approved** | Published. It counts |
+| **Locked** | Final. It cannot be changed |
+
+### Narrowing the list
+
+A filter bar under the pills: a search box for indicator and period, then **All Indicators**, **All Periods**, **All Statuses**, **All Sources** (Manual, Imported, Public Forms) and **All Submitters**, plus two date boxes. **Clear** resets everything.
+
+### Three tabs
+
+**System & Imports**, **Public Forms** and **Narratives**. The first two can be read as **Cards** or in **Sheet View**.
+
+**Narratives** stays disabled until you have picked a project and a period — its tooltip says so. Inside, each narrative question has a box and its own **Save** button.
+
+### Inside a submission
+
+Click a card to expand it. You get **Submitted by** and **When**, a summary broken down by disaggregation, a **Decision Log** with every decision, its time, who made it and the reason, a **Comment Thread**, and a table of values with **Input**, **Value**, **Estimated**, **Disaggregations** and **Notes**.
+
+{{figure:submission-expanded}}
+
+### Discussing a submission
+
+Type in the reply box and click **Submit**. `@` opens a list of colleagues to mention, including **@everyone**.
+
+Replies notify everyone in the thread automatically, so use `@mention` only when you need one specific person.
+
+Comment threads are not available on indicator progress reports yet — the panel says so.
+
+<!-- roles: me_officer, org_admin -->
+
+### Deciding from here
+
+A **draft** or **returned** submission shows **Submit**. A **submitted** one shows **Approve** and **Return**.
+
+**Return** requires a reason: *Add a short reason so the submitter knows what to fix.*
+
+For a whole period at once, choose a **Period** in the filter bar — the bulk panel stays disabled until you do — and use **Submit All**, **Return All** or **Approve All**. Each asks you to confirm. **Export** writes the list to Excel.
+
+For a proper review queue with the approval chain attached, use [Review](/user-manual/review-and-approve) instead.
+
+<!-- /roles -->
+
+---
+
+## What happens after you submit
 
 ```
-Reporter submits → Status: Submitted (yellow)
-M&E Officer reviews →
-  ✅ Approved → Status: Approved (green) → included in reports
-  ❌ Rejected → Status: Rejected (red) → returned to Reporter for correction
+You submit                     → Submitted
+An M&E officer approves        → Approved, and it counts
+An M&E officer sends it back   → Returned, with a written reason
 ```
 
-You will receive a notification if your submission is rejected. The M&E Officer's comment will explain what needs to be corrected.
+You are emailed either way, and the reason comes with the return.
 
-To correct a rejected submission:
-1. Click on the indicator row
-2. Click **Edit Submission**
-3. Make the corrections
-4. Click **Resubmit**
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/07-04-submission-status.png" alt="Figure 7.4 — Submission Status Badges" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 7.4 — Submission Status Badges</p>
-    <p>A close-up of the indicator table showing four rows with different status badges: "Draft" (gray), "Submitted" (yellow), "Approved" (green), and "Rejected" (red). The Rejected row has a small tooltip icon that shows the rejection reason when hovered.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+To correct a returned figure: open the project → **Progress Reports**, find the row — it will be editable again — change the figure, and **Submit**.
 
 ---
 
-## Reviewing and Approving Data (M&E Officers)
+## Common questions
 
-M&E Officers see a **Review Queue** on their dashboard showing all pending submissions across all projects.
+**Can I report into a period that has been closed?**
+No. A closed period refuses new figures. Ask an M&E officer to reopen it; they must give a reason, which is kept.
 
-### Reviewing a submission
+**What if I submitted the wrong figure?**
+Ask a reviewer to send it back. Once returned, you can edit and submit again.
 
-1. Navigate to a project → **Indicators** tab, **or** open the review queue from the dashboard notification
-2. Click on a **Submitted** indicator
-3. Review the value, the narrative, and any disaggregated breakdown
-4. Compare against the period target and any supporting documents
-5. Choose one of the actions:
+**Can I report for several periods at once?**
+Yes. Change the period at the top of Progress Reports and carry on.
 
-### Approve
-
-Click **Approve** to confirm the value is accurate. You can add an optional approval comment for the record.
-
-Once approved:
-- The status changes to **Approved** (green)
-- The value is included in report assembly
-- The reporter receives a notification
-
-### Reject
-
-Click **Reject** if the value needs correction. You **must** enter a rejection reason — this is sent to the reporter.
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/07-05-approval-dialog.png" alt="Figure 7.5 — Approval / Rejection Dialog" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 7.5 — Approval / Rejection Dialog</p>
-    <p>The review dialog showing a submitted indicator value with its narrative. Below the narrative are two large buttons: "Approve" (green) and "Reject" (red). When "Reject" is clicked, a text area appears requiring a rejection reason before the rejection can be confirmed.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Is there a spreadsheet import?**
+Yes — **Progress Reports → Bulk Import**, with a template pre-filled with your indicators.
 
 ---
 
-## Data Entry via Forms
+## Where to go next
 
-In addition to direct indicator entry, reporters can submit data through **Data Collection Forms** — custom forms with multiple questions that feed into indicator values. See the [Data Collection Forms](/user-manual/forms) guide for details.
-
----
-
-## Frequently Asked Questions
-
-**Can I submit data for a period that has already been locked?**
-No. Locked periods reject new submissions. If a correction is needed after a period is locked, contact your M&E Officer to temporarily unlock it.
-
-**What if I submitted the wrong value?**
-Ask your M&E Officer to reject the submission with a note. Once rejected, you can edit and resubmit the correct value.
-
-**Can I submit values for multiple periods at once?**
-Yes — use the period dropdown in the data entry form to select any open (unlocked) period.
-
-**Is there an import option for bulk data entry?**
-Excel import is on the roadmap. Currently, values must be entered individually per indicator per period.
+- [Review and approve](/user-manual/review-and-approve) — what happens to your figure next
+- [Forms](/user-manual/forms) — building a form for the field
+- [Activities and participants](/user-manual/activities) — recording who was reached

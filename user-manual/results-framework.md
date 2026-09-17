@@ -1,8 +1,16 @@
-# Results Framework Builder
+---
+title: Results framework
+chapter: 7
+roles:
+  - me_officer
+  - org_admin
+---
 
-Your results framework is the logic of your whole program on one screen: the impact you are working towards, the outcomes that drive it, the outputs your activities deliver — and the indicators that prove each link. IMPACTMEL's builder lets you assemble that chain visually, in the vocabulary your donor uses.
+# Results framework
 
-Open it from any project: **Project → Results Framework**.
+Your results framework is the logic of a project on one screen: the impact you are working towards, the outcomes that drive it, the outputs your activities deliver, and the indicators that prove each link.
+
+Open it from a project's left rail: **Result Framework**.
 
 ## Watch it done
 
@@ -15,48 +23,89 @@ Open it from any project: **Project → Results Framework**.
   <VideoEmbed src="/videos/15-switch-framework-type.mp4" title="15 · Switch framework type without losing data" duration="23s" />
 </div>
 
-## Choose your framework structure
+## Choose your structure
 
-The first time you open the builder on a project, IMPACTMEL asks which structure your organization plans with. All three store the same chain — what changes is the vocabulary and the nesting rules:
+The first time you open the builder on a project, a page headed **Choose your framework structure** asks which structure your donor or theory of change follows. All three hold the same chain. What changes is the vocabulary and the nesting rules.
 
 | Structure | Levels | Best when |
 |---|---|---|
 | **Results Framework** | Impact → Outcomes → Outputs | Your donor reports against a classic results framework |
-| **Logical Framework** | Goal → Purpose → Outputs | You work with EU / FCDO / GIZ-style logframes, with assumptions at every level |
+| **Logical Framework** | Goal → Purpose → Outputs | You work with EU, FCDO or GIZ-style logframes |
 | **Theory of Change** | Impact → Outcome chains → Outputs | Your logic has intermediate outcomes — outcomes can nest under outcomes |
 
+{{figure:framework-chooser}}
+
 ::: tip You can switch later
-Switching structure never migrates or deletes anything. The same chain is simply relabeled — a Results Framework's *Impact* becomes a Logframe's *Goal* — and the nesting rules adjust. Your donor wants a logframe mid-project? Two clicks.
+The pill under the heading opens **Switch framework structure**. Each option is described as *relabels levels, keeps your data*. A Results Framework's *Impact* becomes a Logframe's *Goal*, the nesting rules adjust, and nothing is migrated or deleted.
 :::
+
+---
 
 ## Build the chain from the top
 
-1. Click **Add Impact** (or **Add Goal**) and write the long-term change statement.
-2. Hover the impact card and click **+** to add each **Outcome** beneath it.
-3. Hover an outcome and add the **Outputs** your activities will deliver.
+1. Click **Add Impact** — or **Add Goal**, depending on your structure. On an empty project the panel says **Start from the top of the chain**.
+2. Hover the card and click the add icon to create each **Outcome** beneath it.
+3. Hover an outcome and add the **Outputs** your activities deliver.
 
-Each result carries more than a title: a **code** (IMP-1, OC-1, OP-1.1), the full **result statement**, and the **assumptions** and **risks** that make the link to the level above credible. Auditors and proposal writers will thank you.
+{{figure:framework-tree}}
 
-## Keep it organized
+Each result holds more than a title. The dialog has:
 
-- **Drag the handle** on any card to reorder results within their level — the order saves instantly.
-- **Move** (the arrow icon) re-parents a result under a different outcome. Only valid destinations are offered, so an output can never end up under an impact, and a branch can never be dropped into itself.
-- **Collapse** any branch with the chevron when the tree grows tall.
+| Field | What it is for |
+|---|---|
+| **Title** | Required |
+| **Code** | IMP-1, OC-1, OP-1.1 |
+| **Result statement** | The full statement as written in the plan |
+| **Assumptions** | What has to be true for the link to the level above to hold |
+| **Risks** | What could break it |
+| **Target group** | Only shown if the project has target groups |
+| **Notes** | Anything else |
+
+Click **Save**.
+
+---
+
+## Keep it organised
+
+- **Drag the handle** on a card to reorder results within their level. Its tooltip reads *Drag to reorder within this level*. It only moves siblings.
+- **Move under a different parent** re-parents a result. Only valid destinations are offered, so an output can never end up under an impact, and a branch can never be dropped inside itself.
+- **Edit** and **Delete** are the other two hover icons.
+
+Deleting warns you: *Everything nested under it is deleted too; linked indicators are kept and become unlinked.*
+
+---
 
 ## Link every indicator
 
-A result without an indicator is a claim without evidence. On each card:
+A result with no indicator is a claim with no evidence.
 
-- **Link indicator** attaches any of the project's unlinked indicators — one click, with the unit shown.
-- The **chip** on a linked card shows the indicator's code; the **×** unlinks it (the indicator itself is untouched).
-- Outputs also show their **activities count**, linking to the activities that deliver them.
+- **Link indicator** on a card opens a list of the project's unlinked indicators. If there are none, it offers **Create a new indicator** instead.
+- Each linked indicator appears as a chip on the card. The **×** unlinks it — the indicator itself is untouched.
+- An output card also carries a chip counting **N activities**, meaning the activities that deliver it.
+- A card with nothing measuring it says so: *No indicators measure this yet*.
 
-The header counts **linked indicators vs total** — and warns when indicators are still unlinked. Aim for every number in your reports tracing back to a result in this chain.
+Above the tree, four figures: one per level, plus **Linked indicators** as *linked of total*. A banner warns while any indicator is unlinked.
+
+Aim for every figure in your reports tracing back to a result in this chain.
+
+---
+
+## Two routes to the tree
+
+There are two screens that show a project's results, and they are not the same.
+
+| Where | What you get |
+|---|---|
+| Project's rail → **Result Framework** | The full builder: the structure chooser, drag to reorder, move under a different parent, assumptions and risks |
+| Project page → **Results Framework** tab | A simpler list of the same results |
+
+Use the rail for building. Use the tab for a quick look.
+
+---
 
 ## Where it flows next
 
-Everything you build here powers the rest of IMPACTMEL:
-
-- **Indicators** created from the framework carry their result linkage into [targets and reporting periods](/user-manual/indicators)
-- **[Data entry and approvals](/user-manual/data-entry)** report against those indicators
-- **[Reports](/user-manual/reports)** — the Results Framework Progress report renders this exact tree with performance attached, answering *"is the logic working?"*
+- Indicators created from the framework carry their result with them into [targets and periods](/user-manual/indicators)
+- [Entering data](/user-manual/data-entry) reports against those indicators
+- [Performance Review](/user-manual/review-and-approve) judges each result in this tree, with a rating and a written justification
+- An assembled [report](/user-manual/reports) renders this tree with performance attached

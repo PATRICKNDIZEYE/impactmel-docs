@@ -1,0 +1,14 @@
+{
+  "name": "@impactmel/print",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Markdown -> branded, role-specific, print-ready PDF via HTML + CSS Paged Media (WeasyPrint).",
+  "scripts": {
+    "build": "node build.mjs",
+    "fixtures": "node fixtures/make-placeholders.mjs"
+  },
+  "dependencies": {
+    "marked": "^12.0.2"
+  }
+}

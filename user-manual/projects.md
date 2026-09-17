@@ -1,14 +1,17 @@
+---
+title: Projects
+chapter: 6
+roles:
+  - reporter
+  - me_officer
+  - org_admin
+---
+
 # Projects
 
-A **Project** is where the day-to-day work happens. It sits within a Program and is where your team logs activities, enters indicator data, tracks budgets, and creates reports.
+A **project** is where the work happens. It sits inside a programme and holds the activities, indicators, figures, budget and documents.
 
-Each project has:
-- A specific budget, currency, start and end date
-- A team of assigned staff
-- One or more reporting periods
-- Indicators with project-specific targets
-- A log of activities and participants
-- Assembled donor reports
+Each project has its own dates, budget and currency, team, locations, results framework, reporting periods and indicators with their own targets.
 
 ---
 
@@ -20,209 +23,213 @@ Each project has:
   <VideoEmbed src="/videos/08-manage-project-team.mp4" title="08 · Manage the project team" duration="22s" />
 </div>
 
-## Viewing Projects
+## Finding a project
 
-You can access projects in two ways:
+Three ways:
 
-1. **Via Programs** — Open a program → Projects tab → click a project
-2. **Via the sidebar** — Click **Projects** in the left sidebar to see all projects across all programs in one list
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/05-01-projects-list.png" alt="Figure 5.1 — All Projects List" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 5.1 — All Projects List</p>
-    <p>The Projects list page showing a table of all projects across all programs. Each row shows project name, the parent program name, status badge, location, date range, budget utilization bar, and a progress chip showing the percentage of indicators on track. Filter dropdowns for Program and Status appear at the top. A "New Project" button is in the top-right.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+1. **Programmes** in the top bar, then expand a programme and click a project.
+2. A programme's own page, which lists its projects with their indicators.
+3. **⌘K**, then type the project's name.
 
 ---
 
-## Creating a Project
+<!-- roles: me_officer, org_admin -->
 
-Projects are created within a Program.
+## Creating a project
 
-1. Open the **Program** where you want to add a project
-2. Click the **Projects** tab
-3. Click **+ New Project**
-4. Fill in the project details:
+Click **New Project** from the Programmes page, or **Add Project** on a programme's row to have the programme pre-chosen. You can also use **New** ▾ → **New project** in the top bar.
 
-| Field | Required | Description |
+The page is headed **Create a Project**. It is one scrolling form in five parts, not a wizard.
+
+Three fields are required: **Program**, **Project Name** and **Project Manager**.
+
+### Basic Information
+
+| Field | Required | What it is for |
 |---|---|---|
-| **Project Name** | ✅ | Full project name |
-| **Project Code** | | Short identifier (e.g., *WASH-RW-01*) — used in reports |
-| **Budget** | ✅ | Total project budget (number only) |
-| **Currency** | ✅ | Select currency (USD, EUR, RWF, GBP, etc.) |
-| **Start Date** | ✅ | Project start date |
-| **End Date** | ✅ | Project end date |
-| **Location** | | Country or region |
-| **Lead Partner** | | Implementing partner organization name |
-| **Description** | | Full project description |
-| **Status** | ✅ | Draft, Active, Completed, or Suspended |
+| **Program** | Yes | Which programme it belongs to |
+| **Status** | Yes | Planning, Active, On Hold, Completed or Cancelled. Starts as Planning |
+| **Project Name** | Yes | The full name |
+| **Project Code** | | A short reference used in reports |
+| **Description** | | What the project is |
+| **Objective Statement** | | What the project is trying to achieve |
 
-5. Click **Create Project**
+### Implementation
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/05-02-new-project-form.png" alt="Figure 5.2 — New Project Form" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 5.2 — New Project Form</p>
-    <p>The "Create Project" slide-over panel showing all project fields. The currency field is a dropdown with common currencies pre-populated. The Status field shows a segmented control with Draft, Active, Completed, and Suspended options. Create and Cancel buttons are at the bottom.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Mechanism**, **Sector**, **Sub-sector** and **Target Population**.
 
----
+### Timeline
 
-## Project Detail Page
+**Start Date** and **End Date**.
 
-Click any project to open its full detail page. This is the command center for everything related to a single project.
+### Financial
 
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/05-03-project-hero.png" alt="Figure 5.3 — Project Detail Page — Hero Section" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 5.3 — Project Detail Page — Hero Section</p>
-    <p>The top section of the project detail page showing a large header with the project name, status badge, and program breadcrumb. Below the name are four stat cards in a row: Total Budget, Amount Spent, Remaining Budget, and Days Remaining. A horizontal progress bar below the cards shows the budget burn rate (spent vs. planned). Quick action buttons (Add Activity, Submit Data, Create Report) appear on the right side of the header.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
+**Total Budget** and **Currency**.
 
-### Header Stats
+### Team
 
-The project header shows four key numbers at a glance:
+**Project Manager** — required — and **Team Members**, a searchable list you can tick several names in.
 
-| Stat | What it means |
-|---|---|
-| **Total Budget** | The full approved budget for this project |
-| **Amount Spent** | Sum of all actual spending recorded in budget lines |
-| **Remaining** | Total Budget minus Amount Spent |
-| **Days Remaining** | Calendar days until the project end date |
+Click **Create Project**.
 
-The **progress bar** below these stats is color-coded:
-- Green (< 60% spent) — healthy burn rate
-- Amber (60–85% spent) — approaching budget limit
-- Red (> 85% spent) — high burn rate, review needed
+{{figure:new-project-form}}
 
----
-
-## Project Tabs
-
-The project detail page is organized into five tabs:
-
-### Overview Tab
-The project description, key information, lead partner, location, and a summary of linked donors.
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/05-04-project-overview.png" alt="Figure 5.4 — Project Overview Tab" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 5.4 — Project Overview Tab</p>
-    <p>The Overview tab showing a description section on the left, and a sidebar on the right with key project details (Lead Partner, Location, Currency, Created date). Below the description, a "Key Contacts" section shows team member cards with names, roles, and email addresses.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
-### Indicators Tab
-Lists all indicators linked to this project, with their current values, targets, and progress scores. This is where you see at a glance how each indicator is performing.
-
-Each indicator row shows:
-- Indicator name and code
-- Unit of measurement
-- Latest reported value
-- Period target
-- Progress score with traffic-light badge
-- Last submission date
-
-From this tab you can:
-- **Link a new indicator** to this project using the **+ Add Indicator** button
-- **Set or update targets** for each indicator
-- **Click any indicator** to see its full history of submitted values
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/05-05-project-indicators.png" alt="Figure 5.5 — Project Indicators Tab" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 5.5 — Project Indicators Tab</p>
-    <p>The Indicators tab showing a table with columns for Indicator Code, Indicator Name, Unit, Latest Value, Target, Progress (as a colored badge), and a "Submit Data" action button on each row. A green "Add Indicator" button appears at the top-right. Indicators are grouped by their result framework Output node.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
-### Activities Tab
-Shows a chronological log of all activities registered against this project. Each activity is linked to a specific Output in the results framework.
-
-### Reports Tab
-Lists all assembled reports for this project. From here you can create new reports, open existing ones, share them, or download them as PDF.
-
-### Budget Tab
-Shows all budget lines for this project with planned vs. actual spending. This is where you manage the project's financial tracking.
-
----
-
-## Setting Up Reporting Periods
-
-Reporting periods define **when** data collection happens for this project. You must set up periods before reporters can submit data.
-
-1. Open the project → click the three-dot menu (⋯) → **Manage Reporting Periods**
-2. Click **+ Add Period**
-3. Enter the period **label** (e.g., *Q1 2026*), **start date**, and **end date**
-4. Optionally set a **due date** for submissions
-5. Click **Save**
-6. Repeat for each period in your project cycle
-
-<figure class="doc-figure">
-  <div class="doc-figure__media">
-    <ImageModal src="/user-manual/images/05-06-reporting-periods.png" alt="Figure 5.6 — Reporting Periods Management" />
-  </div>
-  <figcaption class="doc-figure__caption">
-    <p class="doc-figure__title">Figure 5.6 — Reporting Periods Management</p>
-    <p>The Reporting Periods management page showing a table of periods for a project. Each row shows the period label, date range, due date, submission count, and a "Lock" toggle. A locked period shows a padlock icon and greyed-out row. An "+ Add Period" button appears at the top-right.</p>
-    <p class="doc-figure__hint">Click the screenshot to expand it.</p>
-  </figcaption>
-</figure>
-
-::: tip
-Create all your reporting periods at the start of the project — typically quarterly or annually. This allows reporters to know which periods they need to submit data for, and allows M&E officers to plan their review calendar.
+::: tip The team list is what a reporter can see
+A reporter only sees the projects they are on. Add them here, or later from the project's Team tab.
 :::
 
-### Locking a Period
-
-Once all data for a period has been reviewed and approved, lock it to prevent further changes:
-
-1. Find the period in the Reporting Periods table
-2. Toggle the **Locked** switch to ON
-3. Confirm in the dialog that appears
-
-Locked periods appear with a padlock icon. Reporters will see a message that the period is closed if they try to submit.
+<!-- /roles -->
 
 ---
 
-## Linking Indicators to a Project
+## The project page
 
-Indicators are created once and then linked to specific projects with project-level targets.
+{{figure:project-hero}}
 
-1. Open the project → **Indicators** tab
-2. Click **+ Add Indicator**
-3. Search for and select the indicator from your org's indicator library
-4. Set the **target** value for this project and any other project-specific settings
-5. Click **Link Indicator**
+### The four figures at the top
 
-If the indicator you need doesn't exist yet, create it first in the **Indicators** section of the sidebar, then come back to link it.
+| Tile | What it shows |
+|---|---|
+| **Progress** | Overall progress, as a percentage |
+| **Indicators** | How many the project holds |
+| **Team** | How many people are on it |
+| **Activities** | How many are logged |
+
+Below them, a bar labelled **Overall Progress**.
+
+<!-- roles: me_officer, org_admin -->
+
+**Edit** and **Duplicate** sit in the header. Duplicate is covered below.
+
+<!-- /roles -->
+
+### Seven shortcuts
+
+A row of tiles takes you to the screens you use most: **Activities**, **Collect Data**, **Submissions**, **Charts**, **PITT Report**, **Performance Review** (*Judge what was achieved*) and **Risks**.
+
+### Four tabs
+
+| Tab | What is in it |
+|---|---|
+| **Overview** | Project details, team members, cross-cutting themes and the description |
+| **Indicators & Targets** | The project's indicators, with a **New Indicator** button |
+| **Results Framework** | The results tree |
+| **Team** | Who is on the project |
+
+**Project Details** on the Overview tab lists status, programme, donor, sector, currency, budget, start, end and manager.
 
 ---
 
-## Editing Project Details
+## The left rail
 
-1. Open the project detail page
-2. Click **Edit Project** (top-right, or in the three-dot menu)
-3. Update the fields you want to change
-4. Click **Save Changes**
+The rail down the left is where the rest of a project lives. It is much longer than the tabs.
 
-Changes take effect immediately and are reflected in all dashboards and reports.
+| Item | What it is for |
+|---|---|
+| **Program Details** | Back to this page |
+| **New Indicator** | Define an indicator |
+| **Reporting Periods** | The periods each indicator reports against |
+| **Activities** | The work plan |
+| **Budget** | Budget lines, planned against actual |
+| **Collect Data** | Enter a figure, or share a public collection link |
+| **Submissions** | This project's reported figures |
+| **Progress Reports** | Enter figures indicator by indicator for a period |
+| **PITT Report** | This project's performance tracking table |
+| **Performance Review** | Judge whether each result was achieved |
+| **Risks** | The project's risk register |
+| **Narratives** | Written answers per period |
+| **Locations** | Where the project works |
+| **Documents** | The project's document shelf |
+| **Result Framework** | The framework builder |
+| **Stakeholders** | Who has an interest in it |
+| **Evaluations** | Evaluations of the project |
+
+<!-- roles: reporter -->
+
+Some of these are closed to reporters: **Result Framework**, **Budget** and **New Indicator**. They will not appear in your rail.
+
+<!-- /roles -->
+
+---
+
+## Managing the team
+
+Open the **Team** tab.
+
+- **Add member** adds someone already in your organisation.
+- **Remove** takes them off.
+- **Manage** on the Overview tab opens **Manage Team Members**, which also has **Invite New Member** for someone who is not in the organisation yet. **Save Team** confirms.
+
+---
+
+## Reporting periods
+
+Open **Reporting Periods** in the project's rail. The page is headed **Reporting Periods**, with the project name beneath.
+
+Periods here are **per indicator**. Each indicator is an expandable card with its own list of periods.
+
+{{figure:project-periods}}
+
+Four figures across the top: **Indicators**, **Total Periods**, **Open**, and either **Overdue** or **Due Soon**.
+
+<!-- roles: me_officer, org_admin -->
+
+### Generating a year of periods
+
+1. Expand the indicator.
+2. Click **Quick Generate**.
+3. Set the **Year**.
+4. Click **4 Quarters** or **12 Months**.
+
+Existing periods are skipped, so you can run it twice safely. Generated periods are named *Q1 2026* or *Jan 2026*.
+
+### Adding one period by hand
+
+1. Click **Add Period**.
+2. Fill in **Period Key** (for example *Q1 2026*), **Start Date**, **End Date** and, if you want a deadline, **Due Date**.
+3. Click **Save Period**.
+
+### Closing a period on one indicator
+
+Hover the period row and use the close icon. The confirmation says *Closing prevents new submissions for this period*, and the button is **Yes, Close**. The open icon reverses it.
+
+Rows carry badges: **Open**, **Closed**, **Overdue** and **Due Soon**.
+
+::: tip Two levels of period, two jobs
+The periods here belong to one indicator. The org-wide calendar in **Settings → Reporting Periods** is what [Period sign-off](/user-manual/period-sign-off) closes. Set the org calendar up first so the two line up.
+:::
+
+<!-- /roles -->
+
+---
+
+<!-- roles: me_officer, org_admin -->
+
+## Starting a project from an existing one
+
+Click **Duplicate** in the project header. The dialog is headed **Start a project from this one**.
+
+Set the **Name**, the **Programme**, and when it **Starts** and **Ends**. Then choose what comes across under **Also bring across**:
+
+- Locations and partner organisations
+- Team members
+- Target groups
+- Stakeholders
+- Open risks, without their review history
+- Narrative questions
+
+Click **Create project**.
+
+Figures and targets are never copied. The new project starts empty.
+
+{{figure:project-duplicate}}
+
+<!-- /roles -->
+
+---
+
+## Where to go next
+
+- [Results framework](/user-manual/results-framework) — build the logic first
+- [Indicators](/user-manual/indicators) — then define what you will measure
+- [Entering data](/user-manual/data-entry) — then report against it

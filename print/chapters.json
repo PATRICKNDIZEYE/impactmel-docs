@@ -1,0 +1,22 @@
+{
+  "//": [
+    "Build-level overrides for chapter discovery.",
+    "",
+    "Chapter order and role visibility now come from each chapter's YAML",
+    "frontmatter (`chapter:` and `roles:`), which is the single source of truth.",
+    "This file only holds what frontmatter cannot express:",
+    "",
+    "  exclude  files in a --src directory that are not chapters of the manual",
+    "  order    fallback order/roles for a file with no frontmatter; a file that",
+    "           appears in neither place is placed last and included in every",
+    "           variant, with a build warning"
+  ],
+  "roles": ["viewer", "reporter", "me_officer", "org_admin"],
+  "exclude": [
+    "FIGURES.md"
+  ],
+  "excludeWhy": {
+    "FIGURES.md": "Screenshot capture checklist for the documentation team, not a chapter. It carries frontmatter (chapter: 0, roles: org_admin) so it renders in the docs site, but it must not appear in a printed manual."
+  },
+  "order": []
+}
