@@ -3,8 +3,9 @@ import overview from './01-overview.mjs'
 import programmes from './02-programmes.mjs'
 import data from './03-data.mjs'
 import reporting from './04-reporting.mjs'
+import analysis from './05-analysis.mjs'
 
-const groups = [overview, programmes, data, reporting]
+const groups = [overview, programmes, data, reporting, analysis]
 
 export const RECIPES = groups.flat()
 

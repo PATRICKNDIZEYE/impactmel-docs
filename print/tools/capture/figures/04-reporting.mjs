@@ -156,7 +156,21 @@ export default [
     chapter: 15,
     as: 'me_officer',
     url: (w) => `/org/${w.orgId}/reports`,
-    clip: 'dialog',
+    // Once a link exists the dialog's own box stays 336px while its contents
+    // run to 521px, so Copy link and half the address sit outside it. An
+    // element screenshot of the dialog cuts them off; union the dialog with the
+    // controls to photograph what is actually on screen.
+    clip: async (page) =>
+      grow(
+        await unionOf(
+          page,
+          page.locator('[role="dialog"], [role="alertdialog"]'),
+          page.locator('[role="dialog"] button, [role="alertdialog"] button'),
+          page.locator('[role="dialog"] input, [role="alertdialog"] input'),
+        ),
+        14,
+        page.viewportSize(),
+      ),
     async prepare(page, w) {
       const reports = await apiGet(page, '/reports/org').catch(() => [])
       if (!reports.length) throw new Error('the demo holds no saved reports to share')
@@ -165,7 +179,17 @@ export default [
       const share = page.getByRole('button', { name: /^share/i }).first()
       await share.waitFor({ state: 'visible', timeout: 20_000 })
       await share.click()
-      await page.locator('[role="dialog"], [role="alertdialog"]').waitFor({ state: 'visible', timeout: 20_000 })
+      const dialog = page.locator('[role="dialog"], [role="alertdialog"]')
+      await dialog.waitFor({ state: 'visible', timeout: 20_000 })
+
+      // The dialog opens on "No share link has been generated yet", which is
+      // the state before the step the caption describes. Generate one, so the
+      // figure shows the address, Copy link and Regenerate link.
+      const generate = dialog.getByRole('button', { name: /generate share link/i })
+      if (await generate.count()) {
+        await generate.first().click()
+        await dialog.getByRole('button', { name: /copy link/i }).waitFor({ state: 'visible', timeout: 20_000 })
+      }
     },
   },
 
@@ -189,10 +213,10 @@ export default [
     maxHeight: 1100,
   },
 
-  // ── 17 · Roles and permissions ──────────────────────────────────────────
+  // ── 20 · Roles and permissions ──────────────────────────────────────────
   {
     key: 'members-roles',
-    chapter: 17,
+    chapter: 20,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/settings/members`,
     clip: async (page) =>
@@ -202,10 +226,10 @@ export default [
     },
   },
 
-  // ── 18 · Settings and administration ────────────────────────────────────
+  // ── 21 · Settings and administration ────────────────────────────────────
   {
     key: 'settings-organization',
-    chapter: 18,
+    chapter: 21,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/settings`,
     clip: 'main',
@@ -213,7 +237,7 @@ export default [
   },
   {
     key: 'settings-members',
-    chapter: 18,
+    chapter: 21,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/settings/members`,
     clip: 'main',
@@ -221,7 +245,7 @@ export default [
   },
   {
     key: 'settings-reporting-periods',
-    chapter: 18,
+    chapter: 21,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/settings/reporting-periods`,
     clip: 'main',
@@ -229,7 +253,7 @@ export default [
   },
   {
     key: 'settings-disaggregations',
-    chapter: 18,
+    chapter: 21,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/settings/disaggregations`,
     clip: 'main',
@@ -243,7 +267,7 @@ export default [
   },
   {
     key: 'settings-export',
-    chapter: 18,
+    chapter: 21,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/settings/export`,
     clip: 'main',
@@ -260,7 +284,7 @@ export default [
   },
   {
     key: 'settings-audit-log',
-    chapter: 18,
+    chapter: 21,
     as: 'org_admin',
     url: (w) => `/org/${w.orgId}/settings/audit-log`,
     clip: 'main',

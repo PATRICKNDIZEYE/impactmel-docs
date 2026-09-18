@@ -1,6 +1,6 @@
 ---
 title: Settings and administration
-chapter: 18
+chapter: 21
 roles:
   - me_officer
   - org_admin

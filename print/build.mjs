@@ -59,6 +59,7 @@ function printHelp() {
     ['--out <dir>', 'output directory (default out)'],
     ['--toc-depth <1-3>', 'contents depth: 1 chapters, 2 adds h2, 3 adds h3 (default 2)'],
     ['--quiet', 'suppress the per-chapter log'],
+    ['--product-version <v>', 'release the manual was checked against, printed on the cover'],
     ...THEME_FLAGS,
   ];
   const pad = Math.max(...rows.map((r) => r[0].length));
@@ -331,6 +332,27 @@ function discoverImage(key, imageRoots) {
     if (hit) return join(dir, hit);
   }
   return null;
+}
+
+/**
+ * The brand typefaces print.css declares in @font-face, as `assets/fonts/<file>`
+ * relative to out/print.css. They are not referenced from any markdown, so
+ * nothing else would copy them and WeasyPrint would silently fall back to
+ * Liberation — a manual that looks nothing like the product it documents.
+ */
+const FONT_FILES = ['Manrope-Variable.ttf', 'SpaceGrotesk-Variable.ttf'];
+
+function copyFonts(outDir) {
+  const dir = join(outDir, 'assets', 'fonts');
+  mkdirSync(dir, { recursive: true });
+  for (const file of FONT_FILES) {
+    const src = join(HERE, 'assets', 'fonts', file);
+    if (!existsSync(src)) {
+      warn(`font "${file}" missing from print/assets/fonts — the PDF will fall back to Liberation`);
+      continue;
+    }
+    copyFileSync(src, join(dir, file));
+  }
 }
 
 /** Copies every referenced file into out/assets so the HTML is self-contained. */
@@ -635,7 +657,7 @@ function renderTOC(entries, tocDepth) {
   ].join('\n');
 }
 
-function renderCover(text, logoHref, variant, buildDate) {
+function renderCover(text, logoHref, variant, buildDate, productVersion) {
   return [
     '<section class="cover">',
     '  <div class="cover__mark">',
@@ -650,6 +672,11 @@ function renderCover(text, logoHref, variant, buildDate) {
     `    <h1 class="cover__title">${esc(text.docTitle)}</h1>`,
     text.docSubtitle ? `    <p class="cover__subtitle">${esc(text.docSubtitle)}</p>` : '',
     `    <p class="cover__variant">${esc(text.variantLabel)}</p>`,
+    // Which release the screenshots and the wording were checked against. A
+    // reader who cannot tell that cannot tell whether the manual is stale.
+    productVersion
+      ? `    <p class="cover__release">Describes ImpactMEL ${esc(productVersion)}</p>`
+      : '',
     '  </div>',
     '  <div class="cover__foot">',
     `    <p class="cover__date">${esc(buildDate)}</p>`,
@@ -839,7 +866,7 @@ async function main() {
   const html = renderDocument({
     themeBlock,
     text,
-    cover: renderCover(text, logoHref, variant, buildDate),
+    cover: renderCover(text, logoHref, variant, buildDate, opts.productVersion),
     toc: renderTOC(toc, opts.tocDepth),
     chapters: rendered.join('\n\n'),
     variant,
@@ -849,6 +876,7 @@ async function main() {
   const htmlPath = join(outDir, `manual-${variant}.html`);
   writeFileSync(htmlPath, html);
   copyFileSync(join(HERE, 'print.css'), join(outDir, 'print.css'));
+  copyFonts(outDir);
 
   stats.tocEntries = toc.length;
   // The full contents list, so verify.mjs can confirm the PDF contains exactly

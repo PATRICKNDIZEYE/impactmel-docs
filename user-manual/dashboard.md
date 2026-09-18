@@ -91,7 +91,9 @@ When there is nothing to do, each row says so plainly.
 
 ### Activity Feed
 
-The five most recent submissions, each reading as a sentence — *Households with safe water submitted for review · Q1 2026* — with how long ago it happened.
+The five most recent submissions, newest first, each reading as a sentence — *A team member submitted for review* — with how long ago it happened. The colour of the dot says which kind of event it was: a submission, an approval, or a figure returned for correction.
+
+Use it to see that the workspace is moving. To see *which* figure moved and who moved it, open **Submissions** or **Review**, where every row names the indicator, the period and the person.
 
 {{figure:dashboard-activity-feed}}
 
@@ -122,6 +124,8 @@ Two more cards, each shown only when there is something in it. The first lists p
 ## The M&E officer dashboard
 
 Headed **Dashboard**, with the line *High-level performance signals across programs and teams.*
+
+{{figure:dashboard-overview}}
 
 The first row of four tiles is **Active Users**, **Projects**, **Indicators** and **Target Completion**.
 

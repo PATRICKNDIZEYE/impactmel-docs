@@ -133,13 +133,58 @@
 
 /* --------------------------------------------------------------- typography */
 
+/* The product's own two typefaces, so the prose around a screenshot is set in
+   the same face as the screenshot. Both are variable fonts: one file covers the
+   whole weight axis, declared once per weight the manual uses. WeasyPrint
+   supports neither the `font-weight: 200 800` range form ("invalid value") nor
+   a `font-variation-settings` descriptor ("descriptor not supported"); what it
+   does honour is one @font-face per weight, from which it instantiates the
+   right point on the axis. build.mjs stages the files into out/assets/fonts,
+   next to the copy of this stylesheet the URLs resolve against.
+   Licences (SIL OFL 1.1) sit beside the originals in print/assets/fonts. */
+@font-face {
+  font-family: "ImpactMEL Text";
+  src: url("assets/fonts/Manrope-Variable.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ImpactMEL Text";
+  src: url("assets/fonts/Manrope-Variable.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "ImpactMEL Text";
+  src: url("assets/fonts/Manrope-Variable.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "ImpactMEL Display";
+  src: url("assets/fonts/SpaceGrotesk-Variable.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "ImpactMEL Display";
+  src: url("assets/fonts/SpaceGrotesk-Variable.ttf") format("truetype");
+  font-weight: 700;
+}
+
 :root {
-  --font-body: "Liberation Serif", "Times New Roman", "DejaVu Serif", serif;
-  --font-ui: "Liberation Sans", "Helvetica Neue", Helvetica, "DejaVu Sans", sans-serif;
+  /* DejaVu stays last in every stack: it carries the arrows, en dashes and
+     multiplication signs the manual uses that neither brand face defines. */
+  --font-body: "ImpactMEL Text", "Liberation Sans", "DejaVu Sans", sans-serif;
+  --font-ui: "ImpactMEL Text", "Liberation Sans", "DejaVu Sans", sans-serif;
+  --font-display: "ImpactMEL Display", "ImpactMEL Text", "Liberation Sans", "DejaVu Sans", sans-serif;
   --font-mono: "DejaVu Sans Mono", "Liberation Mono", monospace;
 
-  --measure-base: 10.5pt;
-  --measure-lead: 1.48;
+  /* Manrope sets larger on the body than the serif this replaced, so the point
+     size comes down and the leading opens up to keep the same colour on the
+     page. */
+  --measure-base: 9.8pt;
+  --measure-lead: 1.56;
 }
 
 * {
@@ -152,8 +197,8 @@ html {
   line-height: var(--measure-lead);
   color: var(--ink);
   background: var(--paper);
-  /* Hyphenation matters at this measure; without it the serif body rags badly
-     around long UI labels. */
+  /* Hyphenation matters at this measure; without it the body rags badly around
+     the long UI labels the manual is full of. */
   hyphens: auto;
 }
 
@@ -178,7 +223,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-ui);
+  font-family: var(--font-display);
   /* Headings must not hyphenate: they are also the strings captured for the
      running header and the table of contents. */
   hyphens: none;
@@ -204,7 +249,16 @@ strong {
   color: var(--platform-primary);
 }
 
-em {
+/* Manrope ships no italic, and WeasyPrint does not slant a webfont it has no
+   italic face for — so `font-style: italic` alone rendered emphasis upright and
+   indistinguishable from the prose around it. The manual quotes what the
+   interface says in italics on nearly every page, so the distinction has to
+   survive: emphasis falls back to Liberation Sans, whose italic is a close
+   enough neutral grotesque to sit beside Manrope. */
+em,
+i,
+cite {
+  font-family: "Liberation Sans", "DejaVu Sans", sans-serif;
   font-style: italic;
 }
 
@@ -302,6 +356,7 @@ hr {
 }
 
 .cover__title {
+  font-family: var(--font-display);
   margin: 0 0 5mm;
   font-size: 34pt;
   line-height: 1.1;
@@ -329,6 +384,15 @@ hr {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.cover__release {
+  margin: 6mm 0 0;
+  font-family: var(--font-ui);
+  font-size: 8.5pt;
+  letter-spacing: 0.04em;
+  color: var(--platform-primary-on);
+  opacity: 0.72;
 }
 
 .cover__foot {
@@ -806,6 +870,17 @@ hr {
 
 .doc ul > li::marker {
   color: var(--brand-accent-line);
+}
+
+/* The "Where to go next" list that closes every chapter: three or four links,
+   and the last thing before the next chapter's forced page break. Split across
+   that break it left one or two bullets stranded at the top of an otherwise
+   empty page, with their heading on the page before. Kept whole, and with the
+   h2's existing `break-after: avoid` carrying the heading along, the section
+   moves over as one piece. A list too tall for a page still breaks — the
+   constraint is a preference, not a promise. */
+.chapter > ul:last-of-type {
+  break-inside: avoid;
 }
 
 /* ----------------------------------------------------------------- tables -- */
