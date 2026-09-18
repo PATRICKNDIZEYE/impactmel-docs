@@ -48,7 +48,7 @@ export default [
       const button = page.getByRole('button', { name: /use in another project|measure this in another/i }).first()
       await button.waitFor({ state: 'visible', timeout: 20_000 })
       await button.click()
-      const dialog = page.locator('[role="dialog"]')
+      const dialog = page.locator('[role="dialog"], [role="alertdialog"]')
       await dialog.waitFor({ state: 'visible', timeout: 20_000 })
       // Choose a project so the dialog shows its second step.
       const select = dialog.locator('select').first()
@@ -148,7 +148,7 @@ export default [
       const button = page.getByRole('button', { name: /send back/i }).first()
       await button.waitFor({ state: 'visible', timeout: 20_000 })
       await button.click()
-      const dialog = page.locator('[role="dialog"]')
+      const dialog = page.locator('[role="dialog"], [role="alertdialog"]')
       await dialog.waitFor({ state: 'visible', timeout: 20_000 })
       await dialog
         .locator('textarea, input[type="text"]')
@@ -168,7 +168,7 @@ export default [
       const button = page.getByRole('button', { name: /ask someone/i }).first()
       await button.waitFor({ state: 'visible', timeout: 20_000 })
       await button.click()
-      const dialog = page.locator('[role="dialog"]')
+      const dialog = page.locator('[role="dialog"], [role="alertdialog"]')
       await dialog.waitFor({ state: 'visible', timeout: 20_000 })
       const select = dialog.locator('select').first()
       if (await select.count()) {
@@ -208,7 +208,7 @@ export default [
       const button = page.getByRole('button', { name: /close the period/i }).first()
       await button.waitFor({ state: 'visible', timeout: 20_000 })
       await button.click()
-      await page.locator('[role="dialog"]').waitFor({ state: 'visible', timeout: 20_000 })
+      await page.locator('[role="dialog"], [role="alertdialog"]').waitFor({ state: 'visible', timeout: 20_000 })
       // The confirming button is deliberately not clicked: a closed period
       // refuses the data entry every other chapter's figures rely on.
     },
@@ -225,7 +225,7 @@ export default [
         throw new Error('no closed period on the demo, so Reopen cannot be shown')
       }
       await button.click()
-      const dialog = page.locator('[role="dialog"]')
+      const dialog = page.locator('[role="dialog"], [role="alertdialog"]')
       await dialog.waitFor({ state: 'visible', timeout: 20_000 })
       await dialog
         .locator('textarea, input[type="text"]')

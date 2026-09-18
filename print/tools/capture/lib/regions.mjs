@@ -6,8 +6,8 @@ export const REGIONS = {
   /** The top bar on its own, for the annotated navigation figure. */
   topnav: 'header:has(nav), nav[aria-label*="Main"], [data-slot="top-nav"]',
 
-  /** The open dialog, with its shadow trimmed off. */
-  dialog: '[role="dialog"]',
+  // Radix renders a confirmation as role="alertdialog", not "dialog".
+  dialog: '[role="dialog"], [role="alertdialog"]',
 
   /** The page's own content, minus the top bar — the usual choice. */
   main: 'main, [role="main"]',

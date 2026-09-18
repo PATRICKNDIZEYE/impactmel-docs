@@ -165,7 +165,7 @@ export default [
       const share = page.getByRole('button', { name: /^share/i }).first()
       await share.waitFor({ state: 'visible', timeout: 20_000 })
       await share.click()
-      await page.locator('[role="dialog"]').waitFor({ state: 'visible', timeout: 20_000 })
+      await page.locator('[role="dialog"], [role="alertdialog"]').waitFor({ state: 'visible', timeout: 20_000 })
     },
   },
 

@@ -24,7 +24,7 @@
       "caption": "The registration form, with Continue with Google above it."
     },
     "org-setup": {
-      "caption": "The organisation setup dialog, asking for a name and a code."
+      "caption": "Organization profile: the name, short code and country the rest of the workspace is labelled with."
     },
     "top-nav-annotated": {
       "caption": "The top bar annotated: organisation switcher, the five primary items, Analysis, More, search, ?, New and the avatar."
