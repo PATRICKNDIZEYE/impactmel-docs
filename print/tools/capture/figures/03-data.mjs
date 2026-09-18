@@ -24,17 +24,21 @@ export default [
         page.viewportSize(),
       ),
     async prepare(page) {
+      const picker = page.getByText(/already measuring this somewhere/i).locator('xpath=ancestor::div[contains(@class,"rounded-2xl")][1]')
       const search = page.getByPlaceholder(/search|measuring/i).first()
       await search.waitFor({ state: 'visible', timeout: 20_000 })
       // A term the demo definitely holds, so the result list is not empty.
       await search.fill('households')
-      await page.waitForTimeout(1200)
-      const first = page.getByRole('button', { name: /use this definition/i }).first()
-      if (!(await first.count())) {
-        // Results are rows that reveal the two choices once selected.
-        await page.locator('[role="option"], li, [data-result]').first().click().catch(() => {})
-        await page.waitForTimeout(500)
-      }
+
+      // Each result is a <button>, not an option or a list item, and the panel
+      // it sits in is absolutely positioned — so it adds nothing to the
+      // picker's own height. Without selecting one, the clip below is just the
+      // heading and the search box, which is not what the caption describes.
+      await page.waitForTimeout(1500)
+      const result = picker.locator('div.absolute button').filter({ hasText: /\S/ }).first()
+      await result.click({ timeout: 10_000 }).catch(() => {})
+      await picker.getByRole('button', { name: /use this definition/i })
+        .waitFor({ state: 'visible', timeout: 20_000 })
       await centre(page, 'text=/already measuring this somewhere/i')
     },
   },

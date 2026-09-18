@@ -39,6 +39,18 @@ function parseArgs(argv) {
   return opts
 }
 
+/** Hides anything pinned to the top of the window. Returns an undo. */
+async function hideFixedChrome(page) {
+  const id = '__capture_hide_chrome__'
+  await page.addStyleTag({
+    content: `header.fixed, [data-slot="top-nav"] { visibility: hidden !important; }`,
+    // A tagged style element so the undo removes exactly this one.
+  }).then((handle) => handle.evaluate((el, v) => el.setAttribute('data-id', v), id))
+  return async () => {
+    await page.evaluate((v) => document.querySelector(`style[data-id="${v}"]`)?.remove(), id)
+  }
+}
+
 function selected(recipes, { only, chapters }) {
   return recipes.filter((r) => {
     if (chapters.length && !chapters.includes(r.chapter)) return false
@@ -106,8 +118,17 @@ for (const recipe of chosen) {
     const file = path.join(opts.outDir, `${recipe.key}.png`)
     const shot = { path: file, animations: 'disabled', scale: 'device' }
 
-    if (target.locator) await target.locator.screenshot(shot)
-    else await page.screenshot({ ...shot, clip: target.clip, fullPage: Boolean(recipe.fullPage) })
+    // Playwright scrolls a tall element to the top of the window before
+    // shooting it, which slides the page's own heading under the fixed top bar
+    // — every `main` figure came out with its title sliced in half. The bar is
+    // documented on its own in chapter 2, so it is simply not wanted here.
+    const restoreChrome = recipe.clip === 'main' ? await hideFixedChrome(page) : null
+    try {
+      if (target.locator) await target.locator.screenshot(shot)
+      else await page.screenshot({ ...shot, clip: target.clip, fullPage: Boolean(recipe.fullPage) })
+    } finally {
+      if (restoreChrome) await restoreChrome()
+    }
 
     const { size } = fs.statSync(file)
     row.url = page.url().replace(opts.baseUrl, '')
@@ -142,9 +163,28 @@ for (const recipe of chosen) {
   await page.close()
 }
 
+// Merge into whatever the last run left, rather than replace it: a
+// `--only report-share` run used to reduce the report to one row, throwing away
+// the record of the other sixty-one. Each row keeps the host it came from,
+// because a handful of figures (the share links) are deliberately taken against
+// the demo host so the address in the picture is the real one.
+const previous = fs.existsSync(REPORT) ? JSON.parse(fs.readFileSync(REPORT, 'utf8')) : { figures: [] }
+const merged = new Map((previous.figures ?? []).map((r) => [r.key, r]))
+const capturedAt = new Date().toISOString()
+for (const row of results) merged.set(row.key, { ...row, baseUrl: opts.baseUrl, capturedAt })
+
 fs.writeFileSync(
   REPORT,
-  `${JSON.stringify({ capturedAt: new Date().toISOString(), baseUrl: opts.baseUrl, world, figures: results }, null, 2)}\n`,
+  `${JSON.stringify(
+    {
+      capturedAt,
+      baseUrl: opts.baseUrl,
+      world,
+      figures: [...merged.values()].sort((a, b) => a.chapter - b.chapter || a.key.localeCompare(b.key)),
+    },
+    null,
+    2,
+  )}\n`,
 )
 
 await browser.close()

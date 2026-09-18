@@ -17,6 +17,12 @@
     "fixtures"
   ],
   "figures": {
+    "form-share": {
+      "caption": "The banner prints window.location.origin, so a local capture reads http://127.0.0.1:3100/f/…"
+    },
+    "report-share": {
+      "caption": "Same, for the generated /r/<token> address"
+    },
     "app-home": {
       "caption": "The top bar and the organisation dashboard, as they appear after signing in."
     },
@@ -155,9 +161,6 @@
     "form-field-inspector": {
       "caption": "Edit field, showing Label, Help text, Field key, Required field and Choices."
     },
-    "form-share": {
-      "caption": "The Share this form banner with Copy, Open and View responses."
-    },
     "form-responses": {
       "caption": "The two-pane responses page, with one response selected."
     },
@@ -173,14 +176,38 @@
     "report-view": {
       "caption": "An assembled report: the header, the four figures and Indicator Performance Overview."
     },
-    "report-share": {
-      "caption": "Share Report with a link generated, showing Regenerate link and Copy link."
-    },
     "indicator-register": {
       "caption": "The indicator register: the five clickable counts, the scope and filter controls, and the table."
     },
     "tracking-table": {
       "caption": "The tracking table, grouped by programme and project, with target and actual pairs per period."
+    },
+    "visualization": {
+      "caption": "Data Visualization: the three figures, the project cards and the first of the Organization Overview charts."
+    },
+    "dashboards": {
+      "caption": "The Dashboards page with its empty state and Create Your First Dashboard."
+    },
+    "ai-insights": {
+      "caption": "Insights: the AI Executive Summary with the counts and bands beside it."
+    },
+    "geographic-map": {
+      "caption": "Geographic distribution: the selector, the four figures, the map and the leaderboard."
+    },
+    "risks-org": {
+      "caption": "Risks across the organisation: the heat map, the four counts and the first risks."
+    },
+    "risk-form": {
+      "caption": "Add a risk, with Likelihood and Impact chosen and the resulting score beside them."
+    },
+    "data-hub": {
+      "caption": "Data Hub: the five figures, the four tabs and the start of All Submissions."
+    },
+    "data-hub-explorer": {
+      "caption": "Indicator Data Explorer: target against actual by period, with the period rows underneath."
+    },
+    "data-hub-quality": {
+      "caption": "The Quality Scorecard, with the organisation's health score and one programme's five factors."
     },
     "members-roles": {
       "caption": "A member's row showing the membership level dropdown and their attached role chips."

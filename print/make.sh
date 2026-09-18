@@ -25,6 +25,9 @@ TOC_DEPTH="${TOC_DEPTH:-2}"
 # two arguments and the cover would read "MZF". This is the way to set it from
 # a script.
 ORG_NAME="${ORG_NAME:-}"
+# The release the figures and the wording were checked against. Printed on the
+# cover, so a reader can tell a current manual from a stale one.
+PRODUCT_VERSION="${PRODUCT_VERSION:-}"
 OUT="${OUT:-out}"          # output directory, relative to print/
 
 PRINT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -84,6 +87,7 @@ for VARIANT in "${VARIANTS[@]}"; do
     "${SRC_ARGS[@]}" \
     --out "$OUT" \
     ${ORG_NAME:+--org-name "$ORG_NAME"} \
+    ${PRODUCT_VERSION:+--product-version "$PRODUCT_VERSION"} \
     $THEME_ARGS
 
   # 2. HTML + CSS Paged Media -> PDF.

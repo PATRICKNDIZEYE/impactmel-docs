@@ -16,7 +16,16 @@ Numbers are **not** written into the prose. The build generates them, because fi
 
 **Capture as** is the role to be signed in as when taking the screenshot. It matters: the dashboard, the top bar and most rails render differently per role, and a screenshot taken as an org admin will show a reporter controls they do not have.
 
-Capture on **demo.impactmel.com** (Meridian Impact Alliance), never on a client cell.
+Capture against a **Meridian Impact Alliance** workspace — either `demo.impactmel.com` or a local instance seeded with the same `meridian-alliance` config — and never on a client cell. `assertDemoHost()` enforces this.
+
+Prefer a local instance when the demo cell is behind the release being documented: the manual has to show the version it names on its cover, and the demo is only redeployed on its own schedule. Two figures are the exception and are always taken on `demo.impactmel.com`:
+
+| Figure | Why |
+|---|---|
+| `form-share` | The banner prints `window.location.origin`, so a local capture reads `http://127.0.0.1:3100/f/…` |
+| `report-share` | Same, for the generated `/r/<token>` address |
+
+`capture-report.json` records the host each figure came from, so a mixed set is auditable.
 
 ---
 
@@ -155,13 +164,37 @@ Capture on **demo.impactmel.com** (Meridian Impact Alliance), never on a client 
 | `indicator-register` | `/org/<orgId>/reports/overview` | me_officer | The indicator register: the five clickable counts, the scope and filter controls, and the table. |
 | `tracking-table` | `/org/<orgId>/reports/pitt` | me_officer | The tracking table, grouped by programme and project, with target and actual pairs per period. |
 
-## 17 · Roles and permissions
+## 17 · Analysis
+
+| Key | Capture from | As | Caption |
+|---|---|---|---|
+| `visualization` | `/org/<orgId>/visualization` | me_officer | Data Visualization: the three figures, the project cards and the first of the Organization Overview charts. |
+| `dashboards` | `/org/<orgId>/dashboards` | me_officer | The Dashboards page with its empty state and Create Your First Dashboard. |
+| `ai-insights` | `/org/<orgId>/ai-insights` | me_officer | Insights: the AI Executive Summary with the counts and bands beside it. |
+| `geographic-map` | `/org/<orgId>/map` | me_officer | Geographic distribution: the selector, the four figures, the map and the leaderboard. |
+
+## 18 · Risks
+
+| Key | Capture from | As | Caption |
+|---|---|---|---|
+| `risks-org` | `/org/<orgId>/risks` | me_officer | Risks across the organisation: the heat map, the four counts and the first risks. |
+| `risk-form` | project → Risks → Add risk | me_officer | Add a risk, with Likelihood and Impact chosen and the resulting score beside them. |
+
+## 19 · Data Hub
+
+| Key | Capture from | As | Caption |
+|---|---|---|---|
+| `data-hub` | `/org/<orgId>/data-hub` | me_officer | Data Hub: the five figures, the four tabs and the start of All Submissions. |
+| `data-hub-explorer` | same page, Indicator Explorer | me_officer | Indicator Data Explorer: target against actual by period, with the period rows underneath. |
+| `data-hub-quality` | same page, Quality Scorecard | me_officer | The Quality Scorecard, with the organisation's health score and one programme's five factors. |
+
+## 20 · Roles and permissions
 
 | Key | Capture from | As | Caption |
 |---|---|---|---|
 | `members-roles` | `/org/<orgId>/settings/members` | org_admin | A member's row showing the membership level dropdown and their attached role chips. |
 
-## 18 · Settings and administration
+## 21 · Settings and administration
 
 | Key | Capture from | As | Caption |
 |---|---|---|---|

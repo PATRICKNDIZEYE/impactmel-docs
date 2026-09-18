@@ -5,25 +5,47 @@ import { readFileSync, existsSync } from 'node:fs';
 import { inflateSync } from 'node:zlib';
 import { basename, dirname, join } from 'node:path';
 
+/**
+ * The role-filtering contract, asserted on the manual's own headings.
+ *
+ * These used to name headings in the fixture appendices under
+ * print/fixtures/chapters. A client build leaves the fixtures out, so every
+ * real build reported four failures per variant — twenty in a five-variant run
+ * — and a genuine failure would have been invisible among them. Phrases below
+ * are `## ` headings in ../user-manual; if one is reworded, this file is the
+ * other place to change.
+ */
 const MARKERS = [
   {
     what: 'role-fenced block (me_officer, org_admin) inside a chapter all roles receive',
-    phrase: 'Reject a submission back to the reporter',
+    phrase: 'Step 2 — Set up your organisation', // getting-started.md
     expectIn: ['full', 'me_officer', 'org_admin'],
   },
   {
     what: 'role-fenced block (org_admin only)',
-    phrase: 'Rotating the organisation code',
+    // Body prose inside the fence. Not the heading "Custom roles", which also
+    // appears in the settings chapter's page table; and not a callout title,
+    // which print.css sets in letter-spaced uppercase and pdftotext returns one
+    // character at a time.
+    phrase: 'Changes apply immediately to everyone holding that role', // roles-permissions.md
     expectIn: ['full', 'org_admin'],
   },
   {
-    what: 'whole chapter dropped by frontmatter roles (org_admin only)',
-    phrase: 'Deleting an organisation',
-    expectIn: ['full', 'org_admin'],
+    what: 'role-fenced block (viewer only)',
+    phrase: 'The viewer dashboard', // dashboard.md
+    expectIn: ['full', 'viewer'],
+  },
+  {
+    what: 'whole chapter dropped by frontmatter roles (me_officer, org_admin)',
+    // A heading from inside settings.md, not its title: other chapters
+    // cross-reference "Settings and administration" by name, and a dropped
+    // xref keeps its text, so the title is present in every variant.
+    phrase: 'The eleven pages', // settings.md
+    expectIn: ['full', 'me_officer', 'org_admin'],
   },
   {
     what: 'chapter all roles receive (control: must be everywhere)',
-    phrase: 'How This Manual Is Built',
+    phrase: 'Platform overview', // overview.md, chapter title
     expectIn: ['full', 'viewer', 'reporter', 'me_officer', 'org_admin'],
   },
 ];
