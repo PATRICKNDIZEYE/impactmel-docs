@@ -62,7 +62,7 @@ export default [
       const copy = page.getByRole('button', { name: /duplicate|copy|start (a )?programme from/i }).first()
       await copy.waitFor({ state: 'visible', timeout: 20_000 })
       await copy.click()
-      await page.locator('[role="dialog"]').waitFor({ state: 'visible', timeout: 20_000 })
+      await page.locator('[role="dialog"], [role="alertdialog"]').waitFor({ state: 'visible', timeout: 20_000 })
     },
   },
 
@@ -116,7 +116,7 @@ export default [
       const button = page.getByRole('button', { name: /duplicate/i }).first()
       await button.waitFor({ state: 'visible', timeout: 20_000 })
       await button.click()
-      await page.locator('[role="dialog"]').waitFor({ state: 'visible', timeout: 20_000 })
+      await page.locator('[role="dialog"], [role="alertdialog"]').waitFor({ state: 'visible', timeout: 20_000 })
     },
   },
 

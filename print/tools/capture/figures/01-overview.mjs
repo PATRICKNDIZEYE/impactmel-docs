@@ -39,6 +39,44 @@ export default [
     },
   },
   {
+    key: 'org-setup',
+    chapter: 2,
+    as: 'org_admin',
+    url: (w) => `/org/${w.orgId}/settings`,
+    clip: 'main',
+    maxHeight: 900,
+  },
+  {
+    key: 'dashboard-activity-feed',
+    chapter: 3,
+    as: 'org_admin',
+    url: (w) => `/org/${w.orgId}/dashboard`,
+    clip: async (page) =>
+      grow(
+        await unionOf(page, page.getByText('Activity Feed').locator('xpath=ancestor::*[self::div][2]')),
+        14,
+        page.viewportSize(),
+      ),
+    async prepare(page) {
+      await centre(page, 'text=Activity Feed')
+    },
+  },
+  {
+    key: 'dashboard-indicator-performance',
+    chapter: 3,
+    as: 'org_admin',
+    url: (w) => `/org/${w.orgId}/dashboard`,
+    clip: async (page) =>
+      grow(
+        await unionOf(page, page.getByText('Indicator Performance').locator('xpath=ancestor::*[self::div][2]')),
+        14,
+        page.viewportSize(),
+      ),
+    async prepare(page) {
+      await centre(page, 'text=Indicator Performance')
+    },
+  },
+  {
     key: 'dashboard-admin',
     chapter: 3,
     as: 'org_admin',

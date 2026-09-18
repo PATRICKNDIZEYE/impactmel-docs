@@ -104,17 +104,23 @@ export async function contextForRole(browser, role, { baseUrl, fresh = false, wi
 export async function signIn(page, email, password = process.env.DEMO_PASSWORD || 'Demo@12345') {
   await page.goto('/login', { waitUntil: 'domcontentloaded' })
 
-  // The email fieldset is disabled until hydration, and a fill into a disabled
-  // input silently does nothing — which showed up as "wrong password".
-  const emailField = page.locator('#email')
-  await emailField.waitFor({ state: 'visible', timeout: 30_000 })
-  await page.waitForFunction(() => !document.querySelector('#email')?.disabled, null, { timeout: 30_000 })
-  await emailField.fill(email)
-  await page.getByRole('button', { name: 'Continue' }).click()
+  // Two shapes of this form exist. A client instance asks for the email first;
+  // the demo fills its own credentials in and opens on the password step. The
+  // demo also switches steps a beat after hydration, so the email field can be
+  // visible and then gone — act on whichever field is present at the moment of
+  // acting, rather than deciding once up front.
+  await page.locator('#email, #password').first().waitFor({ state: 'visible', timeout: 30_000 })
 
-  const passwordField = page.locator('#password')
-  await passwordField.waitFor({ state: 'visible', timeout: 30_000 })
-  await passwordField.fill(password)
+  if (!(await page.locator('#password').isVisible())) {
+    // The fieldset is disabled until hydration and a fill into a disabled input
+    // does nothing, which showed up as "wrong password".
+    await page.waitForFunction(() => !document.querySelector('#email')?.disabled, null, { timeout: 30_000 })
+    await page.fill('#email', email).catch(() => {})
+    await page.getByRole('button', { name: 'Continue' }).click().catch(() => {})
+  }
+
+  await page.locator('#password').waitFor({ state: 'visible', timeout: 30_000 })
+  await page.fill('#password', password)
   await page.getByRole('button', { name: 'Sign in' }).click()
 
   await page.waitForURL((url) => !url.pathname.startsWith('/login'), { timeout: 60_000 })

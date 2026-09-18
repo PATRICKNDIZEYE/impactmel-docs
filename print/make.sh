@@ -33,7 +33,11 @@ DOCS_DIR="$(cd "$PRINT_DIR/.." && pwd)"
 # Chapter sources, in order. The user-manual chapters are the real content; the
 # fixtures directory adds the two contract-demonstration appendices. Drop the
 # second --src once every real chapter carries frontmatter and role fences.
-SRC_ARGS=(--src /docs/user-manual --src /docs/print/fixtures/chapters)
+# The fixture appendices under print/fixtures/chapters exercise role fences
+# and figure numbering; they are not part of a client's manual. Add
+# --src /docs/print/fixtures/chapters to include them when testing the
+# pipeline itself.
+SRC_ARGS=(--src /docs/user-manual)
 
 VARIANTS=("$@")
 if [ ${#VARIANTS[@]} -eq 0 ]; then

@@ -31,7 +31,7 @@ Capture on **demo.impactmel.com** (Meridian Impact Alliance), never on a client 
 | Key | Capture from | As | Caption |
 |---|---|---|---|
 | `register` | `/register` | signed out | The registration form, with Continue with Google above it. |
-| `org-setup` | `/org/<orgId>/dashboard`, first sign-in | org_admin | The organisation setup dialog, asking for a name and a code. |
+| `org-setup` | `/org/<orgId>/settings` | org_admin | Organization profile: the name, short code and country the rest of the workspace is labelled with. |
 | `top-nav-annotated` | `/org/<orgId>/dashboard` | org_admin | The top bar annotated: organisation switcher, the five primary items, Analysis, More, search, ?, New and the avatar. |
 | `invite-member` | `/org/<orgId>/settings/members` | org_admin | The Invite by email card, with the Role dropdown open on Member, Admin and Owner. |
 
