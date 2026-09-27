@@ -1,4 +1,10 @@
 import { defineConfig } from 'vitepress'
+import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
+
+const FIGURES: Record<string, { title?: string; caption?: string }> =
+  JSON.parse(readFileSync(join(__dirname, '..', 'print', 'figures.json'), 'utf8')).figures ?? {}
+const escHtml = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!)
 
 const docsHubSidebar = [
   {
@@ -78,7 +84,7 @@ const videoSidebar = [
 export default defineConfig({
   // README.md is for GitHub, not a docs page — it links to repo-relative
   // assets that Vite cannot resolve.
-  srcExclude: ['README.md', 'print/**', 'scripts/**'],
+  srcExclude: ['README.md', 'print/**', 'scripts/**', 'user-manual/FIGURES.md'],
   title: 'ImpactMEL Docs',
   description: 'Enterprise Monitoring, Evaluation & Learning Platform documentation',
 
@@ -156,6 +162,18 @@ export default defineConfig({
     theme: {
       light: 'github-light',
       dark: 'github-dark',
+    },
+    config(md) {
+      md.core.ruler.before('normalize', 'manual-figures', (state) => {
+        state.src = state.src.replace(/\{\{figure:\s*([a-z0-9][a-z0-9._-]*)\s*\}\}/gi, (_all, key: string) => {
+          const entry = FIGURES[key] ?? {}
+          const alt = escHtml(entry.title ?? key.replace(/-/g, ' '))
+          const caption = [entry.title ? `<strong>${escHtml(entry.title)}</strong>` : '', entry.caption ? escHtml(entry.caption) : '']
+            .filter(Boolean)
+            .join(' ')
+          return `\n<figure class="manual-figure"><img src="/user-manual/images/${key}.png" alt="${alt}" loading="lazy">${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>\n`
+        })
+      })
     },
   },
 })

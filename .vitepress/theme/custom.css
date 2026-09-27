@@ -1145,3 +1145,7 @@ body {
   .vp-doc h2     { font-size: 1.15rem !important; }
   .docs-overview-stats { gap: 24px; }
 }
+
+.manual-figure { margin: 1.5rem 0 2rem; }
+.manual-figure img { width: 100%; border-radius: 12px; border: 1px solid var(--vp-c-divider); box-shadow: 0 10px 30px rgba(29, 28, 24, 0.08); }
+.manual-figure figcaption { margin-top: 10px; font-size: 0.85rem; line-height: 1.55; color: var(--vp-c-text-2); }
