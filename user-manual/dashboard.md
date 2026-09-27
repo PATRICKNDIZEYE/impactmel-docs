@@ -91,9 +91,9 @@ When there is nothing to do, each row says so plainly.
 
 ### Activity Feed
 
-The five most recent submissions, newest first, each reading as a sentence — *A team member submitted for review* — with how long ago it happened. The colour of the dot says which kind of event it was: a submission, an approval, or a figure returned for correction.
+The five most recent submissions, newest first, each reading as a sentence — *Farhana Akter submitted for review · 2026-Q3* — with how long ago it happened. The colour of the dot says which kind of event it was: a submission, an approval, or a figure returned for correction.
 
-Use it to see that the workspace is moving. To see *which* figure moved and who moved it, open **Submissions** or **Review**, where every row names the indicator, the period and the person.
+Use it to see that the workspace is moving and who is moving it. To see *which* figure changed, open **Submissions** or **Review**, where every row names the indicator as well.
 
 {{figure:dashboard-activity-feed}}
 
