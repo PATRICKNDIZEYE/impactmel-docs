@@ -27,11 +27,10 @@ What happens after entry — approval — is covered in [Review and approve](/us
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/40-enter-indicator-values.mp4" title="40 · Enter indicator values (reporter)" duration="29s" />
-  <VideoEmbed src="/videos/41-submit-for-review.mp4" title="41 · Submit data for review" duration="29s" />
-  <VideoEmbed src="/videos/42-review-approve.mp4" title="42 · Review and approve submissions" duration="32s" />
-  <VideoEmbed src="/videos/43-return-for-correction.mp4" title="43 · Return a submission for correction" duration="22s" />
-  <VideoEmbed src="/videos/44-data-hub.mp4" title="44 · Audit everything in the Data Hub" duration="33s" />
+  <VideoEmbed src="/videos/40-enter-figures.mp4" title="40 · Enter a figure for an indicator" duration="1m 11s" />
+  <VideoEmbed src="/videos/42-review-approve.mp4" title="42 · Review and approve reported figures" duration="27s" />
+  <VideoEmbed src="/videos/43-send-back.mp4" title="43 · Send a figure back with a reason" duration="56s" />
+  <VideoEmbed src="/videos/45-submissions-page.mp4" title="45 · Track every figure on the Submissions page" duration="47s" />
 </div>
 
 ## Finding what you owe

@@ -39,11 +39,10 @@ A page your role cannot reach does not appear in the rail.
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/67-org-profile.mp4" title="67 · Organization profile and branding" duration="13s" />
-  <VideoEmbed src="/videos/62-org-reporting-periods.mp4" title="62 · Manage organization reporting periods" duration="17s" />
-  <VideoEmbed src="/videos/63-units-settings.mp4" title="63 · Manage units of measurement" duration="15s" />
-  <VideoEmbed src="/videos/64-calendar.mp4" title="64 · The M&E calendar: never miss a deadline" duration="18s" />
-  <VideoEmbed src="/videos/65-notifications.mp4" title="65 · Notifications and the activity log" duration="17s" />
+  <VideoEmbed src="/videos/67-org-profile.mp4" title="67 · Your organisation’s profile" duration="39s" />
+  <VideoEmbed src="/videos/62-org-reporting-periods.mp4" title="62 · Organisation reporting periods" duration="47s" />
+  <VideoEmbed src="/videos/63-units-and-disaggregations.mp4" title="63 · Units and breakdowns" duration="1m 25s" />
+  <VideoEmbed src="/videos/04-notifications.mp4" title="04 · Keep up with notifications" duration="49s" />
 </div>
 
 ## Organization

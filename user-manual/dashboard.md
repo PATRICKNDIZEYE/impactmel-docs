@@ -39,9 +39,9 @@ What it shows depends on your role. A field officer gets a short list of what th
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/02-dashboard-tour.mp4" title="02 · Your dashboard at a glance" duration="22s" />
-  <VideoEmbed src="/videos/03-global-search.mp4" title="03 · Find anything with global search" duration="20s" />
-  <VideoEmbed src="/videos/04-activity-pulse.mp4" title="04 · Stay updated with Activity Pulse" duration="31s" />
+  <VideoEmbed src="/videos/02-dashboard-tour.mp4" title="02 · Find your way around the overview" duration="46s" />
+  <VideoEmbed src="/videos/03-global-search.mp4" title="03 · Find anything with search" duration="51s" />
+  <VideoEmbed src="/videos/04-notifications.mp4" title="04 · Keep up with notifications" duration="49s" />
 </div>
 
 <!-- roles: org_admin -->
@@ -262,8 +262,7 @@ Widgets can be a **bar**, **line** or **pie** chart, a **kpi** figure, or a **ta
 A dashboard is **Draft** or **Published**, and the list shows how many widgets each holds.
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/51-create-dashboard.mp4" title="51 · Create a custom dashboard" duration="27s" />
-  <VideoEmbed src="/videos/53-dashboard-filters.mp4" title="53 · Filter a whole dashboard at once" duration="21s" />
+  <VideoEmbed src="/videos/51-dashboards.mp4" title="51 · Create a dashboard" duration="49s" />
 </div>
 
 <!-- TODO: the Share affordances on the dashboards list and in the builder do nothing — the dropdown item has no handler and the builder button is disabled. There is no public dashboard route. The system guide says dashboard sharing is live and revocable; the frontend disagrees. Resolve before this section mentions sharing at all. -->

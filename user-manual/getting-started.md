@@ -56,9 +56,9 @@ This guide takes you through creating an account, setting up your organisation, 
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/01-sign-in.mp4" title="01 · Sign in to IMPACTMEL" duration="19s" />
-  <VideoEmbed src="/videos/02-dashboard-tour.mp4" title="02 · Your dashboard at a glance" duration="22s" />
-  <VideoEmbed src="/videos/60-invite-member.mp4" title="60 · Invite a team member" duration="19s" />
+  <VideoEmbed src="/videos/01-sign-in.mp4" title="01 · Sign in" duration="40s" />
+  <VideoEmbed src="/videos/02-dashboard-tour.mp4" title="02 · Find your way around the overview" duration="46s" />
+  <VideoEmbed src="/videos/60-invite-member.mp4" title="60 · Invite a colleague" duration="43s" />
 </div>
 
 ## Step 1 — Create your account

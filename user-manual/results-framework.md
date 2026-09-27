@@ -15,12 +15,10 @@ Open it from a project's left rail: **Result Framework**.
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/10-choose-framework-type.mp4" title="10 · Choose your framework structure" duration="30s" />
-  <VideoEmbed src="/videos/11-build-results-chain.mp4" title="11 · Build your results chain from impact down" duration="65s" />
-  <VideoEmbed src="/videos/12-drag-reorder-results.mp4" title="12 · Reorder results with drag and drop" duration="15s" />
-  <VideoEmbed src="/videos/13-move-result-between-parents.mp4" title="13 · Move a result to a different parent" duration="21s" />
-  <VideoEmbed src="/videos/14-link-indicators-to-results.mp4" title="14 · Link indicators to your results" duration="28s" />
-  <VideoEmbed src="/videos/15-switch-framework-type.mp4" title="15 · Switch framework type without losing data" duration="23s" />
+  <VideoEmbed src="/videos/10-choose-framework-type.mp4" title="10 · Choose a framework type" duration="44s" />
+  <VideoEmbed src="/videos/11-build-results-chain.mp4" title="11 · Build the results chain" duration="1m 09s" />
+  <VideoEmbed src="/videos/12-reorder-and-move-results.mp4" title="12 · Reorder and move results" duration="45s" />
+  <VideoEmbed src="/videos/13-link-indicators-to-results.mp4" title="13 · Link indicators to results" duration="42s" />
 </div>
 
 ## Choose your structure

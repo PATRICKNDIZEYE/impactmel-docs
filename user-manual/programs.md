@@ -44,7 +44,7 @@ Open it from the top bar: **Programmes**.
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/05-create-program.mp4" title="05 · Create a program" duration="59s" />
+  <VideoEmbed src="/videos/05-create-programme.mp4" title="05 · Create a programme" duration="1m 03s" />
 </div>
 
 ## The portfolio

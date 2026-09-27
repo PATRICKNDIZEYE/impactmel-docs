@@ -50,12 +50,11 @@ Forms is one of the sections with no left-hand rail, so that side of the page is
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/30-create-form.mp4" title="30 · Create a data-collection form" duration="34s" />
-  <VideoEmbed src="/videos/31-form-builder-fields.mp4" title="31 · Add fields in the form builder" duration="27s" />
-  <VideoEmbed src="/videos/32-publish-share-form.mp4" title="32 · Publish a form and share the public link" duration="25s" />
-  <VideoEmbed src="/videos/33-submit-public-form.mp4" title="33 · What respondents see: the public form" duration="22s" />
-  <VideoEmbed src="/videos/34-view-form-responses.mp4" title="34 · Review form responses" duration="24s" />
-  <VideoEmbed src="/videos/35-delete-form-with-export.mp4" title="35 · Delete a form — with your data protected" duration="31s" />
+  <VideoEmbed src="/videos/30-create-form.mp4" title="30 · Create a data-collection form" duration="46s" />
+  <VideoEmbed src="/videos/31-form-builder-fields.mp4" title="31 · Add questions in the form builder" duration="1m 11s" />
+  <VideoEmbed src="/videos/32-publish-share-form.mp4" title="32 · Publish a form and share its link" duration="33s" />
+  <VideoEmbed src="/videos/33-public-form.mp4" title="33 · What a respondent sees" duration="49s" />
+  <VideoEmbed src="/videos/34-form-responses.mp4" title="34 · Read the responses to a form" duration="39s" />
 </div>
 
 ## The forms list

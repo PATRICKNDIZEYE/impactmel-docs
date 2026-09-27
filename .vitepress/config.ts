@@ -77,7 +77,7 @@ const videoSidebar = [
   {
     text: 'Video Guides',
     collapsed: false,
-    items: [{ text: 'All 47 videos', link: '/videos/' }],
+    items: [{ text: 'All videos', link: '/videos/' }],
   },
 ]
 

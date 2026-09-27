@@ -17,8 +17,8 @@ ImpactMEL decides what you can see and do from your **role**. There are four, an
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/60-invite-member.mp4" title="60 · Invite a team member" duration="19s" />
-  <VideoEmbed src="/videos/61-roles-permissions.mp4" title="61 · Roles: who can do what" duration="78s" />
+  <VideoEmbed src="/videos/60-invite-member.mp4" title="60 · Invite a colleague" duration="43s" />
+  <VideoEmbed src="/videos/61-roles-permissions.mp4" title="61 · Roles and permissions" duration="46s" />
 </div>
 
 ## Two layers, and why that matters

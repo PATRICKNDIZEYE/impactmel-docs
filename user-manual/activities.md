@@ -18,7 +18,6 @@ Recording both gives you an auditable log of what was done and who was reached, 
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/66-participants.mp4" title="66 · The participant registry" duration="23s" />
 </div>
 
 ## Activities

@@ -43,12 +43,11 @@ Examples:
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/20-create-indicator.mp4" title="20 · Create an indicator" duration="48s" />
-  <VideoEmbed src="/videos/21-create-custom-unit.mp4" title="21 · Create a custom unit of measurement" duration="28s" />
-  <VideoEmbed src="/videos/22-generate-reporting-periods.mp4" title="22 · Generate reporting periods automatically" duration="28s" />
-  <VideoEmbed src="/videos/23-set-targets.mp4" title="23 · Set targets per period" duration="30s" />
-  <VideoEmbed src="/videos/24-indicator-detail.mp4" title="24 · Read an indicator’s performance page" duration="25s" />
-  <VideoEmbed src="/videos/25-aggregation-methods.mp4" title="25 · Choose the right aggregation method" duration="25s" />
+  <VideoEmbed src="/videos/20-create-indicator.mp4" title="20 · Create an indicator" duration="1m 10s" />
+  <VideoEmbed src="/videos/63-units-and-disaggregations.mp4" title="63 · Units and breakdowns" duration="1m 25s" />
+  <VideoEmbed src="/videos/22-reporting-periods.mp4" title="22 · Set up reporting periods" duration="41s" />
+  <VideoEmbed src="/videos/23-set-targets.mp4" title="23 · Set targets" duration="46s" />
+  <VideoEmbed src="/videos/24-indicator-page.mp4" title="24 · Read an indicator page" duration="39s" />
 </div>
 
 ## Where indicators live

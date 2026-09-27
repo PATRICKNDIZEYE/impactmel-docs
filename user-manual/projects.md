@@ -18,9 +18,9 @@ Each project has its own dates, budget and currency, team, locations, results fr
 ## Watch it done
 
 <div class="video-track__grid">
-  <VideoEmbed src="/videos/06-create-project.mp4" title="06 · Create a project" duration="60s" />
-  <VideoEmbed src="/videos/07-project-workspace-tour.mp4" title="07 · Inside a project workspace" duration="28s" />
-  <VideoEmbed src="/videos/08-manage-project-team.mp4" title="08 · Manage the project team" duration="22s" />
+  <VideoEmbed src="/videos/06-create-project.mp4" title="06 · Create a project" duration="1m 07s" />
+  <VideoEmbed src="/videos/07-project-workspace-tour.mp4" title="07 · Find your way around a project" duration="45s" />
+  <VideoEmbed src="/videos/08-project-team.mp4" title="08 · Manage the project team" duration="42s" />
 </div>
 
 ## Finding a project

@@ -34,7 +34,7 @@
 
 <div class="docs-overview-stats">
   <div class="docs-overview-stat">
-    <strong>47</strong>
+    <strong>46</strong>
     <span>Video walkthroughs</span>
   </div>
   <div class="docs-overview-stat">
