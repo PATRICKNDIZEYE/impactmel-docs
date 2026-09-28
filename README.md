@@ -81,5 +81,5 @@ Built by VitePress and deployed to **[docs.impactmel.com](https://docs.impactmel
 ---
 
 <div align="center">
-<sub>© ImpactMEL &nbsp;·&nbsp; <a href="mailto:inquiry@impactmel.com">inquiry@impactmel.com</a></sub>
+<sub>© ImpactMEL &nbsp;·&nbsp; <a href="mailto:inquiries@impactmel.com">inquiries@impactmel.com</a></sub>
 </div>
