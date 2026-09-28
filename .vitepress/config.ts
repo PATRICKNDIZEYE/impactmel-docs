@@ -89,7 +89,8 @@ export default defineConfig({
   description: 'Enterprise Monitoring, Evaluation & Learning Platform documentation',
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.png', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     ['meta', { name: 'theme-color', content: '#14170f' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
@@ -105,9 +106,7 @@ export default defineConfig({
   ignoreDeadLinks: [/localhost/, /app\.impactmel\.com/, /api\.impactmel\.com/],
 
   themeConfig: {
-    logo: {
-      svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="10" fill="currentColor"/><path d="M10 21V14.5M16 21V10M22 21V16.75" stroke="white" stroke-width="2.6" stroke-linecap="round"/><path d="M10 14.5L16 10L22 16.75" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/></svg>',
-    },
+    logo: { src: '/logo-mark.png', alt: 'ImpactMEL' },
     siteTitle: 'ImpactMEL Docs',
 
     nav: [

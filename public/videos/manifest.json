@@ -1,278 +1,278 @@
 {
-  "01-sign-in": {
-    "title": "Sign in",
-    "section": "Getting started",
-    "duration": 40,
-    "file": "01-sign-in.mp4"
-  },
-  "02-dashboard-tour": {
-    "title": "Find your way around the overview",
-    "section": "Getting started",
-    "duration": 46,
-    "file": "02-dashboard-tour.mp4"
-  },
-  "03-global-search": {
-    "title": "Find anything with search",
-    "section": "Getting started",
-    "duration": 51,
-    "file": "03-global-search.mp4"
-  },
-  "04-notifications": {
-    "title": "Keep up with notifications",
-    "section": "Getting started",
-    "duration": 49,
-    "file": "04-notifications.mp4"
-  },
-  "05-create-programme": {
-    "title": "Create a programme",
-    "section": "Programmes & projects",
-    "duration": 63,
-    "file": "05-create-programme.mp4"
-  },
-  "06-create-project": {
-    "title": "Create a project",
-    "section": "Programmes & projects",
-    "duration": 67,
-    "file": "06-create-project.mp4"
-  },
-  "07-project-workspace-tour": {
-    "title": "Find your way around a project",
-    "section": "Programmes & projects",
-    "duration": 45,
-    "file": "07-project-workspace-tour.mp4"
-  },
-  "08-project-team": {
-    "title": "Manage the project team",
-    "section": "Programmes & projects",
-    "duration": 42,
-    "file": "08-project-team.mp4"
-  },
-  "09-duplicate": {
-    "title": "Start a project from an existing one",
-    "section": "Programmes & projects",
-    "duration": 46,
-    "file": "09-duplicate.mp4"
-  },
-  "10-choose-framework-type": {
-    "title": "Choose a framework type",
-    "section": "Results framework",
-    "duration": 44,
-    "file": "10-choose-framework-type.mp4"
-  },
-  "11-build-results-chain": {
-    "title": "Build the results chain",
-    "section": "Results framework",
-    "duration": 69,
-    "file": "11-build-results-chain.mp4"
-  },
-  "12-reorder-and-move-results": {
-    "title": "Reorder and move results",
-    "section": "Results framework",
-    "duration": 45,
-    "file": "12-reorder-and-move-results.mp4"
-  },
-  "13-link-indicators-to-results": {
-    "title": "Link indicators to results",
-    "section": "Results framework",
-    "duration": 42,
-    "file": "13-link-indicators-to-results.mp4"
-  },
-  "20-create-indicator": {
-    "title": "Create an indicator",
-    "section": "Indicators",
-    "duration": 70,
-    "file": "20-create-indicator.mp4"
-  },
-  "21-reuse-indicator": {
-    "title": "Use an indicator in another project",
-    "section": "Indicators",
-    "duration": 44,
-    "file": "21-reuse-indicator.mp4"
-  },
-  "22-reporting-periods": {
-    "title": "Set up reporting periods",
-    "section": "Indicators",
-    "duration": 41,
-    "file": "22-reporting-periods.mp4"
-  },
-  "23-set-targets": {
-    "title": "Set targets",
-    "section": "Indicators",
-    "duration": 46,
-    "file": "23-set-targets.mp4"
-  },
-  "24-indicator-page": {
-    "title": "Read an indicator page",
-    "section": "Indicators",
-    "duration": 39,
-    "file": "24-indicator-page.mp4"
-  },
-  "30-create-form": {
-    "title": "Create a data-collection form",
-    "section": "Collecting data",
-    "duration": 46,
-    "file": "30-create-form.mp4"
-  },
-  "31-form-builder-fields": {
-    "title": "Add questions in the form builder",
-    "section": "Collecting data",
-    "duration": 71,
-    "file": "31-form-builder-fields.mp4"
-  },
-  "32-publish-share-form": {
-    "title": "Publish a form and share its link",
-    "section": "Collecting data",
-    "duration": 33,
-    "file": "32-publish-share-form.mp4"
-  },
-  "33-public-form": {
-    "title": "What a respondent sees",
-    "section": "Collecting data",
-    "duration": 49,
-    "file": "33-public-form.mp4"
-  },
-  "40-enter-figures": {
-    "title": "Enter a figure for an indicator",
-    "section": "Collecting data",
-    "duration": 71,
-    "file": "40-enter-figures.mp4"
-  },
-  "41-progress-reports": {
-    "title": "Report several figures at once in Progress Reports",
-    "section": "Collecting data",
-    "duration": 53,
-    "file": "41-progress-reports.mp4"
-  },
-  "44-import-figures": {
-    "title": "Import figures from an Excel file",
-    "section": "Collecting data",
-    "duration": 63,
-    "file": "44-import-figures.mp4"
-  },
   "42-review-approve": {
     "title": "Review and approve reported figures",
     "section": "Review & sign-off",
-    "duration": 27,
+    "duration": 31,
     "file": "42-review-approve.mp4"
   },
   "43-send-back": {
     "title": "Send a figure back with a reason",
     "section": "Review & sign-off",
-    "duration": 56,
+    "duration": 61,
     "file": "43-send-back.mp4"
+  },
+  "01-sign-in": {
+    "title": "Sign in",
+    "section": "Getting started",
+    "duration": 43,
+    "file": "01-sign-in.mp4"
+  },
+  "02-dashboard-tour": {
+    "title": "Find your way around the overview",
+    "section": "Getting started",
+    "duration": 53,
+    "file": "02-dashboard-tour.mp4"
+  },
+  "03-global-search": {
+    "title": "Find anything with search",
+    "section": "Getting started",
+    "duration": 55,
+    "file": "03-global-search.mp4"
+  },
+  "04-notifications": {
+    "title": "Keep up with notifications",
+    "section": "Getting started",
+    "duration": 54,
+    "file": "04-notifications.mp4"
+  },
+  "05-create-programme": {
+    "title": "Create a programme",
+    "section": "Programmes & projects",
+    "duration": 70,
+    "file": "05-create-programme.mp4"
+  },
+  "06-create-project": {
+    "title": "Create a project",
+    "section": "Programmes & projects",
+    "duration": 71,
+    "file": "06-create-project.mp4"
+  },
+  "07-project-workspace-tour": {
+    "title": "Find your way around a project",
+    "section": "Programmes & projects",
+    "duration": 52,
+    "file": "07-project-workspace-tour.mp4"
+  },
+  "08-project-team": {
+    "title": "Manage the project team",
+    "section": "Programmes & projects",
+    "duration": 47,
+    "file": "08-project-team.mp4"
+  },
+  "09-duplicate": {
+    "title": "Start a project from an existing one",
+    "section": "Programmes & projects",
+    "duration": 51,
+    "file": "09-duplicate.mp4"
+  },
+  "10-choose-framework-type": {
+    "title": "Choose a framework type",
+    "section": "Results framework",
+    "duration": 52,
+    "file": "10-choose-framework-type.mp4"
+  },
+  "11-build-results-chain": {
+    "title": "Build the results chain",
+    "section": "Results framework",
+    "duration": 73,
+    "file": "11-build-results-chain.mp4"
+  },
+  "12-reorder-and-move-results": {
+    "title": "Reorder and move results",
+    "section": "Results framework",
+    "duration": 49,
+    "file": "12-reorder-and-move-results.mp4"
+  },
+  "13-link-indicators-to-results": {
+    "title": "Link indicators to results",
+    "section": "Results framework",
+    "duration": 46,
+    "file": "13-link-indicators-to-results.mp4"
+  },
+  "20-create-indicator": {
+    "title": "Create an indicator",
+    "section": "Indicators",
+    "duration": 79,
+    "file": "20-create-indicator.mp4"
+  },
+  "21-reuse-indicator": {
+    "title": "Use an indicator in another project",
+    "section": "Indicators",
+    "duration": 50,
+    "file": "21-reuse-indicator.mp4"
+  },
+  "22-reporting-periods": {
+    "title": "Set up reporting periods",
+    "section": "Indicators",
+    "duration": 48,
+    "file": "22-reporting-periods.mp4"
+  },
+  "23-set-targets": {
+    "title": "Set targets",
+    "section": "Indicators",
+    "duration": 50,
+    "file": "23-set-targets.mp4"
+  },
+  "24-indicator-page": {
+    "title": "Read an indicator page",
+    "section": "Indicators",
+    "duration": 45,
+    "file": "24-indicator-page.mp4"
+  },
+  "30-create-form": {
+    "title": "Create a data-collection form",
+    "section": "Collecting data",
+    "duration": 51,
+    "file": "30-create-form.mp4"
+  },
+  "31-form-builder-fields": {
+    "title": "Add questions in the form builder",
+    "section": "Collecting data",
+    "duration": 80,
+    "file": "31-form-builder-fields.mp4"
+  },
+  "32-publish-share-form": {
+    "title": "Publish a form and share its link",
+    "section": "Collecting data",
+    "duration": 37,
+    "file": "32-publish-share-form.mp4"
+  },
+  "33-public-form": {
+    "title": "What a respondent sees",
+    "section": "Collecting data",
+    "duration": 52,
+    "file": "33-public-form.mp4"
+  },
+  "34-form-responses": {
+    "title": "Read the responses to a form",
+    "section": "Collecting data",
+    "duration": 43,
+    "file": "34-form-responses.mp4"
+  },
+  "40-enter-figures": {
+    "title": "Enter a figure for an indicator",
+    "section": "Collecting data",
+    "duration": 81,
+    "file": "40-enter-figures.mp4"
+  },
+  "41-progress-reports": {
+    "title": "Report several figures at once in Progress Reports",
+    "section": "Collecting data",
+    "duration": 59,
+    "file": "41-progress-reports.mp4"
+  },
+  "44-import-figures": {
+    "title": "Import figures from an Excel file",
+    "section": "Collecting data",
+    "duration": 70,
+    "file": "44-import-figures.mp4"
   },
   "45-submissions-page": {
     "title": "Track every figure on the Submissions page",
     "section": "Review & sign-off",
-    "duration": 47,
+    "duration": 54,
     "file": "45-submissions-page.mp4"
   },
   "46-performance-review": {
     "title": "Judge a result in Performance Review",
     "section": "Review & sign-off",
-    "duration": 61,
+    "duration": 69,
     "file": "46-performance-review.mp4"
   },
   "47-period-sign-off": {
     "title": "Close, lock and reopen a reporting period",
     "section": "Review & sign-off",
-    "duration": 57,
+    "duration": 64,
     "file": "47-period-sign-off.mp4"
   },
   "55-create-donor-report": {
     "title": "Assemble a donor report",
     "section": "Reports",
-    "duration": 70,
+    "duration": 79,
     "file": "55-create-donor-report.mp4"
   },
   "56-reports-library-and-share": {
     "title": "Find a report and share a link",
     "section": "Reports",
-    "duration": 48,
+    "duration": 53,
     "file": "56-reports-library-and-share.mp4"
   },
   "57-indicator-register": {
     "title": "The indicator register",
     "section": "Reports",
-    "duration": 56,
+    "duration": 71,
     "file": "57-indicator-register.mp4"
   },
   "58-tracking-table": {
     "title": "The tracking table: target against actual",
     "section": "Reports",
-    "duration": 54,
+    "duration": 62,
     "file": "58-tracking-table.mp4"
   },
   "59-export-data": {
     "title": "Export your data",
     "section": "Reports",
-    "duration": 32,
+    "duration": 42,
     "file": "59-export-data.mp4"
+  },
+  "50-statistics": {
+    "title": "Portfolio statistics",
+    "section": "Analysis",
+    "duration": 45,
+    "file": "50-statistics.mp4"
   },
   "51-dashboards": {
     "title": "Create a dashboard",
     "section": "Analysis",
-    "duration": 49,
+    "duration": 51,
     "file": "51-dashboards.mp4"
   },
   "52-dashboard-widgets": {
     "title": "Add a chart to a dashboard",
     "section": "Analysis",
-    "duration": 116,
+    "duration": 122,
     "file": "52-dashboard-widgets.mp4"
   },
   "53-risks": {
     "title": "Log and score a risk",
     "section": "Analysis",
-    "duration": 71,
+    "duration": 76,
     "file": "53-risks.mp4"
   },
   "60-invite-member": {
     "title": "Invite a colleague",
     "section": "Settings",
-    "duration": 43,
+    "duration": 50,
     "file": "60-invite-member.mp4"
   },
   "61-roles-permissions": {
     "title": "Roles and permissions",
     "section": "Settings",
-    "duration": 46,
+    "duration": 53,
     "file": "61-roles-permissions.mp4"
   },
   "62-org-reporting-periods": {
     "title": "Organisation reporting periods",
     "section": "Settings",
-    "duration": 47,
+    "duration": 51,
     "file": "62-org-reporting-periods.mp4"
   },
   "63-units-and-disaggregations": {
     "title": "Units and breakdowns",
     "section": "Settings",
-    "duration": 85,
+    "duration": 92,
     "file": "63-units-and-disaggregations.mp4"
   },
   "67-org-profile": {
     "title": "Your organisation’s profile",
     "section": "Settings",
-    "duration": 39,
+    "duration": 44,
     "file": "67-org-profile.mp4"
-  },
-  "34-form-responses": {
-    "title": "Read the responses to a form",
-    "section": "Collecting data",
-    "duration": 39,
-    "file": "34-form-responses.mp4"
-  },
-  "50-statistics": {
-    "title": "Portfolio statistics",
-    "section": "Analysis",
-    "duration": 40,
-    "file": "50-statistics.mp4"
   },
   "00-full-walkthrough": {
     "title": "From programme to donor report: a girls' education project, start to finish",
     "section": "Start here",
-    "duration": 330,
+    "duration": 533,
     "file": "00-full-walkthrough.mp4"
   }
 }
