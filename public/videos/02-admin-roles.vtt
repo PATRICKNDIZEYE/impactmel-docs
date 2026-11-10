@@ -1,0 +1,141 @@
+WEBVTT
+
+1
+00:00:02.450 --> 00:00:04.692
+Helena owns the Meridian workspace.
+
+2
+00:00:04.692 --> 00:00:08.470
+Roles and permissions is where she decides who can do what.
+
+3
+00:00:08.912 --> 00:00:12.321
+A role is a set of permissions, written in plain words.
+
+4
+00:00:12.321 --> 00:00:14.490
+People can hold more than one role,
+
+5
+00:00:14.490 --> 00:00:17.527
+and their access is everything those roles allow.
+
+6
+00:00:17.939 --> 00:00:22.348
+Meridian has hired a data clerk to type up paper forms from the field.
+
+7
+00:00:22.348 --> 00:00:25.876
+None of the built-in roles fits, so she makes a new one.
+
+8
+00:00:26.543 --> 00:00:30.533
+She starts with no permissions, and adds only what the job needs.
+
+9
+00:00:30.974 --> 00:00:34.863
+The clerk needs to see projects and forms, and to send data.
+
+10
+00:00:34.863 --> 00:00:35.705
+Nothing more.
+
+11
+00:00:36.112 --> 00:00:39.370
+Approving data and editing indicators stay unticked.
+
+12
+00:00:39.370 --> 00:00:42.879
+A clerk can enter figures, but someone else checks them.
+
+13
+00:00:43.294 --> 00:00:46.365
+Now she invites the new clerk, Esther, from People.
+
+14
+00:00:51.655 --> 00:00:55.630
+She gives Esther the Data clerk role, and sends the invitation.
+
+15
+00:00:57.010 --> 00:00:57.976
+Next, Joseph.
+
+16
+00:00:57.976 --> 00:01:02.362
+He is an M&E officer, and he now also manages two projects.
+
+17
+00:01:02.362 --> 00:01:04.666
+So he needs a second job title.
+
+18
+00:01:05.078 --> 00:01:07.005
+She adds Programme manager.
+
+19
+00:01:07.005 --> 00:01:10.574
+His M&E work stays his home, the page he lands on.
+
+20
+00:01:11.003 --> 00:01:15.557
+One thing only the owner can do is make someone an organisation admin.
+
+21
+00:01:15.557 --> 00:01:20.956
+Any other admin sees that option greyed out, and nobody can change their own roles.
+
+22
+00:01:21.374 --> 00:01:23.994
+Here is what that looks like for Joseph.
+
+23
+00:01:23.994 --> 00:01:25.370
+He signs in as usual.
+
+24
+00:01:29.214 --> 00:01:33.591
+His home opens on his M&E work: the figures waiting for review,
+
+25
+00:01:33.591 --> 00:01:35.605
+and the forms he looks after.
+
+26
+00:01:36.044 --> 00:01:37.789
+His menu now has Work as.
+
+27
+00:01:37.789 --> 00:01:40.093
+He switches to Programme manager.
+
+28
+00:01:42.045 --> 00:01:43.995
+Now the home follows that job:
+
+29
+00:01:43.995 --> 00:01:47.505
+this week's activities and deadlines for his projects.
+
+30
+00:01:47.505 --> 00:01:49.715
+His access is the same either way.
+
+31
+00:01:49.715 --> 00:01:51.795
+Only the starting point changes.
+
+32
+00:01:52.201 --> 00:01:56.459
+His profile lists both roles, but he cannot change them himself.
+
+33
+00:01:56.459 --> 00:01:58.854
+That stays with an admin, on People.
+
+34
+00:01:59.289 --> 00:02:03.961
+Custom roles for new jobs, more than one role for people who wear two hats,
+
+35
+00:02:03.961 --> 00:02:07.138
+and a clear limit on who can hand out admin rights.

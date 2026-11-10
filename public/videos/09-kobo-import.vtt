@@ -1,0 +1,125 @@
+WEBVTT
+
+1
+00:00:02.450 --> 00:00:05.530
+Meridian's community health promoters in Kilifi
+
+2
+00:00:05.530 --> 00:00:08.152
+record their home visits in KoboToolbox.
+
+3
+00:00:08.152 --> 00:00:13.263
+Helena wants those visits in ImpactMEL, where they can be checked and counted.
+
+4
+00:00:13.700 --> 00:00:17.081
+Integrations connects to KoboToolbox and DHIS2.
+
+5
+00:00:17.081 --> 00:00:22.476
+Anything brought in arrives as a draft for review, never as a final figure.
+
+6
+00:00:22.893 --> 00:00:25.794
+She adds a KoboToolbox connector, names it,
+
+7
+00:00:25.794 --> 00:00:29.236
+and picks the Kilifi project its figures belong to.
+
+8
+00:00:31.129 --> 00:00:35.923
+Then the Kobo server, and the API token from her Kobo account settings.
+
+9
+00:00:35.923 --> 00:00:40.311
+The token is kept hidden here, and ImpactMEL stores it encrypted.
+
+10
+00:00:40.728 --> 00:00:43.699
+She saves the connector, and tests the connection.
+
+11
+00:00:46.630 --> 00:00:49.174
+The forms in her Kobo account are listed.
+
+12
+00:00:49.174 --> 00:00:50.849
+She picks Household visits.
+
+13
+00:00:52.188 --> 00:00:55.415
+She can also copy the form itself into ImpactMEL,
+
+14
+00:00:55.415 --> 00:00:58.576
+so the questions live alongside her other forms.
+
+15
+00:00:59.008 --> 00:00:59.989
+Now the mapping.
+
+16
+00:00:59.989 --> 00:01:02.930
+The households reached question adds up into the
+
+17
+00:01:02.930 --> 00:01:06.669
+indicator for household visits by community health promoters.
+
+18
+00:01:07.112 --> 00:01:10.923
+The form also asks for the gender of the head of household.
+
+19
+00:01:10.923 --> 00:01:16.156
+She uses that as the breakdown, so every figure arrives split by female and male.
+
+20
+00:01:16.585 --> 00:01:19.446
+The visit date decides the reporting period,
+
+21
+00:01:19.446 --> 00:01:23.216
+so October visits land in the October to December quarter.
+
+22
+00:01:23.648 --> 00:01:24.833
+Everything is set.
+
+23
+00:01:24.833 --> 00:01:26.675
+She imports the submissions.
+
+24
+00:01:27.091 --> 00:01:28.853
+All seven visits were read.
+
+25
+00:01:28.853 --> 00:01:31.920
+They came in before, so nothing is added twice.
+
+26
+00:01:33.897 --> 00:01:36.765
+In Review, the figures are waiting as drafts.
+
+27
+00:01:36.765 --> 00:01:39.315
+Nothing counts toward the indicator yet.
+
+28
+00:01:39.718 --> 00:01:45.126
+Here is the household visits figure for Kilifi, for the October to December quarter,
+
+29
+00:01:45.126 --> 00:01:46.478
+brought in from Kobo.
+
+30
+00:01:46.899 --> 00:01:50.744
+From here it follows the same path as any other figure: sent,
+
+31
+00:01:50.744 --> 00:01:55.156
+checked against its evidence, and approved before it reaches a report.

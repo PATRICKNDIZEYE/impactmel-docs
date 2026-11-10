@@ -1,165 +1,52 @@
-# Documentation overview
+---
+layout: home
+title: ImpactMEL Docs
+hero:
+  name: ImpactMEL documentation
+  tagline: How to plan, collect, check and report on your programmes in ImpactMEL. Written for the people who use it every day, and for those deciding whether to.
+  actions:
+    - theme: brand
+      text: Get started
+      link: /getting-started/sign-up
+    - theme: alt
+      text: Read the user manual
+      link: /manual/
+    - theme: alt
+      text: Download the PDF guide
+      link: /ImpactMEL-User-Guide.pdf
+features:
+  - title: Plan
+    details: Programmes, projects, a results framework, and indicators with baselines and targets for every reporting period.
+    link: /manual/programmes-and-projects
+  - title: Collect
+    details: Forms that write straight into indicators, a phone filling page, public collection links, participants and activities.
+    link: /manual/forms
+  - title: Check
+    details: One review queue with automatic checks, evidence and a full history. Approve, return, close and lock periods.
+    link: /manual/review
+  - title: Report
+    details: Donor reports from approved figures, published with a fingerprint, exported to PDF, Word and Excel, and shared by link.
+    link: /manual/reports
+---
 
-<div class="docs-overview-hero">
-  <div class="docs-overview-hero__content">
-    <p class="docs-overview-hero__eyebrow">ImpactMEL documentation</p>
-    <h2 class="docs-overview-hero__title">Everything your team needs to learn ImpactMEL and get work done.</h2>
-    <p class="docs-overview-hero__copy">
-      Start with the user manual for everyday tasks, use the setup guide when rolling out the
-      platform with your team, and open the videos when a walkthrough is easier than reading.
-      Advanced reference is still available when you need it.
-    </p>
-    <div class="docs-overview-hero__actions">
-      <a class="docs-action docs-action--primary" href="/user-manual/overview">Open the user manual</a>
-      <a class="docs-action" href="/guide/quick-start">Quick start</a>
-      <a class="docs-action" href="/videos/">Watch video guides</a>
-    </div>
-  </div>
-  <div class="docs-overview-hero__visual" aria-hidden="true">
-    <div class="docs-overview-hero__window">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="docs-overview-hero__chart">
-      <div class="docs-overview-hero__bar docs-overview-hero__bar--one"></div>
-      <div class="docs-overview-hero__bar docs-overview-hero__bar--two"></div>
-      <div class="docs-overview-hero__bar docs-overview-hero__bar--three"></div>
-      <div class="docs-overview-hero__bar docs-overview-hero__bar--four"></div>
-      <div class="docs-overview-hero__bar docs-overview-hero__bar--five"></div>
-    </div>
-    <div class="docs-overview-hero__pulse"></div>
-  </div>
+<div class="vp-doc" style="max-width: 1152px; margin: 3rem auto 0; padding: 0 24px;">
+
+## Start with your role
+
+ImpactMEL gives each person a home page and a menu built for their job. Pick yours to see what you will use most.
+
+<div class="cards">
+  <a href="/roles/organisation-admin"><strong>Organisation admin</strong><span>People, roles, workspace settings, integrations and billing.</span></a>
+  <a href="/roles/director"><strong>Director</strong><span>The whole portfolio on one page, approvals and reports to sign off.</span></a>
+  <a href="/roles/me-officer"><strong>M&amp;E officer</strong><span>Frameworks, indicators, forms, the review queue and reports.</span></a>
+  <a href="/roles/programme-manager"><strong>Programme manager</strong><span>Your projects, this week's activities and upcoming deadlines.</span></a>
+  <a href="/roles/field-officer"><strong>Field officer</strong><span>Forms to fill, figures to send and anything returned to you.</span></a>
+  <a href="/roles/finance-officer"><strong>Finance officer</strong><span>Budgets, spending, variance explanations and sign-off.</span></a>
+  <a href="/roles/viewer-and-funder"><strong>Viewer and funder</strong><span>Read-only access to results, and the funder workspace.</span></a>
 </div>
 
-<div class="docs-overview-stats">
-  <div class="docs-overview-stat">
-    <strong>46</strong>
-    <span>Video walkthroughs</span>
-  </div>
-  <div class="docs-overview-stat">
-    <strong>6</strong>
-    <span>Documentation tracks</span>
-  </div>
-  <div class="docs-overview-stat">
-    <strong>4</strong>
-    <span>Core user roles</span>
-  </div>
-  <div class="docs-overview-stat">
-    <strong>1</strong>
-    <span>Clear starting point</span>
-  </div>
+## What is new
+
+This documentation describes ImpactMEL release **v0.10.36**, with the new interface introduced in version 2. Recent additions include the quarterly donor report format, progress measured from the baseline, public dashboard links and the funder workspace. See the [release notes](/release-notes).
+
 </div>
-
-## Start here
-
-<div class="docs-card-grid docs-card-grid--2">
-  <a class="docs-card" href="/user-manual/getting-started">
-    <span class="docs-card__eyebrow">Best first read</span>
-    <strong class="docs-card__title">Getting Started</strong>
-    <span class="docs-card__copy">
-      Create your organization, invite teammates, and learn the main interface before you start
-      configuring live data.
-    </span>
-    <span class="docs-card__arrow">Open guide</span>
-  </a>
-  <a class="docs-card" href="/guide/quick-start">
-    <span class="docs-card__eyebrow">Fastest setup path</span>
-    <strong class="docs-card__title">Quick Start</strong>
-    <span class="docs-card__copy">
-      Follow the shortest path from account setup to a working results framework, indicators, and
-      reporting cycle.
-    </span>
-    <span class="docs-card__arrow">View checklist</span>
-  </a>
-</div>
-
-## Browse by need
-
-<div class="docs-card-grid docs-card-grid--3">
-  <a class="docs-card" href="/user-manual/overview">
-    <span class="docs-card__eyebrow">For daily users</span>
-    <strong class="docs-card__title">User Manual</strong>
-    <span class="docs-card__copy">
-      Step-by-step product flows for admins, M&E officers, reviewers, and field staff.
-    </span>
-    <span class="docs-card__arrow">Browse manual</span>
-  </a>
-  <a class="docs-card" href="/guide/introduction">
-    <span class="docs-card__eyebrow">For rollout</span>
-    <strong class="docs-card__title">Guide</strong>
-    <span class="docs-card__copy">
-      Checklists and setup guidance for introducing the platform to your team.
-    </span>
-    <span class="docs-card__arrow">Open guide</span>
-  </a>
-  <a class="docs-card" href="/user-manual/results-framework">
-    <span class="docs-card__eyebrow">The core workflow</span>
-    <strong class="docs-card__title">Results Framework</strong>
-    <span class="docs-card__copy">
-      Choose your framework structure, build the chain from impact down, and link every indicator.
-    </span>
-    <span class="docs-card__arrow">Open the builder guide</span>
-  </a>
-  <a class="docs-card" href="/guide/security-compliance">
-    <span class="docs-card__eyebrow">For your IT and donors</span>
-    <strong class="docs-card__title">Security &amp; Compliance</strong>
-    <span class="docs-card__copy">
-      How your data is protected, where it lives, and what your donors will want to know.
-    </span>
-    <span class="docs-card__arrow">Read the overview</span>
-  </a>
-  <a class="docs-card" href="/videos/">
-    <span class="docs-card__eyebrow">For walkthroughs</span>
-    <strong class="docs-card__title">Video Guides</strong>
-    <span class="docs-card__copy">
-      A full set of short demos covering onboarding, results frameworks, reporting, and forms.
-    </span>
-    <span class="docs-card__arrow">Watch videos</span>
-  </a>
-</div>
-
-## What teams usually need
-
-<div class="docs-card-grid docs-card-grid--3">
-  <a class="docs-card" href="/user-manual/programs">
-    <span class="docs-card__eyebrow">Common task</span>
-    <strong class="docs-card__title">Programs and projects</strong>
-    <span class="docs-card__copy">
-      Structure your donor-funded work, assign locations and teams, and connect projects to
-      reporting timelines.
-    </span>
-    <span class="docs-card__arrow">Open section</span>
-  </a>
-  <a class="docs-card" href="/user-manual/indicators">
-    <span class="docs-card__eyebrow">Common task</span>
-    <strong class="docs-card__title">Indicators and targets</strong>
-    <span class="docs-card__copy">
-      Define indicators once, reuse them across projects, and set targets by reporting period.
-    </span>
-    <span class="docs-card__arrow">Open section</span>
-  </a>
-  <a class="docs-card" href="/user-manual/reports">
-    <span class="docs-card__eyebrow">Common task</span>
-    <strong class="docs-card__title">Reports and sharing</strong>
-    <span class="docs-card__copy">
-      Build reports, share a link with donors, and download a clean PDF when needed.
-    </span>
-    <span class="docs-card__arrow">Open section</span>
-  </a>
-</div>
-
-## What gets easier in ImpactMEL
-
-| Task | Without ImpactMEL | With ImpactMEL |
-| --- | --- | --- |
-| Tracking indicators | Spreadsheets go out of date quickly | Everyone works from the same current figures |
-| Preparing donor reports | Manual copy-paste and formatting | Build reports from approved data |
-| Collecting field information | Separate forms and cleanup work | Forms feed straight into reporting |
-| Sharing progress | Email attachments cause version confusion | Share a link or download a PDF |
-| Working across different donor dates | Manual rework each time | Build reports for the date range you need |
-
-## Suggested next step
-
-If you are brand new, start with [Getting Started](/user-manual/getting-started). If you prefer a
-checklist or walkthrough, go to [Quick Start](/guide/quick-start) or [Video Guides](/videos/).

@@ -4,9 +4,180 @@
   "framework": null,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/user-manual", "destination": "/user-manual/overview", "permanent": false },
-    { "source": "/user-manual/", "destination": "/user-manual/overview", "permanent": false },
-    { "source": "/guide", "destination": "/guide/introduction", "permanent": false },
-    { "source": "/guide/", "destination": "/guide/introduction", "permanent": false }
+    {
+      "source": "/user-manual",
+      "destination": "/manual/",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/",
+      "destination": "/manual/",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/overview",
+      "destination": "/manual/",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/dashboard",
+      "destination": "/manual/",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/getting-started",
+      "destination": "/getting-started/sign-up",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/programs",
+      "destination": "/manual/programmes-and-projects",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/programme-page",
+      "destination": "/manual/programmes-and-projects",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/projects",
+      "destination": "/manual/programmes-and-projects",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/results-framework",
+      "destination": "/manual/results-framework",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/indicators",
+      "destination": "/manual/indicators",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/indicator-register",
+      "destination": "/manual/indicators",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/reusing-an-indicator",
+      "destination": "/manual/indicators#reuse-indicators",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/data-entry",
+      "destination": "/manual/collecting-data",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/forms",
+      "destination": "/manual/forms",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/activities",
+      "destination": "/manual/activities",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/reports",
+      "destination": "/manual/reports",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/settings",
+      "destination": "/manual/administration",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/roles-permissions",
+      "destination": "/roles/",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/review-and-approve",
+      "destination": "/manual/review",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/period-sign-off",
+      "destination": "/manual/reporting-periods",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/risks",
+      "destination": "/manual/risks",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/analysis",
+      "destination": "/manual/analysis",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/data-hub",
+      "destination": "/manual/analysis",
+      "permanent": true
+    },
+    {
+      "source": "/guide",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/guide/",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/guide/introduction",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/guide/why-impactmel",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/guide/quick-start",
+      "destination": "/getting-started/sign-up",
+      "permanent": true
+    },
+    {
+      "source": "/guide/pricing",
+      "destination": "/plans",
+      "permanent": true
+    },
+    {
+      "source": "/guide/changelog",
+      "destination": "/release-notes",
+      "permanent": true
+    },
+    {
+      "source": "/guide/roadmap",
+      "destination": "/release-notes",
+      "permanent": true
+    },
+    {
+      "source": "/guide/security-compliance",
+      "destination": "/security",
+      "permanent": true
+    },
+    {
+      "source": "/videos/:file(.*\\.mp4)",
+      "destination": "/videos/",
+      "permanent": true
+    },
+    {
+      "source": "/user-manual/:page*",
+      "destination": "/manual/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/:page*",
+      "destination": "/introduction",
+      "permanent": true
+    }
   ]
 }

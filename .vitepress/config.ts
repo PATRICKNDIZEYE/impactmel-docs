@@ -1,178 +1,117 @@
 import { defineConfig } from 'vitepress'
-import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { figures } from './figures'
 
-const FIGURES: Record<string, { title?: string; caption?: string }> =
-  JSON.parse(readFileSync(join(__dirname, '..', 'print', 'figures.json'), 'utf8')).figures ?? {}
-const escHtml = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!)
-
-const docsHubSidebar = [
-  {
-    text: 'Start Here',
-    collapsed: false,
-    items: [
-      { text: 'Overview', link: '/' },
-      { text: 'Getting Started', link: '/user-manual/getting-started' },
-      { text: 'Quick Start', link: '/guide/quick-start' },
-      { text: 'User Manual', link: '/user-manual/overview' },
-      { text: 'Video Guides', link: '/videos/' },
-    ],
-  },
-  {
-    text: 'Going Further',
-    collapsed: true,
-    items: [
-      { text: 'Guide Introduction', link: '/guide/introduction' },
-      { text: 'Results Framework', link: '/user-manual/results-framework' },
-      { text: 'Security & Compliance', link: '/guide/security-compliance' },
-    ],
-  },
+const start = [
+  { text: 'Introduction', link: '/introduction' },
+  { text: 'Sign up', link: '/getting-started/sign-up' },
+  { text: 'Set up your workspace', link: '/getting-started/set-up-workspace' },
+  { text: 'Invite your team', link: '/getting-started/invite-your-team' },
+  { text: 'Finding your way', link: '/getting-started/finding-your-way' },
 ]
 
-const userManualSidebar = [
-  {
-    text: 'User Manual',
-    collapsed: false,
-    items: [
-      { text: 'Platform Overview', link: '/user-manual/overview' },
-      { text: 'Getting Started', link: '/user-manual/getting-started' },
-      { text: 'Dashboard', link: '/user-manual/dashboard' },
-      { text: 'Programs', link: '/user-manual/programs' },
-      { text: 'Projects', link: '/user-manual/projects' },
-      { text: 'Results Framework', link: '/user-manual/results-framework' },
-      { text: 'Indicators', link: '/user-manual/indicators' },
-      { text: 'Entering Data', link: '/user-manual/data-entry' },
-      { text: 'Activities and Participants', link: '/user-manual/activities' },
-      { text: 'Data Collection Forms', link: '/user-manual/forms' },
-      { text: 'Reports', link: '/user-manual/reports' },
-      { text: 'Settings and Administration', link: '/user-manual/settings' },
-      { text: 'Roles and Permissions', link: '/user-manual/roles-permissions' },
-    ],
-  },
+const roles = [
+  { text: 'Roles at a glance', link: '/roles/' },
+  { text: 'Organisation admin', link: '/roles/organisation-admin' },
+  { text: 'Director', link: '/roles/director' },
+  { text: 'M&E officer', link: '/roles/me-officer' },
+  { text: 'Programme manager', link: '/roles/programme-manager' },
+  { text: 'Field officer', link: '/roles/field-officer' },
+  { text: 'Finance officer', link: '/roles/finance-officer' },
+  { text: 'Viewer and funder', link: '/roles/viewer-and-funder' },
 ]
 
-const guideSidebar = [
-  {
-    text: 'Guide',
-    collapsed: false,
-    items: [
-      { text: 'Introduction', link: '/guide/introduction' },
-      { text: 'Quick Start', link: '/guide/quick-start' },
-      { text: 'Why ImpactMEL', link: '/guide/why-impactmel' },
-      { text: 'Changelog', link: '/guide/changelog' },
-    ],
-  },
-  {
-    text: 'Roadmap & Trust',
-    collapsed: false,
-    items: [
-      { text: 'Pricing', link: '/guide/pricing' },
-      { text: 'Roadmap', link: '/guide/roadmap' },
-      { text: 'Security & Compliance', link: '/guide/security-compliance' },
-    ],
-  },
+const plan = [
+  { text: 'Programmes and projects', link: '/manual/programmes-and-projects' },
+  { text: 'Results framework', link: '/manual/results-framework' },
+  { text: 'Indicators, baselines and targets', link: '/manual/indicators' },
+  { text: 'Reporting periods', link: '/manual/reporting-periods' },
 ]
 
-const videoSidebar = [
-  {
-    text: 'Video Guides',
-    collapsed: false,
-    items: [{ text: 'All videos', link: '/videos/' }],
-  },
+const collect = [
+  { text: 'Forms and the form builder', link: '/manual/forms' },
+  { text: 'Collecting data', link: '/manual/collecting-data' },
+  { text: 'Participants and registers', link: '/manual/participants' },
+  { text: 'Activities and deadlines', link: '/manual/activities' },
+]
+
+const assure = [
+  { text: 'Review and data quality', link: '/manual/review' },
+  { text: 'Budgets and finance', link: '/manual/budgets' },
+  { text: 'Risks', link: '/manual/risks' },
+]
+
+const report = [
+  { text: 'Analysis and dashboards', link: '/manual/analysis' },
+  { text: 'Sharing dashboards', link: '/manual/sharing-dashboards' },
+  { text: 'Reports', link: '/manual/reports' },
+  { text: 'Funder workspace', link: '/manual/funders' },
+]
+
+const connect = [
+  { text: 'Integrations', link: '/manual/integrations' },
+  { text: 'AI features', link: '/manual/ai' },
+  { text: 'Administration', link: '/manual/administration' },
+]
+
+const reference = [
+  { text: 'Security and data', link: '/security' },
+  { text: 'Plans', link: '/plans' },
+  { text: 'Release notes', link: '/release-notes' },
+  { text: 'FAQ', link: '/faq' },
+  { text: 'Video guides', link: '/videos/' },
+]
+
+export const sidebar = [
+  { text: 'Getting started', items: start },
+  { text: 'Roles', collapsed: true, items: roles },
+  { text: 'Plan', items: [{ text: 'User manual overview', link: '/manual/' }, ...plan] },
+  { text: 'Collect', items: collect },
+  { text: 'Check', items: assure },
+  { text: 'Report and share', items: report },
+  { text: 'Connect and administer', items: connect },
+  { text: 'Reference', items: reference },
 ]
 
 export default defineConfig({
-  // README.md is for GitHub, not a docs page — it links to repo-relative
-  // assets that Vite cannot resolve.
-  srcExclude: ['README.md', 'print/**', 'scripts/**', 'user-manual/FIGURES.md'],
   title: 'ImpactMEL Docs',
-  description: 'Enterprise Monitoring, Evaluation & Learning Platform documentation',
+  description: 'How to use ImpactMEL: plan, collect, check and report on your programmes.',
+  lang: 'en-GB',
+  cleanUrls: true,
+  lastUpdated: false,
+  srcExclude: ['README.md', 'scripts/**', 'print/**'],
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.png', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'alternate icon', href: '/favicon.png', type: 'image/png' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
-    ['meta', { name: 'theme-color', content: '#14170f' }],
+    ['meta', { name: 'theme-color', content: '#0a0a0a' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    [
-      'link',
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap',
-      },
-    ],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap' }],
   ],
 
-  ignoreDeadLinks: [/localhost/, /app\.impactmel\.com/, /api\.impactmel\.com/],
-
-  themeConfig: {
-    logo: { src: '/logo-mark.png', alt: 'ImpactMEL' },
-    siteTitle: 'ImpactMEL Docs',
-
-    nav: [
-      { text: 'Overview', link: '/' },
-      { text: 'Getting Started', link: '/user-manual/getting-started' },
-      { text: 'User Manual', link: '/user-manual/overview' },
-      {
-        text: 'Reference',
-        items: [
-          { text: 'Why ImpactMEL', link: '/guide/why-impactmel' },
-          { text: 'Pricing', link: '/guide/pricing' },
-          { text: 'Roadmap', link: '/guide/roadmap' },
-          { text: 'Guide', link: '/guide/introduction' },
-          { text: 'Quick Start', link: '/guide/quick-start' },
-          { text: 'Security & Compliance', link: '/guide/security-compliance' },
-        ],
-      },
-      { text: 'Videos', link: '/videos/' },
-      { text: 'Open App', link: 'https://app.impactmel.com', target: '_blank' },
-    ],
-
-    sidebar: {
-      '/videos/': videoSidebar,
-      '/user-manual/': userManualSidebar,
-      '/guide/': guideSidebar,
-      '/': docsHubSidebar,
-    },
-
-    socialLinks: [{ icon: 'github', link: 'https://github.com/impactmel' }],
-
-    footer: {
-      message: 'ImpactMEL documentation workspace',
-      copyright: 'Copyright © 2026 ImpactMEL. All rights reserved.',
-    },
-
-    search: {
-      provider: 'local',
-    },
-
-    outline: {
-      level: [2, 3],
-      label: 'On this page',
-    },
-
-    editLink: {
-      pattern: 'https://github.com/impactmel/docs/edit/main/:path',
-      text: 'Edit this page on GitHub',
-    },
+  markdown: {
+    config: (md) => figures(md),
   },
 
-  markdown: {
-    theme: {
-      light: 'github-light',
-      dark: 'github-dark',
-    },
-    config(md) {
-      md.core.ruler.before('normalize', 'manual-figures', (state) => {
-        state.src = state.src.replace(/\{\{figure:\s*([a-z0-9][a-z0-9._-]*)\s*\}\}/gi, (_all, key: string) => {
-          const entry = FIGURES[key] ?? {}
-          const alt = escHtml(entry.title ?? key.replace(/-/g, ' '))
-          const caption = [entry.title ? `<strong>${escHtml(entry.title)}</strong>` : '', entry.caption ? escHtml(entry.caption) : '']
-            .filter(Boolean)
-            .join(' ')
-          return `\n<figure class="manual-figure"><img src="/user-manual/images/${key}.png" alt="${alt}" loading="lazy">${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>\n`
-        })
-      })
+  themeConfig: {
+    logo: { light: '/logo-black.svg', dark: '/logo-white.svg', alt: 'ImpactMEL' },
+    siteTitle: false,
+    nav: [
+      { text: 'Get started', link: '/getting-started/sign-up' },
+      { text: 'User manual', link: '/manual/' },
+      { text: 'Roles', link: '/roles/' },
+      { text: 'Release notes', link: '/release-notes' },
+      { text: 'Videos', link: '/videos/' },
+      { text: 'Open ImpactMEL', link: 'https://app.impactmel.com/login' },
+    ],
+    sidebar: { '/': sidebar },
+    outline: { level: [2, 3], label: 'On this page' },
+    search: { provider: 'local' },
+    docFooter: { prev: 'Previous', next: 'Next' },
+    footer: {
+      message: 'Documentation for ImpactMEL release v0.10.36. <a href="/ImpactMEL-User-Guide.pdf">Download the printed user guide (PDF)</a>.',
+      copyright: '© 2026 ImpactMEL · <a href="mailto:inquiries@impactmel.com">inquiries@impactmel.com</a>',
     },
   },
 })
