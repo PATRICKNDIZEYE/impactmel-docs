@@ -1,67 +1,67 @@
 # Security & Compliance
 
-ImpactMEL is built for organizations that handle sensitive beneficiary data, financial information, and donor-restricted program data. This page explains, in plain language, how your data is protected and what your IT reviewers and donors will want to know.
+ImpactMEL is not certified against SOC 2 or ISO 27001 yet. This page lists the controls in place today, in the same terms as the **[security overview](https://www.impactmel.com/trust/security-overview)** on impactmel.com. Each can be shown in a session with your IT reviewer present.
+
+ImpactMEL is GDPR compliant and has an appointed Data Protection Officer.
 
 ---
 
-## Signing in safely
+## In place today
 
-- Sessions use **secure, browser-managed cookies** that scripts on a page can never read — the design that closes off the most common web attack on session tokens.
-- **Sign in with Google** is available; ImpactMEL stores no password for Google-signed accounts.
-- Sessions expire after seven days, so access always re-confirms itself. An administrator can also revoke any member instantly by removing them from the organization.
+- Each organisation has its own address and sign-in, and every request is limited to its own data.
+- Contracted and self-hosted organisations run in a dedicated instance with their own database, storage and backups.
+- HTTPS everywhere.
+- Automated backups, with an off-site copy.
+- Server access by SSH key only, never passwords.
+- Rate limiting on sign-in, and optional Google sign-in.
+- Four default roles, with viewers narrowed to the projects they are assigned.
+- A full audit trail with the value before every change, and access logs.
+- Read-only funder links that expire and can be revoked.
+- Your data stays yours, and can be exported at any time.
+
+---
+
+## Signing in
+
+Email and password with address verification, optional Google sign-in, and rate limiting on sign-in attempts. External collaborators are brought in through organisation invitations rather than shared logins, so every audit event has a person behind it.
 
 ---
 
 ## Who can see and do what
 
-Every action is checked against the member's role in your organization:
+Four roles per organisation by default, each built from a permission set and renameable to your own structure.
 
 | Role | Access |
 |---|---|
-| **Org admin** | Full access: members, settings, all programs and data |
-| **M&E officer** | Create and manage indicators, forms, reporting periods, and reports |
+| **Org admin** | Full access: members, settings, all programmes and data |
+| **M&E officer** | Create and manage indicators, forms, reporting periods and reports |
 | **Reporter** | Submit data against assigned indicators for open periods |
-| **Viewer** | Read-only access to approved data and published reports |
+| **Viewer** | Read-only access, narrowed to the projects they are assigned |
 
-Roles are assigned per organization, and a person can hold different roles in different organizations.
-
-### Your organization's data is isolated
-
-Every piece of data belongs to exactly one organization, and every request is confined to the requester's own organization. There is no way for a user — even a deliberately crafted request — to reach another organization's programs, indicators, or beneficiaries. This isolation is systematically verified across the platform.
-
-### Public report links
-
-Reports you choose to share by link are read-only, scoped to that single report, and revocable at any time by your admin. Recipients need no account — and a shared link can never lead onward to anything else in your workspace.
+Viewers being narrowed to their projects is how an external reviewer sees one country and not the whole portfolio. See [Roles & Permissions](/user-manual/roles-permissions) for the full matrix.
 
 ---
 
-## How your data is protected
+## A record of every change
 
-- **Encrypted in transit** — all traffic runs over HTTPS.
-- **Separated infrastructure** — application servers are not directly internet-accessible, and the database lives apart from them.
-- **Daily backups with point-in-time recovery**, so an incident never means losing your program history.
-- **Non-guessable identifiers** throughout, so records cannot be discovered by counting upward through IDs.
-- **Approval trail** — every submission carries who entered it, who reviewed it, and when; approved records cannot be silently edited.
+An audit event records the actor, the entity, the action and the full state before and after the change. Not a note that something was edited: the previous value, kept. Access logs record views alongside it.
 
 ---
 
-## Your data is yours
+## Sharing that can be withdrawn
 
-- Export your organization's data — programs, indicators, submissions, participants — whenever you need it, from **Settings → Export**.
-- ImpactMEL does not sell or share customer or beneficiary data.
-- On contract end, your data is returned on request and then removed from our systems.
-
-For organization-hosted deployments, all data lives on **your** servers under your policies from day one.
+Sharing runs by role, by organisation, by named user or by link. Each share carries a view or export permission, a label, an expiry and can be revoked. A donor link handed out in March does not have to be live in December.
 
 ---
 
-## What to send your donor or IT reviewer
+## Where your data sits
 
-Most due-diligence questionnaires are covered by four statements:
+ImpactMEL runs in two forms. In our cloud, each organisation runs in its own isolated instance, served over HTTPS, with automated backups and an off-site copy. On your own servers, the application brings the same roles, audit trail and sign-in controls, and the database never leaves your infrastructure. See **[hosting and residency](https://www.impactmel.com/trust/hosting-and-residency)**.
 
-1. Data is isolated per organization, encrypted in transit, and backed up daily with point-in-time recovery.
-2. Access is role-based, revocable instantly, and every data change carries an audit trail.
-3. Data is exportable by the customer at any time and is never sold or shared.
-4. An organization-hosted option exists for data-sovereignty requirements.
+Your organisation owns its data in both models and can export it at any time from **Settings → Export Data**.
 
-Need a formal security summary or a Data Processing Agreement for a proposal? [Contact us](https://impactmel.com/contact) — we provide both.
+---
+
+## For your IT reviewer
+
+Send them this page with the security overview, the [hosting and residency](https://www.impactmel.com/trust/hosting-and-residency) page and the [privacy policy](https://www.impactmel.com/privacy). If your procurement team uses a security questionnaire, [send it to us](https://www.impactmel.com/contact) and we will answer it in writing, control by control.

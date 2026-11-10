@@ -2,5 +2,11 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".vitepress/dist",
   "framework": null,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/user-manual", "destination": "/user-manual/overview", "permanent": false },
+    { "source": "/user-manual/", "destination": "/user-manual/overview", "permanent": false },
+    { "source": "/guide", "destination": "/guide/introduction", "permanent": false },
+    { "source": "/guide/", "destination": "/guide/introduction", "permanent": false }
+  ]
 }

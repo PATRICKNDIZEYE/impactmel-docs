@@ -1,76 +1,76 @@
 # Pricing
 
-ImpactMEL is priced per organization, with guided onboarding included in every paid plan. The authoritative, always-current pricing lives on **[impactmel.com/pricing](https://impactmel.com/pricing)** — this page summarizes the same published plans.
+ImpactMEL is priced by where it runs and whether you want it customised. The platform is the same on every plan. The current, authoritative prices are on **[impactmel.com/pricing](https://www.impactmel.com/pricing)**; this page summarises them.
 
-All prices are in USD and exclude applicable taxes, travel, client infrastructure, and third-party licence costs.
+All prices are in USD.
 
 ---
 
-## Cloud plans
+## Managed cloud
 
-Managed hosting, operated by ImpactMEL.
+Hosted, backed up and updated by ImpactMEL. Every cloud plan can be paid monthly or yearly, and every cloud plan can start with a 30-day free trial.
 
-| | **Cloud Organization** | **Cloud Enterprise** |
-|---|---|---|
-| **Price** | $219 / month | $549 / month |
-| **Billing** | Billed annually at $2,628 | Billed annually at $6,588 |
-| **Best for** | Organizations running a structured MEL and donor reporting operation | Multi-country programs, consortiums, and larger reporting teams |
-| **Internal users** | Up to 20 | Up to 100 |
-| **Included** | Full standard platform capabilities · baseline configuration and onboarding · agreed initial migration support · role-based remote training · standard support, maintenance, and updates | Everything in Cloud Organization · multi-country and consortium structures · enhanced onboarding and configuration · expanded migration assistance · integration planning · priority support and maintenance |
+| | **Individual** | **Standard** | **Custom** |
+|---|---|---|---|
+| **Monthly** | $20 / month | $219 / month | $549 / month |
+| **Yearly** | $200 / year (two months free) | $2,628 / year | $6,588 / year |
+| **Best for** | M&E consultants and officers who report on their own work | An organisation that wants to start straight away | Organisations that want ImpactMEL set up around how they already work |
+| **Customisation** | None | None, the full platform as it is | Your framework, forms, reports and workflows configured to how you work, set up with our team |
+| **Included** | Your own workspace, the full platform: results frameworks, forms and reports | Everything in Individual, plus your organisation's own workspace and address, review and approval with an audit trail, and read-only funder links | Everything in Standard, plus customisation, set-up with us, and DHIS2, CSV and API connectors |
 
-## Organization-hosted plans
+Pay by card or invoice. Individual is paid by card.
 
-A perpetual licence deployed to your own servers.
+## On your own servers
+
+For programmes whose data must sit on their own infrastructure. These plans start with a conversation, and the trial runs in our cloud first, before anything is installed on yours.
 
 | | **Organization-Hosted Standard** | **Organization-Hosted Enterprise** |
 |---|---|---|
-| **Price** | $18,500 one-time | $32,500 one-time |
+| **Price** | $18,500 once | $32,500 once |
 | **From year two** | $3,700 / year maintenance | $6,500 / year maintenance |
-| **Internal users** | Up to 100 | Up to 500 |
-| **Included** | Deployment to your production server · baseline workflow customization · migration from agreed structured sources · one standard integration · three role-based remote training sessions · administrator documentation · twelve months of support and maintenance | Production and staging deployment · enhanced workflow customization · migration from up to three agreed structured sources · up to three standard integrations · five role-based training sessions · technical and administrator handover · source-code handover under agreed licence terms · twelve months of priority maintenance |
+| **Best for** | Programmes whose data must sit under their own infrastructure and IT policy | Large portfolios that need their own production and staging environments |
+| **Included** | Runs on your servers · one standard integration · three training sessions · administrator documentation · 12 months of support | Runs on your servers · production and staging · up to three integrations · five training sessions · technical handover with source code under agreed licence terms |
+
+Source code is included only in Organization-Hosted Enterprise, under agreed licence terms.
 
 ---
 
-## Included with every paid plan
+## On every plan
 
-- **Your data stays yours** — export your program data when you need it. ImpactMEL does not sell customer or beneficiary data.
-- **Onboarding is included** — guided setup so your framework, roles, and first reporting cycle are configured properly.
-- **Built for team adoption** — the roles, review flow, and support required to move beyond a single-person spreadsheet system.
+- **One platform.** Results frameworks, forms, approvals, evidence, dashboards and PDF, Word and Excel reports.
+- **No hidden meter.** We do not charge per project, indicator, submitted record, participant or uploaded file.
+- **Your data stays yours.** Your organisation owns its data and can export it in either hosting model.
 
 ---
 
 ## Frequently asked questions
 
-### Can we start with one project?
+### Can we pay month by month?
 
-Yes. Teams commonly begin with one active project and expand after the first framework, reporting period, and approval workflow are running.
+Yes, on the cloud plans. Individual is $20 a month or $200 a year. Standard is $219 a month or $2,628 a year. Custom is $549 a month or $6,588 a year. Organization-hosted plans are a one-time fee with maintenance from year two.
 
-### Is onboarding an additional charge?
+### What is the difference between Standard and Custom?
 
-The onboarding listed with each plan is included. Large migrations, custom integrations, or extensive historical-data cleanup are scoped separately before work begins.
+Standard is the full platform as it is, with no customisation. Custom adds customisation: your results framework, forms, report formats and review and approval workflows configured to how you work, and set up with our team.
 
-### Can ImpactMEL be included in a donor proposal?
+### Can we try it first?
 
-Yes. We can provide a clear annual quote and product description that your team can budget into a project or organizational proposal.
+Yes. Any cloud plan can start with a 30-day free trial. Pay before the trial ends to keep your workspace.
 
-### Do you offer monthly billing?
+### Can we set it up ourselves?
 
-Cloud subscriptions are invoiced annually and paid in advance. Contact us if your procurement rules require another billing schedule.
+Yes. Choose a cloud plan, create your workspace and pay by card or invoice. The set-up steps take you through your reporting calendar and your team.
 
-### How are organization-hosted deployments paid?
+### Can we leave with our data?
 
-The standard schedule is 40% at project initiation, 40% when configuration is ready for user acceptance testing, and 20% at production go-live.
-
-### Are other terms available?
-
-The published prices are designed for development organizations. Additional terms may be available for local organizations and multi-year agreements — [contact us](https://impactmel.com/contact) to discuss.
+Yes. Your organisation owns its data and can export it in either hosting model. Organization-Hosted Enterprise also includes source-code handover.
 
 ---
 
 ## Get started
 
 <div class="docs-card-grid docs-card-grid--2">
-  <a class="docs-card" href="https://impactmel.com/pricing" target="_blank" rel="noopener">
+  <a class="docs-card" href="https://www.impactmel.com/pricing" target="_blank" rel="noopener">
     <span class="docs-card__eyebrow">Source of truth</span>
     <strong class="docs-card__title">See live pricing</strong>
     <span class="docs-card__copy">The published plans, always current, on impactmel.com.</span>
@@ -78,6 +78,6 @@ The published prices are designed for development organizations. Additional term
   <a class="docs-card" href="/user-manual/getting-started">
     <span class="docs-card__eyebrow">Already on a plan?</span>
     <strong class="docs-card__title">Get your team started</strong>
-    <span class="docs-card__copy">Set up your organization, invite your team, and run your first reporting cycle.</span>
+    <span class="docs-card__copy">Set up your organisation, invite your team and run your first reporting cycle.</span>
   </a>
 </div>
