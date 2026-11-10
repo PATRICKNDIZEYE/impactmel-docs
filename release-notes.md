@@ -69,6 +69,6 @@
 ## v0.10.0 to v0.10.4 · 1 to 2 November 2026
 
 - **The new interface (version 2)** is the default, with a home page and menu for each role, and a switch back to the classic interface.
-- Self-service sign-up with a 30-day trial, card or invoice payment, and a web address for each organisation.
+- Self-service sign-up with card or invoice payment, and a web address for each organisation.
 - Sign in with Google or Microsoft.
 - Branded emails.

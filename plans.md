@@ -12,7 +12,7 @@
 
 Every cloud plan includes results frameworks, forms, approvals, evidence, dashboards, and PDF, Word and Excel reports. Standard and Custom run the same platform. There is no charge per project, indicator, record, participant or file.
 
-Cloud plans can be paid monthly or yearly, by card or, except on Individual, by invoice. Every cloud plan can start with a 30-day free trial.
+Cloud plans can be paid monthly or yearly, by card or, except on Individual, by invoice.
 
 ## On your own servers
 

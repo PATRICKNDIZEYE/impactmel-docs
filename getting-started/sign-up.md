@@ -8,7 +8,7 @@ If a colleague has invited you, you do not need to sign up. Open the link in you
 
 ## Before you start
 
-You need a work email address you can read, and a few minutes. Every plan can start with a 30-day free trial, so you do not need a card to look around. Plans and prices are on the [pricing page](https://www.impactmel.com/pricing).
+You need a work email address you can read, and a few minutes. Plans and prices are on the [pricing page](https://www.impactmel.com/pricing).
 
 ## Steps
 
@@ -26,7 +26,6 @@ Go to [app.impactmel.com/signup](https://app.impactmel.com/signup). A panel on t
 5. **Payment.** Choose how to pay:
    - **Pay by card** opens a secure checkout with our payment provider, Polar.
    - **Pay by invoice** asks where to send the invoice and an optional purchase order number. Invoices are not available on Individual.
-   - **Start 30-day free trial** lets you begin without paying. You can choose a payment method before the trial ends.
 
 When you finish, ImpactMEL opens your workspace at its own address and starts the set-up steps. Continue with [Set up your workspace](/getting-started/set-up-workspace).
 

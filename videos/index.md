@@ -5,7 +5,7 @@
 <script setup>
 const base = 'https://media.impactmel.com/videos/roles'
 const videos = [
-  ['01-owner-sets-up', 'Set up a new organisation', 'Owner', 'Sign up, verify the email, name the organisation, start the trial, then set the role, logo, currency, reporting calendar and first colleague.'],
+  ['01-owner-sets-up', 'Set up a new organisation', 'Owner', 'Sign up, verify the email, name the organisation, choose how to pay, then set the role, logo, currency, reporting calendar and first colleague.'],
   ['02-admin-roles', 'Create a role and give someone two', 'Organisation admin', 'A custom role with only the permissions the job needs, a second role for an M&E officer who now manages projects, and who may hand out admin rights.'],
   ['03-me-officer-framework', 'Set up a project and its results framework', 'M&E officer', 'A new project, its impact, outcome and output, an indicator on each, and targets by period split by sex.'],
   ['04-me-officer-builds-form', 'Build a form that writes into an indicator', 'M&E officer', 'A household visit form with an indicator value field, a choice with Other, photo evidence, a preview and a public link for the field team.'],

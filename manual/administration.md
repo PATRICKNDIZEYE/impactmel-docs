@@ -64,7 +64,7 @@ Open **Plans and billing**.
 
 ![Plans and billing.](/images/billing.webp)
 
-- **Current plan** shows your plan, its status (Trial, Invoice requested, Active, Payment overdue, Cancelled, or Paid by your funder) and when a trial ends.
+- **Current plan** shows your plan, and its status (Invoice requested, Active, Payment overdue, Cancelled, or Paid by your funder).
 - **Change plan** or **Choose a plan** to move between Individual, Standard and Custom.
 - **Pay by card** opens checkout with Polar, which emails receipts. **Request an invoice** asks for an invoice instead.
 

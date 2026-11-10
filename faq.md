@@ -3,7 +3,7 @@
 ## Getting started
 
 ### Is there a free plan?
-No. Every cloud plan can start with a 30-day free trial, without a card. See [Plans](/plans).
+No. You can book a demo to see ImpactMEL first. See [Plans](/plans) for prices.
 
 ### How long does it take to set up?
 Creating a workspace takes a few minutes. Setting up a programme, its framework, indicators and targets depends on how much you have ready. On the Custom plan, we set it up with you.
