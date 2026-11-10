@@ -1,0 +1,141 @@
+WEBVTT
+
+1
+00:00:02.450 --> 00:00:06.944
+Many health programmes already report to their ministry through DHIS2.
+
+2
+00:00:06.944 --> 00:00:11.695
+Helena connects Meridian's maternal health project to the district system,
+
+3
+00:00:11.695 --> 00:00:14.264
+so figures don't have to be typed twice.
+
+4
+00:00:14.715 --> 00:00:18.521
+She adds a DHIS2 connector for the Lumbini project.
+
+5
+00:00:18.521 --> 00:00:22.700
+Here it points at the public DHIS2 demonstration server.
+
+6
+00:00:26.511 --> 00:00:28.803
+A DHIS2 username and password.
+
+7
+00:00:28.803 --> 00:00:32.698
+The password stays hidden, and is stored encrypted.
+
+8
+00:00:33.103 --> 00:00:35.580
+She saves it, and tests the connection.
+
+9
+00:00:39.308 --> 00:00:43.856
+Next, which DHIS2 data set to read, and for which health facility.
+
+10
+00:00:43.856 --> 00:00:46.819
+She picks the reproductive health data set.
+
+11
+00:00:47.223 --> 00:00:50.703
+And the facility: Ngelehun community health centre.
+
+12
+00:00:54.657 --> 00:00:56.852
+The data set's elements are listed.
+
+13
+00:00:56.852 --> 00:00:58.859
+She maps the two she reports on.
+
+14
+00:00:58.859 --> 00:01:02.811
+Live births go to births attended by a skilled birth attendant.
+
+15
+00:01:03.225 --> 00:01:08.584
+She tries postnatal first contacts against the postnatal check indicator.
+
+16
+00:01:08.584 --> 00:01:14.163
+ImpactMEL warns her: DHIS2 sends a count, and the indicator is a percentage.
+
+17
+00:01:14.590 --> 00:01:18.356
+A count of visits is not a share of mothers, so she cancels.
+
+18
+00:01:18.356 --> 00:01:20.239
+Only live births are imported.
+
+19
+00:01:20.674 --> 00:01:22.511
+Now she imports a period.
+
+20
+00:01:22.941 --> 00:01:25.401
+The data set is monthly in DHIS2.
+
+21
+00:01:25.401 --> 00:01:29.127
+She picks October, the month that has just closed.
+
+22
+00:01:29.566 --> 00:01:35.067
+Meridian reports quarterly, so October goes into the October to December quarter.
+
+23
+00:01:35.067 --> 00:01:40.228
+That draft already exists from an earlier import, so nothing is added twice.
+
+24
+00:01:40.228 --> 00:01:43.284
+The value is the same, so it stays unchanged.
+
+25
+00:01:43.710 --> 00:01:45.289
+In Review, under Not sent,
+
+26
+00:01:45.289 --> 00:01:48.388
+the Lumbini births figure for the fourth quarter is
+
+27
+00:01:48.388 --> 00:01:50.878
+waiting for someone to check and send it.
+
+28
+00:01:51.297 --> 00:01:54.164
+The connection also works the other way.
+
+29
+00:01:54.164 --> 00:01:59.398
+Figures that are already approved in ImpactMEL can be sent back to DHIS2.
+
+30
+00:01:59.828 --> 00:02:04.562
+Meridian's figures are quarterly, so instead of a month she types the quarter,
+
+31
+00:02:04.562 --> 00:02:06.079
+April to June, and sends.
+
+32
+00:02:06.523 --> 00:02:11.621
+DHIS2 reports back what it accepted, and the run log keeps the record.
+
+33
+00:02:12.043 --> 00:02:16.658
+Figures come in from DHIS2 as drafts, get checked like any other,
+
+34
+00:02:16.658 --> 00:02:18.717
+and approved figures go back.
+
+35
+00:02:18.717 --> 00:02:20.705
+One record, in both systems.
